@@ -100,12 +100,12 @@ else
 fi
 
 copy_pool() {
-	local f arch comp
+	local f arch
 	for f in "${DEB_FILES[@]}"; do
-		# derive arch from filename (Termux names: <name>_<ver>_<arch>.deb)
-		arch="${f##*_}"
-		arch="${arch%.deb}"
-		[[ " ${ARCHES[*]} " == *" $arch "* ]] || arch="all"
+		# Derive arch from the deb control file (Termux uses arch names like
+		# x86_64 which contain '_', so filename parsing is unreliable).
+		arch="$(dpkg-deb --field "$f" Architecture 2>/dev/null || true)"
+		[[ -n "$arch" && " ${ARCHES[*]} " == *" $arch "* ]] || arch="all"
 		mkdir -p "$APT_ROOT/pool/$COMPONENT/$arch"
 		cp -f "$f" "$APT_ROOT/pool/$COMPONENT/$arch/"
 	done
@@ -126,9 +126,8 @@ gen_packages() {
 		if [[ -n "$EXTERNALS_DIR" && -n "$EXTERNAL_URL" ]]; then
 			for ext in "$EXTERNALS_DIR"/*.deb; do
 				[[ -f "$ext" ]] || continue
-				earch="${ext##*_}"
-				earch="${earch%.deb}"
-				[[ " ${ARCHES[*]} " == *" $earch "* ]] || earch="all"
+				earch="$(dpkg-deb --field "$ext" Architecture 2>/dev/null || true)"
+				[[ -n "$earch" && " ${ARCHES[*]} " == *" $earch "* ]] || earch="all"
 				[[ "$earch" == "$arch" ]] || continue
 				emit_stanza "$ext" "$EXTERNAL_URL/$(basename "$ext")" "$pkgfile"
 			done
