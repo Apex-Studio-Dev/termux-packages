@@ -431,72 +431,79 @@ jobs:
           exit 1
         fi
 
+  # Fork-specific job: assemble the built *.deb files into self-hosted apt
+  # repos and publish them to the gh-pages branch (served via GitHub Pages),
+  # replacing the upstream aptly-server upload. master stays untouched.
   upload:
     concurrency: ${{ github.workflow }}
     permissions:
-      contents: read
-    if: github.repository == 'termux/termux-packages' && github.ref == 'refs/heads/master'
+      contents: write
+    if: github.repository == 'Apex-Studio-Dev/termux-packages' && github.event_name == 'push' && github.ref == 'refs/heads/master'
     needs: build
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-26.04
     steps:
     - name: Clone repository
       uses: actions/checkout@v7
+    - name: Import GPG signing key
+      env:
+        GPG_PRIVATE_KEY: ${{ secrets.APEX_GPG_PRIVATE_KEY }}
+      run: |
+        if [ -z "$GPG_PRIVATE_KEY" ]; then
+          echo "::error::Missing APEX_GPG_PRIVATE_KEY secret; repository will be unsigned"
+          exit 0
+        fi
+        printf '%s' "$GPG_PRIVATE_KEY" > /tmp/private.asc
+        gpg --batch --yes --import /tmp/private.asc
+        rm -f /tmp/private.asc
     - name: Get *.deb files
       uses: actions/download-artifact@v7
       with:
         path: ./
-    - name: Upload to packages.termux.dev
-      env:
-        REPOSITORY_URL: https://packages.termux.dev/aptly-api
-        GITHUB_SHA: ${{ github.sha }}
-        APTLY_API_AUTH: ${{ secrets.APTLY_API_AUTH }}
-        GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+    - name: Extract *.deb archives
       run: |
-        source scripts/aptly_api.sh
-
         for archive in debs-*/debs-{aarch64,arm,i686,x86_64}-${{ github.sha }}.tar; do
           tar xf "$archive"
         done
-
-        for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' repo.json); do
-          export REPOSITORY_NAME=$(jq --raw-output '.["'$repo'"].name' repo.json)
-          export REPOSITORY_DISTRIBUTION=$(jq --raw-output '.["'$repo'"].distribution' repo.json)
-
-          # Upload file to temporary directory.
-          uploaded_files=false
-          shopt -s nullglob
-
-          if [ -f debs/built_${REPOSITORY_NAME}_packages.txt ]; then
-            for filename in $(cat debs/built_${REPOSITORY_NAME}_packages.txt | sed -E 's/(..*)/debs\/\1_\*.deb debs\/\1-static_\*.deb/g'); do
-              if ! aptly_upload_file "$filename"; then
-                exit 1
-              fi
-
-              uploaded_files=true
-            done
-            shopt -u nullglob
-
-            # Publishing repository changes.
-            if [ "$uploaded_files" = "true" ]; then
-              if ! aptly_add_to_repo; then
-                exit 1
-              fi
-
-              # Usually temporary directory is deleted automatically, but in certain cases it is left.
-              aptly_delete_dir
-
-              # Final part to make changes appear in web root.
-              if ! aptly_publish_repo; then
-                exit 1
-              fi
-
-              # Publish to staging repo if we haven't already
-              if [[ "$REPOSITORY_DISTRIBUTION" != "staging" ]]; then
-                REPOSITORY_DISTRIBUTION=staging
-                if ! aptly_publish_repo; then
-                  exit 1
-                fi
-              fi
-            fi
-          fi
-        done
+    - name: Get current gh-pages tree
+      run: |
+        git fetch --depth 1 origin gh-pages || true
+        if git rev-parse --verify FETCH_HEAD >/dev/null 2>&1; then
+          git worktree add -q gh-pages FETCH_HEAD
+        else
+          git worktree add -q --orphan gh-pages gh-pages
+          git -C gh-pages rm -rfq . 2>/dev/null || true
+        fi
+    - name: Publish apt repository
+      env:
+        GNUPGHOME: ${{ runner.temp }}/gnupg
+      run: |
+        mkdir -p "$GNUPGHOME" && chmod 700 "$GNUPGHOME"
+        export GNUPGHOME
+        if gpg --batch --list-secret-keys >/dev/null 2>&1; then
+          GPG_KEY=$(gpg --batch --with-colons --list-secret-keys | awk -F: '/^fpr/{print $10; exit}')
+        else
+          GPG_KEY=""
+        fi
+        bash scripts/publish-gh-pages.sh \
+          --pages gh-pages \
+          --debs "$PWD/debs" \
+          --gpg-key "$GPG_KEY" \
+          --public-key "$PWD/apexstudio-packages.asc" \
+          --repo-root "$PWD"
+    - name: Push to gh-pages
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd gh-pages
+        rm -rf .merge-*
+        if git diff --quiet && git diff --cached --quiet; then
+          echo "No repository changes; skipping push"
+          exit 0
+        fi
+        git add -A
+        git -c user.name='ApexStudio CI' -c user.email='ci@apexstudio.dev' \
+          commit -q -m "Update apt repository [skip ci]"
+        git push -q \
+          "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+          HEAD:gh-pages
+        echo "Published apt repository to gh-pages branch"

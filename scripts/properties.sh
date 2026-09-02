@@ -369,21 +369,21 @@ fi
 ##
 # Termux project name.
 #
-# Default value: `Termux`
+# Default value: `ApexStudio`
 ##
-TERMUX__NAME="Termux"
+TERMUX__NAME="ApexStudio"
 
 ##
 # The lower case value for `TERMUX__NAME`.
 #
-# Default value: `termux`
+# Default value: `apexstudio`
 ##
 TERMUX__LNAME="${TERMUX__NAME,,}"
 
 ##
 # The upper case value for `TERMUX__NAME`.
 #
-# Default value: `TERMUX`
+# Default value: `APEXSTUDIO`
 ##
 TERMUX__UNAME="${TERMUX__NAME^^}"
 
@@ -434,14 +434,14 @@ TERMUX__INTERNAL_NAME___MAX_LEN=7
 ##
 # Termux repositories host organization name.
 #
-# Default value: `termux`
+# Default value: `Apex-Studio-Dev`
 ##
-TERMUX__REPOS_HOST_ORG_NAME="termux"
+TERMUX__REPOS_HOST_ORG_NAME="Apex-Studio-Dev"
 
 ##
 # Termux repositories host organization url.
 #
-# Default value: `https://github.com/termux`
+# Default value: `https://github.com/Apex-Studio-Dev`
 ##
 TERMUX__REPOS_HOST_ORG_URL="https://github.com/$TERMUX__REPOS_HOST_ORG_NAME"
 
