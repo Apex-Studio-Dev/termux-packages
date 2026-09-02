@@ -1,3 +1,48 @@
+Package: coreutils
+Version: 9.11-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-selinux, libandroid-support, libgmp, libiconv, openssl (>= 1:3.5.0-1)
+Description: Basic file, shell and text manipulation utilities from the GNU project
+Filename: pool/main/i686/coreutils_9.11-1_i686.deb
+Size: 837768
+MD5sum: 0b5ec5a58e18d64a39efff75446978a2
+SHA1: 22ce010a8a2d21f28b53bc97a9327508e51b084e
+SHA256: a3c3b0c524b4d793eed39893bdd503f155ded57658bbee41008d96dcf7416042
+SHA512: b1f12e4d99460a6084ef65bf12857bbe2e667948fbd3e58f7b9602f5897e20d829935e02513b16d9b818e7ebc8845f2b66eb2a3c4d09ce1f64dac596a4b6624a
+
+Package: dash
+Version: 0.5.12-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Small POSIX-compliant implementation of /bin/sh
+Filename: pool/main/i686/dash_0.5.12-2_i686.deb
+Size: 67968
+MD5sum: cf7a6a55f618a60140c1c6a3e7ebdd29
+SHA1: 434f39d6953d28e5c9021128220f6217014f69d8
+SHA256: 7e0e1ec8e3ad1176b89a86b9a852956fbe2f7d6e5fe637f5f4f6deafb4cb95be
+SHA512: dae4db2f4feb3a04297eccd7e89ba74aa4475b92fb5ddedc899c93f1f8b127abb3ddecbf3d0d5c22e82a2d7106967859afae39051c966f0ae31dc5b88ba7be9f
+
+Package: diffutils
+Version: 3.12-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libiconv
+Description: Programs (cmp, diff, diff3 and sdiff) related to finding differences between files
+Filename: pool/main/i686/diffutils_3.12-2_i686.deb
+Size: 173936
+MD5sum: 4525f962e6c3f0368d0b7831a191cda3
+SHA1: 6c9a842651772c008b364952162c939390366efb
+SHA256: 5704a952ab59309d2f7416ff2663838bebf0575141e8e4166b8299c0c8cd7e1c
+SHA512: fce7a6d2beb295d1b9e9d397038ca80e44274fdd5472e6fe8f1f1940cbbcf44523c6e2fe85b8fe7f98a6a6236a4ec7325b444061e12a3555a7b46b26c9f58e3a
+
 Package: hello
 Version: 2.12.3-2
 Architecture: i686

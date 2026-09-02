@@ -1,3 +1,48 @@
+Package: coreutils
+Version: 9.11-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-selinux, libandroid-support, libgmp, libiconv, openssl (>= 1:3.5.0-1)
+Description: Basic file, shell and text manipulation utilities from the GNU project
+Filename: pool/main/aarch64/coreutils_9.11-1_aarch64.deb
+Size: 814348
+MD5sum: a919b45ba48f70e87eec84ab7559c523
+SHA1: a82e5b410efbdf3409bac7c7f04644aa666f43b3
+SHA256: 44f2ebc3d9856de17be6c7bfe6e12f4bc866c51dfb3a0a7a2221fa5aeba023c5
+SHA512: 44545141fc35b3d8f4ce68ff00bf689d4adc7ee427bc01e9c439abf1818d83e9e3d10fa30f18ceebc255b2bd73a56f99a8ab66a209cd3087d07506a47915ef00
+
+Package: dash
+Version: 0.5.12-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Small POSIX-compliant implementation of /bin/sh
+Filename: pool/main/aarch64/dash_0.5.12-2_aarch64.deb
+Size: 65884
+MD5sum: eb42b4d99fb180d5b3e49221a0499fb8
+SHA1: c7209de50d9ceb2dcc2234419b0aa88fecb693d3
+SHA256: e1b2943c28d3d53909403b82849c71c744743422f55bac784e8c053944feb54e
+SHA512: dfb1d4052109537a8abc33e1dcb0fc5ff46501815867b38086f3b78b911ed42cf6b0078b1681b6d9f0ef9b2ba384c534f18d69881feafaab3175c1393b1550f9
+
+Package: diffutils
+Version: 3.12-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libiconv
+Description: Programs (cmp, diff, diff3 and sdiff) related to finding differences between files
+Filename: pool/main/aarch64/diffutils_3.12-2_aarch64.deb
+Size: 162816
+MD5sum: f731b65b8981834e716971a4b3feb70b
+SHA1: 65767e6db92cd58f489fe02ac484d96437323bc9
+SHA256: 4b35435a39b9efeb884d99d9801b0c98532affdb09a4d491b247f0780efdd04f
+SHA512: bb2e035fd2f5ed72aab6e07ba0404053341bbb9d39ef6dec3fb9f5e8d2604221f529470b49ff04770c13b0b9cd7a017a6a5a420e9a22af85095ef052dcca4529
+
 Package: hello
 Version: 2.12.3-2
 Architecture: aarch64

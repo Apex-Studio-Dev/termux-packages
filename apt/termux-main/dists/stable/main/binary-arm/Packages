@@ -1,3 +1,48 @@
+Package: coreutils
+Version: 9.11-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-selinux, libandroid-support, libgmp, libiconv, openssl (>= 1:3.5.0-1)
+Description: Basic file, shell and text manipulation utilities from the GNU project
+Filename: pool/main/arm/coreutils_9.11-1_arm.deb
+Size: 788912
+MD5sum: d9bed4e3513638cbc0ec91019e60601f
+SHA1: 8c50d0e450c93d8d5ca1b15513f2baf1f98e5233
+SHA256: 418b84afb448821ed1e1e501e234b3de116c039d20aef7e0c996d22651a07a3d
+SHA512: e59ac4504de9bdfac40fa15fd497bfa04763a82a22c5b0ea070d87b6d8f39bda7fa415a3ec9e82b7b79f53d7d3ccc6413c472fdb682dbbf52aa7fc1338d59c3e
+
+Package: dash
+Version: 0.5.12-2
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Small POSIX-compliant implementation of /bin/sh
+Filename: pool/main/arm/dash_0.5.12-2_arm.deb
+Size: 61592
+MD5sum: 28f68fa020d72f773ade6e78d1b10f91
+SHA1: e26274c98f60092690d9a0d8183aec778d039271
+SHA256: 8c9d54ec365c1b3a20a281658258ce9ba7672ee2d930283d01b5b9e8c2bac2d4
+SHA512: b7925ecd856d20fffdce402087507bcbbebb6ff794c1ee695be6864b0ad0d5cdd56d0c53ccf7ffcb4a205798bd47502730907c70d7905c77904201746ddd581e
+
+Package: diffutils
+Version: 3.12-2
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libiconv
+Description: Programs (cmp, diff, diff3 and sdiff) related to finding differences between files
+Filename: pool/main/arm/diffutils_3.12-2_arm.deb
+Size: 152188
+MD5sum: 3171b96347fa17f7b02c67cfff7d1207
+SHA1: 055301fa4a7ecca87797aebbe6304808f6ae7f10
+SHA256: 1c72dc53653cf87c091e5a105e0a502f7929e8f23dcab26d96d6eac7a26ddf79
+SHA512: 013806814d789dcce1626f4044556d85d7336248b0d7403c5a4eb945ccc6c51dbb08725ad245ad795be73b8fdeebf29e0d4f3617e0c3582fa55543317a09b2b1
+
 Package: hello
 Version: 2.12.3-2
 Architecture: arm
