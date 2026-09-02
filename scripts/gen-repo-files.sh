@@ -20,9 +20,16 @@
 ## Usage:
 ##   gen-repo-files.sh --debs <dir> --out <repo-root> [--gpg-key <id>]
 ##                     [--suite <suite>] [--arch <arch>...]
+##                     [--externals-dir <dir>] [--external-base-url <url>]
 ##
 ## If --gpg-key is omitted (or gpg not available) the repository is generated
 ## unsigned (a warning is printed). Signing is required for a usable apt repo.
+##
+## Large .deb files may be hosted outside the pool (e.g. GitHub Releases) to
+## keep the git-backed gh-pages tree small. Pass them via --externals-dir along
+## with --external-base-url: they are NOT copied into the pool; instead each
+## gets a Packages stanza whose "Filename:" is the full asset URL
+## ("<external-base-url>/<file>"). Small debs in --debs are handled normally.
 set -euo pipefail
 
 DEBS_DIR=""
@@ -31,9 +38,11 @@ GPG_KEY=""
 SUITE="stable"
 COMPONENT="main"
 ARCHES=(aarch64 arm i686 x86_64 all)
+EXTERNALS_DIR=""
+EXTERNAL_URL=""
 
 usage() {
-	sed -n '3,19p' "$0"
+	sed -n '3,23p' "$0"
 	echo
 	exit 1
 }
@@ -46,6 +55,8 @@ while (($#)); do
 		--suite) SUITE="$2"; shift 2;;
 		--component) COMPONENT="$2"; shift 2;;
 		--arch) IFS=' ' read -r -a ARCHES <<< "$2"; shift 2;;
+		--externals-dir) EXTERNALS_DIR="$2"; shift 2;;
+		--external-base-url) EXTERNAL_URL="$2"; shift 2;;
 		-h|-help|--help) usage;;
 		*) echo "Unknown option: $1" >&2; usage;;
 	esac
@@ -109,26 +120,41 @@ gen_packages() {
 		: > "$pkgfile"
 		for deb in "$APT_ROOT"/pool/"$COMPONENT"/"$arch"/*.deb; do
 			[[ -f "$deb" ]] || continue
-			# extract fields with dpkg-deb; fall back to awk on control if absent
-			if command -v dpkg-deb >/dev/null 2>&1; then
-				dpkg-deb --info "$deb" > /dev/null 2>&1 || true
-				dpkg-deb --showformat \
-					'Package: ${Package}\nVersion: ${Version}\nArchitecture: ${Architecture}\nSection: ${Section}\nPriority: ${Priority}\nMaintainer: ${Maintainer}\nDepends: ${Depends}\nDescription: ${Description}\n' \
-					--show "$deb" >> "$pkgfile" || true
-			fi
-			{
-				echo "Filename: pool/$COMPONENT/$arch/$(basename "$deb")"
-				echo "Size: $(stat -c %s "$deb")"
-				echo "MD5sum: $(md5sum "$deb" | cut -d' ' -f1)"
-				echo "SHA1: $(sha1sum "$deb" | cut -d' ' -f1)"
-				echo "SHA256: $(sha256sum "$deb" | cut -d' ' -f1)"
-				echo "SHA512: $(sha512sum "$deb" | cut -d' ' -f1)"
-			} >> "$pkgfile"
-			echo >> "$pkgfile"
+			emit_stanza "$deb" "pool/$COMPONENT/$arch/$(basename "$deb")" "$pkgfile"
 		done
+		# Large / externally-hosted debs: Filename is the full asset URL.
+		if [[ -n "$EXTERNALS_DIR" && -n "$EXTERNAL_URL" ]]; then
+			for ext in "$EXTERNALS_DIR"/*.deb; do
+				[[ -f "$ext" ]] || continue
+				earch="${ext##*_}"
+				earch="${earch%.deb}"
+				[[ " ${ARCHES[*]} " == *" $earch "* ]] || earch="all"
+				[[ "$earch" == "$arch" ]] || continue
+				emit_stanza "$ext" "$EXTERNAL_URL/$(basename "$ext")" "$pkgfile"
+			done
+		fi
 		gzip -9c "$pkgfile" > "$pkgfile.gz"
 		echo "Generated: $pkgfile ($(wc -l < "$pkgfile") lines)"
 	done
+}
+
+emit_stanza() {
+	local deb="$1" fname="$2" pkgfile="$3"
+	{
+		if command -v dpkg-deb >/dev/null 2>&1; then
+			dpkg-deb --info "$deb" > /dev/null 2>&1 || true
+			dpkg-deb --showformat \
+				'Package: ${Package}\nVersion: ${Version}\nArchitecture: ${Architecture}\nSection: ${Section}\nPriority: ${Priority}\nMaintainer: ${Maintainer}\nDepends: ${Depends}\nDescription: ${Description}\n' \
+				--show "$deb" >> "$pkgfile" || true
+		fi
+		echo "Filename: $fname"
+		echo "Size: $(stat -c %s "$deb")"
+		echo "MD5sum: $(md5sum "$deb" | cut -d' ' -f1)"
+		echo "SHA1: $(sha1sum "$deb" | cut -d' ' -f1)"
+		echo "SHA256: $(sha256sum "$deb" | cut -d' ' -f1)"
+		echo "SHA512: $(sha512sum "$deb" | cut -d' ' -f1)"
+	} >> "$pkgfile"
+	echo >> "$pkgfile"
 }
 
 gen_release_and_sign() {

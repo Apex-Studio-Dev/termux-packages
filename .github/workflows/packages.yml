@@ -456,11 +456,14 @@ jobs:
     - name: Import GPG signing key
       env:
         GPG_PRIVATE_KEY: ${{ secrets.APEX_GPG_PRIVATE_KEY }}
+        GNUPGHOME: ${{ runner.temp }}/gnupg
       run: |
         if [ -z "$GPG_PRIVATE_KEY" ]; then
           echo "::error::Missing APEX_GPG_PRIVATE_KEY secret; repository will be unsigned"
           exit 0
         fi
+        mkdir -p "$GNUPGHOME" && chmod 700 "$GNUPGHOME"
+        export GNUPGHOME
         printf '%s' "$GPG_PRIVATE_KEY" > /tmp/private.asc
         gpg --batch --yes --import /tmp/private.asc
         rm -f /tmp/private.asc
@@ -485,6 +488,7 @@ jobs:
     - name: Publish apt repository
       env:
         GNUPGHOME: ${{ runner.temp }}/gnupg
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         mkdir -p "$GNUPGHOME" && chmod 700 "$GNUPGHOME"
         export GNUPGHOME
@@ -498,7 +502,8 @@ jobs:
           --debs "$PWD/debs" \
           --gpg-key "$GPG_KEY" \
           --public-key "$PWD/apexstudio-packages.asc" \
-          --repo-root "$PWD"
+          --repo-root "$PWD" \
+          --github-repo "${GITHUB_REPOSITORY}"
     - name: Copy website files
       run: |
         for f in site/*; do
