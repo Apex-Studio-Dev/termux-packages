@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ApexStudio Packages</title>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="brand" href="./">
+      <span class="brand-mark">AS</span>
+      <span class="brand-text">ApexStudio<span class="brand-sub">Packages</span></span>
+    </a>
+    <nav class="topnav">
+      <a href="#packages">Packages</a>
+      <a href="#setup">Setup</a>
+      <a href="https://github.com/Apex-Studio-Dev/termux-packages" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>ApexStudio apt repository</h1>
+    <p class="hero-sub">Self-hosted Termux-compatible package repository, served from GitHub Pages.</p>
+    <div class="hero-stats" id="hero-stats">
+      <div class="stat"><b id="stat-pkgs">0</b><span>packages</span></div>
+      <div class="stat"><b id="stat-repos">0</b><span>repositories</span></div>
+      <div class="stat"><b id="stat-archs">0</b><span>architectures</span></div>
+    </div>
+  </section>
+
+  <section class="content" id="packages">
+    <div class="section-head">
+      <h2>Packages</h2>
+      <div class="filters">
+        <div class="searchwrap">
+          <input id="search" type="search" placeholder="Search packages&hellip;" autocomplete="off" spellcheck="false">
+        </div>
+        <select id="repo-filter" aria-label="Filter by repository"></select>
+      </div>
+    </div>
+
+    <div class="legend" id="legend">
+      <span class="legend-label">Available for:</span>
+      <span class="arch-chip dot-on">aarch64</span>
+      <span class="arch-chip dot-on">arm</span>
+      <span class="arch-chip dot-on">i686</span>
+      <span class="arch-chip dot-on">x86_64</span>
+    </div>
+
+    <div id="status" class="status" role="status"></div>
+    <ul id="pkg-list" class="pkg-list"></ul>
+    <div id="empty" class="empty" hidden>
+      <p>No packages found.</p>
+    </div>
+  </section>
+
+  <section class="content" id="setup">
+    <h2>Set up the repository</h2>
+    <p class="setup-intro">Add the repository to your Termux installation, then install any package.</p>
+
+    <ol class="steps">
+      <li>
+        <span class="step-num">1</span>
+        <div class="step-body">
+          <strong>Download the signing key</strong>
+          <pre id="code-key">curl -LO https://apex-studio-dev.github.io/termux-packages/apexstudio-packages.asc</pre>
+          <button class="copy-btn" data-copy-target="code-key">Copy</button>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">2</span>
+        <div class="step-body">
+          <strong>Move the key into the apt keyring directory</strong>
+          <pre id="code-key-move">mkdir -p $PREFIX/etc/apt/keyrings
+mv apexstudio-packages.asc $PREFIX/etc/apt/keyrings/</pre>
+          <button class="copy-btn" data-copy-target="code-key-move">Copy</button>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">3</span>
+        <div class="step-body">
+          <strong>Add repository source(s) to <code>$PREFIX/etc/apt/sources.list</code></strong>
+          <pre id="code-sources">&lt;!-- sources are generated from live data below --&gt;</pre>
+          <button class="copy-btn" data-copy-target="code-sources">Copy</button>
+        </div>
+      </li>
+      <li>
+        <span class="step-num">4</span>
+        <div class="step-body">
+          <strong>Update and install</strong>
+          <pre id="code-update">apt update
+apt install &lt;package&gt;</pre>
+          <button class="copy-btn" data-copy-target="code-update">Copy</button>
+        </div>
+      </li>
+    </ol>
+  </section>
+</main>
+
+<dialog id="detail-dialog" class="dialog">
+  <div class="dialog-head">
+    <h3 id="dlg-title">Package</h3>
+    <button id="dlg-close" class="icon-btn" aria-label="Close">&times;</button>
+  </div>
+  <div class="dialog-body" id="dlg-body"></div>
+</dialog>
+
+<footer class="footer">
+  <p>Built with &hearts; by ApexStudio &middot; served from the <code>gh-pages</code> branch</p>
+</footer>
+
+<script src="./app.js"></script>
+</body>
+</html>

@@ -499,6 +499,11 @@ jobs:
           --gpg-key "$GPG_KEY" \
           --public-key "$PWD/apexstudio-packages.asc" \
           --repo-root "$PWD"
+    - name: Copy website files
+      run: |
+        for f in site/*; do
+          [ -f "$f" ] && cp -f "$f" gh-pages/
+        done
     - name: Push to gh-pages
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
