@@ -447,7 +447,7 @@ jobs:
     concurrency: ${{ github.workflow }}
     permissions:
       contents: write
-    if: github.repository == 'Apex-Studio-Dev/termux-packages' && ((github.event_name == 'push' && github.ref == 'refs/heads/master') || (github.event_name == 'workflow_dispatch' && inputs.publish == 'true'))
+    if: github.repository == 'Apex-Studio-Dev/termux-packages' && ((github.event_name == 'push' && github.ref == 'refs/heads/master') || (github.event_name == 'workflow_dispatch' && inputs.publish == true))
     needs: build
     runs-on: ubuntu-26.04
     steps:
