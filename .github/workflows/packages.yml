@@ -275,6 +275,11 @@ jobs:
         size /var/lib
         size /var/
 
+    - name: Import ApexStudio repository signing key
+      if: ${{ steps.build-info.outputs.skip-building != 'true' }}
+      run: |
+        ./scripts/run-docker.sh bash -c 'gpg --batch --yes --import /home/builder/termux-packages/apexstudio-packages.asc'
+
     - name: Build packages
       if: ${{ steps.build-info.outputs.skip-building != 'true' }}
       run: |

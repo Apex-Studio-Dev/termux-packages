@@ -29,6 +29,7 @@ DEBS_DIR=""
 OUT_DIR=""
 GPG_KEY=""
 SUITE="stable"
+COMPONENT="main"
 ARCHES=(aarch64 arm i686 x86_64 all)
 
 usage() {
@@ -43,6 +44,7 @@ while (($#)); do
 		--out) OUT_DIR="$2"; shift 2;;
 		--gpg-key) GPG_KEY="$2"; shift 2;;
 		--suite) SUITE="$2"; shift 2;;
+		--component) COMPONENT="$2"; shift 2;;
 		--arch) IFS=' ' read -r -a ARCHES <<< "$2"; shift 2;;
 		-h|-help|--help) usage;;
 		*) echo "Unknown option: $1" >&2; usage;;
@@ -52,7 +54,6 @@ done
 [[ -n "$DEBS_DIR" && -n "$OUT_DIR" ]] || { echo "Error: --debs and --out are required" >&2; usage; }
 [[ -d "$DEBS_DIR" ]] || { echo "Error: debs dir '$DEBS_DIR' does not exist" >&2; exit 1; }
 
-COMPONENT="main"
 APT_ROOT="$OUT_DIR"
 HAS_GPG=0
 if [[ -n "$GPG_KEY" ]]; then
@@ -67,18 +68,25 @@ mkdir -p "$APT_ROOT"
 
 # Gather .deb files into the pool. This script generates ONE apt repo tree.
 # To publish multiple repos (main/root/x11 from repo.json), the caller runs it
-# once per repo, passing --out out/apt/<repo-name> and --suite <distribution>.
-# The repo NAME (e.g. termux-main) is not embedded by this script; the caller
-# provides it via --out so the final path becomes out/apt/<name>/dists/<dist>/.
-# COMPONENT is hardcoded to "main" here (matches repo.json for main & x11;
-# root-packages uses component "stable" in repo.json but that only matters for
-# the device-side apt sources.list, the on-disk pool layout is identical).
-declare -a DEB_FILES
+# once per repo, passing --out out/apt/<repo-name>, --suite <distribution> and
+# --component <component>. The repo NAME (e.g. termux-main) is not embedded by
+# this script; the caller provides it via --out so the final path becomes
+# out/apt/<name>/dists/<dist>/<comp>/.
+declare -a DEB_FILES=()
 while IFS= read -r -d '' f; do
 	DEB_FILES+=("$f")
 done < <(find "$DEBS_DIR" \( -name '*.deb' -o -name '*.deb' \) -print0)
 
-(( ${#DEB_FILES[@]} )) || { echo "Error: no .deb files found in '$DEBS_DIR'" >&2; exit 1; }
+# Allow generating an empty (but valid, signed) repository when no .deb files
+# are present. This is useful to seed bootstrap metadata so that CI -I builds
+# can resolve the repo URLs before any package has been published.
+:
+
+if (( ${#DEB_FILES[@]} )); then
+	echo "Found ${#DEB_FILES[@]} .deb file(s)"
+else
+	echo "No .deb files found in '$DEBS_DIR'; generating empty repository"
+fi
 
 copy_pool() {
 	local f arch comp
