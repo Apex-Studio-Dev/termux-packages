@@ -1,0 +1,15 @@
+Package: hello
+Version: 2.12.3-2
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libiconv
+Description: Prints a friendly greeting
+Filename: pool/main/arm/hello_2.12.3-2_arm.deb
+Size: 29420
+MD5sum: 9e597632ca6048b6021d1bb0c4523e39
+SHA1: 617b8df7114eacc005457ae5bebb5333f50c2963
+SHA256: ada4e60e63e46ce171b221f33a11956e83b7ca2269da76471b774adbf7c688b3
+SHA512: 47f85d5a586b35cae40319040714df6485f3d4acc498e4c08016cb327c6588dc56250db9909ffb7cb84a579b1230fbee7b8be461a455a262c58036d221c49872
+

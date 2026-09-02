@@ -1,0 +1,15 @@
+Package: hello
+Version: 2.12.3-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libiconv
+Description: Prints a friendly greeting
+Filename: pool/main/aarch64/hello_2.12.3-2_aarch64.deb
+Size: 31284
+MD5sum: bee9f501e04ebe4eb17269cd711295da
+SHA1: f1c1daad470af7aa10934aa382abee5f0bac08d8
+SHA256: c235c4500a29702fc30b5ce85c6675bdf4c054430c92617c21b32c85901030fa
+SHA512: 1bc81602982e8190cdf0c60acd59c84ad6c0737cfa1e14afa65dae455ad2f5c6c71cd579c1b65e7ddfe2a086f8cff0a1dd5cb8bf2e1f3dda4f6007a4b991ea6c
+

@@ -1,0 +1,15 @@
+Package: hello
+Version: 2.12.3-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libiconv
+Description: Prints a friendly greeting
+Filename: pool/main/i686/hello_2.12.3-2_i686.deb
+Size: 32292
+MD5sum: c812de48f511ffba3e576a7b51a5d9af
+SHA1: ea183431a92c3f99cc0195d354e800fc1ced1e00
+SHA256: cd3a1fb6a8643c930adf5b0d86b2486ae22340a1f610c6decd79f17dcbaaf9b7
+SHA512: 3a4ab26f7b6eab77cbe2a0ae5405fd6e4a64b0c9497d870e7ee3edfc24237e24a78229344139f72101c4bc24b2f6e9a1188c512d33dcb7f9b231520492188017
+

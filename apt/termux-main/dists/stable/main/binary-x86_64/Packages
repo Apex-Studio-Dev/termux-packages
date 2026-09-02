@@ -1,0 +1,15 @@
+Package: hello
+Version: 2.12.3-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libiconv
+Description: Prints a friendly greeting
+Filename: pool/main/x86_64/hello_2.12.3-2_x86_64.deb
+Size: 31980
+MD5sum: 970bad49691430b1f0ad32ceeaddf748
+SHA1: 0bb9dc5e5d8229534a1f9dae34355906f1ab0259
+SHA256: 408ba1ade262d282f4f63e5d92ab32a38ee70e0573913c2f1edc5b111ba312c5
+SHA512: e54d12d8cf3ee4ecd901be9b145713a5ca791123450e05c22b72506dd17f59ad9b36f949297d21e30399123080a60b01ff2b1bfcd40e90d26661e9b628c7735d
+
