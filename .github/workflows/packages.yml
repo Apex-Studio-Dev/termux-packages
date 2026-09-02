@@ -24,6 +24,10 @@ on:
         description: "Free space even if not building large package (useful when building a large number of packages)"
         type: boolean
         default: false
+      publish:
+        description: "Also publish the newly built packages to the gh-pages apt repository"
+        type: boolean
+        default: false
 
 permissions: {} # none
 
@@ -443,7 +447,7 @@ jobs:
     concurrency: ${{ github.workflow }}
     permissions:
       contents: write
-    if: github.repository == 'Apex-Studio-Dev/termux-packages' && github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.repository == 'Apex-Studio-Dev/termux-packages' && ((github.event_name == 'push' && github.ref == 'refs/heads/master') || (github.event_name == 'workflow_dispatch' && inputs.publish == 'true'))
     needs: build
     runs-on: ubuntu-26.04
     steps:
