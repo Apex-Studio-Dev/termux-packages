@@ -3,6 +3,7 @@ TERMUX_PKG_DESCRIPTION="GPG public keys for the official Termux repositories"
 TERMUX_PKG_LICENSE="Apache-2.0"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION=3.14
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_AUTO_UPDATE=false
 TERMUX_PKG_SKIP_SRC_EXTRACT=true
 TERMUX_PKG_PLATFORM_INDEPENDENT=true
@@ -26,6 +27,9 @@ termux_step_make_install() {
 
 	# Key for automatic builds (via CI).
 	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-autobuilds.gpg" "$GPG_SHARE_DIR"
+
+	# Key for the ApexStudio (fork) repository.
+	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/apexstudio-packages.gpg" "$GPG_SHARE_DIR"
 
 	# Key for pacman package manager.
 	install -Dm600 "$TERMUX_PKG_BUILDER_DIR/termux-pacman.gpg" "$GPG_SHARE_DIR"
