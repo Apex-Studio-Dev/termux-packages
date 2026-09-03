@@ -2518,6 +2518,21 @@ SHA1: 868504b1c164efcc14c2d570d37b205a87aa0b2c
 SHA256: a7e351e748bca905675de42639c5bf8f9fc11f7215a561a9df8f7f023e2848b1
 SHA512: 38a42af2c26dd1ec49d81b2ea7315abc4379a37e18991c5e823885e3abd7347470823fcfe9f42b559f726c499b8ca58888f0ef5dac965f3d72de1063c7e383d6
 
+Package: termux-tools
+Version: 1.46.0+really1.45.0-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Description: Basic system tools for Termux
+Filename: pool/main/i686/termux-tools_1.46.0+really1.45.0-2_i686.deb
+Size: 28936
+MD5sum: 426bfd1847c7db81215aea3d9da8e6a0
+SHA1: 44a19c40d6e7b1aa761097ff91f498630b4909ee
+SHA256: 4330322acdbda0e401d4fc541378ba2f5ab24e4e2545a6b2b1b28daac5b98861
+SHA512: 35121def2603e331cb1d6c419a7b19db6be1cd7adcd2b1be2a976f73fd2e1954e9730cd144f1ce599e69d7b8281f186187fb7bd6bd6a3b81f656a27227b0cac7
+
 Package: tk
 Version: 8.6.14-1
 Architecture: i686
