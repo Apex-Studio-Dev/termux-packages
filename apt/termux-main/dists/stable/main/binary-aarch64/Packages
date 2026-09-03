@@ -133,6 +133,21 @@ SHA1: 1cce112f29a81a8c5912fece77eeb34b6368005e
 SHA256: 126171f1964ccc7bb91dfde809bda6adb3d207d05a3e8c691d6b6b57f30d0de0
 SHA512: da06d4c39258efd4b3da518e7373353f5f38a93d9aecc019ec7fa5813daa24b7be55ddc0286fc77ba62a1013197fa02d19cc67e131d68e0a9a42f9dae8b94ab1
 
+Package: command-not-found
+Version: 3.5.0-9
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++
+Description: Suggest installation of packages in interactive shell sessions
+Filename: pool/main/aarch64/command-not-found_3.5.0-9_aarch64.deb
+Size: 23348
+MD5sum: 31d4bc777701d9ea179a99196e22b1bb
+SHA1: dacf5af77fc71c994dc28b53091a76af4e2cfb9f
+SHA256: 6d1e57b089733adeb3a1f208db183fc48a790cfcef09fac6bfd10ab955dc14b8
+SHA512: 58d768a03c9884be459c492dce3cea5260f71884723203c6cc1c0084db8b2e8627a31dd9ee562e47ac480a071cf62a8829143ce03635f0d7fdcb7bef61fe8f8f
+
 Package: coreutils
 Version: 9.11-1
 Architecture: aarch64

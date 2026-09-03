@@ -133,6 +133,21 @@ SHA1: c4377a45b561d5f8f9d9ecfd8120540f747004eb
 SHA256: 4529088acfaa63827d4b455336dd5e77b203e8d382dc363ae74747f545212546
 SHA512: 19425fd10c2c108e02695e30da736c7c50bb53fc1ba5253e067e053c222bea242fbcf4c8ecf6a08228f36b23dba60942fbe31c1bd116197acb744b8d17d553ab
 
+Package: command-not-found
+Version: 3.5.0-9
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++
+Description: Suggest installation of packages in interactive shell sessions
+Filename: pool/main/arm/command-not-found_3.5.0-9_arm.deb
+Size: 13776
+MD5sum: bcfe619633a904866738f14f90e265a7
+SHA1: 26c8763ea6447b1feedc7878292f203d203b7651
+SHA256: b0c3375e6cc77e7c2cc41611905efaf55270a5829bd1a4d39d2fb30a81873e0c
+SHA512: 971966d0f7b6291ae2d0f3eb81263fd46da87d331db29ae1a00c45c921fabba31128ab3a1e45af34018e03f2b7e889ee13459dd2da21e3edf6fe7516ae4e4051
+
 Package: coreutils
 Version: 9.11-1
 Architecture: arm
