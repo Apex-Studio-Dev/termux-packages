@@ -69,9 +69,18 @@ echo "INFO: Using NDK ... $NDK"
 yes | $SDK_MANAGER --sdk_root="$ANDROID_HOME" --licenses
 
 # The android platforms are used in the ecj and apksigner packages:
+# build-tools;30.0.3 and platforms;android-33 are needed by termux-am
+# (AGP 7.4.2, compileSdk 33) so AGP does not need to auto-provision them
+# at build time (which fails when the SDK dir is not writable in CI).
 yes | $SDK_MANAGER --sdk_root="$ANDROID_HOME" \
 		"platform-tools" \
 		"build-tools;${TERMUX_ANDROID_BUILD_TOOLS_VERSION}" \
+		"build-tools;30.0.3" \
 		"platforms;android-35" \
+		"platforms;android-33" \
 		"platforms;android-28" \
 		"platforms;android-24"
+
+# Ensure the SDK tree remains writable so AGP/sdkmanager can still write
+# install.properties and provision additional components at build time.
+chown -R "$(id -un):$(id -gn)" "$ANDROID_HOME" 2>/dev/null || true
