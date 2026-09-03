@@ -83,4 +83,4 @@ yes | $SDK_MANAGER --sdk_root="$ANDROID_HOME" \
 
 # Ensure the SDK tree remains writable so AGP/sdkmanager can still write
 # install.properties and provision additional components at build time.
-chown -R "$(id -un):$(id -gn)" "$ANDROID_HOME" 2>/dev/null || true
+chown -R -- "$(id -un):$(id -gn)" "$ANDROID_HOME" 2>/dev/null || true
