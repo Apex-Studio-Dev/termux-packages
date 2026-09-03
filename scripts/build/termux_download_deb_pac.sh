@@ -40,6 +40,27 @@ termux_download_deb_pac() {
 			local PACKAGE_FILE_PATH="${TERMUX_REPO_NAME}-json"
 		fi
 		if [ "${PACKAGE_ARCH}" = 'all' ]; then
+			if [ -f "${TERMUX_COMMON_CACHEDIR}-all/${PACKAGE_FILE_PATH}" ]; then
+				if [ "$TERMUX_REPO_PKG_FORMAT" = "debian" ]; then
+					read -rd "\n" PKG_PATH PKG_HASH < <(./scripts/get_hash_from_file.py "${TERMUX_COMMON_CACHEDIR}-all/$PACKAGE_FILE_PATH" "$PACKAGE" "$VERSION")
+				elif [ "$TERMUX_REPO_PKG_FORMAT" = "pacman" ]; then
+					if [ "$TERMUX_WITHOUT_DEPVERSION_BINDING" = "true" ] || [ $(jq -r '."'$PACKAGE'"."VERSION"' "${TERMUX_COMMON_CACHEDIR}-all/$PACKAGE_FILE_PATH") = "${VERSION_PACMAN}" ]; then
+						PKG_HASH=$(jq -r '."'$PACKAGE'"."SHA256SUM"' "${TERMUX_COMMON_CACHEDIR}-all/$PACKAGE_FILE_PATH")
+						PKG_PATH=$(jq -r '."'$PACKAGE'"."FILENAME"' "${TERMUX_COMMON_CACHEDIR}-all/$PACKAGE_FILE_PATH")
+						PKG_PATH="all/${PKG_PATH}"
+					fi
+				fi
+				if [ -n "$PKG_HASH" ] && [ "$PKG_HASH" != "null" ]; then
+					if [ ! "$TERMUX_QUIET_BUILD" = true ]; then
+						if [ "$TERMUX_REPO_PKG_FORMAT" = "debian" ]; then
+							echo "Found $PACKAGE in ${TERMUX_REPO_URL[$idx-1]}/dists/${TERMUX_REPO_DISTRIBUTION[$idx-1]}"
+						elif [ "$TERMUX_REPO_PKG_FORMAT" = "pacman" ]; then
+							echo "Found $PACKAGE in ${TERMUX_REPO_URL[$idx-1]}"
+						fi
+					fi
+					break
+				fi
+			fi
 			for arch in 'aarch64' 'arm' 'i686' 'x86_64'; do
 				if [ -f "${TERMUX_COMMON_CACHEDIR}-${arch}/${PACKAGE_FILE_PATH}" ]; then
 					if [ "$TERMUX_REPO_PKG_FORMAT" = "debian" ]; then
