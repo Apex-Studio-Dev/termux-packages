@@ -32,6 +32,10 @@ on:
         description: "Force rebuild of the local package-builder docker image before building (useful after changing setup/scripts without a package change)"
         type: boolean
         default: false
+      skip-depcheck:
+        description: "Skip dependency resolution (build-package.sh -s). Use only to bootstrap-publish a first version of a package whose dependency tree is cyclic (e.g. pulseaudio)."
+        type: boolean
+        default: false
 
 permissions: {} # none
 
@@ -306,7 +310,12 @@ jobs:
         echo "packages: ${packages[*]}"
 
         if [[ "${#packages[@]}" -gt 0 ]]; then
-          ./scripts/run-docker.sh -d ./build-package.sh -I -C -a "${{ matrix.target_arch }}" "${packages[@]}"
+          skip_depcheck=""
+          if [[ "${{ github.event.inputs.skip-depcheck }}" == "true" ]]; then
+            echo "Skipping dependency resolution (-s) as requested via 'skip-depcheck' input"
+            skip_depcheck="-s"
+          fi
+          ./scripts/run-docker.sh -d ./build-package.sh $skip_depcheck -I -C -a "${{ matrix.target_arch }}" "${packages[@]}"
         fi
 
     - name: Generate build artifacts
