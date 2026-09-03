@@ -113,10 +113,10 @@ Depends: subversion-perl, git (= 2.55.0)
 Description: Convert between Git and Subversion repositories
 Filename: pool/main/all/git-svn_2.55.0_all.deb
 Size: 75568
-MD5sum: c067ee516422a9f403ca799f8d33a574
-SHA1: ced0a566c84545d501e382d213efd1e15c88e674
-SHA256: a80f067880da9913ea81c7299c254c2af103b7d0e5543ca19b9880588ca44e06
-SHA512: 1494b941f1b3882487adaea48979a7171d3056ebd09253fee102a3fca042850a5ec2789f19043b5986a2914fbe1f57470463e8c8545029f9f66dce1f26373300
+MD5sum: 25cb279e8ab29dd41bf53a41dbcfbf8b
+SHA1: 6403cd1e5a1047dacf4595330ebdb8107689a6bd
+SHA256: c16871a9edf353ca3d62ead6d7670b44694735ada8512c55f6c935ef483870ba
+SHA512: f8d49f45520fdcf956112116b4042fa33cbe26d86f935980742525e9da65b7e6ed654ec7b833d8137030c1c1dac3d38b4b315f271ab7c7dea68c4cc0a5427f93
 
 Package: python-ensurepip-wheels
 Version: 3.14.6-1
@@ -142,11 +142,11 @@ Maintainer: @termux
 Depends: python (>= 3.11.1-1)
 Description: The PyPA recommended tool for installing Python packages
 Filename: pool/main/all/python-pip_26.2.1_all.deb
-Size: 1193104
-MD5sum: 137e24d9a946a5c32b99dd9f31638beb
-SHA1: f7b13bfce063cb94090f79259ba092a28e67a56b
-SHA256: 76958081b03fca3977eb6e0aec2bf24b61462a9cac483ef6b4f2931d99260aa5
-SHA512: 6061e43e6abe196d85c05482a92073ad02a6538afb574c6b0ee236116c97655c47be26f2f46542027d1f4f9d7fc97087a596b27aeac275b75b840a6706aa2d4a
+Size: 1192892
+MD5sum: 0030eedd7dff06782d4d053ff3cde69f
+SHA1: b49655e40f6ff6cba85e87ef99247ca6f22798aa
+SHA256: be1a65a437ca6ffba9c73f2516da5c9ef9bdb9a9028d5a68c489d231f7089442
+SHA512: dffe501e2afd2f4334ed9cc01a523ed50070c31b9dd177b0f5d16efb10030184b1d2e756e3df10ea0902de247ecdc1dbca49dda2ee13ffa9e63842963585d1c4
 
 Package: python-xcbgen
 Version: 1.17.0-3

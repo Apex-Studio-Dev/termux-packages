@@ -7,11 +7,11 @@ Maintainer: @termux
 Depends: abseil-cpp, libprotobuf, fmt, libc++, libexpat, libpng, libzopfli, zlib
 Description: AAPT2 (Android Asset Packaging Tool)
 Filename: pool/main/i686/aapt2_16.0.0.4-2_i686.deb
-Size: 1157696
-MD5sum: 957f1a88149e051b1465e2babb56e7f9
-SHA1: eeff26ea17c234d826e6627d0d85696bd91723dc
-SHA256: fbde213aeb7b783a430ec05b241973ebda031a2b5359b84abdb7c992ae4ef003
-SHA512: 9be4c4d650acf305098ac392729a9c79b4eb5a91f1e874cf093494dddddefb5707d41df974b1b1758c59f43274a0d09321c8ba7ac87290b75b9223975b1d5336
+Size: 1157828
+MD5sum: d7186eafdb93e033ac070dea50b2d66e
+SHA1: fd82ea1118d2f4f8de79b77a95754add988cf42b
+SHA256: 8e866fe4f9d7f512f01dd3093e4d6fb081859a7469684c15deebd259ca4e9962
+SHA512: c7cdb2cec33ace9a2ed042b37e5e4b34d4e713040e5dbc7ad47b34dda8826b7be06e6c585817005302f654162f4592cfecc7c1de811f6af3b3594c37d7201cfb
 
 Package: aapt
 Version: 16.0.0.4-2
@@ -22,11 +22,26 @@ Maintainer: @termux
 Depends: fmt, libc++, libexpat, libpng, libzopfli, zlib
 Description: Android Asset Packaging Tool
 Filename: pool/main/i686/aapt_16.0.0.4-2_i686.deb
-Size: 524568
-MD5sum: c02a25b9b8fd1e660f75b81347ae48b0
-SHA1: ad070d7785f57f36566e2a0e846dee6622fd3158
-SHA256: df0151c026dede5f6d6e14d57217d3072d13bc0bd14fa2952357578a685ef26c
-SHA512: 65e4a8865bc279e0a8a2186d56b27a8abc444ffdffc31312b5944f58b3f12efae8d5a9bae79362f4c3b2fa84cc3e15e997e36389f72ad5975084fe1f200e1728
+Size: 524576
+MD5sum: 5c4f5fe027f39631dc574ef9b4a4b8c4
+SHA1: 97c1a7f4388edd796085585e3ef03fa80e1ab208
+SHA256: 61718bb61608bb120e9cb1b0b1a8b0deba29fe56637f1e1da02974d144d45d66
+SHA512: 1d59c0bc5f1da0fc24ab7330b880aebe82a24bae7cc5391a9a985cc805450c91c35d3677682a924ea70e3664d9ffe1b965c0d54911783081ffab48f7388d5efe
+
+Package: abseil-cpp
+Version: 20260526.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: Abseil C++ Common Libraries
+Filename: pool/main/i686/abseil-cpp_20260526.0_i686.deb
+Size: 1267508
+MD5sum: 9697abe7b1d7050c69a78ee81d135689
+SHA1: d51b951b0e817e0d8f513c90f4cb453d324ba5ba
+SHA256: dc45919acf9c8b75ef1c505ab962cd0ffdd8f50230bfb679106a8d7b34d83f62
+SHA512: eaa6335251877bcd5c540ebce2bb64b7fa0308686f7e17df09f409c2a165b38972f4a69980f21929ed800e3fe7e0635fcb451dcf60f62cf4fef999ffb5e3d362
 
 Package: aidl
 Version: 16.0.0.4-2
@@ -37,11 +52,71 @@ Maintainer: @termux
 Depends: googletest, fmt, libc++, libexpat, libpng, libzopfli, zlib
 Description: Android Interface Definition Language (AIDL)
 Filename: pool/main/i686/aidl_16.0.0.4-2_i686.deb
-Size: 587448
-MD5sum: 7bf2cb69fae18cab68578bd5a92a5937
-SHA1: fb485adb87c7ac40806c43b604881c56d3e5a33c
-SHA256: ddde7c1c8aab518f961a108648aa4520878657db9e57e237765e291e99144738
-SHA512: cf280725f20b2d1c3c6eafd7355a1d075bffa047f02dec5b47579ba608dec846c304d446a630323fb2d2406ff3035366b6e77191d37e6f8281c278abce971803
+Size: 588232
+MD5sum: 9d1e061c774c87bf7353b57d6c83b9f6
+SHA1: a5ab891fcf6f2c931a789058fe76364bd57e946e
+SHA256: 491594e6a582797d04040c88fb2568145faa240cbdf92dd7f488d79b9d0dda66
+SHA512: 025ff4a2ca55489bbaacec723dd20b3bda9ef7380e597a192a91700b10f12d1b8170ef6211711fccd78dae26048033c658651a780ffd89d0b1525f0983aabe7c
+
+Package: apr-static
+Version: 1.7.6-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: apr (= 1.7.6-2)
+Description: Static libraries for apr
+Filename: pool/main/i686/apr-static_1.7.6-2_i686.deb
+Size: 82412
+MD5sum: 126601b4bd01fdc185bcd88ec90a81e5
+SHA1: 961c712304d2e04fb30dd9e5a36a4001363619c6
+SHA256: 729b7a026a1d32768a308d3e8671ef0a30459dc3c2586fbf316f42643b8502f6
+SHA512: caa8f221fb71e7a2ec179312abb8d891ed3f979aca0987d8714f6853fbbb1ed349027ad3e53834ff6f680982315a5a742a97c4a6f9824019b6ef8f26d08147b5
+
+Package: apr-util-static
+Version: 1.6.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: apr-util (= 1.6.5)
+Description: Static libraries for apr-util
+Filename: pool/main/i686/apr-util-static_1.6.5_i686.deb
+Size: 68508
+MD5sum: 7ee222d17b0af14b8b7e02656873a96e
+SHA1: a5addbdf42ab46853eee91992c55865ed46ecfd1
+SHA256: 61bdd70fd918a27852d67a30382df176942d0c4d79cb7dbef8f2d1d53c86575b
+SHA512: ebb533cdc5dc5fd367b5f382d1b60640d029ea405a6218b2ca7c58f62866444853dcbc99556d8d764ea87045f67d671bea67c00be1deaa5dd1e0964aaa9812a8
+
+Package: apr-util
+Version: 1.6.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: apr, libcrypt, libexpat, libiconv, libuuid
+Description: Apache Portable Runtime Utility Library
+Filename: pool/main/i686/apr-util_1.6.5_i686.deb
+Size: 114876
+MD5sum: 6e5635707e417d8e84940e492761bc94
+SHA1: db6c0acd42dfe128e5a5ec6a28a2d53d5194d6f4
+SHA256: f04a431c1ca268bf0c1a6d036688ebb299fecc945235d4c8a404d9582f92d92d
+SHA512: 94790333bc0f8394ec6bee700c3d8f7e2f6f1515f6ad7dea500e3e28521a5d7fd6a4368c55e549c9b7ce0c34117a10e7d4684f29e96c5c14d4f76a9eef21464c
+
+Package: apr
+Version: 1.7.6-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libuuid
+Description: Apache Portable Runtime Library
+Filename: pool/main/i686/apr_1.7.6-2_i686.deb
+Size: 241412
+MD5sum: cb90271ab5e4310b702e654980800912
+SHA1: 345299ed8f7d653d61d943aa688d69d540d94999
+SHA256: e3b888e8a77a9ac84133608ca93117a34ea0c9b1bd74d1821774f427f653bf9c
+SHA512: b0a4adb03325ca6ce9fbef42fd9ae1a4f049c799b7ed37a1e34b563fcf81cef23508a2f3d5cc99eaf6ab3913df00485b1ccdc2ce6766bce512cea003423f4f42
 
 Package: apt-ftparchive
 Version: 2.8.1-3
@@ -82,11 +157,11 @@ Maintainer: @termux
 Depends: libc++, c-ares, openssl, libxml2, zlib
 Description: Download utility supporting HTTP/HTTPS, FTP, BitTorrent and Metalink
 Filename: pool/main/i686/aria2_1.37.0-3_i686.deb
-Size: 797524
-MD5sum: 9db271a2a8fa08f88b4d863e10faa6bd
-SHA1: 51cffe46a0fee2e06a7867f5a33d371fda82a662
-SHA256: 50bc932cde67dd190f8ea3ef2f667d751fa887877197537d192d2e6748b84ce8
-SHA512: d2fbcb679ee9a53e21f0b3d81a9d7ae74db1788f5831e7fdda0287c83a01e050111b1a03afd0bfcc529fdd80ae5a8f0fc23495cee14ca56c83fb29b97511a1b0
+Size: 797588
+MD5sum: 8fcce4ff6dfd0fd653432839eb1ea0a9
+SHA1: 42cb0c66ffd6ef6478c0b662ec90077bdce13922
+SHA256: 54fc87eb2bb5b52f62b284c8fd82d185c634135d286e9123f42a347b60325c67
+SHA512: b47aba2f4d8a69eb0cfa141d57751bd1c75e4aacfd8d65a57f4fb60e6d709c9a9e189f484471cb6e278e104e574a2a819d72200dffa45820f276f2587bcfc60a
 
 Package: attr-static
 Version: 2.6.0
@@ -142,11 +217,11 @@ Maintainer: @termux
 Depends: 
 Description: GNU Binutils for cross build on the host (NOT for Termux)
 Filename: pool/main/i686/binutils-cross_2.47_i686.deb
-Size: 2194684
-MD5sum: b7e4fe26596ed34c9aac3d98cd2bb500
-SHA1: e0a23dc364aa55098a090b9bde94eadeb4c01b05
-SHA256: c92b1898dfb16402b23b30bd2d6e20bc509fbdf448b031ed4434f43ea44b810f
-SHA512: a18392cae5e403d47a2da6012c697412c46025c3e4eab9b8b66aad5df238cf933d2d76b5fa456ffc4987361a138d788dea60ace9dfa95addb66a4b9f8725d6f3
+Size: 2194552
+MD5sum: 76b499bc275119b616fd40c8615ac4a9
+SHA1: 10daf34b967770e66073164edeebc703033bc030
+SHA256: e1502704830e29fb28c3cd21ac56593f70a7f0db7fc00e96719d1834cbfddc55
+SHA512: 808d919773e2c57e8550d1915958ed3d2675d47e26305fdce5d510118e09c7345150adf833fbb66da5e6afd6d433e240280ec7780f3714042fecbe1bdad2c30f
 
 Package: binutils
 Version: 2.47
@@ -157,11 +232,11 @@ Maintainer: @termux
 Depends: libc++, zlib, zstd
 Description: A GNU collection of binary utilities
 Filename: pool/main/i686/binutils_2.47_i686.deb
-Size: 2218928
-MD5sum: 6edf62a261ed5d4dbfad78b6b73656b4
-SHA1: e92fecddb50470f7570684d0c4c15cca1bc37309
-SHA256: 4c8ec162a0c6e7d44f2d85a83dcfd4f3d33c67abd51e105d6e54f8e2eccf5dd2
-SHA512: f407eace820f271313b7ca26d632a45df5bd9df179e61ab1bec267344cf4de34ec8d048da1a86c313b883ca70ae4bc7f2a21f3f28ff3ef4dde04ae482f6259b4
+Size: 2216492
+MD5sum: c7a1357878c629de3d034d9726cd7d20
+SHA1: 427e7e2dde6ef4e2bbca4baa6c24c3716174cb3c
+SHA256: 87698a7ecb9094407fdf9f38629ccf6e253b5995c26adb392e59981e1d121c42
+SHA512: d13db1d4b54cb2953171f488d0a6be3940eacef957a27aabc282f948079eb6a09b7c6443907a42de415f02553e5efb366e8f5b7d88b007efe1beb0ab902085a1
 
 Package: blk-utils
 Version: 2.42.1-4
@@ -193,6 +268,21 @@ SHA1: 6623de3532d3008704915bbebc84072f4d66810b
 SHA256: 689c92be420d4b180fd9fa0485198fae2ee4cd5798cfc855ec7b62c0f432acda
 SHA512: 865d072556924bacdaf28778c4ee784ce6abe5acfb7d232db0ba344b91c47ba8aaee289e754c309ded85aaff59a23fecb493f252fffd58785b8cb449829ccffc
 
+Package: bsdtar
+Version: 3.8.9
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libarchive (= 3.8.9)
+Description: The tar(1) and cpio(1) programs from FreeBSD, using libarchive
+Filename: pool/main/i686/bsdtar_3.8.9_i686.deb
+Size: 391844
+MD5sum: 72feea40e73f7a3fdf794b662acd48e2
+SHA1: b7541e188e4847295db0045be7be61f461c48e4b
+SHA256: 03c90d64444190ea6bea4658a4cd081fb0438b8495b8cd98f359f38864d13dc5
+SHA512: 883bcc929da9e6c723a4b822cb0784ca9c2010a54fbd22a1ba68abc9ae3ba7959717540215b9d0a1e32c67f6e34eedfd37ee75225b161ed8041ac319a18068c9
+
 Package: bzip2
 Version: 1.0.8-8
 Architecture: i686
@@ -207,6 +297,21 @@ MD5sum: 6c265147aa4370ee005e7e1772849309
 SHA1: f1ef951a556922bf4775f00ef4278489102ac905
 SHA256: a982add68bb87eb6eeca6817c0f9567c4d2a7ade3e6fbbda6fe1565f79668c1d
 SHA512: b650eec339ce92c2ac2462c368dddb94e4d70b2ca24f6aebad94d8307c7de7120be967db8d6ab5b25928eff254c5b8b0fc765ac1fa4d80aa4b84d9f67edf6d44
+
+Package: c-ares
+Version: 1.34.8
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: resolv-conf
+Description: Library for asynchronous DNS requests (including name resolves)
+Filename: pool/main/i686/c-ares_1.34.8_i686.deb
+Size: 206484
+MD5sum: 6f2d32dc4a1acc8fd15bde9c1905fee7
+SHA1: 44478d102e0f74332b92bbb8bb427db886397a42
+SHA256: 0b4171c17eac0e7c7fe8bc4ba3ae3fd29270aed56130e76ef2ebf0000a2e49f0
+SHA512: 5112eb9d3560e73c48a0155a9620729c9efd4071fd7dce7acc54c928448782bc6df483f36971c419a8ba2c6227796ce0f3e7cd1a4f3717a1a32176787f4f1f22
 
 Package: clang
 Version: 21.1.8-3
@@ -232,11 +337,11 @@ Maintainer: @termux
 Depends: ncurses-ui-libs, cmake (= 4.4.3)
 Description: Curses based user interface for CMake (ccmake)
 Filename: pool/main/i686/cmake-curses-gui_4.4.3_i686.deb
-Size: 3052792
-MD5sum: bd91f8d313ccab427ee0c569d05f2036
-SHA1: 8d086c5a491a4a4d21a7526445e3ed448a9c157d
-SHA256: 11539495f24307cd33f5dcf95e1cc34df7787c2d950c968f619bffd680cf8924
-SHA512: f38fde9b2abf91ed5f4156286d2104c4c03620ed0e6ff82c6af9d9b0291ed2f6cf8340f781628af993927601fe22cc5011ac495980790f2ff9488868c491145b
+Size: 3052696
+MD5sum: f0847d8e08b8e8ead7d1addea16744e5
+SHA1: f06c14fe02fc87c9e8acf4b9249201f248aa0982
+SHA256: 3f8d207ee23b2bc3c01ea9f0fe7798f410a1263573c65410f123747178cef269
+SHA512: f96234d8949aa46399b1f34a822d0578213baebfea27d35b25975a69c0e6bffb4e4ac468b5baf7a7725eeb8df6a14c9033562f46fce4948065c9b0e2b6510211
 
 Package: cmake
 Version: 4.4.3
@@ -247,11 +352,11 @@ Maintainer: @termux
 Depends: libarchive, libc++, libcurl, libexpat, jsoncpp, libuv, rhash, zlib
 Description: Family of tools designed to build, test and package software
 Filename: pool/main/i686/cmake_4.4.3_i686.deb
-Size: 12547744
-MD5sum: ea98dd33f776aff88124e9d3e0ad0297
-SHA1: 4be52427a45c48b649d39cebe9231409b63d33d4
-SHA256: 1b310b0062cd99b4db119c082ade06637332bcc84329c1e07adca8df250b2894
-SHA512: ee56845ceb5fb9e30dde5ef1a33dfa8498eee02ea309a92c75cccf75fe8d9164281f39cbf37b8bf97f04f7e84b2af8f6ba17060efd0e6ac455c85296e8872282
+Size: 12549508
+MD5sum: c8507f554f54314de81122f883443fa1
+SHA1: 9d0a4f6feb2118d2dea8279d059d912058a971cc
+SHA256: 9b1e7694337179e549f1d7fb6fc64502532e59ee30c98c41d25dd94d623fc6b3
+SHA512: d7b26f54e356f2ec06f59c95ddf4d548291940d41b253f3b02f798d329b8aba5a81e73b01d53c32818448e09ffc166e5bfd3c619d5fc0a0410cf8c8fae644a74
 
 Package: command-not-found
 Version: 3.5.0-9
@@ -323,10 +428,10 @@ Depends:
 Description: Small utilities which are used primarily by the installation scripts of Debian packages
 Filename: pool/main/i686/debianutils_5.24_i686.deb
 Size: 17320
-MD5sum: 7fb16976db589a2adc0cea54ce88e069
-SHA1: 20af76d073248250f912b9a899bbc63cfcd8b42f
-SHA256: 144b46178a260501032057b87c8785ea0024c031fdaf6dde463c538f326a32ef
-SHA512: 6916f58fd9236e50414e4523de262da19cd4803738628251159ab9bc9bd7131faf3d975ced78727f1bb9ab0437a184878b9d7b4aa26021040d46c86b18116854
+MD5sum: b31b7114beb235512e250095b298ea25
+SHA1: 99299d889084e9769edbb8a30f84df290fedcc3a
+SHA256: 8d3e1a5232e59e45111dc70dd430eab8f72d3b65422d6c43fb741a453aa3ba57
+SHA512: 97b390e346420264535a60a55d4e9f9512e6936ad9a7d5bd24bcb87858c18d1d73dc39567dbc7cbf5eced6469b61eb74e9426fa9f2c0d1e54b67d952452bda47
 
 Package: dialog-static
 Version: 1.3-20260721-0
@@ -382,11 +487,11 @@ Maintainer: @termux
 Depends: libandroid-support
 Description: Converts between DOS and Unix text files
 Filename: pool/main/i686/dos2unix_7.5.7_i686.deb
-Size: 67060
-MD5sum: c7a8d97573e9468a0e11618d56bf7073
-SHA1: 48a7043e5cbe8d91510ec4700ea5622ecf80f4b0
-SHA256: 5394f934d4e1bf3a8c9ceb54e994a0a267c3dafa839224fa55532d43b284f2bc
-SHA512: 08a41d7f52392b6a868d51913574dcc277bee8a399bca76bb79b0e17a43bcd9e56546d7fa34b53c3e7b2706b68bb1731540cca76c26e0f19d27e256a4ed6eb81
+Size: 67072
+MD5sum: 36a4b174d26a289e8eef9e26b03d64a1
+SHA1: 5f089962848096ae2656db857f2980704e46bef4
+SHA256: 68af649a446c67034a79f881359136192605df274af8a8b5675c4e985edc409d
+SHA512: bffaf2df5ff0f119d6dec40ea13c8f6522411d778b7ea31294b85dddd5be14d9b88666ba38c134b7989ce3c1ccb7e5d1f4ab438982bf89e80918c5d5f9428e50
 
 Package: doxygen
 Version: 1.18.0
@@ -427,11 +532,11 @@ Maintainer: Oliver Schmidhauser @Neo-Oli
 Depends: 
 Description: Classic UNIX line editor
 Filename: pool/main/i686/ed_1.22.6_i686.deb
-Size: 44008
-MD5sum: facbedfb6578d48c159d6437368b490a
-SHA1: 115c829257d6fdc3b5129e8b2d6b98023bf3ee25
-SHA256: b1c6e37c8aba0c1fe980822899b638934e54f1f6ecfe00d8cbeab4e2e3e0b906
-SHA512: a9f426daa8ae6337ab4ff535ce8ddb3b1cf951159f4e971e6277846e46eee1253fc40720b5b39c645ca4fc3421894cbcac0158e8d925e5acd346f992699a21a1
+Size: 44000
+MD5sum: 46ef1ea82a9e08047f4c98aeee1cf087
+SHA1: 0b055a62f6a055d6b3d75121d10ef1cff9f5ce73
+SHA256: 3e8cbd97061cdb07a0b65e7be28953696b4ab894224ed00a33e6df631e8d6c5a
+SHA512: c862bec9137147e46b6f64668f9a7f3d55510f77f06b44509ced5f264ff8e498198fe15089501ed4f8c3f2ffbbc6b731e098e05a6e2e984eb028d91b6daed08a
 
 Package: fdisk
 Version: 2.42.1-4
@@ -448,6 +553,21 @@ SHA1: 43d875103e57bdb4d337c7683c59be4023b85fa8
 SHA256: bee8e6103357f784a0620776ce194137b30baa5232957249dbadf68f12321404
 SHA512: 3d2a497e1b16982e2b98ba37997ab40839083fb3df7d5eaacb43f2b895f2055f5402e9ec48e575eef80fde2357aadc72301de53357ea1e1cc343e180165f154a
 
+Package: file
+Version: 5.48-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmagic (= 5.48-3)
+Description: Command-line tool that tells you in words what kind of data a file contains
+Filename: pool/main/i686/file_5.48-3_i686.deb
+Size: 17208
+MD5sum: c0b58950699be9df0970f18054d69264
+SHA1: 9f48b2f9a2da69cb2e6ca8727715f02d2e40c0a6
+SHA256: 5f37139150f2780a0d3a585fc1e6f78ffb51b56c04e0742e32ed16e6581eb4da
+SHA512: d0522bf5a5ccf3d24e1567addd3370c6cf18ea0b097f8a5293b10ac279b43fd747e84d1ae4d3df8c08b362253558fe1261ab596a1130d67c1f16e01e39bb59df
+
 Package: findutils
 Version: 4.10.0-1
 Architecture: i686
@@ -462,6 +582,21 @@ MD5sum: 18160344a83705932efd803c7774a959
 SHA1: aec27e8f16b444b03f59d10fbd6875de77de01fa
 SHA256: e1a457eed9c7973f101b9177964dcba94daf7d72756d7000ba7b4fe5607c01aa
 SHA512: 8c4b5c3d9ca272dcef8d0df0f508ca4a7d32d1cd761d1a2311829cb194113eff5870111970f214352c97e050bb87f891e1204e9162ef4777c36e2ef6911835a3
+
+Package: fmt
+Version: 1:11.2.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: Open-source formatting library for C++
+Filename: pool/main/i686/fmt_1:11.2.0_i686.deb
+Size: 173912
+MD5sum: 8e8d653e695f2698bb579da30e8c8f00
+SHA1: f5b65164935a33ccda16da0e1c210de05a892fc7
+SHA256: 4139bcdfa436b2c9be94984beac4241cbc63570e2a291f076a9f4ce4c30daa6a
+SHA512: 7fe81eda8b159e00a52d40089266ea287167b229035b4047fcfc6fe0cd5474f640f725d0b8c43c4694abaa175b0fc6f6148ac96e94b483c7abf6c197d831ea43
 
 Package: fontconfig-static
 Version: 2.18.3
@@ -608,10 +743,10 @@ Depends: tk, git (= 2.55.0)
 Description: Git repository browser
 Filename: pool/main/i686/git-gitk_2.55.0_i686.deb
 Size: 143696
-MD5sum: aef2a776ee099ea21d1088b732a5bcb1
-SHA1: 09ab8790fd3d437d1a29193441e7b2ec6ed71222
-SHA256: 4bd374a03d8ba26a111c1ebca677885c48bcf055b0d18d819f8d6fb4e5fbfde0
-SHA512: 6742e814284336e20e9b9e6932c8abf7199687cca267cdb879ebdaaa8c8f272774ed916c86a6b356089ae81aa6bdf061882b258b804f8499332b3c574a9aab53
+MD5sum: 08f078118fd4ec2dd71e2f7407764516
+SHA1: 7d93b4e1d13c5feae3a38b05ca4184bb387f3cf9
+SHA256: f13f16ebe8fdf5fdfe0f903860aa2b71868e6bf83379dcc8eb00aedb5cbd3a62
+SHA512: 09fc73833396bf1855fb2adbcb4cfdf86d5bc05be0b07a7645a055402c26026c7c335e9a7e537b163c630962c29c0e63af1b417b4c3bdabef012fb9d99df27cb
 
 Package: git-gui
 Version: 2.55.0
@@ -622,11 +757,11 @@ Maintainer: Joshua Kahn <tom@termux.dev>
 Depends: tk, git (= 2.55.0)
 Description: A graphical interface to Git
 Filename: pool/main/i686/git-gui_2.55.0_i686.deb
-Size: 215588
-MD5sum: 5a848b29f6534e0555b848d9b33ba8ad
-SHA1: e1da2fc663ecaf2a2d63d6862fdcbb5eeb534142
-SHA256: 5b11b99ff1cce60d959ebfee5a1e190ba6442ae966a237a3bdf7343de17ff4a8
-SHA512: a3babc2a8471649827efaee67504de64951ee8f0b1d34a0ce71fe2b331bdf3570d0463363684514c6bfc63a2aa9d8b54d4a3851c796ec84d1709643cece192c1
+Size: 215512
+MD5sum: 3a4b6b1ec39d7da5b497b58e8fc2cd48
+SHA1: 5154d06209db2ac2d5057b09ea0e51c10c7e992e
+SHA256: 9a32709a0b8ebd8c8ac7a95a9fa5190488229b41eefe782ff9c275ee4ecf901e
+SHA512: 0c04e69d1e1908696ef9f61bdddb7dab7346102c83f2954e35e9fe41e9e48b4fa1c5f86dae1e8d91362b2eb38c8f6b2fdd5a0c17ef62495496364999ff105491
 
 Package: git
 Version: 2.55.0
@@ -637,11 +772,26 @@ Maintainer: Joshua Kahn <tom@termux.dev>
 Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
 Description: Fast, scalable, distributed revision control system
 Filename: pool/main/i686/git_2.55.0_i686.deb
-Size: 4590608
-MD5sum: dc58d9c19543412a390759fb55cff04a
-SHA1: 7748f6b5bb684911bc3540323d8c9a3525a815d8
-SHA256: 0fbea25bd31f3b77a7e4e323af28a88f585ef7824afb4bc8fce49c0da812fbde
-SHA512: a0921158e242bd99664802e947bc77190be4256fc9c614ab7e8ac4abf956deec66e8f33ec2346456bdb83cc34d1f746a1f76299a9963d2fc0557a285570cee04
+Size: 4594252
+MD5sum: e449d0c11cc772aa0b533ca688966ea8
+SHA1: effd208f44e85bd9b4ac20a78c373dc9b2a06ab0
+SHA256: 50208808b63529d3c450048e74346a523136da92edf43840e12b071cb2824081
+SHA512: c1cac14997160b7ebaadd681bf9512f0ef9bffa9a564537d8fb8eb0bf542bb88aac4d1bbf0fededdefec32c12127ace9b1c4a67774bab3ccf6455cdd66c52668
+
+Package: googletest
+Version: 1.18.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: Google C++ testing framework
+Filename: pool/main/i686/googletest_1.18.0_i686.deb
+Size: 378268
+MD5sum: 688f94759baaffe98c3982f48e4b40eb
+SHA1: c86da239e73ec888d16ea259697d3eb2b2a78448
+SHA256: 60cf67a16dd3fe10080223179bb26f2789d845b9a317fb6ae2f62878c75a5bbd
+SHA512: 194674c4eac390f5d570573a51140d85d9bfcf251a66ba6a218d2628c5526a8632093ba6cfa73a539e0677ad6305fcacfee55e39c955b1a9ecb713ef0b3278f9
 
 Package: grep
 Version: 3.12-3
@@ -727,11 +877,11 @@ Maintainer: @termux
 Depends: readline
 Description: Collection of common network programs
 Filename: pool/main/i686/inetutils_2.7_i686.deb
-Size: 244576
-MD5sum: 2f6e197c7c7db8974cfebd5377e6f7ef
-SHA1: 244c66c2f930b15fee7409b62dbb78deed68b5b3
-SHA256: 1c0d26f80455988b98f52d4c8fa14518845c2745366525b946a30203e348e069
-SHA512: af38525a99dee3288bd83c7ed940850796727c3ac15b5c0998b012923ad41a1e8e8833da5f93158badbca45e27dfa8d501314ebf23a7d652a5c6584c0cedad98
+Size: 244112
+MD5sum: 2ae2737c4c511985efc92a694a6cba89
+SHA1: b25e7f8ebcee5ccd43c37c489432f42515941d0b
+SHA256: 344341b2579f50b81d08ede48b3d258fee33dc36622f1c78dd94eadd65f28459
+SHA512: 294b8d96ccae7821a88a11acaeacd02ef52cd00f9afbc997e9bad56cf5546b9fe5481ac14cd4bf70545fe84274a15bea332dde6185fe201210a52ea0bbd98a6d
 
 Package: jq-static
 Version: 1.8.2
@@ -742,11 +892,11 @@ Maintainer: @termux
 Depends: jq (= 1.8.2)
 Description: Static libraries for jq
 Filename: pool/main/i686/jq-static_1.8.2_i686.deb
-Size: 155660
-MD5sum: cb7e7768892d711b67040a589f85695a
-SHA1: 7aba30ff56f3c79e50fad44b40edbd12409f443e
-SHA256: 93075f611468e25240a93c0ef05d92fc1b369dbf88c82b750b6917919d37630a
-SHA512: c6e21dc2a89f7838787283b7f4098cb84258fb1ffa17beb724b34104c4a367da805ddf71dc6c3d39108f1814e5db0c56099672ec587b35d088216d775d776d03
+Size: 155584
+MD5sum: 145dde0515081c7c9fbaf39e4f07a470
+SHA1: 356c24490ac9f23c014b7ce0c5c6b7ecae4456c6
+SHA256: 279a2b5b11857c944b05db8a1dd1f61e469cd589c82d89ac8ad67b62528c79e9
+SHA512: 6165d8701e6edd83ee76e1e946e85bbbcb86fabee0ab46fd150ffacb3163fffea127f72822a95ed7946dd86c9c3310c4578aeacc25e38fdd38b657f1a10ba1b0
 
 Package: jq
 Version: 1.8.2
@@ -757,11 +907,41 @@ Maintainer: @termux
 Depends: oniguruma
 Description: Command-line JSON processor
 Filename: pool/main/i686/jq_1.8.2_i686.deb
-Size: 207876
-MD5sum: 20d9b16a758bfef96fc367b28656a641
-SHA1: 16691ea000c5baf85a4d76a83159824b616573ca
-SHA256: e9c24dcb918db52063343a0d431f31e69e0960fbde73cc94200ab12c9c06cc93
-SHA512: a1328ab4cb4085495275eb4449e39211ea620c53f82e081ca3f620d6a83259aea25e138fc58514c1fa3825d705d0bd55abd9b703a58788cd33d7cb22d75a9b0e
+Size: 207752
+MD5sum: 52a6e04a8a3a06ed6285512b491efd21
+SHA1: bc0175932806131be234b09f0fd9d49bd8074b12
+SHA256: 3e1557fe695e9ff24994a1859e5d3d6467fde2fddc7fc0396ed5b8ffe1476554
+SHA512: 2814450aa610ee58e6c1142992aa2517ca7851f5aa9046b1981b10b11617dfe4740c3c7fcbd52aea433f825e74660e0bb525555a3f8069100697a882ac7a8a3f
+
+Package: jsoncpp-static
+Version: 1.9.8
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: jsoncpp (= 1.9.8)
+Description: Static libraries for jsoncpp
+Filename: pool/main/i686/jsoncpp-static_1.9.8_i686.deb
+Size: 81580
+MD5sum: 9ad761b6e62477822e4302bc1b6e640c
+SHA1: 7f0d7f7174abb8d617a9573049ebecccf5c777af
+SHA256: c402063b94df20a2476b47ce32a3cce5cab553c0229f503d987c6f9710f65ec2
+SHA512: 91cab396f33ab444dafb781c40802945fe152d5f365b04af4c76f23a631464d7fd6b8133d72b9a180ceb3a143f29918bc08505d0170e5954e7da5c7869a874a2
+
+Package: jsoncpp
+Version: 1.9.8
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: C++ library for interacting with JSON
+Filename: pool/main/i686/jsoncpp_1.9.8_i686.deb
+Size: 106672
+MD5sum: 196343ea98d9d7936b24d2be07188631
+SHA1: a0b00ddf3653c09ccef5edec4db24b500605829e
+SHA256: 58f109b2dde765b0f57454b458d18a69af6b9a99c6d0e2077982cb70cc3127f4
+SHA512: 5f91dadec1e6a6b6d6e96bb33db29ddb4ad69e4a17de3d9c3e88e216384bb9ba103540c08534100c96c50c1a90634a351fe54bae023166ea510b5a55dd0aa663
 
 Package: less
 Version: 704
@@ -973,6 +1153,36 @@ SHA1: 66810fa4d1aad49f010266515780201ee380a8f4
 SHA256: 9e9162103cae9102c7167e76371468c90dde65ded09385dcd033180614b37a00
 SHA512: a00c729f7b7558006d41a9d23922a2837367c4459c328f5754b30ae3c511854fbf2ffc6d8ef141669edba04a6c49d94011d9a4c5c6cec0313140f955debeafc4
 
+Package: libarchive-static
+Version: 3.8.9
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libarchive (= 3.8.9)
+Description: Static libraries for libarchive
+Filename: pool/main/i686/libarchive-static_3.8.9_i686.deb
+Size: 366184
+MD5sum: 37751aba668e5e764bb5c3757175a066
+SHA1: 9d7bcf08546269d0d4f6ad5a7ce3419f62dd0b4a
+SHA256: a36b373fed076d8dfe34757910fcae795973b956962046a3636a1d4dcb764f7e
+SHA512: a06a01ca8d62bc653a514d32f94ffbdb0a4e895e7ee8b2a01c17fbaf1220abbf03068d84f233f57ea0656af3542fc1292cac6967eace7d6474c7dca14b3a4906
+
+Package: libarchive
+Version: 3.8.9
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libbz2, libiconv, liblzma, libxml2, openssl, zlib
+Description: Multi-format archive and compression library
+Filename: pool/main/i686/libarchive_3.8.9_i686.deb
+Size: 430724
+MD5sum: caed8972f07df09508e6722dc9062bbb
+SHA1: 7be0d799dadf1b601d12024bae9ff4f188d9348e
+SHA256: b3f33a861b41d10465595ac86b92dd9f9066b10a9c37c61d8c5fe3833b0a7da3
+SHA512: 7c67078055a5b58f608a91a56e5867a5b323dce3b26c8a67512017b89526f8c9af74d3cac0746b863fd22cf9141bdbe97236843b32dba21e7ad8ea11782ac1eb
+
 Package: libassuan-static
 Version: 3.0.2-1
 Architecture: i686
@@ -1047,6 +1257,36 @@ MD5sum: 2c10bbc6a91cb892bf07b8ba3e5e0162
 SHA1: 8d73fc81a743625623c9c55a2bc1aede2b590c0a
 SHA256: 70adc9d8d51df79b94a4f61cdb15c70424960a46ece962f52179f8910ccd46d5
 SHA512: f51fc58a32b96ac1d5abd65bc3dfcaa01b190ec629e74ea16967f0b0fecbbe668b896fb176ee90bb002e440cffa95df89308bf768422bb971abcbb8d2cecff55
+
+Package: libcap-ng-static
+Version: 2:0.9.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libcap-ng (= 2:0.9.5)
+Description: Static libraries for libcap-ng
+Filename: pool/main/i686/libcap-ng-static_2:0.9.5_i686.deb
+Size: 9168
+MD5sum: 42a2b2c54f4555ab1d3a8c5fefa2caf3
+SHA1: 50082e10f56ff6080738a199f2083f0850f7dee9
+SHA256: 41891a39189e2574c1eec0a6a4c1b34426ac1e5db49d3d11bd1e7e7e7f54c489
+SHA512: 570856119cdbd36a1875527e58cacaefabd1bc497cc270e77bda765af6e47702bf3e990363d0bd43bc3a80f787d3fb83f08bf49c8315e89746e4200b41d23cc6
+
+Package: libcap-ng
+Version: 2:0.9.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Library making programming with POSIX capabilities easier than traditional libcap
+Filename: pool/main/i686/libcap-ng_2:0.9.5_i686.deb
+Size: 58244
+MD5sum: 1b80f941f8441a6faca899f67d3b30d1
+SHA1: 703e5ffca62e19355f71a2e9da96431d31199875
+SHA256: 6a22c5394e629a55f8ed2b1e751e03e5cd0fa023ae2d162ef64fb3cd999ae460
+SHA512: a253a1efb583cdfeab0950091fcb1a000ac838c43b30322b495d2ff432145ce574d560fa167ebb9cbacea53f6927eed86f2a2bc9bad9f8c284508a6ff32e8b0e
 
 Package: libcompiler-rt
 Version: 21.1.8-3
@@ -1438,6 +1678,21 @@ SHA1: bdbd10e56f1076223648fdd4d6120e71f03c3b07
 SHA256: e3667f6a147bb46ffb7cbf11b8405a003f4f524e045d2a9b4538ee1bdc61cf50
 SHA512: d030723cf634f6d01e2b856458278306bd0334c54f87e039972ea7c0b7b903ff4f080ed733b46b819fee9ae00ba764eb33b9537db30fa1feb278dfe46737bb17
 
+Package: liblz4
+Version: 1.10.0-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Fast LZ compression algorithm library
+Filename: pool/main/i686/liblz4_1.10.0-1_i686.deb
+Size: 100708
+MD5sum: 4fc7b1ea79b627b6c7f83f9cb922bf6f
+SHA1: 06bb9658f95319ba47e214d2eb7131c25eb0c951
+SHA256: 47e8cc1e927db1e9ea480c537562cc0d805b1b120cc76d5f0b08dcfe77b295cd
+SHA512: 2dab9e4fd3624d51237e155101e7a32cac7f65a438dc345e07ec425f3a50cdc360e0c4702d9d1853958bb22c38eb84020222640e89603559fce9bc6246d3e84f
+
 Package: liblzma-static
 Version: 5.8.3
 Architecture: i686
@@ -1467,6 +1722,36 @@ MD5sum: 34541fa26a82092d763e35870edf96fc
 SHA1: b5a2aecf9de8891228ab19cebcef5f7903dc8556
 SHA256: 0b18923c25242bb8d2d02e010bd531ad15ddb76b3409aac4fa2b9aef353b7506
 SHA512: 31375b36677ea19ad23e1bd88d7dd2fa4d0b6157af76d3e8770486e9870765b1beae1ca74adc0a78b2d7262a29c5c029776e919300c6c854e06b4fd691781380
+
+Package: libmagic-static
+Version: 5.48-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmagic (= 5.48-3)
+Description: Static libraries for libmagic
+Filename: pool/main/i686/libmagic-static_5.48-3_i686.deb
+Size: 74048
+MD5sum: 0a87a05c5a546784398178b11de6b1a5
+SHA1: 2d81f9bb3774072acac557791889e5465eb6488f
+SHA256: 0dea2a59c1a3b45e7a44acc4f7da71a3b025cbc273074e6fc91469bf24a13134
+SHA512: 49e2f6c03997cf86a5843a67ca66017da6a2b8d8f8b504fc96cdc3af1759332e07385097e4340f17251072d0796fd263f1a47dcda2ec9d7494a1df41a3f569bf
+
+Package: libmagic
+Version: 5.48-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: zlib
+Description: File type identification library
+Filename: pool/main/i686/libmagic_5.48-3_i686.deb
+Size: 402112
+MD5sum: 41f0cd58736c0af371930e5fa2d99e0f
+SHA1: f8be135cea4a5146427cc78fafc958279de66694
+SHA256: 5db2d6e7d9f7cc28f9abb8340264c6423c43de5d1990eddf981c3699fbf87908
+SHA512: 49dd00c7add4ceb7f9e4200ca9bd73d4694bdda580306198996fe2916a1dea1c7f48610d36ba63d2a00f67e17e29e0c77dcf9116f2a3fde9462703578957ec12
 
 Package: libmd-static
 Version: 1.1.0-1
@@ -1903,6 +2188,36 @@ SHA1: 01c5c703a641421c06a5904201f0ae0a4477bcc0
 SHA256: 988b8f713e76c311fb0c1f0406813d7997c274abdea7435a674485e8336a8713
 SHA512: 89c73593ee92fc5e25159c147e3af650b5d30daa8ad66f8df01cbb8665ca4eeda7b8dd33362f88aac8016d9702487f619143c77446a8e975a1d01af8d03650b3
 
+Package: libtirpc-static
+Version: 1.3.7-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libtirpc (= 1.3.7-1)
+Description: Static libraries for libtirpc
+Filename: pool/main/i686/libtirpc-static_1.3.7-1_i686.deb
+Size: 66568
+MD5sum: b629054864a0f4e8da179a576003dcff
+SHA1: 38e379346702d8c2321ce449beccc8e2c19a1704
+SHA256: 95168d2a80c8b01c767d6067ad7ec24b0d190f16e29390b8d8e59e44a11857d7
+SHA512: 079bb8cf0b63c935c0118e2bfd6024d2749b7dfdac360bd2ebea8701dc35c0b15d3148d4ede0ee9caeca2f0e04eb240baa170ad019e8abfd34e66551010ba17c
+
+Package: libtirpc
+Version: 1.3.7-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Transport Independent RPC library
+Filename: pool/main/i686/libtirpc_1.3.7-1_i686.deb
+Size: 126128
+MD5sum: 9aacd7807958a2c8641aee33d6e2ace3
+SHA1: ab692511aa393e8448dea7888ace9b3043a99288
+SHA256: 4a9e43face6000f59c0e4d69216411c404a4218e85d3009da07a212760ea7e15
+SHA512: cd5ea9ba05394224be1173446ebfff8d19bab917021b7348972a54eeca14d607c42258bdbe69dd2c7972dcddc3d78bfceed4f86cffd5a3dd4336abf9f67951a1
+
 Package: libunbound-static
 Version: 1.26.0
 Architecture: i686
@@ -1977,6 +2292,36 @@ MD5sum: db21cdc1a6efebe09d45952f46b97773
 SHA1: 60c8048b50326a2e38cf8f598d9ab542424bd240
 SHA256: 5f60ee3e020af2bc3d5be229ffad721e1d7a76a765f35093d9291de05df9c5c9
 SHA512: 749872a0502cc1a4ff263fe4e67190c444a5f8a4a717c7e7e3f448796994ed788ce95b523d40f7e0e4c290f5c501d07ffd0d93f2f7b68ce1429f4a7cf2a26916
+
+Package: libuv-static
+Version: 1.52.1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libuv (= 1.52.1)
+Description: Static libraries for libuv
+Filename: pool/main/i686/libuv-static_1.52.1_i686.deb
+Size: 262248
+MD5sum: c1b5ce18a0e5fc82f28f1c3516fbfb81
+SHA1: f04cd196805b261cedf379962a537c627bf421ab
+SHA256: 977d4e3039df2db34cb55657d39fecb459e849103039174a3043696fb9a8ccdc
+SHA512: 065e72d53912c68ea0a67aff582cd60f7027feac72c770e60ac111ac453ff7d80aff5aee7cc9fdc64d049cca58d89cb461b35d9b35e73a4aed147cc8a5692cc0
+
+Package: libuv
+Version: 1.52.1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Support library with a focus on asynchronous I/O
+Filename: pool/main/i686/libuv_1.52.1_i686.deb
+Size: 86016
+MD5sum: a4c7a9a753f1e8bc31b86cf15a788389
+SHA1: 7e0edb1d1e40effe93868a6a13be0817711182f4
+SHA256: aa9175455e9ea041c5bdafbd1b52b22b21bc9c0e37e57051e12138f978579e73
+SHA512: fefc57e6384e514aceb5728e6d1dccc2d867ffb21db53a8e96c732f5a0af53521f731c6e900c6e91aa97b95ef65bf1cc1e3a6c424974059cb68bc7367dc0cc4c
 
 Package: libx11-static
 Version: 1.8.13-1
@@ -2248,6 +2593,21 @@ SHA1: 8a8a13f46ec974912b7b140d086179e18a159592
 SHA256: 173365627d80e729da87bd9a0ec0262816ff39a5b0869a12179f19d555bd8c3f
 SHA512: e02d549149651aada13d54a44104fa784622e0fe1fa8adfe620f3eb7b2bdefaae280ee70fe22169b06990034ce51050c4b4143b3c2dbda5513e8462de97e0c4e
 
+Package: libzopfli
+Version: 1.0.3-5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: New zlib compatible compressor library
+Filename: pool/main/i686/libzopfli_1.0.3-5_i686.deb
+Size: 124852
+MD5sum: bfb286bffeda1a43cae687c559a4df71
+SHA1: 5d04f77ce12a62082efa7f50cc13c738d6a3108e
+SHA256: bdc6f4ad8a48bb480c9a30f399ce4c3a304e2df67e2080405cd9e45e8ac9928f
+SHA512: 4d5d0d824c2b812ae17970d89bd8de74cf1cd6a83f696355e2b6837cade8ef28cf925b2fb92c9cee36f7676835fcdee5e77bf5c22835cd35cbade0ce03287341
+
 Package: lld
 Version: 21.1.8-3
 Architecture: i686
@@ -2317,11 +2677,11 @@ Maintainer: @termux
 Depends: lsof (= 4.99.7)
 Description: Static libraries for lsof
 Filename: pool/main/i686/lsof-static_4.99.7_i686.deb
-Size: 55848
-MD5sum: 30a19c6ee16c1c665f01122b3305a9e0
-SHA1: 80f2845d42d4b9e9de0ac282d48341e3cef2f5db
-SHA256: ae577c9be7aa5f1b27cd6685f373914236a9bb1c068c6fe39c4f2941ff1bac84
-SHA512: 89f6c110f0f329fe36ea914cbade6f65aa46ac44df9129f53b2cab4b155322655a29dbd3ec39bd097a430ff5efefda512c0200985aa2612c8e681ed457a1b330
+Size: 55920
+MD5sum: 524303de28d7695c0ab15dc7b46c8b7a
+SHA1: bbfbc83a7fded2f89d4df78e0ec6d554be874c30
+SHA256: 3093352d3a72e336cbcfa218de10d0ab80cea6765314ac69bb8cbf893b840f41
+SHA512: 460796002884fe7bcc3df49e6f93737e61e386020053b3379efc0c00bc9f75a67385e1809c598ec7007ed52fbaff3489c830b726d96ebd3d5ae286b392dd96d2
 
 Package: lsof
 Version: 4.99.7
@@ -2332,11 +2692,26 @@ Maintainer: @termux
 Depends: libandroid-support, libtirpc
 Description: Lists open files for running Unix processes
 Filename: pool/main/i686/lsof_4.99.7_i686.deb
-Size: 128976
-MD5sum: 4842ca7718ab1271565c1f889cc12a30
-SHA1: 3aad872a7d5f1581ee1e5435f10a4c26dacb5780
-SHA256: cc9a087346b29c0584ff89e358d8b83db5c85d79917fcde76a0c8a891df81983
-SHA512: df0c7db7f520b24bd07ebf70aa5ce5f1c0a4188a82d89113fb512e52871f055554e142f2c2cfc25d023b6074acd188568ab16fa75f4b76600ef782e4fdb03200
+Size: 128884
+MD5sum: d99fb8503a83e82923751247a95c0fb1
+SHA1: 5edef1e79836e74ab05220aee2c4a9e8117c8743
+SHA256: 764f0428276b5efdb28fe0774ca4361a9bf239c870edca0d8359bd492dc7bd2c
+SHA512: 67d92555b6e14d080ddc790c3696f93511d03bc16d11a6a7c585e4871014c1f603416b95de950cec64b9c64766ffbc4ac53e3a73c5357ef34b823f9ca1cbaa00
+
+Package: lz4
+Version: 1.10.0-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: liblz4 (= 1.10.0-1)
+Description: Fast LZ compression algorithm tool
+Filename: pool/main/i686/lz4_1.10.0-1_i686.deb
+Size: 108128
+MD5sum: d4772fb49cde75a072448bd0017201c6
+SHA1: 0cb28a9c3b097af2b0ec04239a4e6117b826f8ae
+SHA256: a4d157e8785cff152fae5e6e3040c2decfd9ce3f3422a5377c77e9e2e007b1c1
+SHA512: a6d7587a14c4b0fc29d80f318e337e62ed328576e98c83fb2085776ed8116aaf149b82a94bf1a7ed02d5be27194ddf5343f3168decdca62b06171d3c3ff223e0
 
 Package: make
 Version: 4.4.1-1
@@ -2347,11 +2722,11 @@ Maintainer: @termux
 Depends: 
 Description: Tool to control the generation of non-source files from source files
 Filename: pool/main/i686/make_4.4.1-1_i686.deb
-Size: 248844
-MD5sum: f42af673b137db4777a9354da2f6d8d4
-SHA1: 0719ad02cd9e87bbdb6bd76b38ed4f133bcfda3b
-SHA256: 33217c49927b619950b275d29125c3dfebbcdca24887a83fbb7dc0bfe50de3f5
-SHA512: faa66a651c3cb8671a499bdaea80ddbd143f41b2a8db36facbe8830172913880e05dfb515744b9bfb2d087ab3f3d8452a360f34463c8c2d655277307562fb29d
+Size: 248752
+MD5sum: 90524a240e06132a08ed86d05c32e74c
+SHA1: fc80051661e247c8f8f1391a101bb359bf4ba7e2
+SHA256: db8fbcb067923264ba0dfed4d7b5c41eed2a776854e521cc6e1c2ac5842eb3a8
+SHA512: 2cb0c98dfb8e481f3cede5b445c409f218ac6347c91f5a89465861d91285208717784ffe89e7eabd0e3adadce8041977224f1e198b8538e5ad35432c702a84b5
 
 Package: mandoc
 Version: 1.14.6-6
@@ -2362,11 +2737,11 @@ Maintainer: Joshua Kahn <tom@termux.dev>
 Depends: less, libandroid-glob, zlib
 Description: Man page viewer from the mandoc toolset
 Filename: pool/main/i686/mandoc_1.14.6-6_i686.deb
-Size: 283708
-MD5sum: ea02a433279700b433100fa810c31d4b
-SHA1: e91cfd2182b24a17075d2318b5ba10cf89341a04
-SHA256: 5d316d59de54e1b178ae7625a5442a9a5da417e3d15236cba0fa368b8c1982a1
-SHA512: e176e5b4dac6a879c4ca52166347f2d0a7b86936662e9b1aea47fb5c9075f8269674f638efb8137ba2c7a6076181258fe9897af7cab4160cc2db04a3f7fe0d91
+Size: 283716
+MD5sum: 2bad4ec7bb939dcb3a51eac2fbfa2f54
+SHA1: 82f23af2f2a9f5fa206c3aadbd811ff956664d4c
+SHA256: d76b6fdca2c7ccf2b6988badaabb01859b4d251cfc3e9f285dfc280472ee8b77
+SHA512: adb62f57fcc12733aca7acec3790f7b5faac0c43927566f372bfb37d3f822a0ca34a3cb3a8c1fcfea69e84c59e6330ef045b52d1ff3202cbedcfaa9b8e6945d6
 
 Package: mlir
 Version: 21.1.8-3
@@ -2422,11 +2797,11 @@ Maintainer: @termux
 Depends: libandroid-support, ncurses, libmagic
 Description: Small, free and friendly text editor
 Filename: pool/main/i686/nano_9.2-1_i686.deb
-Size: 247112
-MD5sum: 7fc642a64f7dda9b831bb4ccab2bc954
-SHA1: d771ba6be7ea249c5848cff914c27a35e88d8437
-SHA256: 44b51a42372846f75b4af6239217e8ffa4d2d2062303c23d3db4d35f3050d6de
-SHA512: 397dcec969ace29238457925fc5f0383da375eaae3f99516304c0f0ea5d5d361f54f5816fba7047deaed18e08576340791a9e2dd9d31b8dacaae2feb3f55ea15
+Size: 247100
+MD5sum: 93f94695674ac444fd4c597638beb1cd
+SHA1: 7446da9dfa545144249ec02ed5b6087e23e7986d
+SHA256: f4749e95ca713d9bb62e15c7afb7bb2350fac4f955962f44e96f52a4221ed240
+SHA512: 3fd0a913e3c3341b8fb61cd3bde7450043d368ad7e04e2259caec8cc392adb4e0f391e916be70e7844c3325b8e7ed157b6bf1aa8546ba10f5cc1e0fd5dbd72a6
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830
@@ -2512,11 +2887,11 @@ Maintainer: @termux
 Depends: 
 Description: Configuration tools for Linux networking
 Filename: pool/main/i686/net-tools_2.10.0-1_i686.deb
-Size: 117580
-MD5sum: ded8fdaa102f0f69f1b5aa85a3200b06
-SHA1: 60a8c2c6742e659029ff2307f2893ac9b4bfc778
-SHA256: 0a4ecd971b43a9874d685985423d6a7a669d3db2391760df12d55819174273d6
-SHA512: ebe96881ab4c02b0e5b6b6184b1af51f4cabb068be9f34a66375725f40e99053b2a3d18a9d2aac93ce4462bbfdfce879b0934e5b2f744e250bc972c73e6b1127
+Size: 117604
+MD5sum: ed918e8c45fcc6b79a4248c53f3172d3
+SHA1: 29e82e86a7bde33d49169d64eac0387f3c345a6e
+SHA256: ace34f8eeb34dd22c1bb9a7f9a2c0432c4be5a13203fa734142449611c243332
+SHA512: 6efac145f6797093dfe27ef2e4fc4c1a2be2547e0bdde884b5f9cbb1db8a5604de4c8c7d85154772a90af74a15d3935e0767bd51c3b5242a6941925f7b1886c0
 
 Package: nettle
 Version: 4.0+really3.10.2
@@ -2532,6 +2907,36 @@ MD5sum: 1ac7c87841bea47d3f0cd18301284b1d
 SHA1: 6968db93ffa191619b38cd3180fe08caf4d9dd4b
 SHA256: 98e39b115dea4cdeebcd701b9aa4b465add9551bfe78f5adef18e08b5c80a67b
 SHA512: 1f528a3ef2de652241be61647a65a0519b18ab47d47a383f9593968d73809884ff1ff243b037e3a4700f3b99759f793701770959bd2d8276b1a44c2a131cdd86
+
+Package: oniguruma-static
+Version: 6.9.10-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: oniguruma (= 6.9.10-1)
+Description: Static libraries for oniguruma
+Filename: pool/main/i686/oniguruma-static_6.9.10-1_i686.deb
+Size: 146528
+MD5sum: ef20fba32b5ebabe5e684854a65524dc
+SHA1: d24bd86f6b1b7888e046b78b1695030d677e6175
+SHA256: 45bbe9f54082b71e3394941c3d4d9ecde53b171615ab74c9180e2df4e5ef7412
+SHA512: c7e471793a34da72b9834cee1fbd633b6dd867e523810d1632ec885333725849ee438f008007ada3acbf70d5f8e8d28e7ece8bbaa37101944dc93d0a15f13474
+
+Package: oniguruma
+Version: 6.9.10-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Regular expressions library
+Filename: pool/main/i686/oniguruma_6.9.10-1_i686.deb
+Size: 144492
+MD5sum: 3b159ef41f2b4c2bc48f6b23803bdfdc
+SHA1: b8d850bc9af7de39eb8954b42837188be455e5b9
+SHA256: ba8a8be3fe2df8231e3c8b22c289e5a163b5ce98fbe8b519772429e8bbc29e57
+SHA512: f1602864a4ccefd5cc2462eea2ee1c60992d79a5735d9bdb9713d679b57f3de1259feb4eb21892c304c212b06b769b3b2261e5fc1c819aa2bce476cd657adbde
 
 Package: openssl-static
 Version: 1:3.6.3
@@ -2587,11 +2992,11 @@ Maintainer: @termux
 Depends: 
 Description: GNU patch which applies diff files to create patched files
 Filename: pool/main/i686/patch_2.8-1_i686.deb
-Size: 80132
-MD5sum: edc2697f31de804cd6f7252ecc2b56ce
-SHA1: 5df90666499f168fbca2202c0779d4fcf13161eb
-SHA256: 07a6d36d2864255028beb7de6003f8e83db8587ee2cceef1d78d9eff40180e97
-SHA512: e27949ac9fe4cde3bbeacf088673bf1d436eb90747159d44b7b88a4ea9837a7be70e8ff565d430217e3c830b3d0e877344defb028612f2c459cb99358584054f
+Size: 80104
+MD5sum: 987e8c3ed0a8b0923a9fcdb44d290696
+SHA1: 100dc3fc69b8dcd24f91b211fd63fdccbb69306b
+SHA256: 57a937215d08d64bce3d432a0de1881e5714d069fd2f7f66d8165ff676a8728c
+SHA512: 73c852caa52d46108fe3cb84d58d4241f28be55691fe65d36cea5c11d7054260e16c11e372602b014d2a242e620f8a4d375683d4340b55ae1c2da44f8ef58aeb
 
 Package: pcre2-static
 Version: 10.47
@@ -2863,6 +3268,36 @@ SHA1: 8bdf3078f6a8b202ed3fa7a2cd9eff45c665d923
 SHA256: 4f3fd0a565874ba27f7eaa8af8369ed45f4935044cf7364c3c6e6ed3e45c1afc
 SHA512: 4dd946547c1b704e8a55fe408c26e168669d20f73f2c696ccbe62d85d74951cbbc0ae774734e3f82b2942805530ad22de1904e9a051f2cf7258763af4f93d0ad
 
+Package: rhash-static
+Version: 1.4.6-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: rhash (= 1.4.6-1)
+Description: Static libraries for rhash
+Filename: pool/main/i686/rhash-static_1.4.6-1_i686.deb
+Size: 140916
+MD5sum: c0cb1fac0f641e82fa17a06a61c6b20d
+SHA1: cd0cfcf5c314ac1c22e061634a24625d84d40173
+SHA256: 57d14b007e9cbc1d55f2ea6d531241dce962e235bd12b9f33d40058071ea625c
+SHA512: 8adceb2fd8019f1677cb41f1725c176ae959924b452f68e8702aa5d55ad7d7bf4481b11df07ce2b3b888c22d6f0eef03b3230859a37ee8628a2033171c14eafe
+
+Package: rhash
+Version: 1.4.6-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: openssl
+Description: Console utility for calculation and verification of magnet links and a wide range of hash sums
+Filename: pool/main/i686/rhash_1.4.6-1_i686.deb
+Size: 176956
+MD5sum: 342d08ee282af976d0259f6b116f7237
+SHA1: 22c8a808e77e5106cb52b8876d4fb55d7ff332e2
+SHA256: 834f936f00f8eaf7c97598bd891a28306b2774a3efaa0c326a89e708141a0aa2
+SHA512: f3c5f79bbf991f1ed34bec6ea956aa7dbda1ba2d1c711f92a99f4bc8cd539cf4a81d2507fcca5d63ce0a32cc4fb19841ac55cee19c957d604ff8b9ceb4c674c5
+
 Package: sed
 Version: 4.9-2
 Architecture: i686
@@ -2878,6 +3313,36 @@ SHA1: 88c0bb2ae414abe5d5bc0901a88071c19a964ce1
 SHA256: 20d036355ce2a168b35d7b2a81f08dcb2f8b1380a0b155bbf640a9e018eddc05
 SHA512: ea61562175fb2906d85f8b5be3a7863c8df02424580f2ddff1c41e7081bfd52ea2ceeafafb9807ae19c3943971bcf93fa7b67110930844de5b5653a142fbf798
 
+Package: serf-static
+Version: 1.3.10-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: serf (= 1.3.10-2)
+Description: Static libraries for serf
+Filename: pool/main/i686/serf-static_1.3.10-2_i686.deb
+Size: 38608
+MD5sum: 2bc298e3c0f53e0679fed43a5e7915ab
+SHA1: 6b476c56430884df824f56dc52426b4142de82d3
+SHA256: 968e3ed40fb661fb0c4f1e3f402f96a23aefe2a76635513ba50922c0186a94f1
+SHA512: 1bd2377fafe60c46e6f2abbb794717b0e77ad55ff57c75b387132618430a6ff165d536b995a494be5b0a61703d400da91ba0f39c7c5f12a9b01ad437f9cf23c8
+
+Package: serf
+Version: 1.3.10-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: apr, apr-util, openssl, zlib
+Description: High performance C-based HTTP client library
+Filename: pool/main/i686/serf_1.3.10-2_i686.deb
+Size: 50116
+MD5sum: 071b565798a49433d6e6f5569ada1201
+SHA1: 7e71f3833c0922824c5ce4274e06feb76e8ecb77
+SHA256: 2db078d2ab284fe293fdb59f542d6d3ba019ba303e7d2ac950dd47bdce8d0668
+SHA512: bcda544d1db1fc9605d2e8b8001fd0919444dbd563da2b6aa52547d82f838149bf2d32dfa43c78a3d5d748960698717c236d637cb4747d04c9d69c2aeadb89e2
+
 Package: sqlite
 Version: 3.53.4
 Architecture: i686
@@ -2892,6 +3357,66 @@ MD5sum: 4165b6a226340552f1942c961482816c
 SHA1: fc60d8052af69e5a6c016d5a2f2ca7093cd3ba50
 SHA256: 025ed2f25ff8fd089c97f176a2a3412cc52603304749c94eba802370b5ca5f02
 SHA512: 2ab5992ab69468b9b6434769e91d0c5eaf67b0a20d82f0b63ac392a1f9292f3e5e6b292687e68e85c9b19f15554682d5a7d7a92b507c7cc53b7f54ed9d948bfe
+
+Package: subversion-perl-static
+Version: 1.14.5-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: subversion-perl, subversion (= 1.14.5-3)
+Description: Static libraries for subversion-perl
+Filename: pool/main/i686/subversion-perl-static_1.14.5-3_i686.deb
+Size: 14616
+MD5sum: ca2cb13f86da0edab63905704f273e1a
+SHA1: 0c913420a6589f5b16933500d322299689293f76
+SHA256: aa92b4a0d66b6ab8ae10a6ed87c4d45e8451a2a3fa5c03e42ed47b7cfd6fd26f
+SHA512: db3bed03c5c35afdd9e201ad4eb7f39795499f4ddd1572a3170834bbc424c9b10aec11e2f44b8f220809b793d06c3345e1015240eb56f9aed76848cd1e188d9f
+
+Package: subversion-perl
+Version: 1.14.5-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: perl, subversion (= 1.14.5-3)
+Description: Perl interface to Subversion
+Filename: pool/main/i686/subversion-perl_1.14.5-3_i686.deb
+Size: 783080
+MD5sum: 14e287bd52440b06ef7a8e9929c533c3
+SHA1: 2d79fc4efe378c96925c382192b0c607b0dac64c
+SHA256: 0eb9b925752fcd64706f947b4b64d488d451fbd2e56523894a5e97c1e3a69f3b
+SHA512: 79f4c05223298938f9b84731eec0803230891c8a7e165ab8cad4e47ba0d64f7c3492ec6b3a6013ec74bb309ee46bbb55903cb20c19d442b166b7f35fc585c555
+
+Package: subversion-static
+Version: 1.14.5-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: subversion (= 1.14.5-3)
+Description: Static libraries for subversion
+Filename: pool/main/i686/subversion-static_1.14.5-3_i686.deb
+Size: 1099116
+MD5sum: 18301480830868f0ab5665bd786a7000
+SHA1: 7f3ec10ccb02319e188d34ffa0be7945fd64e1e3
+SHA256: 058366e6cb2a3750f30cb9936962a74ed6bca098f75d44897f18b09816ef71e5
+SHA512: 3a5db70c2eb5b0bfb47e376d5429235815eb949a5e1b1f89a5237a054f7922ea95a78143ffae83cb75e23ccbcab1743c3969f1becc443caf4732edfaa1e4351c
+
+Package: subversion
+Version: 1.14.5-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: apr, apr-util, serf, libexpat, libsqlite, liblz4, utf8proc, zlib, libmagic
+Description: Centralized version control system characterized by its simplicity
+Filename: pool/main/i686/subversion_1.14.5-3_i686.deb
+Size: 1446040
+MD5sum: 10f7ace79b709be3e82e80053af4a163
+SHA1: 0081f96481a7fa111751cc5c11d32d3a2c752195
+SHA256: 286d657664a765a336a9e7eefd9e0cfe5da35d8431d9f3e8e029e4f191691b0d
+SHA512: 6fca5b5c8a7b7072ec43c52da3fbcef020707353da7e4c0e9e14cbc6d2d1ac71c72906023308f499db8854ea02c0733870d12c697ca0482a0efc9f234829f1d7
 
 Package: swig
 Version: 4.5.0
@@ -2917,11 +3442,11 @@ Maintainer: @termux
 Depends: fmt, libc++, libprotobuf
 Description: Android sysprop generators
 Filename: pool/main/i686/sysprop_16.0.0.4-2_i686.deb
-Size: 106408
-MD5sum: 8d609f2d70aed3e54452595a10dbb7d2
-SHA1: 36508ebdb525a85cfa1c2e42274067d087093dd3
-SHA256: adfdab0d5d90f456d86cbdc9b3f212b32d9798e727b4caf1a6e9bb080dec38ef
-SHA512: 0e1c839af427698011acfa21bf1036a20758236825428b53f9bb633b82210d5444d617e2042f44f80b2466af0a56baa57d23e24b37b6b6882173980a3231d8ba
+Size: 106368
+MD5sum: 3c595bc8dfc3f1b21dccea1df8f67369
+SHA1: aef783bb2aa2cfbe0e1970fe4885c433e526a1e2
+SHA256: 1fe791956c6cf484249bad8dfd9ee321daf90a84179e79a25523b047f9110696
+SHA512: 008ede5d054c476153b14f012777dd2631d5bfdbdf423ad7a341f4d58fb6d0cb9fdd54e09b07d54dac0e9cea81508cf5924f8301e427f7af054a25f80b70f1fa
 
 Package: tar
 Version: 1.35-3
@@ -3082,11 +3607,41 @@ Maintainer: @termux
 Depends: libbz2
 Description: Tools for working with zip files
 Filename: pool/main/i686/unzip_6.0-10_i686.deb
-Size: 117148
-MD5sum: bd27047c03fc0c0f8de9e54f446a531e
-SHA1: f0849fa1f5e277ad2ad7eb2ff93c583f3b936c45
-SHA256: 36e73efa749a6317c3cdc5bfe0f68c28fb585553f5180129f183f6cef0d9479b
-SHA512: e454c601be0bfa46f44607ad81564080368f106e03ccb87f06f87a98adc0c03b02b3b08a8a6446a97273d42af21db5f73aed0d0116fe6c34480316db74cccb54
+Size: 117128
+MD5sum: f25ea625df4261f422b1f5bb5c3d67ec
+SHA1: 5e0cef3cfb8fd293976172e668407014319f0d46
+SHA256: 9b4096cb53047082fd8768ac2791d9abffa0256eaf9700f449bab44716c8f87f
+SHA512: af17b743e84d0c01ccdfcc00979720ac0aa898255afd578e856d452219cdadd758f8de432f7e6073b517c4ea795e215f26acdeedb8731192f8e12f7c264f0f6e
+
+Package: utf8proc-static
+Version: 2.11.3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: utf8proc (= 2.11.3)
+Description: Static libraries for utf8proc
+Filename: pool/main/i686/utf8proc-static_2.11.3_i686.deb
+Size: 48868
+MD5sum: a5b03872d2ffd6cdbed7a6f15ad49bf8
+SHA1: c943c8f2c41bbaa186d3033da2cd434ef32a353d
+SHA256: da25fb5d3a9a7bc87e0ea0d77d1392b622dbee9e134220d0193861149de4793a
+SHA512: dd8c34ccdff464e55e28fa0049cdf086222cbd4f2e502394e10e11ba494ba49fe43e76794b3b52c9ec056321061b0b88ed159d69cb6fc99485f32dfd2c18c803
+
+Package: utf8proc
+Version: 2.11.3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Library for processing UTF-8 Unicode data
+Filename: pool/main/i686/utf8proc_2.11.3_i686.deb
+Size: 60224
+MD5sum: 7afbb5654f61708711c790c9d4c0942b
+SHA1: 3a4f19d97c1ba65e9c69c04f5e7173f1f1ee2918
+SHA256: 332e63fd68c11fa14348a701bbd2bf5dd492036e7504d39a8f21a17db5f7fd81
+SHA512: 4415f282979deb1d75720ecd371f3dd7c4ca3ffc0f19e8ae6dafac0bd5a207b316ffc4697e8b8e2b0bfcedf125bc70049fa6019fbe805e053af1df3e5ab7d9b6
 
 Package: util-linux-static
 Version: 2.42.1-4
@@ -3142,11 +3697,11 @@ Maintainer: @termux
 Depends: libandroid-support, libiconv, libidn2, libuuid, openssl, pcre2, zlib
 Description: Commandline tool for retrieving files using HTTP, HTTPS and FTP
 Filename: pool/main/i686/wget_1.25.0-1_i686.deb
-Size: 294572
-MD5sum: 679339a9c0f44447acc7366b5fce3256
-SHA1: 36d2300c5e5ca4ec363613e00ed17eecf0ddd51b
-SHA256: f25facc39933d61945286783890037a51ee6d43d7714a03cf723ead4a8a2dd33
-SHA512: 479fec485c0a4ec9a0751ee7282da4ac2cd83b145242ed28c75bd94f90c483a700e74771f22631ad02d0b0741bb2d181924fe7a60ca021356f806f011840c610
+Size: 294604
+MD5sum: 385ea34f6e293f19e5d7295080e02b50
+SHA1: a6f44e608d77813a846befba4727f8b5c39d6957
+SHA256: e30a7cbc2da3d16e215bd20a75f61b5d7b8fe9e65c5e0f464dcefc759f1b26e0
+SHA512: cc87740dd1533b4115ac5470890ab45abc63c1bf4615f10a749a13eb6994a6afeba7a51554ebaf11d7694b910ca2ecd9e0abcf88bdb21a10a6fce35dedf0f7ea
 
 Package: which
 Version: 2.25
@@ -3157,11 +3712,11 @@ Maintainer: @termux
 Depends: 
 Description: Shows the full path of (shell) commands
 Filename: pool/main/i686/which_2.25_i686.deb
-Size: 12628
-MD5sum: ece860c25152a6546d75401830986a9b
-SHA1: 28bdbf8e2b7bf5f7a6c145f3b9daa47622b89503
-SHA256: daed9165e22cb783424bf92dc106bc3c52ba864970aebed7187ffca4804e888f
-SHA512: 4e2a09d30519c2667c91d6e1f842356e3973fcf67939b86c81a636d0ca7c4a54ed3e750d600d85bf8922196d9ef054633b96e09cc2611f3bf717b9c3c59068a2
+Size: 12632
+MD5sum: 306c66d4e173bb0610d9f1ecafac4668
+SHA1: 08198b1890be2ba03beca63ee1caec312596755c
+SHA256: cac971d904447a9e9f121c436f111a13491151a08b2c8f1177df2eac85cd5186
+SHA512: 62f6f3f7b7f8129606f0fe021b5bb10f82b1017fd726e9a84a36c0e5d22388fb8451b49fbd8ab860a2db26305709f63504d2d6334bc8a712cba0a49572a9b4cf
 
 Package: xsltproc
 Version: 1.1.45-1
@@ -3202,11 +3757,11 @@ Maintainer: @termux
 Depends: libandroid-support, libbz2
 Description: Tools for working with zip files
 Filename: pool/main/i686/zip_3.0-7_i686.deb
-Size: 153432
-MD5sum: af57c1ff3969596938f9f4a1f99251a8
-SHA1: 0068695bc10f4b41d1ab43230dfe558cc5563182
-SHA256: d0f0f473a7f8c832e937d454b42b98f35b22d3e15fb3503f605f0b8a6b2f536c
-SHA512: bcd6adb36a12567ebcddc982e32b66f0bbb8be415e6743ed56d0c5cf693ee391b7b56c2f9d9dbaf0565af1ed4dcff681eab8f61b97a846e7924b2f6a4d0371b4
+Size: 153376
+MD5sum: c14330b850769960b26288595e1033d6
+SHA1: b1bfb31ddfd0a0f5455810e93000d46ebcb58fb9
+SHA256: 6ed863bb18c8979fbc672f24abe83b461c9dfb85396cfe806917266306e2bb1c
+SHA512: 3cef05bdab50c8b5c3317262e49605ab0e29c4352a6b20de89f612493b08c30faebf0161ac36dbe8980afcdfab27aa59981896cbf0c203ec60c1cc4f5bb43d60
 
 Package: zlib-static
 Version: 1.3.2
@@ -3237,6 +3792,21 @@ MD5sum: ed0278d6e9b9559776e454f91a4d0bcd
 SHA1: 7b327be6073d8b0f7052ef563f1cb175f0c6f4c0
 SHA256: feb1a88a1f2d39a713a8559d97c8d885494a09bd89570b2ff3edddccaf38219b
 SHA512: acec236c3e3952d9df877c8d0f8544c25a47b46472ebf242343c9e850e4877d3d3ed0610b25c3d598314e50bdab69dcd8690e20c3fe44c539d6384cef9d633b9
+
+Package: zopfli
+Version: 1.0.3-5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libzopfli (= 1.0.3-5)
+Description: New zlib compatible compressor tools
+Filename: pool/main/i686/zopfli_1.0.3-5_i686.deb
+Size: 23424
+MD5sum: efe4c863d50e92217ec18e1f026561c4
+SHA1: 295dc1e94611c0e5c859c032456c21e7ff9cbe7a
+SHA256: 8e6506b579542931b1812e672fbb254fb25d8fda37ad17d91053079df383a095
+SHA512: f9e578c351578edc32fadc0b059f6ee3f0c624b63e30ab34a0d166c7dbcf01fb22c7fc396e7f0b63e1a7552e739df1bedc4d8ab2181e4b50ca3abc4414642e4e
 
 Package: zstd
 Version: 1.5.7-1
