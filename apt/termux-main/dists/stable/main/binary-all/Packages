@@ -149,6 +149,21 @@ SHA256: 5feb1261cc373ca56d7d439571d1c86636b1f6475a9b3b12b977a8c957d40aa6
 SHA512: d4fa58f70acd71ae1c2014a4ec2383ccbef3a190ab76c02cc11b31f84aca830153ca134c8c5faa39d3437931c6bc86f9831db46b2aa44cb290b8bb02e9f92997
 
 Package: termux-keyring
+Version: 3.14-1
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GPG public keys for the official Termux repositories
+Filename: pool/main/all/termux-keyring_3.14-1_all.deb
+Size: 46184
+MD5sum: 595a4deaf1ab9676c583d55dd483845f
+SHA1: 4cb7e5a19702026eb91d5e7b7d973d997548f447
+SHA256: 50b7f738ac9d2c2c9312e71ce8a5a80c2174a5ef7b8afa88e389346437914828
+SHA512: 19ba033ce195bc4bc2264a8ba8dc064c47ee64e04c007ef6e7e739463201202e596637d14239508a9c28b7a08164f89f91c89a848a0dbf573bb07a6d89777c76
+
+Package: termux-keyring
 Version: 3.14
 Architecture: all
 Section: 
