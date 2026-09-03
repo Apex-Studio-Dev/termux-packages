@@ -1483,6 +1483,36 @@ SHA1: ab6cb24ab0714a0e4d4dd30a331e47d3816a5df1
 SHA256: 70acf2be7bb2a17e08d48625843503233140e2d24c3fae74471578a89decb588
 SHA512: ff8c438e05d41ec37149b6e963a695b4148677dcd229f7c43fce53e3ba312612d7f1521f909a1c345f964b43a1680be48ed99bc342879c0ce00c9093773401a6
 
+Package: libsndfile-static
+Version: 1.2.2-3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libsndfile (= 1.2.2-3)
+Description: Static libraries for libsndfile
+Filename: pool/main/aarch64/libsndfile-static_1.2.2-3_aarch64.deb
+Size: 167916
+MD5sum: 96b78699c494baaf0cb28cfa685a62fd
+SHA1: e995149c18d335a38b441f02420d18ea63e09711
+SHA256: eab6054942db843a9a1e43523dec764a246799579bf37e5fddcb00d8808e8afc
+SHA512: aea55512ee24fb7b86023f2d7f455cde4f01d838a5456575b66a82937b0b96c983d167d7ad2768fbaa786c842976013df2669272d0b6035518974387969046a8
+
+Package: libsndfile
+Version: 1.2.2-3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libflac, libmp3lame, libmpg123, libogg, libopus, libvorbis
+Description: Library for reading/writing audio files
+Filename: pool/main/aarch64/libsndfile_1.2.2-3_aarch64.deb
+Size: 201840
+MD5sum: 8fdd6e0859333e55e117c580206d5313
+SHA1: fd5583debacbe85871ced019bc3a725cfbeb2f30
+SHA256: 1fb145fc030f4dc5fcae78488cf44a7ef79e82af49dcf143556118631ec31294
+SHA512: faede4557b2f4e942a8651aa43a02e519d2f3c5fbaacc6195c3fac09fe842955f610d7f59f69d2e6002797bf7b810991cc87a8913185e33c1f436f238b580bbc
+
 Package: libsqlite-static
 Version: 3.53.4
 Architecture: aarch64

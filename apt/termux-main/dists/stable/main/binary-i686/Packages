@@ -1483,6 +1483,36 @@ SHA1: 485946fd170b448e4830a680ff73e781c8720375
 SHA256: 91a858c5d14a5669fdb3aa54ffafbd98b3b45936846e5b3b80061f937c800369
 SHA512: 8704b3e932339a7d50c647c4aad406d69b3bd0f153573a29d6c94610a05f4df760254842f273e00ee3cdc7a96155ebb7887f9832e24e7b4619b9e45fd506a5c4
 
+Package: libsndfile-static
+Version: 1.2.2-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libsndfile (= 1.2.2-3)
+Description: Static libraries for libsndfile
+Filename: pool/main/i686/libsndfile-static_1.2.2-3_i686.deb
+Size: 178208
+MD5sum: 337b2060f2372cebe09e86f97ed78b75
+SHA1: 1e05b6571220716d20b8e1242bc9ea41a88416d4
+SHA256: cb29be150f6adbbf7956274123a0881b2f3019d4ef2d235f98eb1cd1b18b50c5
+SHA512: 5d0c972a8692a072270f3979ffed07af5ae6656ef3a0b71e232a0d9028bf5ea28d36bd348e696f0eea2537d782fd8255f1e87818e95a7c47e9ce3ff42833761e
+
+Package: libsndfile
+Version: 1.2.2-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libflac, libmp3lame, libmpg123, libogg, libopus, libvorbis
+Description: Library for reading/writing audio files
+Filename: pool/main/i686/libsndfile_1.2.2-3_i686.deb
+Size: 217616
+MD5sum: 1aff229b49546bafbef2103baab0dda0
+SHA1: 7e5ace52d40802e9986ab138bc4cf60ca6e43395
+SHA256: 6cda8aad787acc34e2c2f9c716637ae498bd87b9e1ee3ee3745d057f023dc602
+SHA512: d2bc3d3291f381495cdeaeeb7871263cfb9a59963cb671a10cefaf986047761abe4c8b305444e8f63dd85bc8c0c4720752fca9348ff57509f8c776a552340d77
+
 Package: libsqlite-static
 Version: 3.53.4
 Architecture: i686
