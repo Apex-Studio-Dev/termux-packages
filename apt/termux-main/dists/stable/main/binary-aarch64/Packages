@@ -193,6 +193,21 @@ SHA1: c7209de50d9ceb2dcc2234419b0aa88fecb693d3
 SHA256: e1b2943c28d3d53909403b82849c71c744743422f55bac784e8c053944feb54e
 SHA512: dfb1d4052109537a8abc33e1dcb0fc5ff46501815867b38086f3b78b911ed42cf6b0078b1681b6d9f0ef9b2ba384c534f18d69881feafaab3175c1393b1550f9
 
+Package: debianutils
+Version: 5.24
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Small utilities which are used primarily by the installation scripts of Debian packages
+Filename: pool/main/aarch64/debianutils_5.24_aarch64.deb
+Size: 17224
+MD5sum: 7b81cccfb11e297bb559f35cb6728d3e
+SHA1: 2cb41061b94dc6d935f973fc27d144919d3b1181
+SHA256: 766ab74a9da0a5d5aa1fce3cec0fc8a7ddf69938ef5c86d97d03eb4041b8e01c
+SHA512: a9cfebf474b5cd24b0707746d42769a6c72f73895cd0ab85bd1e2db5d418a8d17b77bc90b7f70a012452a6578b728a61e87827e1236679966b660442374bdc7c
+
 Package: dialog-static
 Version: 1.3-20260721-0
 Architecture: aarch64
@@ -238,6 +253,21 @@ SHA1: 65767e6db92cd58f489fe02ac484d96437323bc9
 SHA256: 4b35435a39b9efeb884d99d9801b0c98532affdb09a4d491b247f0780efdd04f
 SHA512: bb2e035fd2f5ed72aab6e07ba0404053341bbb9d39ef6dec3fb9f5e8d2604221f529470b49ff04770c13b0b9cd7a017a6a5a420e9a22af85095ef052dcca4529
 
+Package: dos2unix
+Version: 7.5.7
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support
+Description: Converts between DOS and Unix text files
+Filename: pool/main/aarch64/dos2unix_7.5.7_aarch64.deb
+Size: 65948
+MD5sum: 9ca0eec15cc8f3681f662ffe2162701e
+SHA1: 83e125c254e6a8d65abefae2fce732ed01bd98f6
+SHA256: f7e09846e81f949edca4022331d22c5faf3dd9b7d547cf73e1ebf23089eed9ba
+SHA512: 7a2a8fbef94d2b0898462a2dc554fae672e290266e9a0b572bd5abb0af4eec8b68abc779a5edd536f26e9a2b2df4659f68e905694f74804375c46525bbf51901
+
 Package: doxygen
 Version: 1.18.0
 Architecture: aarch64
@@ -267,6 +297,21 @@ MD5sum: 5fafe7689120c4f4606460d9998828c7
 SHA1: 8c21ee5664a6e075923e8fd8d4e06e20659965a6
 SHA256: cbf4400c18e3dcb9e814d22ec1a94eda97b12d878b7d016b6209f9b21b5c5c7c
 SHA512: d64da528f974d3e35d32830aeb8d47abba1fcb07318e3adaa12ae33eb47151c9b280e79205470aa5752665d0beccc74ea30c2339dce5c2c2d8dbed61f7520f11
+
+Package: ed
+Version: 1.22.6
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Oliver Schmidhauser @Neo-Oli
+Depends: 
+Description: Classic UNIX line editor
+Filename: pool/main/aarch64/ed_1.22.6_aarch64.deb
+Size: 43016
+MD5sum: e71a84ee81c4f99442c16a1224cb493e
+SHA1: 154ddea8267319b077798f00165e71c97d46be34
+SHA256: bdfd5b8a75879765ace8e2df0922f5c278c84c6b2684c3266b16feaa8cc96cd7
+SHA512: a1d181f70ad22e11934bf43787839ec2b25200b94e9654f545d71858931b822685f95f8d5f06eab570b8736fc712cc2241cd848f32eb38c18d8ff2442f9c8f1a
 
 Package: fdisk
 Version: 2.42.1-4
@@ -507,6 +552,21 @@ MD5sum: e5d858279c3c2b3fc8b9d773f05b6025
 SHA1: b984bebcdbf9cf32f5e69e8419cd3025688eadfc
 SHA256: 7408c21e4f2b4bbbe1f0e8f956be52dded579060dee3dfc8287bea2206a77414
 SHA512: d4817b93fee7f99479474ed26abd36f7830b99a6b844cba6a3b0eb8669dfdec199bc827fff035bf2d4033df5bfd5b82057686b186279a57bc618ed1f9460933c
+
+Package: inetutils
+Version: 2.7
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: readline
+Description: Collection of common network programs
+Filename: pool/main/aarch64/inetutils_2.7_aarch64.deb
+Size: 240156
+MD5sum: 9d72887e35b6e006cd845f82a26a6688
+SHA1: 2522e15f1d2e068220d839b2b9b9cf147b1b088c
+SHA256: 2fd1cc2b16ffc407aca2175dc657a4cf6a44b3e4c866f5b722c6cd62c0ffd30f
+SHA512: 27c06aeb9719ad51a0a9b1300d23cc54b12d6708e844a373b33d3b4edbbbb601a0282183a898131f8eedb3bc34aa55cad52bace54d20a413edb2b6a34381f1f0
 
 Package: less
 Version: 704
@@ -2038,6 +2098,36 @@ SHA1: aea98733468f52964794ec6db860a52d543b01d5
 SHA256: 26a27cc824c61bdbd3ec305f782fe053da659667d796e0bfe69dced661d1bb2d
 SHA512: 35ff94bb7dfbd8c01338b2dd9b1bb216f09caece4de5758ca68099e130c426321c5aef95a24a745022814698114d9ad79ee5d290790b4b4745e03e2dc657dd9c
 
+Package: lsof-static
+Version: 4.99.7
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: lsof (= 4.99.7)
+Description: Static libraries for lsof
+Filename: pool/main/aarch64/lsof-static_4.99.7_aarch64.deb
+Size: 54604
+MD5sum: a57141a312968fefb3d314ad618867d9
+SHA1: f4bc875fcd182f6ef5dbb50b55ee241045d58498
+SHA256: db01819ff8aec092dd34f47ffe36ef7cd3528811c93501b2e7330040aed89bb7
+SHA512: 3a802e6de3e6469c89d4226c4e8c47138478e331795e4a2feeb4761c6ad626e744fa2a471ac50dcb7b0132a7bd250a1ef0e47ef5083871d6fb2854bef2a23a5f
+
+Package: lsof
+Version: 4.99.7
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libtirpc
+Description: Lists open files for running Unix processes
+Filename: pool/main/aarch64/lsof_4.99.7_aarch64.deb
+Size: 124040
+MD5sum: e44608dd6ab99cb32c95e3dbae85bfbb
+SHA1: bd69ac01eeee149765b65b844e51535faff57830
+SHA256: 92f10b08adb44a62daf6f5f125d2354be4e8f46f775d19e6e3789d52f4d58a0d
+SHA512: fa9ed31cb17e8f2e67156feec98be544f925376257dd08e56a510c4cf0952262bcd66b5c4c18996680143a89b8a4e5db10ac0e11b6d5256013f0c6796b0fb0c1
+
 Package: make
 Version: 4.4.1-1
 Architecture: aarch64
@@ -2097,6 +2187,21 @@ MD5sum: b46c2404bdbba65c4a02aba4e066d477
 SHA1: e3fecffbaba2cd41b1e559f8fb053151132ca535
 SHA256: 6e2e90c232962c7350a77a5046b0201b0ef5dfb22896d65b8551fc02595fa674
 SHA512: f79fc497ab3e640b3bf32d34b5bf0fdcff4c3831073ed2e26ad8c64a5e3e21e434434fc8342738901416c2943704f66cf05780eabb78635fbeffc259c011adaf
+
+Package: nano
+Version: 9.2-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, ncurses, libmagic
+Description: Small, free and friendly text editor
+Filename: pool/main/aarch64/nano_9.2-1_aarch64.deb
+Size: 241008
+MD5sum: 32d644df8cb7b046fddea69eb9005664
+SHA1: eabadd1f5fe09136592993028f6fba21267f58cb
+SHA256: f02e6b40a5a0f41ba4ef42b18c7d480c95c3175c7e049e01693df0049d3a97a4
+SHA512: b0266e23b277784082963934889bdd35b3a36869ae40de2cbffdb44f0ff8b8861e226219cd7719b3b9c63580483c567d443ca90c4312442deef1bea9f1a8a751
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830
@@ -2173,6 +2278,21 @@ SHA1: 32b428649fa06512a00b56019c5533a2961c0cd3
 SHA256: 405af40eb2b568a69817c94765516059a23653793bcd399ccc475743ece7e874
 SHA512: 833943a2c0aa547536565ecae014172fb89b3684a8e1b1c0e9c5277349f321edb2cf833c3c4d2600122a6e82d51ec4899a44da0a1bf380edcdce0aca541216fb
 
+Package: net-tools
+Version: 2.10.0-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Configuration tools for Linux networking
+Filename: pool/main/aarch64/net-tools_2.10.0-1_aarch64.deb
+Size: 118572
+MD5sum: 25310deeee4bdcbb6225a3a4c7a525ec
+SHA1: c5bd36f7e9f7557f316d761ea55fd35246f8345f
+SHA256: 0f99869fe2ac3f52ef251728e19b723e94b9d373b3d0fa31b89738a94b4f77a1
+SHA512: 2ac645adad8cc426457349c3232c9cf533dde9b65655ca2d65d3098898a0c1fc276eb3ba350a80983205f5b136fdd399dd24b93949b30bec20a146b67555969d
+
 Package: nettle
 Version: 4.0+really3.10.2
 Architecture: aarch64
@@ -2232,6 +2352,21 @@ MD5sum: e09052129609b1fe36a051be8a40a3dd
 SHA1: 97a661abd48eb8e708a0d098d168014fe1457c21
 SHA256: f70bbd41b3f40d77d4209bc329774ab4626857b88f5bd7fd86fb099c314ced44
 SHA512: 60fd75d4391da705dbecda0cbb9344a101e6a32104202f65f1a0e563dea8bce08e5b0d488ed7897d860bd6713443b5190dc82f7e3f42de96cc2d56d011349786
+
+Package: patch
+Version: 2.8-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GNU patch which applies diff files to create patched files
+Filename: pool/main/aarch64/patch_2.8-1_aarch64.deb
+Size: 73992
+MD5sum: 3ad99d8e7384372bac890bb8d5dc98c0
+SHA1: b7eb081fb9ef9e0222e86ad4d6be0bfa3f3bd4b4
+SHA256: 4f88bd0561c8ff81319ae327734ee7c5ca2d9ac59a1a103d6118764612425568
+SHA512: 81d00121ee564610fc08cbd52fd52fc77b55b793f283de2cea1d93a40f9979491c0daa784fd5f8b6651c1fb2dbeb827723e63ed2c9e3a7eb0e10db543e800958
 
 Package: pcre2-static
 Version: 10.47
@@ -2682,6 +2817,21 @@ MD5sum: 3685d5427f29ba0452ccd129f3de2638
 SHA1: 8f078ce358364b22fa2194b40e3aaa71869234d0
 SHA256: 1cdaed762fa14b7b6e31cb4cc153e83aac96c584607691bda51474b5d9d3b84b
 SHA512: 40425bca7006116afc5ee1f989ddad8d5adf2dcbc4545f9de5c9ab7da71ce87599ef6109f87676a05c43a9f0ca57b8b6bbb01e13312b66afda4751d3f217d7cd
+
+Package: unzip
+Version: 6.0-10
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libbz2
+Description: Tools for working with zip files
+Filename: pool/main/aarch64/unzip_6.0-10_aarch64.deb
+Size: 116576
+MD5sum: dc9fd1fc70105e41089d43d0c5b651b4
+SHA1: 4862c326b04ee233b9c1ff61fe05e00333dea8a5
+SHA256: b68124892efa94cc604d71d78c9c1a359715807a11e83628cfff501ef22464be
+SHA512: a1ee5ed38a9df3fbaea7c79aac37b221ec8fe1bb55861e346a66dc90b59c7fdb9cf98c3b78cde42fa731eec734729885bef0c6f540a7470d1c857764965fabcb
 
 Package: util-linux-static
 Version: 2.42.1-4

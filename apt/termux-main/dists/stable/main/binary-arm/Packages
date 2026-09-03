@@ -193,6 +193,21 @@ SHA1: e26274c98f60092690d9a0d8183aec778d039271
 SHA256: 8c9d54ec365c1b3a20a281658258ce9ba7672ee2d930283d01b5b9e8c2bac2d4
 SHA512: b7925ecd856d20fffdce402087507bcbbebb6ff794c1ee695be6864b0ad0d5cdd56d0c53ccf7ffcb4a205798bd47502730907c70d7905c77904201746ddd581e
 
+Package: debianutils
+Version: 5.24
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Small utilities which are used primarily by the installation scripts of Debian packages
+Filename: pool/main/arm/debianutils_5.24_arm.deb
+Size: 16224
+MD5sum: d4bd69d8374a4bef961bc301443e3597
+SHA1: 1b174193269639a5ad3f0a747227be5eae47ec9b
+SHA256: f408dc7bc6ab10ae9caf10815bd0033495432123e97defb0fff2abd2f5f88fa5
+SHA512: 76f14790625a792be416dc47032f943c1ce286db39b5e05d188b89398be846345a2ee690f2b4c1f0dd7cfc046bfbe5cc7956cd39def4d58a7620494c68c2ac34
+
 Package: dialog-static
 Version: 1.3-20260721-0
 Architecture: arm
@@ -238,6 +253,21 @@ SHA1: 055301fa4a7ecca87797aebbe6304808f6ae7f10
 SHA256: 1c72dc53653cf87c091e5a105e0a502f7929e8f23dcab26d96d6eac7a26ddf79
 SHA512: 013806814d789dcce1626f4044556d85d7336248b0d7403c5a4eb945ccc6c51dbb08725ad245ad795be73b8fdeebf29e0d4f3617e0c3582fa55543317a09b2b1
 
+Package: dos2unix
+Version: 7.5.7
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support
+Description: Converts between DOS and Unix text files
+Filename: pool/main/arm/dos2unix_7.5.7_arm.deb
+Size: 64016
+MD5sum: 563f774769bbc5a2322a4be5fa806f05
+SHA1: 8ad277f401d183b48c5587260d0502ae038db153
+SHA256: 2c8a0fc8ebd60ce0bbfbdf704d60ef9cdb840724e054136022b69b76f2edc1db
+SHA512: f1ba34d92999456cb62c342979ca9da70c87ab4f9688387154e8e10e5eae5515e8a534df46e6d465c1887ca0b4928254bfb8ef4602f8087e7ac947644b8324ae
+
 Package: doxygen
 Version: 1.18.0
 Architecture: arm
@@ -267,6 +297,21 @@ MD5sum: ee4cb8d00a89e65133e02443cc991f18
 SHA1: 25728b67d5f5c3ce479d8cebf2a74526d2085c98
 SHA256: ab292bee81fa87cda962c902bfc2061cefef8e1f2d60ce390efa8d63a44e5564
 SHA512: 9427134f5d385e37bef1473b930ef633099f6dbd01d5521514baf795460c728b95dbb1f4a9e241741e14becdffcc87c804ddbb5ea7d0c97ac7bf6076e7e37c97
+
+Package: ed
+Version: 1.22.6
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Oliver Schmidhauser @Neo-Oli
+Depends: 
+Description: Classic UNIX line editor
+Filename: pool/main/arm/ed_1.22.6_arm.deb
+Size: 40724
+MD5sum: 7222efb9a094489a014702da9ab63437
+SHA1: 69298c71cbf577e5088610221bcf5059fe78786f
+SHA256: 22d2d0c271b916d59e80ba3dbaf541490f440c8699f02b91c2564992642ca31a
+SHA512: c10fd9dcb77dd38513945cf49d9daf7d758ef1dfb7cb1c8bcbfaa6355268b559bdda84875bf5772957c06de974ad788409cb600626022bd94fe84e03a0864ece
 
 Package: fdisk
 Version: 2.42.1-4
@@ -507,6 +552,21 @@ MD5sum: 19b4044aa92e13cf77aeb7537f617651
 SHA1: f1207b2f9f62cfceaf84dd1b324a4abbdfed9d6c
 SHA256: 381a8d0c465daa841fbb101265b32a3720e060987b9d139ec4913978520805ba
 SHA512: 31867cca803346b67692950328f57f2c1be545ade69ddd4af9aefd650fa204f5dbb1e916c6ce8c6a42d69c439a5b07c3cc4e32e4c9f47c55a367509727c54af1
+
+Package: inetutils
+Version: 2.7
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: readline
+Description: Collection of common network programs
+Filename: pool/main/arm/inetutils_2.7_arm.deb
+Size: 211636
+MD5sum: fcee38da4acb9a345f9458db84967438
+SHA1: 18a2810d368be789030a02483a59aa16917b39a8
+SHA256: dce38c04fea17d1137e55bb6ad534925a8f478a33f7b447eb9b0a42e9b0c5893
+SHA512: e4788deedb9be4c3be406372fa7c2ab72294e27c79764d44da4fa16e096d65a016d794fa8838a0952e704832c09a5fd1eaa01093dbac57def9a444afbb7f27d2
 
 Package: less
 Version: 704
@@ -2038,6 +2098,36 @@ SHA1: 9d5448faa1ecee962aa10897ee23cd4607fe7a0f
 SHA256: 9b630627fe2b76577633b4a12c17b4d866b6a76d72d0b1f955168982fc6f2345
 SHA512: 265aa8cc09eb4b231b034ea5a3afa4dd0ec437d0c221401c171d4d6ea37396694827d603c2180d56330aa0924475b27222e0923936200c3518bd544366615c9c
 
+Package: lsof-static
+Version: 4.99.7
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: lsof (= 4.99.7)
+Description: Static libraries for lsof
+Filename: pool/main/arm/lsof-static_4.99.7_arm.deb
+Size: 52448
+MD5sum: e37f58613a057f148de3a03317926fcb
+SHA1: 5be6f0ccbd4263b921b227d01b0e79fc2b5f5ab1
+SHA256: b4dd23e7ebaae4679e0190ec30c91086a2f1a86d462d3c4f62127dc659bbb9be
+SHA512: d57fcd9b2d59f0d5f954fc06811bca7d8076857fd6d587555eec5a921c59d6c2c77acf7919c9b336013dc5fa583eb5d3eb17135b12b5447f926dea76ef838320
+
+Package: lsof
+Version: 4.99.7
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libtirpc
+Description: Lists open files for running Unix processes
+Filename: pool/main/arm/lsof_4.99.7_arm.deb
+Size: 117952
+MD5sum: ddee5939c5d74539708e7f3da2e5f73c
+SHA1: d77471c2cbc211b8a008f34efc1e1e0ef51ec1aa
+SHA256: bdec9c233918aef90febb29031300134c6918dd3aee2d88dc4312dc39c3ed728
+SHA512: eb7ce468aa9cd93498fe85274319a4b6ba7ba6282ade1866ddeaf2b983f9b99800128101e7358e900acb5036ad6683caf1e39102947a92a717a77ad9475add2b
+
 Package: make
 Version: 4.4.1-1
 Architecture: arm
@@ -2097,6 +2187,21 @@ MD5sum: bce9e1cd9bf580b928e364c23f454727
 SHA1: 22e76a31ac51cee92220e586ea9f3db95fe8b838
 SHA256: d1592990f1240c9cb9215967cdb0ec2bc64e7dba91d6d8d67ea435bc9590ff93
 SHA512: 6bbf2ef43033071b61cc09709e536a1f0e433f8af2b583c0f4f1a8b3dc427c23f69e2beef8bcb050cd24829a25a7197413731bc907370fcf2bcdb6ddbe497d60
+
+Package: nano
+Version: 9.2-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, ncurses, libmagic
+Description: Small, free and friendly text editor
+Filename: pool/main/arm/nano_9.2-1_arm.deb
+Size: 228148
+MD5sum: 0ba31a16ccb7f7b6f9122c6980cee928
+SHA1: c1c0c698906daa1c017dfdb2631f1b4d9500f8eb
+SHA256: 16fb44474167db62e0f502af81d0561763fa1f63d153d3fd1fc0405f437d8061
+SHA512: 474576e6ac97baecb0210d020175d7f1ecbc2473a8021788f98924265022e328a68e5de4fbc490a564d1f013fdfb26918be93c5d2fc3ca8cf47f6ea25c239f9a
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830
@@ -2173,6 +2278,21 @@ SHA1: 3893c67193529f1032beabc4cfbfc080b8bf0b67
 SHA256: e6fb54e7e7a492db35a01ad117d9e2dccbb02ba0e35a4eb464dfe88115e68610
 SHA512: c173b14b8943a130069a459e68bdc4446a9e44f953b748cdd23c8358ee2ab323e69cfa7843c4651dea404b221752e39c6c5040921a93489dbadc096e6e622846
 
+Package: net-tools
+Version: 2.10.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Configuration tools for Linux networking
+Filename: pool/main/arm/net-tools_2.10.0-1_arm.deb
+Size: 105524
+MD5sum: a750b130701866a7a68d1babfa1bacc7
+SHA1: 73b613969aad14ed9dfd37de636db08a8b6fe059
+SHA256: 4dfe1456cb32e7901d77a46aa96260af9d3fa721fa935b8f93350bb0b7694980
+SHA512: 4a3def4a8724cc5b0e42f2fed2e27a52e0451ba5826f3b8c3fe89249a1273b81fe5cd5b904ab8c3b9e4fe2bc70e53d8001a4d8d516c9a45740fd57a5ec456cec
+
 Package: nettle
 Version: 4.0+really3.10.2
 Architecture: arm
@@ -2232,6 +2352,21 @@ MD5sum: d6da8bd676d6b661cfd63987e33e3075
 SHA1: 0a8261d635ac7abf633e918fded64e5d17be06b0
 SHA256: 8b81f729d278c2d914efd2474d31b9adb949923d5fef5c9f58773d2967ca7a01
 SHA512: f6fd6db238588055276defa013bcac503dcab92d859de9f166a0e487029aac886e18fa253d62f9cdef5df495ab2f62ce2d1571b46a988941d5a3f58221e384e0
+
+Package: patch
+Version: 2.8-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GNU patch which applies diff files to create patched files
+Filename: pool/main/arm/patch_2.8-1_arm.deb
+Size: 70860
+MD5sum: 62ff6fb7b739fce5acc8a883b05450c2
+SHA1: 4460dac2a6039f58bb62275ec78c33fc9d23ef65
+SHA256: e928424ba897c4010ae59efe3a6dd8941afa1ba32bec080bb8c35b94673c9851
+SHA512: d0f53337b196bc4cdb5c7f7e485d66d79127729cc86b5a9160475b5f2d3507e43b8d7dc09733c3297a914ec6d15cbb73b3674b82ced32a8f58133195e4f04d77
 
 Package: pcre2-static
 Version: 10.47
@@ -2682,6 +2817,21 @@ MD5sum: cba7792691d5b7326341ae6f474d4ed8
 SHA1: d95e84a95ee72de34fa4fc4b8a6cdf3b4e1aef41
 SHA256: 7e7b75625433daaad25292c38840314e71bfe0622ce3a43f779db51ff633c492
 SHA512: cf634d468a094ecd82c1633f64a84f42b6ba15a902b9978e5068ea410ed7a1bb096a5b889d09e5805a4efb1beefeefc4cfd5ea9c3e236a9acc231787d9c9f2a1
+
+Package: unzip
+Version: 6.0-10
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libbz2
+Description: Tools for working with zip files
+Filename: pool/main/arm/unzip_6.0-10_arm.deb
+Size: 114168
+MD5sum: 0cd577b4cf5cacb02a7bf6be7fb1511f
+SHA1: 95b84a3bdb64b69f3fc5f27dc473bcb1b93abf10
+SHA256: c5bab641c05f54455c14ccf455ae85b3df21b401ed28c7fd7675c318069161dd
+SHA512: 645c308faf316512363885476455ad3d60be7713e2e358ed2bdb7ef5b35e785f8a9b31faad468d32347f478830dcf7f6b30f9c51d23979af021b8363a750cb06
 
 Package: util-linux-static
 Version: 2.42.1-4

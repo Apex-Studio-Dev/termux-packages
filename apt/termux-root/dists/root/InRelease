@@ -5,7 +5,7 @@ Origin: ApexStudio
 Label: ApexStudio
 Suite: root
 Codename: root
-Date: Thu, 03 Sep 2026 11:11:21 UTC
+Date: Thu, 03 Sep 2026 13:10:13 UTC
 Architectures: aarch64 arm i686 x86_64 all
 Components: main
 Description: ApexStudio apt repository
@@ -16,15 +16,15 @@ MD5Sum:
  4a4dd3598707603b3f76a2378a4504aa               20 Contents-i686.gz
  4a4dd3598707603b3f76a2378a4504aa               20 Contents-x86_64.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-aarch64/Packages
- 60a3c6c8556165f862c4fde012f68d75               29 main/binary-aarch64/Packages.gz
+ f23c6c40a415812c5dc5b5081903f8d3               29 main/binary-aarch64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-all/Packages
- 60a3c6c8556165f862c4fde012f68d75               29 main/binary-all/Packages.gz
+ 5980e1e39770bb2acf97a23d12f3eed8               29 main/binary-all/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-arm/Packages
- 60a3c6c8556165f862c4fde012f68d75               29 main/binary-arm/Packages.gz
+ f23c6c40a415812c5dc5b5081903f8d3               29 main/binary-arm/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-i686/Packages
- 60a3c6c8556165f862c4fde012f68d75               29 main/binary-i686/Packages.gz
+ 5980e1e39770bb2acf97a23d12f3eed8               29 main/binary-i686/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-x86_64/Packages
- 60a3c6c8556165f862c4fde012f68d75               29 main/binary-x86_64/Packages.gz
+ 5980e1e39770bb2acf97a23d12f3eed8               29 main/binary-x86_64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 stable/binary-aarch64/Packages
  f49239304efe6b9e9a515f49f93f1684               29 stable/binary-aarch64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 stable/binary-all/Packages
@@ -41,15 +41,15 @@ SHA1:
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 Contents-i686.gz
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 Contents-x86_64.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-aarch64/Packages
- dc437cfeff1dc026549ebdf01807fad101ecbd01               29 main/binary-aarch64/Packages.gz
+ 4446d3fdfa5fe111d0920c0e5254d2e1afa50359               29 main/binary-aarch64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-all/Packages
- dc437cfeff1dc026549ebdf01807fad101ecbd01               29 main/binary-all/Packages.gz
+ 1b62aae28b1aa96aa0b14abab3bd5f88926ad891               29 main/binary-all/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-arm/Packages
- dc437cfeff1dc026549ebdf01807fad101ecbd01               29 main/binary-arm/Packages.gz
+ 4446d3fdfa5fe111d0920c0e5254d2e1afa50359               29 main/binary-arm/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-i686/Packages
- dc437cfeff1dc026549ebdf01807fad101ecbd01               29 main/binary-i686/Packages.gz
+ 1b62aae28b1aa96aa0b14abab3bd5f88926ad891               29 main/binary-i686/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-x86_64/Packages
- dc437cfeff1dc026549ebdf01807fad101ecbd01               29 main/binary-x86_64/Packages.gz
+ 1b62aae28b1aa96aa0b14abab3bd5f88926ad891               29 main/binary-x86_64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 stable/binary-aarch64/Packages
  4386e24979e06b40aab7e890561948b8a107241b               29 stable/binary-aarch64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 stable/binary-all/Packages
@@ -66,15 +66,15 @@ SHA256:
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 Contents-i686.gz
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 Contents-x86_64.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-aarch64/Packages
- b7b6a16de621be59c0dd5dbc90857dd10f068a5b62aa811668250348623305f1               29 main/binary-aarch64/Packages.gz
+ 427c5cd29d9225335e8ff5f2f65f592be4f02b76abbc19b4b05fe67ddc36db9a               29 main/binary-aarch64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-all/Packages
- b7b6a16de621be59c0dd5dbc90857dd10f068a5b62aa811668250348623305f1               29 main/binary-all/Packages.gz
+ b164e39f1a6ef9a7b3224d820ea62f8d750a95f76645239eee6d12c66323e08a               29 main/binary-all/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-arm/Packages
- b7b6a16de621be59c0dd5dbc90857dd10f068a5b62aa811668250348623305f1               29 main/binary-arm/Packages.gz
+ 427c5cd29d9225335e8ff5f2f65f592be4f02b76abbc19b4b05fe67ddc36db9a               29 main/binary-arm/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-i686/Packages
- b7b6a16de621be59c0dd5dbc90857dd10f068a5b62aa811668250348623305f1               29 main/binary-i686/Packages.gz
+ b164e39f1a6ef9a7b3224d820ea62f8d750a95f76645239eee6d12c66323e08a               29 main/binary-i686/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-x86_64/Packages
- b7b6a16de621be59c0dd5dbc90857dd10f068a5b62aa811668250348623305f1               29 main/binary-x86_64/Packages.gz
+ b164e39f1a6ef9a7b3224d820ea62f8d750a95f76645239eee6d12c66323e08a               29 main/binary-x86_64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 stable/binary-aarch64/Packages
  83d7fb17cdc51847e95b243ab610245d8d539821c1d4556eb02f77a5fd6c0864               29 stable/binary-aarch64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 stable/binary-all/Packages
@@ -87,17 +87,17 @@ SHA256:
  83d7fb17cdc51847e95b243ab610245d8d539821c1d4556eb02f77a5fd6c0864               29 stable/binary-x86_64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqZVdoACgkQdpPrVPIE
-9coEGA/+OHpD1+iwB0Okzw1F4vCoC/kjOPTAhCyqDgHzCQUC0vF71urt2Cq+ssR/
-3KdEplVZoeWMdywD9uHoEnp68/pNerHR7UAB/uZEiAJ/Fi3k9ZIIcGN+qdd5aVyb
-YT2Z5gexik67XRdBOdc+MQ10Mz/YfhfzkHSuyHFRKrXBUxubsVVaV9qlfg7eeVgo
-2REmq/49SZg8Lnatwc181tNfvXFa1LUbE7EZF4wZpmbRTSrvrnqFiBFdgkIbwLuX
-K8R/ytTgVW/+0WR573iUpmgbT4kKV8tMH0oPM8Cn+ix1bdlr7/8z2mlAU4yib3N3
-AH80QG1YfhsKG9oyakLcqVM2BYLJNDolcw+n/5zhRfBVBEzqOe9Xks0ybE1o09gd
-I1/Ann80CQC1v9RrfFfEaDg5/63c7snlh6uW/IlpjCo4Vi7uflZizl6zxQv0h41e
-LUZ6nUTHNZWYBinZks2+yr+mulkjXIKlrlJm78p/9iEUcasVPJAZeW8PCI7v91ez
-qyibeoC8gQMkejFO4E2s8hnHV67TmqIyt6ge9xOManaZCH2qE/36S5fj0MvNmx1Q
-i51OIc8CoF0r0GyFwSybIYfTrsOxuW+ZPCHPEiIKHYwyHOPqUA1MpoW673S4c0Zc
-aRLvpwcSnQRFA3dBHWhUyJh+3ee8YzyN5htI2XwZx4teZYA24DA=
-=CdJY
+iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqZcbUACgkQdpPrVPIE
+9croQQ/+MBGLz/VIbJAftcVx9Fea4NAn51pPpcPrTJ/lDq1Zvb0n/OofqSrl1xay
+TuDfcMQK5MMg5h3tJAOHPoggYhE01AdawclR344zIbOrjLHxny271OUfb/f2jD++
+AG9vrXSCrR7lWlABcoV7JyE1jxJW3sRLH6BiZcqWCO48eXJzj9C2uoC9ZJpNPQ+3
+TAU4OtWduxT4AQYhUQtjUS6pi0eclBMvdglNq3J10LT801myd401xi6OLdQDUL5Y
+cZ5Oxv6ENCuqEVlUDpBgag6NeS8bLUCXmjgLud5+jBWWgsHzSoEZr2wZh8gDGxh5
+PvoY1mRXrU1bjpYi4upP7EFm2mzETQmYoMyq9fUgSwfWSz0zRyAbJY3PJsvg5BFB
+9pANOh1qGSOx3knJHbBDnvpvbJ+8zlSEt6ysu7dOA5r/MKqlXWAyuoYIszGCDr6E
+HkFF7AXiWguCe0wb1FIW/CQ/Pflg1VOmINlNCOBi7SgPZTkU9zxqMv7+9wEP39F7
+8rw1yhx4S9zAB95LQfrYOSwYfmCUCK715HCieTMmYnRWZfMhMT4yz6KpLDNI3Jjs
+AYDbw0nr8LVZ1qbPdKmwl1ryEvAA335avS1AYCaHDiyERgt/vyZME5+BVg0mVlEx
+UaOgrvat7Dy0BD+WvpthqO04gFq6dTkkF9X9zlbC+XrpahsVEZc=
+=RWbm
 -----END PGP SIGNATURE-----
