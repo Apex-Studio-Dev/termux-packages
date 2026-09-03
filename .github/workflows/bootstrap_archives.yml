@@ -1,8 +1,6 @@
 name: Generate bootstrap archives (android-7)
 
 on:
-  schedule:
-    - cron: "0 0 * * 0"
   workflow_dispatch:
 
 permissions: {} # none
@@ -23,12 +21,15 @@ jobs:
           - arm
           - i686
           - x86_64
-    if: github.repository == 'termux/termux-packages'
+    if: github.repository == 'Apex-Studio-Dev/termux-packages'
     steps:
       - name: Git clone
         uses: actions/checkout@v7
       - name: Create bootstrap archive
-        run: ./scripts/generate-bootstraps.sh --architectures ${{ matrix.arch }}
+        run: >
+          ./scripts/generate-bootstraps.sh
+          --architectures ${{ matrix.arch }}
+          --repository https://apex-studio-dev.github.io/termux-packages/apt/termux-main
       - name: Store artifacts
         uses: actions/upload-artifact@v6
         with:
@@ -39,6 +40,7 @@ jobs:
       contents: write # for git push
     needs: build
     runs-on: ubuntu-slim
+    if: github.repository == 'Apex-Studio-Dev/termux-packages'
     steps:
       - name: Git clone
         uses: actions/checkout@v7
