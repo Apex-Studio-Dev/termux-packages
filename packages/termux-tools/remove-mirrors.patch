@@ -1,0 +1,23 @@
+diff -uNr a/Makefile.am b/Makefile.am
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -16,7 +16,7 @@
+ # along with termux-tools.  If not, see
+ # <https://www.gnu.org/licenses/>.
+ 
+-SUBDIRS = . scripts doc mirrors motds src
++SUBDIRS = . scripts doc motds src
+ 
+ CONFFILES = \
+ etc/motd \
+diff -uNr a/configure.ac b/configure.ac
+--- a/configure.ac
++++ b/configure.ac
+@@ -95,6 +95,6 @@
+ AC_PROG_LN_S
+ 
+ AC_CONFIG_FILES([Makefile scripts/Makefile doc/Makefile
+-mirrors/Makefile motds/Makefile src/Makefile])
++motds/Makefile src/Makefile])
+ 
+ AC_OUTPUT
