@@ -1273,6 +1273,36 @@ SHA1: ee3515c1e4cc8af8149e04ed7a9f4d2b03cc5046
 SHA256: 004c1c355442fdfdad993d017e5fc794bc0410e9f380803c23efb63ca9c884c6
 SHA512: 2ca840d92ceeccfabe33f2216432d590fe03c00bd6bb5ea295c552c30a23501e04f1a2da010fd4e4d2e2c2d597c9df5579336382f9824bbdb26367faefe0bd6c
 
+Package: libmpg123-static
+Version: 1.33.5
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmpg123 (= 1.33.5)
+Description: Static libraries for libmpg123
+Filename: pool/main/x86_64/libmpg123-static_1.33.5_x86_64.deb
+Size: 160540
+MD5sum: 6631fe1e13cd81d554c87278cfeb3aa1
+SHA1: 86e434c31105685db31a059217cd3b249f13ac5d
+SHA256: b6e1b1f4301cc1d559c32813bc9ff6a7bb6f60bf0051db04a59903a06b287d6c
+SHA512: 3c4398b96cf6443cce1f2cb999d889909ca0b97930b4302059bfdd237763fe06cb387928feedfee7aa73301b36dcb1511d605436345ee78ecea1594db09767ef
+
+Package: libmpg123
+Version: 1.33.5
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Fast console MPEG Audio Player and decoder library
+Filename: pool/main/x86_64/libmpg123_1.33.5_x86_64.deb
+Size: 187808
+MD5sum: cf3ecbc7d613255e1c1e6561b6b4a81b
+SHA1: 790174d9f533f62c14c159f4518c9aeb811d479c
+SHA256: 47fbf96b200977f44e92f225c1deb84e22be86c4f8b3c46f850c6b869691b721
+SHA512: 7accb99df3d7fe3fb4f7d926083a40c0e080c037cccf8b724e1bd0c99de1de9ea19804d7ecd1a5d43ba698e1d8e2207ae388e6e029645369a2d401b1d556d15f
+
 Package: libnettle-static
 Version: 4.0+really3.10.2
 Architecture: x86_64
@@ -2007,6 +2037,21 @@ MD5sum: 55ca9e38a6d84a3ae77051909bba215e
 SHA1: 63a4a600a16e45d82a2282882f7c79168bf38c7f
 SHA256: d09706d63d363ed4e06fad857af0274405fd48dded8bbb9dce1ae6843667eee8
 SHA512: 043ba895a7c6540348347209e299c694f709a61ccb2715304672af681aa812cd6b9f717eba0c73e67489bd45286b5588433ca621a89ce7a5635e45a6873c0932
+
+Package: mpg123
+Version: 1.33.5
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pulseaudio, libmpg123 (= 1.33.5)
+Description: Fast console MPEG Audio Player based on libmpg123
+Filename: pool/main/x86_64/mpg123_1.33.5_x86_64.deb
+Size: 99296
+MD5sum: cdced04d978664e074ae61f868debeff
+SHA1: 8d3f426af00b4a253eb91754a14d7d05391cf406
+SHA256: e936a9ec050a5222ec905f8f4fff13b54ec7ae77c97920d85e35f4226af99903
+SHA512: 047c74cb22fa54e793a70618a55c50aa4771e0b7902409441a5e17a74ae66161f7ad714c5200a53833b45d2690e9b9da995d7cfe39c1134dd700336fbf18cf0a
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830

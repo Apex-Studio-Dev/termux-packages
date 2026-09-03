@@ -1273,6 +1273,36 @@ SHA1: 4476a2fa950281696c825d57f037d654a2d4696b
 SHA256: 280c43365447fbd6ee1f0c9eb5ee498ed9ec14d2694be8cb9ef1d917c50bf2af
 SHA512: 3b72b4af7febf7065d190072b0db62ed53e49aca43d41aee9910953ab9572a679c8c0ba0e5f0937daaa8077649fcc6fd6c653495822e92a38c4550698c3628df
 
+Package: libmpg123-static
+Version: 1.33.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmpg123 (= 1.33.5)
+Description: Static libraries for libmpg123
+Filename: pool/main/i686/libmpg123-static_1.33.5_i686.deb
+Size: 175644
+MD5sum: ecc0da741d2a5af841a4aa235879c5bd
+SHA1: 36ecdb4dfb1b7c02faee05619765b7e1aa5336ad
+SHA256: b6d6854b86da5927c84f182f58f6d2fbcaca61793fb786702008ba2183553269
+SHA512: 9bd88d2d3d8e90c17fe9f30e84e2c867d76b8139e8eaf9670232904a54edf370258427cd2519d4eac2ece5c4a1cb5a1552bcd8eab28f65529b6c1169bb450287
+
+Package: libmpg123
+Version: 1.33.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Fast console MPEG Audio Player and decoder library
+Filename: pool/main/i686/libmpg123_1.33.5_i686.deb
+Size: 200744
+MD5sum: 6277d387c5a15a062ab0aaf518f9cc09
+SHA1: 7a5e2923a15730eb625604a3194756e275f2c4a9
+SHA256: dfc1fc97c31658f6941bf37bb0f942affa3cbf8661a12a627e75b6b3a13f2c65
+SHA512: 6be1c8ea5beaf831acbfc755cfc75efcfd1051e041ecbc62f3b9681b7cb694cb9cc8027a3f66346f788c96f6efeea343133c5f7d3a8bbabe6b112126247f8bbd
+
 Package: libnettle-static
 Version: 4.0+really3.10.2
 Architecture: i686
@@ -2007,6 +2037,21 @@ MD5sum: efaa5e61f40370461ba8f6be2669e489
 SHA1: 9c0e6987e78d0e660ef750729298d652173a5e49
 SHA256: df46d2025c56c2ccbec3c19959276cd8244c44f048d9db7b4ccefe874ebc42c8
 SHA512: e6553e5f297fff8786c6f68cb31488bd51f4e9bd510364f75b96d6cdf4602380f67cb22dc2520bd8544bb0840543f8a91e88b91bf3be4c8d71704125306d2417
+
+Package: mpg123
+Version: 1.33.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pulseaudio, libmpg123 (= 1.33.5)
+Description: Fast console MPEG Audio Player based on libmpg123
+Filename: pool/main/i686/mpg123_1.33.5_i686.deb
+Size: 95712
+MD5sum: 1ebc4d74e0a65c910de050fabae83b9d
+SHA1: b7a4c0056365cbea7c20579d67fb21798b23b9ca
+SHA256: 70b413aa45b59624952758cd7a7c11bd71cae260ee749165d2b6838a3990b200
+SHA512: 62e3cada412b1335e58a3b91499157f036ac3aa0dec24a073b166dd03191157fcad881b41613e74fe570897df25b8aa1e008c9476c4ecda2fa5b6ad499669a0f
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830

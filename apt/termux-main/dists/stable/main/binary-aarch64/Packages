@@ -1273,6 +1273,36 @@ SHA1: 58d1af68ff59bddf6e3ff4fe18202814647294ac
 SHA256: bc7cf96cea05ecb1dc75d0d83e3f56e6c9e845851d7a258bc90bb3b62feab7bf
 SHA512: ab07b7270ebe47cd7a9ad29209290a73ab779370170492016a1eb511012a41b741582729722130196e3c64d3008e2f96c637c7c14ee0a0cbeed336eb7785784c
 
+Package: libmpg123-static
+Version: 1.33.5
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmpg123 (= 1.33.5)
+Description: Static libraries for libmpg123
+Filename: pool/main/aarch64/libmpg123-static_1.33.5_aarch64.deb
+Size: 151268
+MD5sum: f1cfda33129064422e10c146649d861a
+SHA1: be130f2444f8f0e045235e8e931f358a8e61d3e3
+SHA256: 514bf5dde663585cefaac47ef0f18735ba33ef8ea67d934999daeb211e0603bf
+SHA512: 2ecb8aba3d8aa37c22f8f4edf98a0dea4ddbf1764d6f440e7da51cbcae16b6d29648275b9506a01de337000e495e55c3ec03f4e225415b10118995ac84e29b19
+
+Package: libmpg123
+Version: 1.33.5
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Fast console MPEG Audio Player and decoder library
+Filename: pool/main/aarch64/libmpg123_1.33.5_aarch64.deb
+Size: 174584
+MD5sum: 3587df67f73324b320ad9c42b3575119
+SHA1: cb6891b1847ea3a5a760f5152c1f37199110e5f1
+SHA256: 264e69d92c86a07daf47e6cd0f21d391774368f6a53dd97f678b6228c54e4d0c
+SHA512: c28ebad196d3d5ffe059b169fccc52f2cd3970e83f551063a9caccd87c69a95b04ee9784256b87226e58596879c6fbb5fb5c015577b812b6cd2a01768e9efbb2
+
 Package: libnettle-static
 Version: 4.0+really3.10.2
 Architecture: aarch64
@@ -2007,6 +2037,21 @@ MD5sum: 8c498ddbb4a7db73a1c430850613e237
 SHA1: 98f30a9e5183d30b625af6f3992767bcf5bf66a7
 SHA256: f07b442ccd93622079d06a88b675020d0a3074a800612194d50a1c3a21992b51
 SHA512: b51d4caafe0dd0bc82e2cde0ec00da932b597b0dc7b235ebd0b8be4da9b0ab8d1fceb246d79ab71ab50e2187cc35bea26f66a62daf0a2ab2818994a1add837f5
+
+Package: mpg123
+Version: 1.33.5
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pulseaudio, libmpg123 (= 1.33.5)
+Description: Fast console MPEG Audio Player based on libmpg123
+Filename: pool/main/aarch64/mpg123_1.33.5_aarch64.deb
+Size: 91932
+MD5sum: b46c2404bdbba65c4a02aba4e066d477
+SHA1: e3fecffbaba2cd41b1e559f8fb053151132ca535
+SHA256: 6e2e90c232962c7350a77a5046b0201b0ef5dfb22896d65b8551fc02595fa674
+SHA512: f79fc497ab3e640b3bf32d34b5bf0fdcff4c3831073ed2e26ad8c64a5e3e21e434434fc8342738901416c2943704f66cf05780eabb78635fbeffc259c011adaf
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830
