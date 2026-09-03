@@ -7,11 +7,11 @@ Maintainer: @termux
 Depends: libdb, apt (= 2.8.1-3)
 Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
 Filename: pool/main/arm/apt-ftparchive_2.8.1-3_arm.deb
-Size: 88300
-MD5sum: c9c5bbc2ed2717eee8c0b0c0cfb70baa
-SHA1: 9019050530eee9249b003e01a35494041c365c52
-SHA256: 29b8cb7a03550bbf9445f352e5d7a155ec2aeaa46727f27204143f3ea0f07879
-SHA512: d3fdf20c6002b10ee03a341cc0552a267fe56b16320a304d509938d5aadae3d538e0ecf6f36cd7a48d7a6fe04c94649325107ec3801f3509320a2d219006121d
+Size: 88360
+MD5sum: e69ca1ba3283f1cf2710a3b6045e4512
+SHA1: 12239586f8c59b9a8405e1170b80e75841703b0a
+SHA256: 00ab7167f721122271173625055e52bdbdd428a798a31bc90b96aaed3a6e89b8
+SHA512: 11efbaebfad2e528a55d5c0719e97751189a87f06a619176e04f752025c2587da4881b7568a2c869b8f963fba7571954a9e8baa03a1d57f6ff2e086cc03e7738
 
 Package: apt
 Version: 2.8.1-3
@@ -22,11 +22,11 @@ Maintainer: @termux
 Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
 Description: Front-end for the dpkg package manager
 Filename: pool/main/arm/apt_2.8.1-3_arm.deb
-Size: 1000592
-MD5sum: 4109dce9a1aab2a5837f5112294c387e
-SHA1: bc55b449e4374e05597e05a9ca62f01f3a44e27d
-SHA256: bb17162b294aa3a7fe1457cdd61dd26af3f3f7c24f0fb2883b354a63accdca05
-SHA512: bb9b352958f9dc2ce20889d6fc72ae2b82ee8eb097972c5ec98fd3df9821f3dada65e6d90e69f4767015e5afb610b673a498b8352d26474dda5df8c71c3977cc
+Size: 1000568
+MD5sum: 2c7e68fbbe13f4f33703a98c5478ee52
+SHA1: 9e3fc1cad72849c7767ef976d0b2566ea0e938c1
+SHA256: f56c9eab4737ce7d48386ac54d94fee1cbebb6fbe5ef6ba9887d339ab66a006d
+SHA512: bc68df8a704093d067dcfae649c343764baa09883264fbd4ba5beaa5ba5c697f54a4798965f3f55508938c2002db18cd55d327afee13f62347cfcaf91116f301
 
 Package: attr-static
 Version: 2.6.0
@@ -57,6 +57,36 @@ MD5sum: f319d8a789737fe4f96eccb67d5f9cb2
 SHA1: 17924b4fcb65596e7bd20b47504251f3a0f32e27
 SHA256: 9364d5c84dd56afbf3e1e93709772e1f3a0f60866bac7fa911d9c50e6983db10
 SHA512: 259fa633c66551182986eeffb3205030063b5459a6eead6745ff509e2d87bd478e4d2e78f5c93cfb25974d3be8dc71c04764cd4ee0913d514fa8db82cef03401
+
+Package: bash
+Version: 5.3.15
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libandroid-support, libiconv, readline (>= 8.3), termux-tools
+Description: A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)
+Filename: pool/main/arm/bash_5.3.15_arm.deb
+Size: 928472
+MD5sum: b332f2a6c7ae29cc80e293f03447d0dc
+SHA1: 3cdacd3ce938926389baa54d9ec12237fb7bbee4
+SHA256: 91db4433e7f02d5a3a57564784edc292108bf23aa022890a17161f163e9cfa03
+SHA512: 06f8f3353479c0f929b567092cd35d57e186cc07b6e32e60b3ab2a519d90aac69e54a9771a0fb2ad5676c6f7571b9b9ae13f639f22b77ad5dd2cd54919254eba
+
+Package: blk-utils
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libblkid, libmount, libsmartcols, libuuid
+Description: Utilities for handling block device attributes
+Filename: pool/main/arm/blk-utils_2.42.1-4_arm.deb
+Size: 164508
+MD5sum: e1c2f174e576a1720230b9c6316d961d
+SHA1: aafdf8ab5ad2cc2764a9a8e6db6141b7805f7b7d
+SHA256: b29d0503577f9e449da883be18fdbea07548d3af8c006ad2c411700f92b50fa8
+SHA512: ddd1c83769519cc6bb2dc369c9f2151cc465200440e54e50a616429d7f044c67716eda7724ff9ae31258aa64f27ec6e003ebc73a892d117cbccc62de329968d4
 
 Package: brotli
 Version: 1.2.0
@@ -222,6 +252,21 @@ MD5sum: ee4cb8d00a89e65133e02443cc991f18
 SHA1: 25728b67d5f5c3ce479d8cebf2a74526d2085c98
 SHA256: ab292bee81fa87cda962c902bfc2061cefef8e1f2d60ce390efa8d63a44e5564
 SHA512: 9427134f5d385e37bef1473b930ef633099f6dbd01d5521514baf795460c728b95dbb1f4a9e241741e14becdffcc87c804ddbb5ea7d0c97ac7bf6076e7e37c97
+
+Package: fdisk
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libfdisk, libmount, ncurses, readline, libsmartcols
+Description: Utilities to manipulate disk partition tables
+Filename: pool/main/arm/fdisk_2.42.1-4_arm.deb
+Size: 106844
+MD5sum: c16c64a40326616227187e7f038e7c3b
+SHA1: d53f5d41de445c81f29fe66df64de79b4fb49839
+SHA256: 22d63e6f01209ffd73f170e02782eb1c293a98238ba4796718c81d03e4047243
+SHA512: 51d7fafd4469a4d4b5e57443332c9075bad90ce1eaf4f5748572f6e0d5d1910f0d90f904e5dcdcfc40860a58488311744cfd7d6decdb67d6693df3fe6a7bb280
 
 Package: findutils
 Version: 4.10.0-1
@@ -688,6 +733,21 @@ SHA1: 1a1ca64e620e76386dfca0bb6e25dea4e3ec92a0
 SHA256: 903efc43ac4a7dd571ed3403b823b9a5158be9ee5de381b8b8506f1a1462b05c
 SHA512: 77ab7652715a6da26c57ff101bd2ff1e7e56799378071febc1d233823c9508949ff8b1e1d55714a9b2cfd2181772b5f0c04b9aa620662f386a3ae0d7b2e395f2
 
+Package: libblkid
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-posix-semaphore
+Description: Block device identification library
+Filename: pool/main/arm/libblkid_2.42.1-4_arm.deb
+Size: 121868
+MD5sum: 5ed44ab4026884807787d50f6754fba0
+SHA1: e3d40e80b21145033c8c3833f542faf4fb5a6e1a
+SHA256: 946e78eca89b1c794bcc6f58ff67d1369b1cdcebd3f3207a9d37047c96205ea7
+SHA512: 1af4caaec33569aea711caa4a8b87b213d8324777aa5d1bff4c4e98bea3b8193175e13b525b1f4db5e3e848acfab4fe4546920d830e0f45bcc66dff3adc0a961
+
 Package: libbz2
 Version: 1.0.8-8
 Architecture: arm
@@ -852,6 +912,21 @@ MD5sum: 6f3842612e78e3cccef07b3248debca0
 SHA1: 67be32596f920daf08ba00472c40ab730b6b832b
 SHA256: f2fbf6c33425ee740e3bdaeb5037703cacf0d8430a426be46128618ba0075aa9
 SHA512: a1af39b56e04377183bab370ae10a02d0500218b273573188d9bd0590de01b7b250108114e1c8183744bcd62f5cf575e9806944c28ba2729a55c11412572bf4f
+
+Package: libfdisk
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libblkid, libuuid
+Description: Library for manipulating disk partition tables
+Filename: pool/main/arm/libfdisk_2.42.1-4_arm.deb
+Size: 155308
+MD5sum: 81330036b7d0c2b6ee5c777bf856246d
+SHA1: a49bf3bf5899ac332896ba125161a6d1c7135d9d
+SHA256: 13a05bfc274174c79835438391de5afbe2c820667eade7626c83986f983d19da
+SHA512: ea3d515831b5e3e0ec71021d34884b61225343922f86cd2f0342fa25ee95a1712fc41d29b4a502fcbed02c506bcfe36c592bf8dcf20e68489fd495753f4f13cc
 
 Package: libffi-static
 Version: 3.5.2
@@ -1153,6 +1228,21 @@ SHA1: 05ff1bb7106ef65fe0b543ed9a284e3c68d29d7b
 SHA256: 3edc5e71288ae1326da2fe71b1dec1a7d126ef6b0deb1ab70062558a9fec2800
 SHA512: 5982270e8493bec6dc531b7e1069342440a54c4839b3ed2c04b440f016668a9be9292c9dd8a199da7531465cdd73fad9693ec295943189e5c667de01344fcc01
 
+Package: libmount
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libblkid, libsmartcols
+Description: Library for (un)mounting filesystems
+Filename: pool/main/arm/libmount_2.42.1-4_arm.deb
+Size: 149800
+MD5sum: 4ef652813ee92b1d2aff4b95a9c19cb9
+SHA1: 1394855290345ef41ae183865ffd6c1ddc8b2282
+SHA256: b798c08df135d7a2b4e15931b6f72b6d08c1f57bff8146a1192ad58f5d395999
+SHA512: e4fdd06a1cd3cd35af45cbfc3dd5a524ca84fc5433560f3fcca712aa1606cba097a9ff99892302b9d98d55c267316dbf9d4a110be2a5ad3c8a79bc26e0a5ee0e
+
 Package: libmpfr-static
 Version: 4.2.1-1
 Architecture: arm
@@ -1348,6 +1438,21 @@ SHA1: b82a3188d46b59d14d72f29f6d0d5b3af62d3962
 SHA256: be36e321bedda1aa2a433bca95a57c6987fa5880cdc3adec3c4ca353a05448de
 SHA512: 076b55905ac7242a69ce3fa987601f3fd46dfb943d7e94d8a58110ffd4705904f68641c63a89dab733fa9052eb2b98d593da50f6e042529130778898fc08569d
 
+Package: libsmartcols
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-posix-semaphore
+Description: Library for smart adaptive formatting of tabular data
+Filename: pool/main/arm/libsmartcols_2.42.1-4_arm.deb
+Size: 93440
+MD5sum: 7f87fd8e3916ddd2b8a5a6d010c7fadb
+SHA1: edf3b4a6e1d53c62ac3c379999ab5758151a35a1
+SHA256: ea3257742c979c8da06826e3f7bb5c0cf5e4e972bed60c9cd1eb867a1a63f8eb
+SHA512: 877fb7218f604abf1cdece3918e0db2f12dc8e0a03bc4237e20cb4585a2b686fd9b3ad5e6aa4dfc1bb74f258cb92841943dd1607a68bb884c9f8d6a5d592320b
+
 Package: libsqlite-static
 Version: 3.53.4
 Architecture: arm
@@ -1512,6 +1617,21 @@ MD5sum: ed5086966407871d8e311a034460db15
 SHA1: d15988db9ca9be0c6802902290ce47a64862c0f6
 SHA256: d50227a848de16baec3809cf23e2ad23a63fcf7a71d591e0db4fc576ec8babba
 SHA512: be46d3461839924bece095fc6308d893ec83c2b611eb9074af824d3d9df5182ad69c4bd783b678a70ae6542d068df5aba51e33db0ae1608cacd6c2ceeaa6a01e
+
+Package: libuuid
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-posix-semaphore
+Description: Library for handling universally unique identifiers
+Filename: pool/main/arm/libuuid_2.42.1-4_arm.deb
+Size: 14196
+MD5sum: 1504fb897e1347ffaafb447bbc03d5c4
+SHA1: 444e2c5a1059bddbb3f117b55ae4a859805c442d
+SHA256: 95567921d7306c43fa89fa919eb66b010d711b14d8c5eb2a18e18a63fa508117
+SHA512: 5c75a6a62dc8e322dbf7c32549203ea3c60c43ebc7dac3c8213f96c89662c4e20ebd2dcf1909b6c753b9b01d03e9b0293c8e99357d9bb17994d289660277d230
 
 Package: libx11-static
 Version: 1.8.13-1
@@ -1872,6 +1992,21 @@ MD5sum: c87b9e704299746ade63c9467d8182e7
 SHA1: 723d10310c4514faf3665833e3db3f9d5d782609
 SHA256: ed904601e3f8b9c79c80da663c0deeb61871d38df2e224434a62c1e2b135ba4b
 SHA512: d0f7fb1f1d87a78e3f4650fb39977d1964a85e03909af698e5b3f7376322fd6b6b1f74c40a32e411dd10ecfa0ab2fd195a7a6b7ac5cf9db133675b10cdf0a96a
+
+Package: mount-utils
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libblkid, libsmartcols, libmount
+Description: Utilities for (un)mounting filesystems
+Filename: pool/main/arm/mount-utils_2.42.1-4_arm.deb
+Size: 135528
+MD5sum: 03c893049a629eeb3678c8d0602950af
+SHA1: 3d0083b52aed7281877f1cb6344351778fcdecf4
+SHA256: 24a92fb8d131fb99b3dda008d85f707755cb6f2c133e90e0b5d32544c6ca69f0
+SHA512: e5f70cde5c5dc8deb3d61e2a7914cb98e3456c9768d4b69a24b667ee75283d0410e6113b4bf78c6744065fbd1e4f1c87fc6db682f5e043100c2368107cc11343
 
 Package: ncurses-static
 Version: 6.6.20260307+really6.5.20250830
@@ -2308,6 +2443,81 @@ SHA1: ba2c920a8161ebc5b73d6b345957da9c068f9045
 SHA256: 3acd2cb1c001af20038ae1564f65f21b7a21eaaa38b4b8fdfa7cc92ba99463c3
 SHA512: 58f67d93bc58cc2a464f14fa1a2607e01723f3c93c517d8a59783a23c32261063044f20aa86529dad4f97d1d8bf1f390d91fb018b297b063c944bc60d05b3657
 
+Package: termux-core-static
+Version: 0.4.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: termux-core (= 0.4.0-1)
+Description: Static libraries for termux-core
+Filename: pool/main/arm/termux-core-static_0.4.0-1_arm.deb
+Size: 18840
+MD5sum: e2c37eb4ef0ab536f370c383f024f8b2
+SHA1: 30380a46df88a79a8ef16c5d4d3152be0a001e0c
+SHA256: ca0b69fc10548b75c41f7bec3087585a7fb8e43746f876f8dadd7c0377b2dcbb
+SHA512: 4407675a315b51e5d8ef8a33df165b0168afa4f397e99add0f9d129f6dcc76d6186015cc2c6195817891cb9f1df56f46fcec74f67faf7583a81ed2cd8859cf02
+
+Package: termux-core
+Version: 0.4.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Utils and libraries for Termux core
+Filename: pool/main/arm/termux-core_0.4.0-1_arm.deb
+Size: 225640
+MD5sum: 21d114574db5c36cdf86b3932604f9af
+SHA1: c48ba420e7fc072f6bbfb99f09705d7c462e64eb
+SHA256: d14f970d007dcd2aeb47c07b7c37ce7c58b0a8b3357c1cb0f8e6ba3041b81d45
+SHA512: 2939d5eccb6651d44b6cc7f691de855306fc94ae4e11d522059f85091112306670d7f21e0ca4c3c948a81bbca2674bcc49aea49db547b3517ad412c641028c10
+
+Package: termux-exec-static
+Version: 1:2.5.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: termux-exec (= 1:2.5.0-1)
+Description: Static libraries for termux-exec
+Filename: pool/main/arm/termux-exec-static_1:2.5.0-1_arm.deb
+Size: 10372
+MD5sum: 5a489a1e140aaa4c5899d6f16453b0e4
+SHA1: 154089e612e3c04fa7411663ec0743d9df186725
+SHA256: 3505d990df84a559e5cb9b145cfc8f466a24a985089ec836b4ebd7f1741ca993
+SHA512: f7ef4507e655283716234b194f034c4fe09803d9fafdeb16acc41c68183b92fc00f9d89d3936fde2c207bea749282ccb6a23859671c905d3c975d0ab3e253eee
+
+Package: termux-exec
+Version: 1:2.5.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Utils and libraries for Termux exec including a LD_PRELOAD shared library for proper functioning of the Termux execution environment
+Filename: pool/main/arm/termux-exec_1:2.5.0-1_arm.deb
+Size: 362700
+MD5sum: 0cb6cf7f5476845629210e75395bd791
+SHA1: b6c5bca6ebcafb6a6f213acc5ca9095bb418872c
+SHA256: ae5f33bdfdf653ecd5ebe6b14478712637c53e0785cb19b185295bddbd7bfb1a
+SHA512: b37182f97171a90a563a9474ebb99f37d107c63c20941c65fbf5a61af4af7229aec0ca3b181c54494b3ccaea6af3468eb92f861c3743cc6fd3b8abdc2d1725a0
+
+Package: termux-tools
+Version: 1.46.0+really1.45.0-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Description: Basic system tools for Termux
+Filename: pool/main/arm/termux-tools_1.46.0+really1.45.0-1_arm.deb
+Size: 33396
+MD5sum: e1a8511d05ac642b4c50d24d2cca9d1d
+SHA1: 383516754526df12a003df0887d7923693e71f66
+SHA256: b275fe830ac459959755722b98ec40a5d0b4b679f2260405d2bc8185d00bccae
+SHA512: 84bc43cc828f2c64ea7e848b84d17b271533941f50936e060a45fa1f50991f2ccd9edb432edad65870d0d81e97b640912766d3d2fbbbb7eb8883df46df10efee
+
 Package: tk
 Version: 8.6.14-1
 Architecture: arm
@@ -2337,6 +2547,51 @@ MD5sum: cba7792691d5b7326341ae6f474d4ed8
 SHA1: d95e84a95ee72de34fa4fc4b8a6cdf3b4e1aef41
 SHA256: 7e7b75625433daaad25292c38840314e71bfe0622ce3a43f779db51ff633c492
 SHA512: cf634d468a094ecd82c1633f64a84f42b6ba15a902b9978e5068ea410ed7a1bb096a5b889d09e5805a4efb1beefeefc4cfd5ea9c3e236a9acc231787d9c9f2a1
+
+Package: util-linux-static
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: util-linux (= 2.42.1-4)
+Description: Static libraries for util-linux
+Filename: pool/main/arm/util-linux-static_2.42.1-4_arm.deb
+Size: 436928
+MD5sum: 52b56e3eef10e1e0d5d2941aee2ce3c4
+SHA1: 4d713d40a1aff6d19d866c6cb4531a9895822426
+SHA256: a3c670345b2d68ed5cb683516117138878375bb867153db8f5958e8cd8874290
+SHA512: 7cedc63bb7920370a1033a35afdb19bfe3bcbdb69c1eae8d180e1e8224ac3399db330c89cc945c1f3575d178ae2b4ea212ff55d022b7b4481a01925fa2d3ca3f
+
+Package: util-linux
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-glob, libandroid-posix-semaphore, libcap-ng, libsmartcols, ncurses, zlib
+Description: Miscellaneous system utilities
+Filename: pool/main/arm/util-linux_2.42.1-4_arm.deb
+Size: 701972
+MD5sum: 0364d90681f40a533f61cc190f68f30d
+SHA1: 9c778c6ae290a3e4d26d426f911b7cf12471dc4c
+SHA256: 90aaefc3f9b9cda6b57053300d0ddb873bdb91ab39b44d6374a87c189b69753d
+SHA512: e1de6ee239f5a8fe05cc73493f6438314df13166e204d0c88501e14e6e01494719f753efcfde7c72b4dc1525ed2ff4c73732abd933c4ea4e73597dd1182b22f7
+
+Package: uuid-utils
+Version: 2.42.1-4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libsmartcols, libuuid
+Description: Utilities for handling universally unique identifiers
+Filename: pool/main/arm/uuid-utils_2.42.1-4_arm.deb
+Size: 37892
+MD5sum: 8ed788ad8bdab697970df3bfec263504
+SHA1: bf4b095b777a1d1397827c4861a5571a5ba8d8fd
+SHA256: 57fad2c0cc26cc180dcc135235b6875a576a383b6d59170a546c9a4290fbc6fd
+SHA512: 7cbdf3c69dfc7598572da5c3def07d28b26033eabeb15c792ee2ed6f681379f34cb690b6e180de0148f0e7a7376ff6075e26e13cede025369024cc4674c776b3
 
 Package: xsltproc
 Version: 1.1.45-1

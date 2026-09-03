@@ -8,10 +8,10 @@ Depends: tor, apt (= 2.8.1-3)
 Description: APT transport for anonymous package downloads via Tor
 Filename: pool/main/all/apt-transport-tor_2.8.1-3_all.deb
 Size: 932
-MD5sum: b88bd502855216866c72a278bff8a3e8
-SHA1: 39091689e9c99e8f16e206273ee6ebfdc3ba7711
-SHA256: a137cc66613831af25e167382ccdccf7a456abe422fe0029a79150bc3d09ae0a
-SHA512: 96f3a92e7297444b999af5109afba8166d9d4444f5ae4b6995f7c8b4a2fb4c1b8d298f2c30ba43a56c1cfaad233a45e0b49953c858e94c6fe4747eac0f69c1e8
+MD5sum: 80aac84f23fd3488f26fe1b63031ef87
+SHA1: f25c95d2a874ec4230e50a51154abc1ade74f2cd
+SHA256: df2402f9f516c97fde0e90bf0e08dbbe4550c4b1b3714f0bf68d48f6bcde4756
+SHA512: f940376ec109882633d55ad64a61315da55117e0e0668d5787ef65d2f19496523405e541f0c030b57143fb98311ec166f386dccb8388ef63c940e61c4c5164c7
 
 Package: ca-certificates-java
 Version: 1:2026.08.13
@@ -147,6 +147,21 @@ MD5sum: 3f018c75b96e820b2be0be6287774679
 SHA1: 661dc791c0439d360d019a9e794ef4e81f1fa879
 SHA256: 5feb1261cc373ca56d7d439571d1c86636b1f6475a9b3b12b977a8c957d40aa6
 SHA512: d4fa58f70acd71ae1c2014a4ec2383ccbef3a190ab76c02cc11b31f84aca830153ca134c8c5faa39d3437931c6bc86f9831db46b2aa44cb290b8bb02e9f92997
+
+Package: termux-keyring
+Version: 3.14
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GPG public keys for the official Termux repositories
+Filename: pool/main/all/termux-keyring_3.14_all.deb
+Size: 45016
+MD5sum: da218698f8446515021a5c4a93e7b700
+SHA1: a44b59133b3fea0603bc6759086b44a6017b5bf5
+SHA256: f770d34e41f8a4da96c4faa5b281927286f493eaa247203dfe2606c2a574f1ab
+SHA512: a5d9d7da38de6c141ad8d5d616d7e721026ea567a57661691eb7c1fab9d1b53e01e5610e8691847463d3722c623816e0c7cf908b0f1492f2305c51ea8496b007
 
 Package: ttf-dejavu
 Version: 2.37-8
