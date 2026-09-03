@@ -1,3 +1,33 @@
+Package: apt-ftparchive
+Version: 2.8.1-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libdb, apt (= 2.8.1-3)
+Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
+Filename: pool/main/x86_64/apt-ftparchive_2.8.1-3_x86_64.deb
+Size: 108388
+MD5sum: 83a08923732aa92cf8db61494339d195
+SHA1: 2af5d1c385bd1e4175c36eb5380b70df29274c9b
+SHA256: 78c259fda0b0ae3f635857158bcf239c597574ecc0127b36d894115a47ba4628
+SHA512: 60772afd992b49066a624208d0b1db9e59b039a01fe5f30c0e24b1dad3925bc2daaf27224604a9fe7e27c0469522ddbd658eab0c820bcb1150c25bf98a60ff9f
+
+Package: apt
+Version: 2.8.1-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
+Description: Front-end for the dpkg package manager
+Filename: pool/main/x86_64/apt_2.8.1-3_x86_64.deb
+Size: 1168492
+MD5sum: f975078cabed82a91cd592c96350141f
+SHA1: 3bcb937a286d5ead1983d86adcff4e0ab92b57dc
+SHA256: 83e0f559db00a200153b5b5154ac4c81301b2ecd0025d771291bed252f9535d6
+SHA512: 3e4b5538cae1de71008a834ab5c5c634303069eb776b6a380ca7f77806939eb26a424723601838669bea001311d63e2c2dcba4a9e384afc29c463a1e50b1d2f9
+
 Package: attr-static
 Version: 2.6.0
 Architecture: x86_64

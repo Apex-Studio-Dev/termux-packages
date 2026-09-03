@@ -1,3 +1,18 @@
+Package: apt-transport-tor
+Version: 2.8.1-3
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: tor, apt (= 2.8.1-3)
+Description: APT transport for anonymous package downloads via Tor
+Filename: pool/main/all/apt-transport-tor_2.8.1-3_all.deb
+Size: 932
+MD5sum: b88bd502855216866c72a278bff8a3e8
+SHA1: 39091689e9c99e8f16e206273ee6ebfdc3ba7711
+SHA256: a137cc66613831af25e167382ccdccf7a456abe422fe0029a79150bc3d09ae0a
+SHA512: 96f3a92e7297444b999af5109afba8166d9d4444f5ae4b6995f7c8b4a2fb4c1b8d298f2c30ba43a56c1cfaad233a45e0b49953c858e94c6fe4747eac0f69c1e8
+
 Package: ca-certificates-java
 Version: 1:2026.08.13
 Architecture: all
