@@ -39,7 +39,7 @@ GPG_KEY=""
 PUBLIC_KEY=""
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 GITHUB_REPO=""
-LARGE_THRESHOLD=52428800
+LARGE_THRESHOLD=104857600
 
 usage() {
 	sed -n '3,30p' "$0"

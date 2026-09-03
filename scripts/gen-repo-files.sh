@@ -28,8 +28,11 @@
 ## Large .deb files may be hosted outside the pool (e.g. GitHub Releases) to
 ## keep the git-backed gh-pages tree small. Pass them via --externals-dir along
 ## with --external-base-url: they are NOT copied into the pool; instead each
-## gets a Packages stanza whose "Filename:" is the full asset URL
-## ("<external-base-url>/<file>"). Small debs in --debs are handled normally.
+## gets a Packages stanza whose "Filename:" is the full release asset URL. The
+## tag segment ("pkg-<name>-<version>") is derived from each filename, so
+## --external-base-url should be the releases "download" base, e.g.
+## https://github.com/<owner>/<repo>/releases/download. Small debs in --debs
+## are handled normally.
 set -euo pipefail
 
 DEBS_DIR=""
@@ -129,7 +132,14 @@ gen_packages() {
 				earch="$(dpkg-deb --field "$ext" Architecture 2>/dev/null || true)"
 				[[ -n "$earch" && " ${ARCHES[*]} " == *" $earch "* ]] || earch="all"
 				[[ "$earch" == "$arch" ]] || continue
-				emit_stanza "$ext" "$EXTERNAL_URL/$(basename "$ext")" "$pkgfile"
+				# Reconstruct the release tag (mirrors upload_large_deb in
+				# publish-gh-pages.sh) so the Filename becomes the full asset
+				# URL: <external-base-url>/pkg-<name>-<version>/<file>.
+				efname="$(basename "$ext")"
+				ename="${efname%%_*}"
+				ever="${efname#*_}"
+				ever="${ever%_*}"
+				emit_stanza "$ext" "$EXTERNAL_URL/pkg-${ename}-${ever}/$efname" "$pkgfile"
 			done
 		fi
 		gzip -9c "$pkgfile" > "$pkgfile.gz"
