@@ -1,3 +1,48 @@
+Package: aapt2
+Version: 16.0.0.4-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: abseil-cpp, libprotobuf, fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: AAPT2 (Android Asset Packaging Tool)
+Filename: pool/main/aarch64/aapt2_16.0.0.4-2_aarch64.deb
+Size: 963212
+MD5sum: 0c9e75d5bd4b2e504facb9d28e0e15f2
+SHA1: 05d0788b03d2464217df1afbbd7234d5416421dd
+SHA256: c0558ddae82a68689642441ee39b38da4f8936b4b93efe5546af1af993f05cf4
+SHA512: e62a2b336627fbe1ef0641241d5a09c95426610648b1f9d7381afa5bab3354f75c3fa40873cd609b1104cfc60d1935cefa216dc704545a7783221b0868654f13
+
+Package: aapt
+Version: 16.0.0.4-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: Android Asset Packaging Tool
+Filename: pool/main/aarch64/aapt_16.0.0.4-2_aarch64.deb
+Size: 452848
+MD5sum: 7127d3077900cbf6964a7b17c1b4b6fe
+SHA1: 1d5e284acb662e7882e6decfa76b2de78aba0df9
+SHA256: 038202795aa0a539396cc0751dcc290863c1b378995fa4d577fd0cd1e2688906
+SHA512: b95c885d69045a0af226584b9c7569a6b0ec03132f6cc664a7142230ed8bc5383a97656ccab8e0208f249b2d8e0ed99d7f780e03e4e1cf0d9e1fa92a685b56f1
+
+Package: aidl
+Version: 16.0.0.4-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: googletest, fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: Android Interface Definition Language (AIDL)
+Filename: pool/main/aarch64/aidl_16.0.0.4-2_aarch64.deb
+Size: 490952
+MD5sum: dbc5f0797220728f144b288ca3a05252
+SHA1: a5f50e7940538b9fab7bfe883924e3eead4abbc1
+SHA256: 698fd7cf4c59dad2b7620650dcfa72b872f558e65d3be364364a446360e1fb7c
+SHA512: f178c157126b753ad0d1d1e509de9f6e36ee562796b0c3dcaec210812bd3d8b42135ddb92342037837c5c63eda5642496724ce19d9e5a6524962b4b8d714e387
+
 Package: apt-ftparchive
 Version: 2.8.1-3
 Architecture: aarch64
@@ -73,6 +118,36 @@ SHA1: 55e10e007282f91d1f3ca81c1c98bdac87401856
 SHA256: f9aad3d45e90b9ca814353c43553599c96adc32078185abaf567034ea77b7364
 SHA512: 6cc93f4b33364e0d7a9e3052cd500de085df0bbf34fae0c4f867bd6a877730482c0539ce18a1468b228c38edae5d44e882ecb53f8174e4af4453e610dc8be596
 
+Package: binutils-cross
+Version: 2.47
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GNU Binutils for cross build on the host (NOT for Termux)
+Filename: pool/main/aarch64/binutils-cross_2.47_aarch64.deb
+Size: 2338696
+MD5sum: cc26c7837e7cac6a54cbe0ca0248b546
+SHA1: 2796d03d5eba00671b59b7b7ab602bc89ab7efed
+SHA256: 3799a916bceac8a9f802d3a12b39fddce37fec76621b0cff1089e53203ca5be2
+SHA512: 3df9b48bc633037efe073cf3c062475a90d0575c7823d4d89bbf8f22a057bfae58b866e104dcc897eb8384d2726b9318e56b02a0151ebaca84f1479f44fa7915
+
+Package: binutils
+Version: 2.47
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, zlib, zstd
+Description: A GNU collection of binary utilities
+Filename: pool/main/aarch64/binutils_2.47_aarch64.deb
+Size: 2444564
+MD5sum: 204984315005883d6240f84056cfc717
+SHA1: 3bd4417d89b970ead3cc0afc60772b0b6faa384c
+SHA256: 2f79bf87387878055ad1801f7fd903cebbde8b4b2c7066c8b1da6821ea22c97a
+SHA512: f63bd27b03058b4efe5227c3ec869e756641bd3c29daaad709248f108bf1ce9ad1198e70c0d19ed06d42ae6e11519e38a732575852883ef38f961ad46e98a294
+
 Package: blk-utils
 Version: 2.42.1-4
 Architecture: aarch64
@@ -132,6 +207,36 @@ MD5sum: c89c17851e10e66a82f879bd55e93309
 SHA1: 1cce112f29a81a8c5912fece77eeb34b6368005e
 SHA256: 126171f1964ccc7bb91dfde809bda6adb3d207d05a3e8c691d6b6b57f30d0de0
 SHA512: da06d4c39258efd4b3da518e7373353f5f38a93d9aecc019ec7fa5813daa24b7be55ddc0286fc77ba62a1013197fa02d19cc67e131d68e0a9a42f9dae8b94ab1
+
+Package: cmake-curses-gui
+Version: 4.4.3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: ncurses-ui-libs, cmake (= 4.4.3)
+Description: Curses based user interface for CMake (ccmake)
+Filename: pool/main/aarch64/cmake-curses-gui_4.4.3_aarch64.deb
+Size: 2471160
+MD5sum: 7e3499df2aaabb504cfcef027f620e7a
+SHA1: 5b71d14480f7b5d6fd568ce839fbbceb2d2585ff
+SHA256: df16d611299fe56efe1a051c8d941035bc60d8e905ad1e0e3f52f09794465546
+SHA512: 872893b5a927d544396c47d9b58e65cd1c8fca5f2d8d524ba93bdedc6ef5b4b51719a92115a753961412354e2115326efd32c70639e276b2e2ade13d49b404ac
+
+Package: cmake
+Version: 4.4.3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libarchive, libc++, libcurl, libexpat, jsoncpp, libuv, rhash, zlib
+Description: Family of tools designed to build, test and package software
+Filename: pool/main/aarch64/cmake_4.4.3_aarch64.deb
+Size: 10634308
+MD5sum: 32d37f33bfd6d87b2de2c0b85752ff68
+SHA1: 245029a4a00e9ef4ac049114936cd49a71e3e220
+SHA256: bd247ab93293c3e5782282d111640bbc5e22f37308fda65038486fae74fa2e03
+SHA512: 8852a447cc5106882be582fcf62302bc9b1ad5c33b1c95ec7989db9c5e0eafebae003c858863668e592969f00a19dd82d71da00bbd0c54073c5a21ef789106c0
 
 Package: command-not-found
 Version: 3.5.0-9
@@ -567,6 +672,36 @@ MD5sum: 9d72887e35b6e006cd845f82a26a6688
 SHA1: 2522e15f1d2e068220d839b2b9b9cf147b1b088c
 SHA256: 2fd1cc2b16ffc407aca2175dc657a4cf6a44b3e4c866f5b722c6cd62c0ffd30f
 SHA512: 27c06aeb9719ad51a0a9b1300d23cc54b12d6708e844a373b33d3b4edbbbb601a0282183a898131f8eedb3bc34aa55cad52bace54d20a413edb2b6a34381f1f0
+
+Package: jq-static
+Version: 1.8.2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: jq (= 1.8.2)
+Description: Static libraries for jq
+Filename: pool/main/aarch64/jq-static_1.8.2_aarch64.deb
+Size: 141788
+MD5sum: d09ea869eaa56bd2798486937e54092d
+SHA1: 69e884446be9af981c613d48736b6f05dbf5facc
+SHA256: bec0070ea01952e141dbe855afbcf8f4ff04a7e77beea71443596b821f47e15c
+SHA512: 0d2be4484f33c87e0fbf756318bbb3163bcf2fc06e4ba846613962172a254213b0d5c1476427ec303c05a726b089fae8f04f39b9469c4b7ef9df2fc368c04582
+
+Package: jq
+Version: 1.8.2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: oniguruma
+Description: Command-line JSON processor
+Filename: pool/main/aarch64/jq_1.8.2_aarch64.deb
+Size: 184608
+MD5sum: 02dceacfedec1397a22918bcb4e007eb
+SHA1: 9cfbe9dad3eb947948525bd32b647ede4468bdde
+SHA256: a6ac97ef4afb260888719dd0f41f2603f6c4525efb5de0b618103fe1997f30dc
+SHA512: ed94cb5ecd5ee6533af30998b0c8a3230346dd15788621f30d0622fa6210885da4aeb43f47782aec82b3ba8af59a905d4b239ba12337d9ea276e6fc1b0f6da58
 
 Package: less
 Version: 704
@@ -1543,6 +1678,21 @@ SHA1: f0165a94fed72ef8687c0feaaa5bab5a266b5f7d
 SHA256: 65624206b008b8bad1f17514d66a59455f9f308a5361bc01389a2a3dfe384237
 SHA512: 2152de620d2b75e90187b8582a4a4651b77e710d98e914bdbf3d30990f85ab2975b4ca80fba3d292fb3e878b2431f7c592ebaa95df609f7e856b6972c7ea3f8a
 
+Package: libprotobuf
+Version: 2:35.1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: abseil-cpp, libc++, zlib
+Description: Protocol buffers C++ library
+Filename: pool/main/aarch64/libprotobuf_2:35.1_aarch64.deb
+Size: 1385636
+MD5sum: 3f79e565f714aaadaeb38a99155e7676
+SHA1: 9c58f027ec54720fb9da0206dc9df4e0652753da
+SHA256: 3b50dc726eab4a8a43bc34ea4eac18c98091d858b74c5c429d6f8631fc979f5d
+SHA512: f5a97a8e5da430d41978fe06b88ed5fd692961e48b6d02439e479a1c61666bea7369db12a114d895ec98a765b31f1975ed6deba7e11869130cc8c1658dff014c
+
 Package: libsmartcols
 Version: 2.42.1-4
 Architecture: aarch64
@@ -2137,11 +2287,26 @@ Maintainer: @termux
 Depends: 
 Description: Tool to control the generation of non-source files from source files
 Filename: pool/main/aarch64/make_4.4.1-1_aarch64.deb
-Size: 240536
-MD5sum: f3ac389b2610962791aa4818142fef31
-SHA1: 5e061ba76650c1f7ecff8463ffa918778641b94b
-SHA256: c894bf859f3900e32b9165c6c59c624ef973175a1e8da093c9a5d3a8ebba1541
-SHA512: 7801930dee500dbf992eefd8f7d6bd072053a3cd7ba1295667f2faa47d73f7fe6d4d329b9dea9af2b7cb9961069698a40f6760dc7b3609aeb53a5133d5354dd9
+Size: 240580
+MD5sum: 700f5233a6116bcbdc76c3b3b3466363
+SHA1: a430595267ef8d09457f2103ee08db91470da63d
+SHA256: b3788a84625c1a3855873aadf1615099618bcea6f69a63ad36cde6004e950a0a
+SHA512: faba7e4256f13a0d74ddb584b95e4d4e2502552b244be2cf7389616a4022269a6fb0bbc55bd4f9c28fc06f69a445360ed414f36b0ea517ceecfdeeaa0b1671e1
+
+Package: mandoc
+Version: 1.14.6-6
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: less, libandroid-glob, zlib
+Description: Man page viewer from the mandoc toolset
+Filename: pool/main/aarch64/mandoc_1.14.6-6_aarch64.deb
+Size: 277048
+MD5sum: ec76edb36ab8171149e1b993e06825e5
+SHA1: ff1018baaccee072c6082085f3791eaa5395fc12
+SHA256: 812fe45bf9be19fe671fa03d5ad55c919cfb1f8a7b5d0e3534875f25ef04b557
+SHA512: ee92a79bff396ef5306503de4be90a6165c2e9013d992180ac00ff7e6e95d5e6e884ad3f50d661c20f4a3a3e217bfe3adcc70de15d04c4a51091a18d3bcbb444
 
 Package: mlir
 Version: 21.1.8-3
@@ -2458,6 +2623,21 @@ SHA1: 1d2e403ed927e557ffe563c0d41658ea7abb624f
 SHA256: a15061b1ad16c00a1752a73583369be8d3a132c9dd15c7cafacfeba14a89532f
 SHA512: 621a2789992ba1e15b2c88b82f63d41f9f63dee93ab581805a5312a57e0c65145d2ece52c89499b5cd9ff2b92d3cb1011cb073f6ee9c31e98a86bead9a89e8a5
 
+Package: protobuf
+Version: 2:35.1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libprotobuf (= 2:35.1)
+Description: Compiler for protocol buffer definition files
+Filename: pool/main/aarch64/protobuf_2:35.1_aarch64.deb
+Size: 1193692
+MD5sum: cc6db24bf425efcd4c3528da5210a294
+SHA1: 3df4144c4cfee3c593e27d96ceae910c9ae67ce1
+SHA256: 89727ec3da87afedb0b715bed7d368057d37e4a535bc26500bf10eb909914bdd
+SHA512: a3d0daacc96d3aa52b0305522911156b0e21b722c9a9b36f5881932a3d54241309269a1db44b11b59713ec3ce6124bd9fb915bba870d5afc23fd265c5b879fa4
+
 Package: psmisc
 Version: 23.7-1
 Architecture: aarch64
@@ -2667,6 +2847,21 @@ MD5sum: 8046eeee9ce5a2d8d33f2ec42df3d79a
 SHA1: 6da7cd9f47135b66277d25e1e989aaa98deeb512
 SHA256: 3f46ffb55fa5769642a4066ed3910d1733ac1a57ed73a5f5b64af0ece374c31a
 SHA512: 4a70872ad9f468153e6ed0f4712a862dd47026013a363b01a558ea69380660f5622d8fc008bcc86db7eef7fa56c665df2c5ad38dce17b603e16520e4ab242f95
+
+Package: sysprop
+Version: 16.0.0.4-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fmt, libc++, libprotobuf
+Description: Android sysprop generators
+Filename: pool/main/aarch64/sysprop_16.0.0.4-2_aarch64.deb
+Size: 96692
+MD5sum: 47b25f51d3356f4d3bf127356852e474
+SHA1: 5ca30b558cfac2fc0a42cb7ff86bef8e9b5a0c9d
+SHA256: de6de96a73c08fd62d96c576411f505564d1a1142f1581ddd274b08cd998ac0d
+SHA512: afe2b04297cc3f15820baf02d91bff1608228729f853af37baeb9c374d9421711ee8b434473d136a6b739cd40277b54c2c0f0d43c691ca0c9c6e8aca607d9e27
 
 Package: tar
 Version: 1.35-3
@@ -2893,6 +3088,21 @@ SHA1: 53f594eb53971488c00aa6745d89213bf677b8eb
 SHA256: 036295a63cbfb1429d0171ae5457df832328b957c0035a68d3f4e19d73555813
 SHA512: 8a6c6fc7a7d7e7892fe64c2b7456487d51f48de688b9f26a09daede353cf27986a05591d3737487a52d005ece19d849469fd22192ef2ea8ac2cc1177376a59af
 
+Package: which
+Version: 2.25
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Shows the full path of (shell) commands
+Filename: pool/main/aarch64/which_2.25_aarch64.deb
+Size: 12620
+MD5sum: 098aadc90ce42b6a80f2a74d027f7c5c
+SHA1: ab3ae92b26c53714ef31f18b7b165e26281a2bd7
+SHA256: a3902e440dab4e5dc3d1aadefeded7bdf2336bb589b2ed4bf8229795321fb504
+SHA512: 93f01ff2d0efe70c0e6d9a057df826960f96ef974e7ea72075f9e8465a748aa075491025d623eb196ba5977422e8f608a7184059016d84ebb6a867d8c5a38fe2
+
 Package: xsltproc
 Version: 1.1.45-1
 Architecture: aarch64
@@ -2922,6 +3132,21 @@ MD5sum: 73b2d1bd2d26df608887f81bb32efc07
 SHA1: 9c81990c01c5c8d85d7cff76851d4ee2842d9dd3
 SHA256: 89d503e52dc0749cb72737bded9dee8237ded36aff2aeb2a89f6ab8b6a752ece
 SHA512: db2aab9100520664301afa7a067b6641cbaf876d9ea2bd68639a118808e6d2184ef56ef047ade8048204f951e25228b76c31d2b5efd742b1e6f615ead6f43481
+
+Package: zip
+Version: 3.0-7
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libbz2
+Description: Tools for working with zip files
+Filename: pool/main/aarch64/zip_3.0-7_aarch64.deb
+Size: 142096
+MD5sum: 91da68ead27ee4d45ab618c7631e432d
+SHA1: aff7fa39c691bb8191a9bde2e4549e9def86ac6e
+SHA256: 6f403fcee59d7c1dfadb9eef5ec07c56d81d656d592042c1a1c92b2dcea0e3ec
+SHA512: 05753c8b9d946f25be6b35c700d9d225d816b07980bc8306b5a8bd099ae32f3f525f93c5a4e247ed34f6471d546d9174b6e7a0985dda6fd8104634b3d470f2ed
 
 Package: zlib-static
 Version: 1.3.2

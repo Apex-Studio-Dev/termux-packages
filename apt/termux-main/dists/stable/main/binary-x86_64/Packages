@@ -1,3 +1,48 @@
+Package: aapt2
+Version: 16.0.0.4-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: abseil-cpp, libprotobuf, fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: AAPT2 (Android Asset Packaging Tool)
+Filename: pool/main/x86_64/aapt2_16.0.0.4-2_x86_64.deb
+Size: 1093324
+MD5sum: 3410cdc299d891de7761bf7761e4313b
+SHA1: 99eff77acfd80ded8f226febad24f3f8d5143591
+SHA256: 3f4316ff8c7a419268b15a206719b2a2dca3f62413359c8bdb4ff27fa0b7ca99
+SHA512: 76fd83e2fcbdc7f7e16c0400a34177bf23588577627b4d3d7906d80339d30550eeea2cb5bde021c7879f005caca0fb1946e2accd6deffbc98e16b837e8d86b6b
+
+Package: aapt
+Version: 16.0.0.4-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: Android Asset Packaging Tool
+Filename: pool/main/x86_64/aapt_16.0.0.4-2_x86_64.deb
+Size: 518660
+MD5sum: 6ba341e2401d5cdf752f2986f4239aa4
+SHA1: 2c1925847d8abfe8d8ed255f1fc6f21c5b2d5e75
+SHA256: 49053e1692e4857a32bf766cdff7cdf5623797d4236083c3276aa111350a8547
+SHA512: 65f0f38a0b691758f6790c1af7136230fb2a8becbef58c2e16463c9c8a106e1a7f2dfb56d089a82911b0283cdb6efd868da80971c891dddb892d31ce11396f4d
+
+Package: aidl
+Version: 16.0.0.4-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: googletest, fmt, libc++, libexpat, libpng, libzopfli, zlib
+Description: Android Interface Definition Language (AIDL)
+Filename: pool/main/x86_64/aidl_16.0.0.4-2_x86_64.deb
+Size: 554340
+MD5sum: 1c788ba1e8f5895a47bc0830781c5c3b
+SHA1: 49a406b98e7e513b832757b7bf3b1b7a4554c09e
+SHA256: e67f5cdab97b6d897eb25372d6173e4ca4460b26d14124a9b743f2e80a567e9a
+SHA512: 2f65b709bd9e52ee81c053ea69dd43adc2c672eef379c24506b02a0561d6024f6a1fe35ab89e292255ba4e67f437dc58e0b4ca5cd0d29031cca3e4a1dc505dbf
+
 Package: apt-ftparchive
 Version: 2.8.1-3
 Architecture: x86_64
@@ -73,6 +118,36 @@ SHA1: dba7f1aa8281dcc84b4c04baa7549ea435b1901b
 SHA256: c779188f1529b9c33ef69f0662f5b6f9e3a47ce1ec3282725facee145a794e71
 SHA512: 988b435db811a0b3477ee78fc62cda164e9da058a913fe32054f1989e7dcee1e0295c57a960c179713810e9bfa252d6e84c33dd0a6cadd16b2ea145f9bd7b8ce
 
+Package: binutils-cross
+Version: 2.47
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: GNU Binutils for cross build on the host (NOT for Termux)
+Filename: pool/main/x86_64/binutils-cross_2.47_x86_64.deb
+Size: 2194804
+MD5sum: 1620b0505816cdd36738311c384bec25
+SHA1: e5c8c4950091e7deb08fe7b17d6cdb6209e940de
+SHA256: ac2fe835c89b67a9f7d23d52be16670297ce1185ea8d3a0c12b72b767ab9cea1
+SHA512: debc411c5ca2ae4a6b1ae1f2ca600b5f888167df5d9a7a0ec940decc713306bf5635b4e218b46b15f37094fbdba8a0bb4692c5e854177ff7fbd36db1f2990ab4
+
+Package: binutils
+Version: 2.47
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, zlib, zstd
+Description: A GNU collection of binary utilities
+Filename: pool/main/x86_64/binutils_2.47_x86_64.deb
+Size: 2344932
+MD5sum: 5fa71a7974552bc3bc0ed8033eaf2b05
+SHA1: 56c8d147f94acba961fa24f2547d60dd8204ca49
+SHA256: fa47e44d8f735c17e3b7636766d379bf41392cfa1365778d6396f13c94d14dbc
+SHA512: 7cb309a71c3d8d87f001b5f7a8bb2829f768ab91f006fd80b48ac2fd889f371571261a12f6f540386fd66dea40582d890099bdac0d00a48d355b70a94be457c7
+
 Package: blk-utils
 Version: 2.42.1-4
 Architecture: x86_64
@@ -132,6 +207,36 @@ MD5sum: e6ecbfcd1d4fcaf2fcd7641c36b7b1d7
 SHA1: 8953eb52b0a0d1b85573d4391443d762e09d2b4b
 SHA256: fee256e2cb1aa35c1e1c3d9c8a6217bb70e5d1d6206aaeaef38f482a1d033695
 SHA512: cfe29a886824cd57dc8cfc6cc865d7ab0b0f4cf41d8b07b3966d83632765ca92a4318ceb60c786442c7254937a8ac645e5a75227ac0e9f09f92d1095527b98f9
+
+Package: cmake-curses-gui
+Version: 4.4.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: ncurses-ui-libs, cmake (= 4.4.3)
+Description: Curses based user interface for CMake (ccmake)
+Filename: pool/main/x86_64/cmake-curses-gui_4.4.3_x86_64.deb
+Size: 2860780
+MD5sum: 12a464c6151a8efc54aefd8ef3fe2d8a
+SHA1: c9cdf9bc8cf6ed784ff1680d7ef1f0d21773b4b4
+SHA256: 035b1f5a33db246d6ac322123ffe9603901cab31c313373e6fa283a10f940b47
+SHA512: 49f03e4de59f75bf8091e63132c06e185ac63df42ed0dda1c626095305c499d3e9db04d28d33ddbc14c0ee30cc74fbb13d4bc6820afb6bff33fa9e72e30e3773
+
+Package: cmake
+Version: 4.4.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libarchive, libc++, libcurl, libexpat, jsoncpp, libuv, rhash, zlib
+Description: Family of tools designed to build, test and package software
+Filename: pool/main/x86_64/cmake_4.4.3_x86_64.deb
+Size: 11912024
+MD5sum: da978b9d2c83a1ca606b89724c1b89ff
+SHA1: bc6c1b0a27ad379dc1cd7997f42500381e5b0a4d
+SHA256: c685c88b4d2730a1bd91a708f6d72b6de482c301902937e79ebbf0eb24387b03
+SHA512: da1c753874f57bc53a46601a0ecc539380049cd2467ca92318506a2e5d27958967e7c52ac057ed46c4fb38571207e973ae3f225e6b9d04dedb9f16a1b4309994
 
 Package: command-not-found
 Version: 3.5.0-9
@@ -567,6 +672,36 @@ MD5sum: ab04503eb7f3d106ee92fa3464603185
 SHA1: f16a3c220e112cd7d9a2aaa212f14189ac0e4c40
 SHA256: 5c581c07892130cdcd96900b67cf3905b8fd5b2dd51baf91b5c4f4da558d0617
 SHA512: 2e46512635aa755597e752966cabf339cea60bf8548b0c86cc2451133b9924b446383fa73ef2fe1a697daa4396eb99d28d2dea45da2714598835057ddf8a9801
+
+Package: jq-static
+Version: 1.8.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: jq (= 1.8.2)
+Description: Static libraries for jq
+Filename: pool/main/x86_64/jq-static_1.8.2_x86_64.deb
+Size: 144736
+MD5sum: 5e95b6088b6a2384a5bea3f5be0dbdcb
+SHA1: d6344ee7cd737d54b570ea519e4ccac35e3ba363
+SHA256: d303ef4917b10962332d0310a23daf5b9cc06c5b6eb9e8aedb5bd0d0f102346e
+SHA512: c81b2614d0a06952852d21f090ade478c7cc3e016c2a32391677fc04a9496c1930d99d2bc9cb0c4de7c442e38ce0592308805d7cb1380a4f1dfa9ff8572ad4b7
+
+Package: jq
+Version: 1.8.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: oniguruma
+Description: Command-line JSON processor
+Filename: pool/main/x86_64/jq_1.8.2_x86_64.deb
+Size: 196108
+MD5sum: 7a78812d56f34b0625cfc6cedc3c6ae6
+SHA1: c07b3a3c39bc1d6b19129944fb8d660bc5441bc3
+SHA256: 5a9ecb6ff7f0cb629886255620bbfc9c220a8088607c9dc06d37f87d9ae394e9
+SHA512: 26b8a8f7c104f5215b7b6f0486aceb308ae75c237dc81ef79baddc5df21c410f61bbf1e428b55815111e5756822264af561650d53e5134f2d75aa48065858d53
 
 Package: less
 Version: 704
@@ -1543,6 +1678,21 @@ SHA1: bf121506bea4c85b30b72cbda060b57fd954cc8b
 SHA256: 76e05f16fb8d416e38d8ec832cfcf3d393d885783cf7b60333593eb4b31c9b42
 SHA512: 0244a6035a4a50f42904a45ee7a5d9d00bedede690773b4c47c633efbe528e8e283374516e004a3495ae6f6580e1f2d32a73e6659092ca28f9b49ca121fb887a
 
+Package: libprotobuf
+Version: 2:35.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: abseil-cpp, libc++, zlib
+Description: Protocol buffers C++ library
+Filename: pool/main/x86_64/libprotobuf_2:35.1_x86_64.deb
+Size: 1493700
+MD5sum: d07a9cc3a91e19b6451b49286eaa3ff0
+SHA1: 72ff9ea29031ac6715d44763063c85022b4a82e6
+SHA256: dc49d0c888689160da0371aeb07a29db5f7ffc6ecc6dd24b55b798fbd56897e4
+SHA512: 34fe11cb342a644809fcb77f8dc4f9f38c89bc73762877e61c7ca74ea6034a305372d98142494efa106ef5b9b114944bea073d8782406b06f0eeedd55c8b5c62
+
 Package: libsmartcols
 Version: 2.42.1-4
 Architecture: x86_64
@@ -2137,11 +2287,26 @@ Maintainer: @termux
 Depends: 
 Description: Tool to control the generation of non-source files from source files
 Filename: pool/main/x86_64/make_4.4.1-1_x86_64.deb
-Size: 248148
-MD5sum: 75053ceca07a12624e32bf2793f2c6ad
-SHA1: d5ca6e894fd87000a65fd27ae31e8967a40597e9
-SHA256: 35bf7b61334544c9122ffc860d4acab8e11b15224085e84c59019189004ba3b0
-SHA512: de60a1d8b5a8800b6f0d6be4d604c1b1d715e4188fb51bafd90af4e3f00ce8c91fd9a00daf7bebd137e5ba7e367c02ae797e4cc97aa8e7823137ce3cd6ab551f
+Size: 248108
+MD5sum: 85f94b15cff996e872268f303d6fce40
+SHA1: 48ba71ef98ec6f08d8176eb6940323df9880b58e
+SHA256: 0efdd3ea3d6d0cb9e8cb51fdc43bff00c2c094a02a6168104d941239dc0cc29d
+SHA512: 92e86b039f00cb50339c9aa534cec0e83c687f14c4012894626d11ab07e77763c5ce47b7d0a4ac603c26f32a5cfedf420142ef4f895625e3e418c1c8588e8764
+
+Package: mandoc
+Version: 1.14.6-6
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: less, libandroid-glob, zlib
+Description: Man page viewer from the mandoc toolset
+Filename: pool/main/x86_64/mandoc_1.14.6-6_x86_64.deb
+Size: 287984
+MD5sum: 647df737f57a6aa0271ec4912e8e6183
+SHA1: 790e40c10535fc50aa923b508aa999a7ef282044
+SHA256: b9841682c49a8f53de9fecdbe151a73a0399d9659f22048b6a0f8aeaa0c8e237
+SHA512: 3feab6a37fdb8cadea2bf4e22092db1929752a53bd798c3d690645b6f1500eb638c14873ad77925e080b33fae725bc6aeb0928e22b7769666f421bddfc8e4fdb
 
 Package: mlir
 Version: 21.1.8-3
@@ -2458,6 +2623,21 @@ SHA1: e07363c6f30ad5fc536b3259325898d812436283
 SHA256: 69c886162a9ada67b29e080669823e63ae8c56e7cce2c097c1f42f0549a46fca
 SHA512: 6ff5e034c0ef70c6f8f97873e7967492aa543ccf4b1239d858b4947c3940adb9495107284d0b90219c898adc71bd4835f4958c3212ef486dc5e35f8471beb32a
 
+Package: protobuf
+Version: 2:35.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libprotobuf (= 2:35.1)
+Description: Compiler for protocol buffer definition files
+Filename: pool/main/x86_64/protobuf_2:35.1_x86_64.deb
+Size: 1324052
+MD5sum: bb447b34bf901f40830ead51a24d0f24
+SHA1: 0a5a8f8aeb59e1f67b8213ea9b47cce375172e81
+SHA256: 3f5a76051d98417e759a01d9ff89afcb842d8c81cc4f47da44cf7ac76f55f89b
+SHA512: 1dd40e4f06efc9e1c934201f0d69c56ca8559782c4b2f313c9b95d3a78dedca69c23bd838a9073341325cc3929e4eb0d08ecd4dda88665f19963c30dafa3779f
+
 Package: psmisc
 Version: 23.7-1
 Architecture: x86_64
@@ -2667,6 +2847,21 @@ MD5sum: 9d0e8ebf87568676614bb018ca5893e5
 SHA1: 34922950e4fa21004653be18c6f2b65be2cc78db
 SHA256: 2ea4fece6c0c1416f460c42e15b9280c467753559fee6ea81ce2edaf6d16c013
 SHA512: b25ad610cef2387b85ecde2af3992b5ae346635c8c80929eb5c396de8b70379f95c80a18e875465291cbffd65281b010f0edfd97aa2ec083134674cbc6a7e417
+
+Package: sysprop
+Version: 16.0.0.4-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fmt, libc++, libprotobuf
+Description: Android sysprop generators
+Filename: pool/main/x86_64/sysprop_16.0.0.4-2_x86_64.deb
+Size: 103784
+MD5sum: 00de41d4710794f7a84e5ba54bf09359
+SHA1: f002773e39cd067a21e37a9db883caffd2e897ab
+SHA256: 6cc4237858f834ce21ad8c6d06e2f38f2cf571d2b0fd28865ff9c8a6131ecb62
+SHA512: 35c1ff2ca40a075b2e650a6eeae6a71a47284e6e1eb6122c43f2748f0edd823d754f902acde54dcba61a55eefa65cf687a5d2bf1f6374520355e69d24c5ddc29
 
 Package: tar
 Version: 1.35-3
@@ -2893,6 +3088,21 @@ SHA1: 40776007bebac5f8ca1eb123c248bf4a262b35f8
 SHA256: f24891fe926f2f9d2c6b16616099ad57d635ecad67b0045655d6fc9ee0da1a0c
 SHA512: dee0bd8e0dc0a67716ca999d637782e7a1da77a08d616c6a3d92c4182bc8d15daadc8bbbfb11df41cd468646d2a87f9b94c66fa0035c29f8b6301bb73ee8e920
 
+Package: which
+Version: 2.25
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Shows the full path of (shell) commands
+Filename: pool/main/x86_64/which_2.25_x86_64.deb
+Size: 12980
+MD5sum: 337f4e9419f86fd4b22df1cc9b0488c2
+SHA1: 1f3e57b8f8325f902dae29ffffea90d3383a835b
+SHA256: cfd80e39882748c69a25e1d1c96a7ff17a3ecb9d92c1c87c79cf3db05ad4e28f
+SHA512: c20f7f98a185dea180a0aebaa740c6c2889828f060dcd0941aca27f6446933c60af2b6014f108c26e30f900ea81122e332e8ee142fb4ee79b8642bcccb649472
+
 Package: xsltproc
 Version: 1.1.45-1
 Architecture: x86_64
@@ -2922,6 +3132,21 @@ MD5sum: edb50eaeaf44cd74d4cf0835d2f95f25
 SHA1: ef8e7321fb9fab439f1d31a3a354fc6236d90ef7
 SHA256: 04a4394970ac7881bc9179a22eebdbe61a112219ce7cefc0ae2422209c9f4b85
 SHA512: 73c76388cba5c1f4296a0f6108a6a1da59da15090f5d8e66f8757804d31fd26900aa0c03c4d91a9b1f275781a32b8687c2f910a0e9466361ff3c612a2048f8ae
+
+Package: zip
+Version: 3.0-7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libbz2
+Description: Tools for working with zip files
+Filename: pool/main/x86_64/zip_3.0-7_x86_64.deb
+Size: 156192
+MD5sum: cd6983542cb405db17c384b5a66a1267
+SHA1: bb3599327eb8f81a428a963e26dbe4a7647e6a69
+SHA256: f9b661ad126aff63bb919673dc28db1faa2a4e4a1e83309acc29ca3939d40a12
+SHA512: c6f4dd98e22fcd49d94150f664c057ec194e9e322ba8b3107b2ca91c02ac1587da20d3deef1bf3ffa188f6f963c0184931ce5eaa3d8b1346dc7df90bab83823f
 
 Package: zlib-static
 Version: 1.3.2
