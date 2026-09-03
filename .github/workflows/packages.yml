@@ -332,6 +332,26 @@ jobs:
           fi
         done
 
+        # Also publish freshly-built dependency debs. These are produced in
+        # output/ (via -I) but are not listed in any built_<repo>_packages.txt
+        # manifest, so without this they'd be built and then dropped. Move them
+        # into debs/ and add their package names to each touched repo's manifest
+        # so publish-gh-pages.sh stages & publishes them too.
+        if [ -d "output" ]; then
+          mapfile -d '' -t leftover_debs < <(find output -name '*.deb' -type f -print0)
+          for deb in "${leftover_debs[@]}"; do
+            mv "$deb" debs/
+            pkg="$(basename "$deb")"
+            pkg="${pkg%%_*}"
+            for repo in $(jq --raw-output 'del(.pkg_format) | .[].name' repo.json); do
+              if [ -f "./debs/built_${repo}_packages.txt" ]; then
+                echo "$pkg" >> "./debs/built_${repo}_packages.txt"
+              fi
+            done
+          done
+          rmdir output 2>/dev/null || true
+        fi
+
         # Files containing certain symbols (e.g. ":") will cause failure in actions/upload-artifact.
         # Archiving *.deb files in a tarball to avoid issues with uploading.
         tar cf artifacts/debs-${{ matrix.target_arch }}-${{ github.sha }}.tar debs
