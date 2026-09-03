@@ -2713,6 +2713,21 @@ SHA1: 197cdb3ecb00e251fc91210e2caf85e00298b528
 SHA256: 9b0406e3199fe2a869612cdda0dac6086fa5c24ef21066492dd8f0c6fa10ec8f
 SHA512: 8d69ef0b638e9b62602db5b9167d38ea590ba74ec832b0c56feaa1add67c7774be0619ce5a1c35a9d6b0302c1c43f7e02c286aeea5aa4390ca4fae9d57b21d77
 
+Package: wget
+Version: 1.25.0-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libiconv, libidn2, libuuid, openssl, pcre2, zlib
+Description: Commandline tool for retrieving files using HTTP, HTTPS and FTP
+Filename: pool/main/i686/wget_1.25.0-1_i686.deb
+Size: 294572
+MD5sum: 679339a9c0f44447acc7366b5fce3256
+SHA1: 36d2300c5e5ca4ec363613e00ed17eecf0ddd51b
+SHA256: f25facc39933d61945286783890037a51ee6d43d7714a03cf723ead4a8a2dd33
+SHA512: 479fec485c0a4ec9a0751ee7282da4ac2cd83b145242ed28c75bd94f90c483a700e74771f22631ad02d0b0741bb2d181924fe7a60ca021356f806f011840c610
+
 Package: xsltproc
 Version: 1.1.45-1
 Architecture: i686

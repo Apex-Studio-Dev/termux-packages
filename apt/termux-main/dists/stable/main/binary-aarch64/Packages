@@ -2713,6 +2713,21 @@ SHA1: 88bd43f2071f8ee0562ee467ec36e143fb88db17
 SHA256: e878be41172b8f50d575e5570b2bcbe0f04265e5ca741383cb263ba9b6ba7bd6
 SHA512: 8a3d3a0a56d61a6b3da0d0e64253093a17b1d5d04020dfc46a3d8107f7ba40805c5b58433b86f8e436ee9283878251edd97a36da81a4c152457e7dc8c404e12b
 
+Package: wget
+Version: 1.25.0-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libiconv, libidn2, libuuid, openssl, pcre2, zlib
+Description: Commandline tool for retrieving files using HTTP, HTTPS and FTP
+Filename: pool/main/aarch64/wget_1.25.0-1_aarch64.deb
+Size: 281868
+MD5sum: 87724856a6dead5330b454fd2151636c
+SHA1: 53f594eb53971488c00aa6745d89213bf677b8eb
+SHA256: 036295a63cbfb1429d0171ae5457df832328b957c0035a68d3f4e19d73555813
+SHA512: 8a6c6fc7a7d7e7892fe64c2b7456487d51f48de688b9f26a09daede353cf27986a05591d3737487a52d005ece19d849469fd22192ef2ea8ac2cc1177376a59af
+
 Package: xsltproc
 Version: 1.1.45-1
 Architecture: aarch64
