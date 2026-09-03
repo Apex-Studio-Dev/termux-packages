@@ -9,6 +9,8 @@
 ##
 ## Layout produced (under <output>):
 ##   dists/<dist>/<comp>/binary-<arch>/Packages[.gz]
+##   dists/<dist>/Contents-<arch>.gz   (file -> package map; used by
+##                                     command-not-found's generate-db.js)
 ##   dists/<dist>/Release
 ##   dists/<dist>/Release.gpg   (detached signature)
 ##   dists/<dist>/InRelease     (clearsigned Release)
@@ -166,8 +168,51 @@ emit_stanza() {
 	echo >> "$pkgfile"
 }
 
+gen_contents() {
+	# Generate dists/<SUITE>/Contents-<arch>.gz for each real architecture:
+	# one "path package" line per file shipped by every package in the pool
+	# (paths relative to /, e.g. data/data/com.termux/files/usr/bin/foo).
+	# command-not-found builds its command database from these files, and its
+	# generate-db.js fetches them from dists/<dist>/Contents-<arch>.gz (no
+	# component segment). The "all" arch is skipped: generate-db.js only ever
+	# requests the four real architectures (TERMUX_ARCH).
+	local arch deb pkg_name tmpf
+	for arch in "${ARCHES[@]}"; do
+		[[ "$arch" == "all" ]] && continue
+		local contents_file="$APT_ROOT/dists/$SUITE/Contents-$arch"
+		tmpf="$(mktemp)"
+		: > "$tmpf"
+		for deb in "$APT_ROOT"/pool/"$COMPONENT"/"$arch"/*.deb; do
+			[[ -f "$deb" ]] || continue
+			pkg_name="$(dpkg-deb --field "$deb" Package 2>/dev/null)" || continue
+			[[ -n "$pkg_name" ]] || continue
+			# tar -tf lists one path per line (symlinks included, directories
+			# end with /); strip the leading "./" that tar emits.
+			dpkg-deb --fsys-tarfile "$deb" 2>/dev/null | tar -tf - 2>/dev/null | \
+				while IFS= read -r p; do
+					[[ "$p" == */ ]] && continue
+					p="${p#./}"
+					[[ -n "$p" ]] && printf '%s %s\n' "$p" "$pkg_name"
+				done >> "$tmpf" || true
+		done
+		sort -u "$tmpf" | gzip -9n > "$contents_file.gz"
+		echo "Generated: $contents_file.gz ($(sort -u "$tmpf" | wc -l) entries)"
+		rm -f "$tmpf"
+	done
+}
+
 gen_release_and_sign() {
 	local rel_file="$APT_ROOT/dists/$SUITE/Release"
+	gen_release_and_sign_hashes() {
+		local algo="$1" cmd="$2" f
+		echo "$algo:"
+		for f in $(find "$APT_ROOT/dists/$SUITE" -type f \( -name 'Packages*' -o -name 'Contents*' \)); do
+			printf ' %s %16s %s\n' \
+				"$($cmd "$f" | cut -d' ' -f1)" \
+				"$(stat -c %s "$f")" \
+				"${f#"$APT_ROOT"/dists/$SUITE/}"
+		done | sort -k3
+	}
 	{
 		echo "Origin: ApexStudio"
 		echo "Label: ApexStudio"
@@ -178,27 +223,9 @@ gen_release_and_sign() {
 		echo "Components: $COMPONENT"
 		echo "Description: ApexStudio apt repository"
 		echo
-		echo "MD5Sum:"
-		for f in $(find "$APT_ROOT/dists/$SUITE" -type f -name 'Packages*'); do
-			printf ' %s %16s %s\n' \
-				"$(md5sum "$f" | cut -d' ' -f1)" \
-				"$(stat -c %s "$f")" \
-				"${f#"$APT_ROOT"/dists/$SUITE/}"
-		done | sort -k3
-		echo "SHA1:"
-		for f in $(find "$APT_ROOT/dists/$SUITE" -type f -name 'Packages*'); do
-			printf ' %s %16s %s\n' \
-				"$(sha1sum "$f" | cut -d' ' -f1)" \
-				"$(stat -c %s "$f")" \
-				"${f#"$APT_ROOT"/dists/$SUITE/}"
-		done | sort -k3
-		echo "SHA256:"
-		for f in $(find "$APT_ROOT/dists/$SUITE" -type f -name 'Packages*'); do
-			printf ' %s %16s %s\n' \
-				"$(sha256sum "$f" | cut -d' ' -f1)" \
-				"$(stat -c %s "$f")" \
-				"${f#"$APT_ROOT"/dists/$SUITE/}"
-		done | sort -k3
+		gen_release_and_sign_hashes MD5Sum md5sum
+		gen_release_and_sign_hashes SHA1 sha1sum
+		gen_release_and_sign_hashes SHA256 sha256sum
 	} > "$rel_file"
 
 	if (( HAS_GPG )); then
@@ -212,6 +239,7 @@ gen_release_and_sign() {
 
 copy_pool
 gen_packages
+gen_contents
 gen_release_and_sign
 
 echo "Done. Repository written to: $APT_ROOT"

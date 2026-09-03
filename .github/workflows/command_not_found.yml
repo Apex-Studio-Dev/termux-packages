@@ -12,20 +12,24 @@ jobs:
     permissions:
       issues: write
       contents: write
-    if: github.repository == 'termux/termux-packages'
+    if: github.repository == 'Apex-Studio-Dev/termux-packages'
     runs-on: ubuntu-slim
     steps:
       - name: Clone repository
         uses: actions/checkout@v7
         with:
           fetch-depth: 1
-          token: ${{ secrets.TERMUXBOT2_TOKEN }}
+          # A PAT is required instead of the default GITHUB_TOKEN: pushes made
+          # with GITHUB_TOKEN do not trigger other workflows, so the Packages
+          # build+publish would never start. Create a classic PAT (repo scope)
+          # as the APEXBOT_TOKEN repository secret.
+          token: ${{ secrets.APEXBOT_TOKEN }}
       - name: Revbump main/command-not-found
         env:
-          GITHUB_TOKEN: ${{ secrets.TERMUXBOT2_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.APEXBOT_TOKEN }}
         run: |
-          git config --global user.name "Termux Github Actions"
-          git config --global user.email "contact@termux.dev"
+          git config --global user.name "ApexStudio Github Actions"
+          git config --global user.email "actions@apexstudio.dev"
 
           ./scripts/bin/revbump command-not-found
           git add .

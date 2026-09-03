@@ -100,7 +100,23 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 	comp=$(jq --raw-output ".[\"$repo\"].component" "$REPO_ROOT/repo.json")
 	builtlist="$DEBS_DIR/built_${name}_packages.txt"
 
-	[[ -f "$builtlist" ]] || { echo "Skip $repo ($name): no built manifest"; continue; }
+	if [[ ! -f "$builtlist" ]]; then
+		# No newly built packages for this repo this run. Still regenerate its
+		# metadata from the existing pool so dists/<dist>/ (incl. the
+		# Contents-<arch>.gz files needed by command-not-found) stays present
+		# and freshly signed for every repo in repo.json.
+		echo "No new debs for $repo ($name); regenerating metadata from existing pool"
+		# --debs expects a flat dir of debs; stage every deb in the pool.
+		merge_dir="$(mktemp -d)"
+		find "$PAGES_DIR/apt/$name/pool" -name '*.deb' -type f -exec ln -sf {} "$merge_dir/" \; 2>/dev/null || true
+		gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist")
+		if [[ -n "$GPG_KEY" ]]; then
+			gen_args+=(--gpg-key "$GPG_KEY")
+		fi
+		bash "$gen_repo_files" "${gen_args[@]}"
+		rm -rf "$merge_dir"
+		continue
+	fi
 
 	# Stage only this repo's freshly built debs. gen-repo-files.sh copies them
 	# into the pool (creating pool/main/<arch>), then regenerates Packages from
