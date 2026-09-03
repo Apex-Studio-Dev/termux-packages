@@ -73,6 +73,21 @@ SHA1: 1cdfd70d90239bfd35e496fa3d78d840f30c9988
 SHA256: bfdbaee8089e4977ff72aa008a1887edb9e0f96575eff0053e9f4952e6cf9c8f
 SHA512: 3cd8739759b10592476616a7bc915dfcaa96c262a96d6b377861392b43aeb3a80c83fa147f8754eb348e481fbaea73e05805aff5073b4b94144e8087e5594b55
 
+Package: aria2
+Version: 1.37.0-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, c-ares, openssl, libxml2, zlib
+Description: Download utility supporting HTTP/HTTPS, FTP, BitTorrent and Metalink
+Filename: pool/main/i686/aria2_1.37.0-3_i686.deb
+Size: 797524
+MD5sum: 9db271a2a8fa08f88b4d863e10faa6bd
+SHA1: 51cffe46a0fee2e06a7867f5a33d371fda82a662
+SHA256: 50bc932cde67dd190f8ea3ef2f667d751fa887877197537d192d2e6748b84ce8
+SHA512: d2fbcb679ee9a53e21f0b3d81a9d7ae74db1788f5831e7fdda0287c83a01e050111b1a03afd0bfcc529fdd80ae5a8f0fc23495cee14ca56c83fb29b97511a1b0
+
 Package: attr-static
 Version: 2.6.0
 Architecture: i686
@@ -582,6 +597,51 @@ MD5sum: d99b0f934cd4d761c67aaf75cead3b9e
 SHA1: 4dbe8270c8b5c5ca6f4bc8a14907bef4c2264b0b
 SHA256: a0040ff119e6767ca9ebc67b16306ee977aa7d909640d1d7d04d75d2253f6d04
 SHA512: 6b09674b47b24e857a3c60ebb066e36fae07107ce2cfc120626e6c4832efde0227c5180d678d0373a6d3da7f2a0bef440cb947aef7c53864927595c6053167c9
+
+Package: git-gitk
+Version: 2.55.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: Git repository browser
+Filename: pool/main/i686/git-gitk_2.55.0_i686.deb
+Size: 143696
+MD5sum: aef2a776ee099ea21d1088b732a5bcb1
+SHA1: 09ab8790fd3d437d1a29193441e7b2ec6ed71222
+SHA256: 4bd374a03d8ba26a111c1ebca677885c48bcf055b0d18d819f8d6fb4e5fbfde0
+SHA512: 6742e814284336e20e9b9e6932c8abf7199687cca267cdb879ebdaaa8c8f272774ed916c86a6b356089ae81aa6bdf061882b258b804f8499332b3c574a9aab53
+
+Package: git-gui
+Version: 2.55.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: A graphical interface to Git
+Filename: pool/main/i686/git-gui_2.55.0_i686.deb
+Size: 215588
+MD5sum: 5a848b29f6534e0555b848d9b33ba8ad
+SHA1: e1da2fc663ecaf2a2d63d6862fdcbb5eeb534142
+SHA256: 5b11b99ff1cce60d959ebfee5a1e190ba6442ae966a237a3bdf7343de17ff4a8
+SHA512: a3babc2a8471649827efaee67504de64951ee8f0b1d34a0ce71fe2b331bdf3570d0463363684514c6bfc63a2aa9d8b54d4a3851c796ec84d1709643cece192c1
+
+Package: git
+Version: 2.55.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
+Description: Fast, scalable, distributed revision control system
+Filename: pool/main/i686/git_2.55.0_i686.deb
+Size: 4590608
+MD5sum: dc58d9c19543412a390759fb55cff04a
+SHA1: 7748f6b5bb684911bc3540323d8c9a3525a815d8
+SHA256: 0fbea25bd31f3b77a7e4e323af28a88f585ef7824afb4bc8fce49c0da812fbde
+SHA512: a0921158e242bd99664802e947bc77190be4256fc9c614ab7e8ac4abf956deec66e8f33ec2346456bdb83cc34d1f746a1f76299a9963d2fc0557a285570cee04
 
 Package: grep
 Version: 3.12-3

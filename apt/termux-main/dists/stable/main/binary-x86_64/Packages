@@ -73,6 +73,21 @@ SHA1: 1d36194fa95c0844ff30e63848a6d38b40204ddf
 SHA256: 8902a7ec63526074deb4a9c6785c1d2b549bd9f1748db45e7d47e434354dd9aa
 SHA512: 179be1f4f577cae318f6e99883298773b0224fb8e4853ec8bd3f0910e6391bc6d711216538bc89d19c313ac7c3d75d427fdab2cb2ed8cfca2c22b493eca8c4f2
 
+Package: aria2
+Version: 1.37.0-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, c-ares, openssl, libxml2, zlib
+Description: Download utility supporting HTTP/HTTPS, FTP, BitTorrent and Metalink
+Filename: pool/main/x86_64/aria2_1.37.0-3_x86_64.deb
+Size: 721516
+MD5sum: 87f2fc0bf15b654a4925402939294f0d
+SHA1: e9ddf16e927ad352e8e55851ec273a9ac7bb15ac
+SHA256: d39358ef9cc42eb421d90929aef767b361507cb2b118cdd5af254bb0b924b7be
+SHA512: 926908063e54cc370b2fd4e9f3047202ce867550f6a5aa45cd3cda07199280ecbfcf540727db9abd366e7a1f6ffcf43f89fd1c8b281adf6f59ac274b9e7d5d98
+
 Package: attr-static
 Version: 2.6.0
 Architecture: x86_64
@@ -582,6 +597,51 @@ MD5sum: ff989cef25e99eba7ada814f3c7cd04d
 SHA1: b7307e3d0a6cd6eabfc36cb3a4061a51d6643449
 SHA256: fda25223e05c1abab31170e2aba2df77f5b790c017f35ef25e7f245ef2485050
 SHA512: e25a0990e00faae9641b9e553a923fb1f8dec2cebd712d3ccc4add7080bf5901109125ec6723ee39aab294a08c572f6269c7bacf1dd26ee75ae3a6404b5b9f69
+
+Package: git-gitk
+Version: 2.55.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: Git repository browser
+Filename: pool/main/x86_64/git-gitk_2.55.0_x86_64.deb
+Size: 143696
+MD5sum: 30b431837975cf60dd11c1dd9a06bf9a
+SHA1: e478f64db83db80c88631d7b9816d52c4b17637a
+SHA256: 5e4ad45a36086c16b08e3de77dee5c8ce762d2aa500a4f524d3c62d85ec2ad60
+SHA512: d9cd7b1e9d584cb3e84721ec95df4eeb7a29c9acfe6d0c1535be5e91b9821153c7c7efc54f06ce4c206be70bf3439e55cb4f383371e166963e3895d9969c32da
+
+Package: git-gui
+Version: 2.55.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: A graphical interface to Git
+Filename: pool/main/x86_64/git-gui_2.55.0_x86_64.deb
+Size: 215588
+MD5sum: d8a6f6fd036ecac32e360326f6cdded6
+SHA1: 249977c5f39c766f22c8f8a1496582934d3de24d
+SHA256: 537fb70243f7ed979b88b6c91119f6caf0af5e7e1aab90fc11095628d96e4450
+SHA512: 4de3112c7fc6835377b713eca73bb2185651739bf02b1b5277bd543751618b0958ad66da2800901eaeb6ea06bd6138e30099ea1cded4dca3146cda2479eece74
+
+Package: git
+Version: 2.55.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
+Description: Fast, scalable, distributed revision control system
+Filename: pool/main/x86_64/git_2.55.0_x86_64.deb
+Size: 4568644
+MD5sum: 98e8e6fb2957da42ee6125ff9e02ea7b
+SHA1: a21b61e00feef2956855f2f986aa5f289b92af22
+SHA256: 5eb997fa0bd07a4facb566cbdcad79e41ccb20445908c1b81c66f0b75b047221
+SHA512: f8198c8ddcc4e93d43f1982a837e1bba78d18a604846f06bcd7bad8aa34dc712aed08fdb6b0301be5dffbbab53638cb4de1cb261ae8b4c5133e214861facddc9
 
 Package: grep
 Version: 3.12-3

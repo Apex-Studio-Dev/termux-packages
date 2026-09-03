@@ -73,6 +73,21 @@ SHA1: 9e3fc1cad72849c7767ef976d0b2566ea0e938c1
 SHA256: f56c9eab4737ce7d48386ac54d94fee1cbebb6fbe5ef6ba9887d339ab66a006d
 SHA512: bc68df8a704093d067dcfae649c343764baa09883264fbd4ba5beaa5ba5c697f54a4798965f3f55508938c2002db18cd55d327afee13f62347cfcaf91116f301
 
+Package: aria2
+Version: 1.37.0-3
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, c-ares, openssl, libxml2, zlib
+Description: Download utility supporting HTTP/HTTPS, FTP, BitTorrent and Metalink
+Filename: pool/main/arm/aria2_1.37.0-3_arm.deb
+Size: 657328
+MD5sum: 14a60f38bc90f62fe91467d7dbff431e
+SHA1: d1353f7d1fcd6cd3198b832b91dc2ee5d62aa15a
+SHA256: ec88b19f00dc56a56bac2cb5f78a02b532dccdd5abacc2139b210fd830938264
+SHA512: 15d2a84c90552e8ed4239b933625ad241d2def423f14b936777a5026910466a6070a88bfb510a8b7f2863e58544a6a098e04faae2a5f5cf7c14a2d86689b2e7b
+
 Package: attr-static
 Version: 2.6.0
 Architecture: arm
@@ -582,6 +597,51 @@ MD5sum: 6cce8fed08de12fb97a30c1949c8da3a
 SHA1: 91afd9ec9b65afb730e4be1016542f633aed9626
 SHA256: 7b08a0c383aae23d3d6fae20d3ded8e5880744a0284f65bb3566629dce7d67a2
 SHA512: 2007126d2bac7212039893cb1e93e34007f60c4ec82fef6d36e741f33ab6a7a92478df08cd8f6a8622389e1e8997d6d0f8b6014e1bfcbfd803e8650254c8ead9
+
+Package: git-gitk
+Version: 2.55.0
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: Git repository browser
+Filename: pool/main/arm/git-gitk_2.55.0_arm.deb
+Size: 143692
+MD5sum: c24410748d520acae461c52d99b42a55
+SHA1: 1766adb9835d597fb192abef0b8bb3879cdbac8a
+SHA256: b21065eeb53bffe76c9a4a300196db6b7c296cad6825c9a8a68d2be2f476fd6b
+SHA512: 05ddbc658276d03504c922f4aae5f8f46ceda7103d35a035baf6dd13139a41ef0fe272100e2a1c12e04d60c97ad36025118fcae9ca2e07636853687fc21bf749
+
+Package: git-gui
+Version: 2.55.0
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: tk, git (= 2.55.0)
+Description: A graphical interface to Git
+Filename: pool/main/arm/git-gui_2.55.0_arm.deb
+Size: 215588
+MD5sum: 17af3fcf3d9ae4c05646482a0e153f43
+SHA1: f6ae51e5133d63c5ed4a85a848db587dca30c0c9
+SHA256: e6dc61fe036432af572ad02993e105f775b68d6596a13935163a43d04caf0b8a
+SHA512: 0171b6e177f7ff652eed8ecbbd33097e69d0d7597b672c8acdd779e21a999ee905f7346cb24e443c0792befe37331a07deefa0c579a8301b26498cd35fc45112
+
+Package: git
+Version: 2.55.0
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
+Description: Fast, scalable, distributed revision control system
+Filename: pool/main/arm/git_2.55.0_arm.deb
+Size: 4498292
+MD5sum: c6da69fd279807b85997b6a3e16d5cdd
+SHA1: 65bb4642e1a03f432eb402c1b82918a5d1f3a742
+SHA256: ff0378065647f27e2b499e3e32651b2163a05e1f01ee22090cfbbcf16f1aeecd
+SHA512: f49e47b148b223aa69b18bf13b1f62488c1b3d2d1cc1534df256acd2ec2dfdde34042f8183e0982de6042bf5fa6e1d670bb0cb96aa2ece1310768dee7764c461
 
 Package: grep
 Version: 3.12-3

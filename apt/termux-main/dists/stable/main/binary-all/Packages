@@ -103,6 +103,21 @@ SHA1: f73ef21a780b55aaa5343a67e32c18dcbf78baba
 SHA256: 91b65b59fc5d91f506645c1f2cba705e40384064dec09bbacffc16f46718febc
 SHA512: 545a42cda6761b5a402be15c6b83badcd9a55c90b1c8f72f171d2870ade960ad9803a3c42847e870ecdee86b5ab8337e5b0d6cfa08b89f81b25c6eb09490691f
 
+Package: git-svn
+Version: 2.55.0
+Architecture: all
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: subversion-perl, git (= 2.55.0)
+Description: Convert between Git and Subversion repositories
+Filename: pool/main/all/git-svn_2.55.0_all.deb
+Size: 75568
+MD5sum: c067ee516422a9f403ca799f8d33a574
+SHA1: ced0a566c84545d501e382d213efd1e15c88e674
+SHA256: a80f067880da9913ea81c7299c254c2af103b7d0e5543ca19b9880588ca44e06
+SHA512: 1494b941f1b3882487adaea48979a7171d3056ebd09253fee102a3fca042850a5ec2789f19043b5986a2914fbe1f57470463e8c8545029f9f66dce1f26373300
+
 Package: python-ensurepip-wheels
 Version: 3.14.6-1
 Architecture: all
