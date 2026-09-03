@@ -133,6 +133,21 @@ SHA1: 086ce0764aa5699faeeba38d2876006d0a2c1f34
 SHA256: 3a2d35b11b971e86f6497c1756f94fa83765157b5d72062a911a80a84aa19e7a
 SHA512: dc9cf987c01f00df5e807959a14fce28744e598751b8aa62d2c8deafc85c793ee3eafb5355a4ba5549b767ee5faf5bb42fbc414db017937975fda30f327d2ed8
 
+Package: termux-am
+Version: 0.8.0-3
+Architecture: all
+Section: 
+Priority: 
+Maintainer: Michal Bednarski @michalbednarski
+Depends: 
+Description: Android Oreo-compatible am command reimplementation
+Filename: pool/main/all/termux-am_0.8.0-3_all.deb
+Size: 577364
+MD5sum: 3f018c75b96e820b2be0be6287774679
+SHA1: 661dc791c0439d360d019a9e794ef4e81f1fa879
+SHA256: 5feb1261cc373ca56d7d439571d1c86636b1f6475a9b3b12b977a8c957d40aa6
+SHA512: d4fa58f70acd71ae1c2014a4ec2383ccbef3a190ab76c02cc11b31f84aca830153ca134c8c5faa39d3437931c6bc86f9831db46b2aa44cb290b8bb02e9f92997
+
 Package: ttf-dejavu
 Version: 2.37-8
 Architecture: all
