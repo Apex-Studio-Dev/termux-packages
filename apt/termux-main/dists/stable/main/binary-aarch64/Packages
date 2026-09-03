@@ -2323,6 +2323,36 @@ SHA1: ec7d181fb327f3a878d0f5223d308807b1276615
 SHA256: 6b5916ffb9c98b240478eb261b5251b800d5c79c1d85bb490b62ca71147598cb
 SHA512: 1893781f8bcdaa8193c115f99093d0a84c6da27d11915c03bcad6b8059d95eb262e2a3aaf45e1e2cd64466b30b9993c154c7760c2b1fa687d67182ad571b3b74
 
+Package: pulseaudio-glib
+Version: 17.0-4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: glib, pulseaudio (= 17.0-4)
+Description: PulseAudio GLIB mainloop component
+Filename: pool/main/aarch64/pulseaudio-glib_17.0-4_aarch64.deb
+Size: 6840
+MD5sum: c7bda00cbbbbe1ec114da6af01e7d9ca
+SHA1: 394c19b75d9328c0b2faf7681ff3df2873bf38bf
+SHA256: 24694c91d0740179a11bc984de76df04507c225b1d268261e47801146f063c46
+SHA512: 6a063d0db4a789b6e53f8807222ac411bde7093dda60d0cf1199b37a78758e8e8cd5a8563d277d0a5b2e4e4009434df25eb1c67cf9d5844c3ac5459bcdd75a0c
+
+Package: pulseaudio
+Version: 17.0-4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: dbus, libandroid-stub, libandroid-execinfo, libandroid-glob, libc++, libltdl, libsndfile, libsoxr, libwebrtc-audio-processing, speexdsp
+Description: A featureful, general-purpose sound server
+Filename: pool/main/aarch64/pulseaudio_17.0-4_aarch64.deb
+Size: 847908
+MD5sum: 70f90c3479495694b1c3a75f2f109417
+SHA1: cb1e6db8aba600a15790e21d350bdff7d26b1fe5
+SHA256: 4a25e8f5b1b6acc0f92e21f120bb18a222ea4d08f3a76fef15da51a258651d1e
+SHA512: 971796efe0bf30b7b5a620513e5adad1929e44458626ba633e43719b8777863732a168b5246ab5feca56c0d7bf540081bfd06f92aa6d42a7e25b3a0232680858
+
 Package: python-static
 Version: 3.14.6-1
 Architecture: aarch64
