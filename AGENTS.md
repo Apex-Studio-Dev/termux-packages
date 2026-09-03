@@ -47,7 +47,8 @@ Termux package build recipes for Android. Each package is a directory containing
 - Prefix is `/data/data/com.termux/files/usr`; home is `/data/data/com.termux/files/home`. This repo is a fork whose internal package name is `dev.apexstudio.ide` (see `scripts/properties.sh`); don't change forked identity vars.
 - `TERMUX_PKG_BUILD_IN_SRC=true` for in-tree/Makefile-only builds. `TERMUX_PKG_PLATFORM_INDEPENDENT=true` for arch-independent.
 - A `*` Latin: recipes support `TERMUX_PKG_VERSION` as an array and `*.subpackage.sh` subpackages (split debs) — subpackage name must also pass `dpkg --validate-pkgname`.
-- Lint runs a version-increment check comparing against `origin/master`. Commit trailer `%ci:no-build` makes lint skip the version check and tells CI to skip the build/stale-file checks (used when only running tests or doing non-package CI changes).
+- Lint runs a version-increment check comparing against `origin/master`. Commit trailer `%ci:no-build` makes lint skip the version check and tells CI to skip the build/stale-file checks (used when only running tests or doing non-package CI changes). Trailer `%ci:free-disk` triggers `scripts/free-space.sh` in CI (also auto-triggered for packages in `scripts/big-pkgs.list`).
+- `scripts/properties.sh` defines all build-system variables. When forking, only the identity block (name, package name, host org) should change — other vars (NDK version, SDK, build tools) track upstream.
 
 ## Commit messages
 
