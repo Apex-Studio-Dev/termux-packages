@@ -1297,11 +1297,11 @@ Maintainer: @termux
 Depends: libandroid-support (= 29-1)
 Description: Static libraries for libandroid-support
 Filename: pool/main/i686/libandroid-support-static_29-1_i686.deb
-Size: 8640
-MD5sum: 0d418ed82cb5756c53a5819e93fee7bd
-SHA1: 75483f5bceb2635e21ff232f64527d1146ab838a
-SHA256: 0d0adff7c7336e38482adaf7146ba35a910482a84e3cfdd7150ba238d2d8edb8
-SHA512: 32a0eb78108e2586cf9921cceba4f12edddf551329223fe8d4afbce582eebdb24a39b51f8bd76d43d918ef5fd777061a1b17e8ab1fcd12e0279f77fcc5eca220
+Size: 8648
+MD5sum: 195bca211b1321f98b8d393da26bfc58
+SHA1: 2d63b55a27eb315ad75d76c1f1224e6eef414ca8
+SHA256: 72f4d827beceba917d96b8672ce069b2d8bc549ed3f5a9866a1c484f049a3f31
+SHA512: 96e92d24682eeed10b22793d588cd8871eb707ce280d19db1d03ea29e2ec41580096238230e3554ebe5b6fd54c3b82195ea0b563687d532c4cbbae2d1cd057d1
 
 Package: libandroid-support
 Version: 29-1
@@ -1312,11 +1312,11 @@ Maintainer: @termux
 Depends: 
 Description: Library extending the Android C library (Bionic) for additional multibyte, locale and math support
 Filename: pool/main/i686/libandroid-support_29-1_i686.deb
-Size: 11140
-MD5sum: 3d8ccad7f6be513336e207ef4b59b961
-SHA1: 0b1b8eb1896de64402b66cbdcf01253e08b00b22
-SHA256: cfa50cbd9e96fdd9bd9d8cc918e7750c424968223dcadcd5e51bf8c9184bdf06
-SHA512: 073da5b1fb103e58f04a4431c0f83866d58935096305f4f6864e31335e07399eb6b7ba1d696a470f019a46c833f3286c536c73e023f235850a56f718cc1f27e5
+Size: 11152
+MD5sum: 1d4abec63faff991343bc94af26bbf51
+SHA1: 67ad2c965079f3b14ed6570bc97de37402d11746
+SHA256: a8a02170e100b418be592179b480bd86e21040738f307d6213ee20035399691f
+SHA512: 0bdcee3b847a4842e36107374c5dd6c41c167f4aad4b8a2a10df6b3ae07fc371a02a9e2ba2f957b80293e5418e7c09ecf1c811b57774c1eb01acc63caac0426f
 
 Package: libandroid-utimes-static
 Version: 0.4
@@ -2887,11 +2887,11 @@ Maintainer: @termux
 Depends: libx11 (= 1.8.13-1)
 Description: Static libraries for libx11
 Filename: pool/main/i686/libx11-static_1.8.13-1_i686.deb
-Size: 564572
-MD5sum: f739cdc91e4787ef7b5933cfef9d4ef5
-SHA1: b1e41619589f0d8814d92c0f42dde03816e58460
-SHA256: 59ffff46bb30d64e9ab26045422a8a9a5894cb27b846fbe9e9bdac30969df3f2
-SHA512: eb5117486979e23e099aa7e11095b8f373efa6c1339e2d033fe70576ee6df3bb245f7406f3e1b3f78b59d19a14b3da2f1fb87d3916eaa957c19f03850e2fdef7
+Size: 564184
+MD5sum: fdca685f46f1d29fbf575274c1267584
+SHA1: 4f60f03487c79fcc8fc0664c22d3088bc3ded668
+SHA256: 969d90f59d9ef3786033defaf58d85183776a9803b367d458370372555e0aeba
+SHA512: f1673866275562558ad9c8b86eda6a994e5ccb16694f94d60dafcd31eaaf32fb142c30a9baefc92d6c308cfcf474724532d801530b36de18323d447db36b693f
 
 Package: libx11
 Version: 1.8.13-1
@@ -2902,11 +2902,11 @@ Maintainer: @termux
 Depends: libandroid-support, libxcb, xorgproto
 Description: X11 client-side library
 Filename: pool/main/i686/libx11_1.8.13-1_i686.deb
-Size: 1924764
-MD5sum: e57f0ecf3aae2e75169a821eaf34bb5b
-SHA1: 2c5b6b73339b63b47a9a0c007f60592e76e85033
-SHA256: 4b7929c6f593791593700ed6fd5c1a56d24448ab7f8a1ebad84ea74940f47b50
-SHA512: f87cc3c022491ab255ecbe6f58d91b5680621efc2b34a33aabf86ca5dc600822275a362c5b55ee075d58c8136390d5a7466027e83aa5344c72c31e94636603cf
+Size: 1924332
+MD5sum: 676260f44bde0c38cbeeaa54e735f634
+SHA1: 04b8cd6ef966d856225028022617a4e824cfee16
+SHA256: 987f5d7c40dd5558fdb1af29e7da6bcddb9ac64dbfb3b7f49c16e1102fe7ad60
+SHA512: 3e3e707be3ec38a73784c231e2e8eff11b0651606f730ac3cba21917e9557f1f19faeae570f628080aeb43de256f6805a89f275b64e6c89ad7eca10e556b32c5
 
 Package: libxau
 Version: 1.0.12-2
@@ -2917,11 +2917,11 @@ Maintainer: @termux
 Depends: 
 Description: X11 authorisation library
 Filename: pool/main/i686/libxau_1.0.12-2_i686.deb
-Size: 9148
-MD5sum: 3958779a373b4267cfeb1bbb67dcc329
-SHA1: e7e51d8d4f447f49a4c5bd5785e9704fde7ae554
-SHA256: 62cdcf9dd1326f61efbe540fce6fb5e62ed445571b906ffef3bff2854f3b06fa
-SHA512: 81d8edb5ef6d7ab4c2e00798c9a6560244d3c46aa93132f8314b9694810f5df27957b44e7a30012fc1dcdf7f2c39773d3fa36d9acf51c889de11557c05668fa2
+Size: 9152
+MD5sum: a2f5570c5ea0de108e73460ea5aceb21
+SHA1: d129bfd857af68d4ea50522e37db176c2ad04d33
+SHA256: d3270221d3b6e5a91f2edde0643df546cba82967873737ac3644e20bc5b1c60a
+SHA512: 5de76389a85ed5bb5db74d8d492331866638a9046c6b1166420509c03d91f21f3d3d22cc1d90d244c7fca3afd4aa57b76403de5b93c39e2a3cdc0a30b976b1df
 
 Package: libxcb-static
 Version: 1.17.0-1
@@ -2932,11 +2932,11 @@ Maintainer: @termux
 Depends: libxcb (= 1.17.0-1)
 Description: Static libraries for libxcb
 Filename: pool/main/i686/libxcb-static_1.17.0-1_i686.deb
-Size: 144204
-MD5sum: 9643fdf8da07380dd5e45d277695bb73
-SHA1: ada7c7904e21abbb7e10a6f94a4accfb298467c5
-SHA256: d961ab9b746703338a60cfb173a6cd51f4a5cbd81c01fbd4784d800df6c2431e
-SHA512: 3b1e61dd0046d0a06c7ea0a2e02a3009c9e92f1082cdabe7a44a9916627f27c07922d5f9d732bee28ec25cf47a987ea333f48a99b2a6f7078dec26f8974333db
+Size: 144036
+MD5sum: cf50cf9c32bbb92713a1ba947202d989
+SHA1: 5dd8b23a0d50d02213ae5c5756949dcb2551d8a8
+SHA256: b6165b42ecf9b5a920a94d0eaf155e514b1e17abaff0bf077552544e7c73f940
+SHA512: 6d89960491e70378ffa6ec008e02ed34c16fd9764e488011a6b6b8522e4ac0bd60fd4afbe66ecb3d75ada0bdf3ab2839318bc769b9139f38868406a9ff44079f
 
 Package: libxcb
 Version: 1.17.0-1
@@ -2947,11 +2947,11 @@ Maintainer: @termux
 Depends: libxau, libxdmcp
 Description: X11 client-side library
 Filename: pool/main/i686/libxcb_1.17.0-1_i686.deb
-Size: 917272
-MD5sum: 355a5475750294ec5a3f4ff1c5f4ebb4
-SHA1: 5cbc82a954b974ce105784218d5be918f1e4da73
-SHA256: 04fc5cba313f2ce752c9c1480d01f9a9963539e78e7622f15abd7c5b8182e147
-SHA512: 92893552b6bbbb136d428bd3acb95c93784d8489edcc47c8b7c9b948e53cd7e37d87212ebebf5eee8b9027255a6fe2dedadc94295612598c468d6ffa82abbb9a
+Size: 917184
+MD5sum: d2abd12a801e837cbb7ac46948ae7420
+SHA1: 14ce9f446147726f32db82f7f990e21ba1d5640f
+SHA256: c8f7b5735f94b93b845fef4865048ecec76a1719179114082f58549802c4eec0
+SHA512: 036b3dc9a69b4ffbdd9acf49da04506e12a863e3026b7327541d4343f96350447997970443dd7014d865e84adf8cc7afdac449b4adc22c2235a03e06e2ba93c3
 
 Package: libxdmcp-static
 Version: 1.1.5-2
@@ -2962,11 +2962,11 @@ Maintainer: @termux
 Depends: libxdmcp (= 1.1.5-2)
 Description: Static libraries for libxdmcp
 Filename: pool/main/i686/libxdmcp-static_1.1.5-2_i686.deb
-Size: 7604
-MD5sum: cfb66b4518ad265c64be529fb766a539
-SHA1: e2fa06b61a9ea3c49d6fea955a46a3a8df6daa6e
-SHA256: 486e89efabbb8cffb039433b840940f711d1cd56d8d9e7fd210da142751d42de
-SHA512: a4064e62b07402d70d3297192200c54ea8c4bab2aeaa22f18edcd4abc8dd668c82a40453ad0a126d71e32cfa05139e6dc12ea818eaf5174f033521f72a3fce36
+Size: 7608
+MD5sum: 787dcb503fb0dce5b6f69d84b0077b8f
+SHA1: e9ef9f887613160f23e457b77d2b5e3b8cdea1b6
+SHA256: c0e2db3100e42d1817bd3e3a8d54d9ddc9b9aca7d9d3e353a173a223c0c73a24
+SHA512: 9cbc705740e84ba2bf0e6d2131ecb84c7efd6e904a1594a92c44f6272c1fa3cc5b5bf2af93160e9722ba74057c6b9e2f49ac9c6bf3d112b800fa336b58f657da
 
 Package: libxdmcp
 Version: 1.1.5-2
@@ -2977,11 +2977,11 @@ Maintainer: @termux
 Depends: 
 Description: X11 Display Manager Control Protocol library
 Filename: pool/main/i686/libxdmcp_1.1.5-2_i686.deb
-Size: 24416
-MD5sum: 3006c8b573f5ecf58435bc6a9146070e
-SHA1: 716cb889d47b2a84f6749753d96b9f733515833b
-SHA256: 73af8107206f3f5e8ccc0de82bb512e797e29abb858757c9991241830291f590
-SHA512: 2d939ae3e3583fb40f40bdbcf4c87d1e462bfc731fe0d021c6384a2be6904a3708ad5251d5774c1a907cb2315590603dfd1afc13a1ca45cacc48b0b24177ffcc
+Size: 24408
+MD5sum: a7ed00bd296d5bae5991ad5d239e628c
+SHA1: 3e3915ba66ef5e3cdde84f001736943a2bd26ac8
+SHA256: be7842beb7ad24c989fe7f9b2645bccfe9afe120a25c3bc4cdd4b3a5181b05b3
+SHA512: 6a07a8f94e60dc498c7f75c809f1c62b3862e54009a5dfc6d45984e5692174f909b139f656aa75cbc25bfe85dd33aaffd3078e61da7f6494fbd813674218b04f
 
 Package: libxext-static
 Version: 1.3.7
@@ -2992,11 +2992,11 @@ Maintainer: @termux
 Depends: libxext (= 1.3.7)
 Description: Static libraries for libxext
 Filename: pool/main/i686/libxext-static_1.3.7_i686.deb
-Size: 22428
-MD5sum: edf9c38234e282e53095fffe901cda85
-SHA1: c16ece479ea70d48db3604dd3dd1bda9f058740e
-SHA256: 6bdf69aeb334be577b01367359def81aefb73e9316b9db2a24347cf6d607b323
-SHA512: 07e02f7fdd044fa37ae134372b711af89f6573495309bda2d3dc3bc531d44f270643529c4f108eb5626705c2b8f0204f05afd94c7b72fbcc67800440df21a435
+Size: 22432
+MD5sum: 8ddd5ae8f9819eb7b8d1b69763874b7c
+SHA1: ca12e460afd67a9109ccb1a2f7d1f5c9a2ee41bb
+SHA256: 1516850f69de8f9e8bbd280f5628fb3782395b653486474ee22de898d8e8dbd9
+SHA512: 67d790db140a9257df8b34e5f1c9ca8444dae9a92e3331f4447076bbd2271b09e84237f7dfe5693e6d137ba9c2a6828d611447ea41fb160948fecc3c14c6d2b2
 
 Package: libxext
 Version: 1.3.7
@@ -3007,11 +3007,11 @@ Maintainer: @termux
 Depends: libx11
 Description: X11 miscellaneous extensions library
 Filename: pool/main/i686/libxext_1.3.7_i686.deb
-Size: 96668
-MD5sum: b9d703f272a280238a05948bd731a7b5
-SHA1: fc0304e99eec0f955a7b2058325c40c55fecda3a
-SHA256: 8e301d05856e47719731baf9fe687e1ff8db6934a80b187a8e9e48083cd5bc43
-SHA512: 23e5ca58ecb22bc415ed1227940a404ea056c40817d721780f137ea92f29cde958c00a341ac0fc7551fb4a88bfbe81a6aba05c68897baab820feb16f1dd1f8e4
+Size: 96660
+MD5sum: c29914754cfbbd513c6c93ec711cf3a2
+SHA1: 1e82ef9aa4cc6db4d52aca5c3924e03cad528c82
+SHA256: 0aac7100e3832a77754816de9a720420c59eaa3707c6091369b16ab9229bcfca
+SHA512: 138b9c187bb92661092cd410ccbb1dd4f812474fd9e120f6eddc508352971a5858a229c97add77152f14ff83e8a2b0dfa75050be2a33e0593e4ddf9c8858385c
 
 Package: libxft-static
 Version: 2.3.9-1
@@ -3088,6 +3088,36 @@ SHA1: 595315a83b6e49698c5ed655f8f6d03c2079404d
 SHA256: 1b3355c169cefef38a91a09f25a14713819757a6945b82943cc24f222577b7a9
 SHA512: 083577aca8271b82b4d9be9e717762144b1c10068db36781fe7f83f4725fa596d3c7d9e4a2976ec95ec133b017edf17b108e276dd04d967b346f1b041e76d8a5
 
+Package: libxrandr-static
+Version: 1.5.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libxrandr (= 1.5.5)
+Description: Static libraries for libxrandr
+Filename: pool/main/i686/libxrandr-static_1.5.5_i686.deb
+Size: 13268
+MD5sum: c3edb90a1a0aa28454fcce97aef0fcf4
+SHA1: d14e1198655aa734daa47345ffbd2c422cd61f03
+SHA256: 9bf3c80ad6062975704a7c5aebadce43c5434e1900ffe5a77705b564d66c6885
+SHA512: 054009ea73e2bb6827b470acd88bd93ec4164580dd2669e1464a87744e624137450f70e69127747accb4e36c04dcf58be04a0c20fc421edd57712fb693c5a8c3
+
+Package: libxrandr
+Version: 1.5.5
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libx11, libxext, libxrender
+Description: X11 RandR extension library
+Filename: pool/main/i686/libxrandr_1.5.5_i686.deb
+Size: 21896
+MD5sum: 743f5fca80c532f0c1dcd4b59f410dd2
+SHA1: 64d2998da94ece7c27fc94b246777d69c397cd5e
+SHA256: b09d3f59071d678fce5ab6be1e25f4a52b29c81cb9f014e13a4b6523228a22ee
+SHA512: e0c91a119fa7d276991789d1fd802b3cd814c5f6b9521939c5c80f9ed01f9f772ee25528c3232c7737a92f6f964084dd6fd0d2fd942f5b2163edc0700552074b
+
 Package: libxrender
 Version: 0.9.12-1
 Architecture: i686
@@ -3097,11 +3127,11 @@ Maintainer: @termux
 Depends: libx11
 Description: X Rendering Extension client library
 Filename: pool/main/i686/libxrender_0.9.12-1_i686.deb
-Size: 23952
-MD5sum: 24f3d7fccf6f386310a8052b8bf93462
-SHA1: 360aab75b83dedc5ff9f4ea5a38a213d9376aaaa
-SHA256: b4534aaef5d3d5c75baea270012011f0cdf399c766cc559c89afc2d0def2bff9
-SHA512: fe25e6b740950f66dba17357e3f0d11802db492ecfc5bc96f7383e13ecfc0ff205f921cc820c2fc781e96cbb772f1bcf07564fc8ddabd947e3d50a7f3202fc88
+Size: 23964
+MD5sum: c8410971c9b63a3c20ca3d21728b10a7
+SHA1: 6bdd5dd22cbfa45c7c71b21de5d6d89aa4cda455
+SHA256: 29be07632dd23591b4b923d59480ed9b4b42571cfd99c2e8be32b7fe58023965
+SHA512: a4c7e326c0d132f595871af4ce7e12b73ce938e060a42af28a5f45752e2097c5fdb1d455c3475ae45b41369737c30a67b866bf629308d07c189078d97b6dfd02
 
 Package: libxslt
 Version: 1.1.45-1
