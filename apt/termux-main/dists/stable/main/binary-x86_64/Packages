@@ -157,11 +157,11 @@ Maintainer: @termux
 Depends: libdb, apt (= 2.8.1-3)
 Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
 Filename: pool/main/x86_64/apt-ftparchive_2.8.1-3_x86_64.deb
-Size: 108428
-MD5sum: 72606ee4d6c2d94ea77a23cf6f6fe4dd
-SHA1: 83497852d4e814b3b7e3ae94602c67e35a1c0f4e
-SHA256: c8f6b25a12dcba2463aa16c44d7fa38c33c85121425d9608423dc95280758797
-SHA512: d0a6b205fccd0bdd7bfd85e7a3ff1b3dab6ecbcafa6aaad8322ff50a059f4ae80140426d22a5045c1aefb30d572288b7d74bb428724a9bdc85e385b26d84511c
+Size: 108416
+MD5sum: 29afe0e2255d3fd7043156b5016a4e18
+SHA1: 678a0a209f39583f6e7e7b11a5c422b7c205ad2d
+SHA256: 25c2f900fb1db32525fe084041636dab1c568fbc516b5b4163698b5a6031d4f8
+SHA512: dffab154896ee1aeaf2f51a76d9d84b80b895f3e167bb2401970a1d2bea0bcad290ebbf8429997490c2102d27913c7b262f9c271ff34ed6af1979dba49c4c4d9
 
 Package: apt
 Version: 2.8.1-3
@@ -172,11 +172,11 @@ Maintainer: @termux
 Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
 Description: Front-end for the dpkg package manager
 Filename: pool/main/x86_64/apt_2.8.1-3_x86_64.deb
-Size: 1168184
-MD5sum: 475cde438a91230c3d0cab16616206a7
-SHA1: b732889c8b2cb85fbc527c506b07a3bfc2095fe9
-SHA256: 4ec4db14c69c5a5238f0d11ce13dcf7d833ab59de177c4bb634611d59f24fc0e
-SHA512: 8e7708b0cc58bf8f51f0b75bbc38055034d6ded48b470f38c32b85bcf04f7005662625cf9b6fd76a7ee8106f60d7d10fa88f9d56d36dc0624870d88426b74273
+Size: 1167312
+MD5sum: 9671ac11cce183dba2992293dfed4080
+SHA1: 4bc79b3d8b2aea268bb109c16daf933cc35a7202
+SHA256: 30ea82eef3be44ca6665addfd667a487a2d4fb378871faeb93f0f51cfc13ae53
+SHA512: 007281dd6a3b1146ba0ace36f856e82f55c0f441bd09c9031608ccca59127ee4894123cabab451677ff939d94df38ab8fbab8e82467f3cfa404c9668f2dc8ae3
 
 Package: aria2
 Version: 1.37.0-3
@@ -5067,19 +5067,4 @@ MD5sum: ca69c33f1a718589ba8759a9a49a2431
 SHA1: 0460570a5eb5732553fa791bc027107168dc0dcd
 SHA256: cc40fd9d17a5d70f8f801230fd46e752c0b2a139c90a55a82df0834d482ec799
 SHA512: 88f8fdf6dc7604ed03ecc7dc6d9e60a7bd482687641f609bc455b9b59c141a6818878e7dd7ec1329731392f436112bd0d2545ac83c93b0043fd42a0fec11012e
-
-Package: openjdk-21
-Version: 21.0.12
-Architecture: x86_64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
-Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12_x86/openjdk-21_21.0.12_x86_64.deb
-Size: 84
-MD5sum: 3b621ce652103b5a211c72c31bd2412f
-SHA1: 51350eb122762712945e0223bcaa120078bdcfea
-SHA256: 86d199c5e169a3d0eada35965f0e1adb9cb95cbb1e337874178dec252ed37d4d
-SHA512: ea336ab1b1e258301d229f5159feb0b77ceb5fea064385b9059fb9ba578781192eaa20bf546e813850aa1f6b70501c076dcd85e790acff874fa9a50366a5ebb5
 

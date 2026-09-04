@@ -2,7 +2,7 @@ Origin: ApexStudio
 Label: ApexStudio
 Suite: stable
 Codename: stable
-Date: Fri, 04 Sep 2026 04:54:51 UTC
+Date: Fri, 04 Sep 2026 08:41:48 UTC
 Architectures: aarch64 arm i686 x86_64 all
 Components: main
 Description: ApexStudio apt repository
@@ -12,43 +12,43 @@ MD5Sum:
  013e7d10070b7be0f7d0f37ee6343221           208474 Contents-arm.gz
  ab4c71d447f65d422a9fb99395fd9d2a           208756 Contents-i686.gz
  48bc4e6373c649640df2b665446f980c           206242 Contents-x86_64.gz
- 8451c8ee0fef43c6648dda8a66a04fb4           190649 main/binary-aarch64/Packages
- c4291a870c02ddfd07a220ccaed86f85            74963 main/binary-aarch64/Packages.gz
- 55e3af8db78ca316dc5c5891bcb4bdd5            13625 main/binary-all/Packages
- 2b53dc8edd558acf575f5baa8df6f193             5921 main/binary-all/Packages.gz
- ff787dff42781d085d347ade59e8b73f           186503 main/binary-arm/Packages
- b75c10ad29d714eee357fbf343f1efc9            74641 main/binary-arm/Packages.gz
- 76ee4d3278a9311df972188cfabc592c           187541 main/binary-i686/Packages
- 06709c6f424d1cdf6bfd03853096f0d9            74723 main/binary-i686/Packages.gz
- 2e009046b2a43b1c55e8a7112ded301f           189646 main/binary-x86_64/Packages
- 62b123d09ef24c35a1933d904b5163ac            74940 main/binary-x86_64/Packages.gz
+ 9ed568c337aec0a363e482a8d1a9feaa           189962 main/binary-aarch64/Packages
+ a19701c5286cfafab4b2ce9215e357f4            74636 main/binary-aarch64/Packages.gz
+ b888d4278aaa7257818923adec485119            15278 main/binary-all/Packages
+ 860509be34377815a6dae6570328ae4e             6599 main/binary-all/Packages.gz
+ a7b95309f2375ec43c6e1eb76aac12d3           186503 main/binary-arm/Packages
+ bcee2541972bb806e2bfae90a2b48de2            74644 main/binary-arm/Packages.gz
+ aad4d970be55805a3b7e24ff50c6d137           187541 main/binary-i686/Packages
+ d4f99b09412abc27e3e351e4d5c43c80            74728 main/binary-i686/Packages.gz
+ ec9d416c5da1db08c4cfaf77d47dcc2d           188957 main/binary-x86_64/Packages
+ e92425e36a6cee46f944e33f18bff316            74593 main/binary-x86_64/Packages.gz
 SHA1:
  a22ab0e307699af5cc94878026336d8da2b6a061           207686 Contents-aarch64.gz
  1e8d11a268a0657504a34664e96b2c660bcea7e8           208474 Contents-arm.gz
  ef0c8570acc1c429eba453ca24eb7d73711e8abe           208756 Contents-i686.gz
  3ae2e657e37abf8eba4e42acab0d8c7593313ff4           206242 Contents-x86_64.gz
- 7acdb478ec8b7848427a60410a63d67123a5d0f1           190649 main/binary-aarch64/Packages
- dd5c152cad22eb17b4710ad3ef5e9de79a40a21c            74963 main/binary-aarch64/Packages.gz
- dbb067fe7028ac39066f5090085b100988bb499f            13625 main/binary-all/Packages
- 01c108e4b0830fc7b1a881e462ffc97054fdf673             5921 main/binary-all/Packages.gz
- ad3856ce2f3778b15abc0d54a28ef71f6b56756e           186503 main/binary-arm/Packages
- 461ec59b4eae0635f849a1c045a8827fafe15233            74641 main/binary-arm/Packages.gz
- d84e28980b31547634a1ec4ac8f1d994ee6d22ae           187541 main/binary-i686/Packages
- 33947692d2fb33997b26a60e9b7ca82b868ef445            74723 main/binary-i686/Packages.gz
- 24f2f8ed826f3477da0b9441920eb008e2e4daba           189646 main/binary-x86_64/Packages
- 888b5070277bcd529edbcf8fe31e54e935a6c14d            74940 main/binary-x86_64/Packages.gz
+ b56ddf4fa5f0d5ed04615b2050966c324a795dee           189962 main/binary-aarch64/Packages
+ 3cf579374e47728d8efd121f305044b19a23ba8c            74636 main/binary-aarch64/Packages.gz
+ ded099f9d898056630513e510a739264c861d8bf            15278 main/binary-all/Packages
+ b4cd2887811a8e66f005eb49a860ed492ccb5c17             6599 main/binary-all/Packages.gz
+ 3a0bfad990c51d69d44ef4ff2d31eabab083d690           186503 main/binary-arm/Packages
+ fb7b19b4004f877de0986689d7b88f9c7781bcb7            74644 main/binary-arm/Packages.gz
+ 880342b0bbc3a3a2b3f0191de51a9afa3e606504           187541 main/binary-i686/Packages
+ caddc54e0280fc171a3e765812269a61675dc7e5            74728 main/binary-i686/Packages.gz
+ 8e695cfbdf6b897d2770a63caf2de5aec756547a           188957 main/binary-x86_64/Packages
+ bb205b714c3244c2e73bab4074444fe0b2c58f6f            74593 main/binary-x86_64/Packages.gz
 SHA256:
  74ae55a01fa937cacab8ef539947af661b9c80ae0ede03ebf9ec1abc2e3093a3           207686 Contents-aarch64.gz
  8d4b3f17041071c098de71ab8ae349f51448319d5a03cedb7a9badf9176b93b9           208474 Contents-arm.gz
  1733ab426ac418a1631c4f96dae242c855762abb2c5b1165f5db35b15ceb0122           208756 Contents-i686.gz
  776d9fa2270a3d07ece3d0fabbd06bae56a87e5b7e44644220a081386ec44eac           206242 Contents-x86_64.gz
- 5608e5d3958ab9e266309ad321356af734be90a138d8b6b5d876699ecf56375b           190649 main/binary-aarch64/Packages
- 1f7dd6eec94991d55f1f72140f00516572f6871175dbc59f95571abc867425b7            74963 main/binary-aarch64/Packages.gz
- bd9978214aca29e6f3e584dbc8f102a5a407b718eb04d442d47e5f4f14659f7d            13625 main/binary-all/Packages
- 12136c7971318960b7f565f358fa8f26a378a02f437caf79495a7d47bd453c0b             5921 main/binary-all/Packages.gz
- 408b5e019e1ad4fc3d1b80f24a8ab57314504d32491388b86f9b6e4bbba1371f           186503 main/binary-arm/Packages
- 79b6397083052e9d7ec332880c5b5ea2a2b2e2215de7c2e0c863e90900c0d059            74641 main/binary-arm/Packages.gz
- 724ed7d7eabbbad98d09a4746c95fbaa9354008f3e625e58a2ef5ff80479e237           187541 main/binary-i686/Packages
- ca9c1f770d4c786d1ce9927c63df5dd1ff5091fc7c3b1a52c0f7f401f733e160            74723 main/binary-i686/Packages.gz
- 389c4bb6ea6663edb8ecf849c50db5e4b6892f9dad065e5418ddd56aecc05b36           189646 main/binary-x86_64/Packages
- a9f3fe6f29b016d2aa48b8fb9bfefcf9f84c5a33c385a7c30a7bffc2281e4ac0            74940 main/binary-x86_64/Packages.gz
+ a8644ebcad29ce69875ccfb75d7ce1f91266b2e1247801b795266c0fd15e9a12           189962 main/binary-aarch64/Packages
+ 21744a58fdcdf1c1b70e44f65e41c819e521e80ea4f8b4c0d8de71e954d4f529            74636 main/binary-aarch64/Packages.gz
+ 351de01ad92d1568bd72284de52d79074a93933a627732b79f1045a3801c0290            15278 main/binary-all/Packages
+ 24f8914a34c9aa14af33737477edb729f177bb966c8633f98152b2d768e89ed3             6599 main/binary-all/Packages.gz
+ 09931afbeacc10d80671077674c47b9c3adce0a07d1043b620ba020f70a88a40           186503 main/binary-arm/Packages
+ c3b76ce7f0f3ffb5539ba8763f38d80d29a90d7d9748350ecfef7a24bd1e46d1            74644 main/binary-arm/Packages.gz
+ a101f37bfbe8adf111b0db60d01f3a9717aa63aba9a3ddcce3480e1702f35de1           187541 main/binary-i686/Packages
+ 782fa37def63a6e14126175b186fc0d9b9ef23cb094c2d059993a14c16d30f5e            74728 main/binary-i686/Packages.gz
+ 7704ade95182dcce44cd36c6bd00a6470fc0ce32d8383c454ee73e8f932936cc           188957 main/binary-x86_64/Packages
+ f294906cf24ab4dd31ea7c9c21ff76bc166aa4ea877c57462d452c21219f762b            74593 main/binary-x86_64/Packages.gz

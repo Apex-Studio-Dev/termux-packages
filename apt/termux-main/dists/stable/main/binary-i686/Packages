@@ -157,11 +157,11 @@ Maintainer: @termux
 Depends: libdb, apt (= 2.8.1-3)
 Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
 Filename: pool/main/i686/apt-ftparchive_2.8.1-3_i686.deb
-Size: 112856
-MD5sum: 49ae8e866ca5ed73b019913607bb95f2
-SHA1: ad1a80e15f20f9c8727dfe603f2b7279f4405ad8
-SHA256: a98ac9a224abd00af795bc2a74507458b9427d2dceb87a98cfbe02ce864351cc
-SHA512: 6e56ee73cf1cf5eb1caf43e8f52f18acb6d0e376c152bc217cb71f2cf5213bbbb3baec9286ed31427c4ff2ad94aa5894d8cf93ff481a3a0702ba50f6b535bc71
+Size: 112676
+MD5sum: 24e18f26418f590d7e92b9c11e5be552
+SHA1: aeed2e016a6fc493d76e4f6dfe21003ef354a90e
+SHA256: f2f2596634d6f66a83d5544f07300eac15de64a80952a23de5168fe90ddcc819
+SHA512: 740a1b7f29bc029f015eab863f146829b9d811f47ac2935f670ade0eca899556a237740141c8dedb481dbe57486be31526cecc65a1aff10a2faded736b4c5d46
 
 Package: apt
 Version: 2.8.1-3
@@ -172,11 +172,11 @@ Maintainer: @termux
 Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
 Description: Front-end for the dpkg package manager
 Filename: pool/main/i686/apt_2.8.1-3_i686.deb
-Size: 1220916
-MD5sum: 07643ddd4ec3b5f489ce6668e9b3ace3
-SHA1: 8fd20623602d869737d8b6ea136400138d748978
-SHA256: d8e0d9772d17a57ac8dfe7ae4f3af4255b415a7f0bba478dc9bc394787e15134
-SHA512: ace4a4a9b1c60c6f245aa68cf57352dc27a41259b0da16488b266b62c7ba249cb848911ced441662afe135661c4733901a9560bb20a3022767cf8b9fce553e63
+Size: 1220700
+MD5sum: ae34164653b438cf98f91e3867a8c902
+SHA1: 61b38a3f8352348b7088dd30ee7c3a77f5b56cff
+SHA256: aac566f4519dabbcecf4d4734a389edd95058ccb111caeaa77c639d41c4f1f6d
+SHA512: a39c965d8ea8aada46824745f05c65d3ec20332ace709c461518a97bfe619220047d27d53e6b19d3b92a193f380d3c040c49be8e2ef478f96790de2d6e09481a
 
 Package: aria2
 Version: 1.37.0-3
