@@ -36,6 +36,10 @@ on:
         description: "Skip dependency resolution (build-package.sh -s). Use only to bootstrap-publish a first version of a package whose dependency tree is cyclic (e.g. pulseaudio)."
         type: boolean
         default: false
+      force-build-deps:
+        description: "Force building all dependencies from source (build-package.sh -F) instead of extracting them from the repo."
+        type: boolean
+        default: false
 
 permissions: {} # none
 
@@ -315,7 +319,12 @@ jobs:
             echo "Skipping dependency resolution (-s) as requested via 'skip-depcheck' input"
             skip_depcheck="-s"
           fi
-          ./scripts/run-docker.sh -d ./build-package.sh $skip_depcheck -I -C -a "${{ matrix.target_arch }}" "${packages[@]}"
+          force_build_deps=""
+          if [[ "${{ github.event.inputs.force-build-deps }}" == "true" ]]; then
+            echo "Force building dependencies from source (-F) as requested via 'force-build-deps' input"
+            force_build_deps="-F"
+          fi
+          ./scripts/run-docker.sh -d ./build-package.sh $skip_depcheck $force_build_deps -I -C -a "${{ matrix.target_arch }}" "${packages[@]}"
         fi
 
     - name: Generate build artifacts
