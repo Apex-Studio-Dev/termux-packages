@@ -313,6 +313,36 @@ SHA1: 49517d99c5e25901b6edb55ed117226c707fc63f
 SHA256: b797e19ba80dc04e233812e722a2b58a85e76dbfaa1be46c71690cbc7fb4cd21
 SHA512: 7a1d29242a2e644b4a4d37da4f87f66aabda047a68731d3b87c7d39a5e7697fdbe0b3d12b823fb1a5681bf6cdfd1f388c6594850439cbe0a1dad33f06501841b
 
+Package: check-static
+Version: 0.15.2-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: check (= 0.15.2-3)
+Description: Static libraries for check
+Filename: pool/main/x86_64/check-static_0.15.2-3_x86_64.deb
+Size: 22352
+MD5sum: 469ee73be1dc49728022e64084b50d8a
+SHA1: 69a1ae14b3704637310fbdd3f7e0d2cb02478050
+SHA256: fc103bd494653d86d7b4d0adb9d36e41617c22adccef0d0799d0c8e3b36b366f
+SHA512: f268870c1f4c9fa5e5cd1f0890c80a8b7d30b13ee9b3ae60242f1f57018cb99ec5e7ffbecf2f6627b4144a5ae46a842a5556145201761461f886aa32b1d022f0
+
+Package: check
+Version: 0.15.2-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libtool, pkg-config, texinfo
+Description: A unit testing framework for C
+Filename: pool/main/x86_64/check_0.15.2-3_x86_64.deb
+Size: 98284
+MD5sum: 31d6509a855233268a05c40f4d590f5e
+SHA1: e20bbeebb690f273066dadf160400ffc61c55134
+SHA256: 9092d1d5ec403a7dfe86ed5f84491459d520a3b8236efca75cefbe9520247dfa
+SHA512: c83b1df1275d0a7145944f15699f8f7a7b4b935593cbc49fce03732e3111b06458af88ed24047665f4509a01990859a4a590231441f2a34ee9c6eac673d095b1
+
 Package: clang
 Version: 21.1.8-3
 Architecture: x86_64
@@ -417,6 +447,21 @@ MD5sum: b8db0d3598506bc2d2cb0fb5bafc130f
 SHA1: 4cbc90a731abe75f4643a9fd28a4911d20d99247
 SHA256: e7731fdc6ddc7329b21532df794cfedb625c6370b8e8ae73bd04c0ce84131dfa
 SHA512: de56c3818a0f5a9562478eec8ee1459ee2ad888ebee76fd865f3f9a70d2be4a131e8d751ed623454c81acbfd4fe6f14fbdef8180550b9a2f71a8654285d2115d
+
+Package: dbus
+Version: 1.16.2-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libexpat, libx11
+Description: Freedesktop.org message bus system
+Filename: pool/main/x86_64/dbus_1.16.2-3_x86_64.deb
+Size: 447692
+MD5sum: 66d0a0bf6b872e43cab36075f2cbabd4
+SHA1: a2983a33a4e0a62031263b71cd3b4452b91db65a
+SHA256: 79f42f201c33644d14e0b6fb4c64b9c28ed492ebc6669661f17a086854595035
+SHA512: 06b3e42ab2b23c34225b8ddbdb3d42555ead02991fa76a71b5c3e05f75b415f0b4d308dc768d20e6cefaef339ab3e84e406a320616e7f2fd9eaad25831ae28cd
 
 Package: debianutils
 Version: 5.24
@@ -582,6 +627,21 @@ MD5sum: 4da54dc9777984fec483d0c68041da2f
 SHA1: 9d03cdecdc722bd5019c8819b1a2eb5e71469252
 SHA256: e609c950fdad218bc657267b185a11ec1383a9c7e90b44aa72d0e961ee723a8a
 SHA512: f44bc302c59729a7a56d501cc158bc345b7ca13d5392d68f752ff9210a314da8abcd3cb6d030ac5ec5dc6624e842462cb42f7a00cfb884d7878d1f0d2d6730b8
+
+Package: flac
+Version: 1.5.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libflac (= 1.5.0-1)
+Description: FLAC (Free Lossless Audio Codec) command-line tool
+Filename: pool/main/x86_64/flac_1.5.0-1_x86_64.deb
+Size: 110660
+MD5sum: f4492327da6fa38a0a3c346956492464
+SHA1: 48621e7407ed174d6387c4badf2e692428951279
+SHA256: 3dc21fa1363049aed52198e16f2fbca19de29ff541cf011f0b45baeb3194ed6a
+SHA512: 69cfc5dd08652a65d3353da52af16f951c9415037048230ba83a01d8c66ca94f5f8bcd33a1118e1c062fc55ac468ffeb40f22bf59f4a96768235b98c534a49d6
 
 Package: fmt
 Version: 1:11.2.0
@@ -778,6 +838,21 @@ SHA1: 0bad218a1f52291e958bb965e6feaea66f012313
 SHA256: 990a3fd114db897cd54b2fc8b8bf3a09e2e81a08d5919acac9a48efde5b3b4db
 SHA512: d6d3814e842145f0d50d654c17cb869819a92b5e930bdb3b45af87539504048df17ca7f6993a602db3de13c6981f84f00b20ac4322037212b78f2db13abdc00a
 
+Package: glib
+Version: 2.88.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libffi, libiconv, pcre2, resolv-conf, zlib, python
+Description: Library providing core building blocks for libraries and applications written in C
+Filename: pool/main/x86_64/glib_2.88.3_x86_64.deb
+Size: 2622200
+MD5sum: 9dd4a139295e8bde5df852a1a896e493
+SHA1: 586ae135cfce994e52e752d5398b5ab7569d3dd4
+SHA256: 9b1bfd64353eff92e49a930d95db34640158b6836a099200e77225825d31c8c9
+SHA512: 1f724245778186cb562a4fb12d63143f7fffa8d96021dd1b73e7533cfa78c79d9b0d1148ba433360153c84c81a2571771f627ee1102084f71535e25bd0f05852
+
 Package: googletest
 Version: 1.18.0
 Architecture: x86_64
@@ -943,6 +1018,21 @@ SHA1: ea84b58b31f736a84ef9cc615b187bc893b5dc60
 SHA256: 9f44594d476213744aa5bd1339635e7d316bddd169a6951ada42b7af29700286
 SHA512: 20285a3614d40e0f7876a612a9f44f1c15c1fd0c95198cd6f6892205688f46092dbb64795e3a83c5cf7bedd762621a0345bc9be12bc2bd79bb0bf226e0771fbd
 
+Package: lame
+Version: 3.100-7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: ncurses, libmp3lame (= 3.100-7)
+Description: High quality MPEG Audio Layer III (MP3) encoder - frontend
+Filename: pool/main/x86_64/lame_3.100-7_x86_64.deb
+Size: 199276
+MD5sum: b502c113c45197fed9644c70fc6a6658
+SHA1: 369663d6ce087959e03280d8f5387b4de611056f
+SHA256: 34afbf401036d7ca3a52bc3f9be7ea71e94ed81559581386b5b3c255551adc2c
+SHA512: 35c1e68b3bf1fa2321208b8ae924cb7ade0a3281b81c48252faedc55a3586f96c195fe1636771bea1119dc0e75d05eb24763fee9c822cd1dc5bfebdcb71f962f
+
 Package: less
 Version: 704
 Architecture: x86_64
@@ -987,6 +1077,36 @@ MD5sum: c3a796c1d42312fa73c1e1bc8cf7608a
 SHA1: c34bd1a35eaf1edfd3b1042376597fbe82d56b3c
 SHA256: 303b82c87b6215eba3e6e6dc6de40e2e2357a324da8003aaa9ab0715f8563a23
 SHA512: 56320a384e7760eab97c9acdff6030cce7d77f342923f40ed0fa2d7a74710a7a01fe9a7a0784de4ac8ef741678062347ea424f5a9c12ba8ad74ae8253f629b26
+
+Package: libandroid-execinfo-static
+Version: 0.1-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-execinfo (= 0.1-3)
+Description: Static libraries for libandroid-execinfo
+Filename: pool/main/x86_64/libandroid-execinfo-static_0.1-3_x86_64.deb
+Size: 2336
+MD5sum: d01f9b2892d11e467ce1642b183f459c
+SHA1: fc9f38105a9b82bebb8e191d30e72a3725be7508
+SHA256: 7e4277fa25cc7f0e9c5b34a6d7f8fb2e705f1da89b890acf50950ae042ffe56e
+SHA512: 9e6b93f33a52ef659ce2c77ba7e286e9966b410f118a6b76716de928b026dfb03db66c8ffaabfec56d00a30c44a75e72a397dde464768b25908eaa342d7997cb
+
+Package: libandroid-execinfo
+Version: 0.1-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Shared library for the backtrace system function
+Filename: pool/main/x86_64/libandroid-execinfo_0.1-3_x86_64.deb
+Size: 15120
+MD5sum: 9b95530740cb5fba4aa1e5389f80a762
+SHA1: c9b659ddff02322ae110655b9e1561141395d33b
+SHA256: 49caa4a6c4ef9a6a204c5c334665f67ac3cd869b23f8a59b194ae3aaa6df8ca3
+SHA512: cd1c3ad48f7e9bdced9bf69104d49ce77a82a3e2157dbd2250d5a69c2a4152f4072ff67fdf5d2b29740bb8d0183d0534399e92997074c59b1e416408dfa21cf1
 
 Package: libandroid-glob-static
 Version: 0.6-3
@@ -1092,6 +1212,21 @@ MD5sum: 443d12fbd214857bd39f8f1dba131688
 SHA1: 98938d429e5124d2d3dfb0a432d6299b28e69a3b
 SHA256: 8ca4e7dc968b335922e78ac58c8a4dc0696f46108329d68353587eb1ce5d4f49
 SHA512: e4e49a28988b48b893b650589956f19611b9f0b43a35ec81c7ea3f28927e7d3447162362a0b1685517068dff63cb9724c4446a93b6c3faf86cc47e0feac11dce
+
+Package: libandroid-stub
+Version: 29-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Stub libandroid.so for non-Android certified environment
+Filename: pool/main/x86_64/libandroid-stub_29-3_x86_64.deb
+Size: 25580
+MD5sum: 404eb1cd42f4b1b990f55a87b8dbdaf3
+SHA1: 20303af238c09491eaa0339534795b9ae55c89b5
+SHA256: 71b440b8ed96c7ce80636610e7de95e9d01c531040c74f9ab9742b60585df5ae
+SHA512: f134c14626c4ea428cfbe958c3606ff952ebde748b172ef59f72082c27746fa950937be454671161fae42acd3f6074ab6bf0742542880a2c4cd8c89742791075
 
 Package: libandroid-support-static
 Version: 29-1
@@ -1468,6 +1603,36 @@ SHA1: d897960cc9ba7a5f11f1740d54c6ec2d3fd4d69d
 SHA256: da98224560be1d545a4ca77a5bbdddf2cf4de62c869f316effa9aa55c323435d
 SHA512: 08b8af95f2731adbb5cf839128db8fe612abf6b287ec49a83e4c3f1eb4ca8a4f9bcf208a851dae6469ec6a9b80bd3c00741f3f357f576f1244e8778a0f45796d
 
+Package: libflac-static
+Version: 1.5.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libflac (= 1.5.0-1)
+Description: Static libraries for libflac
+Filename: pool/main/x86_64/libflac-static_1.5.0-1_x86_64.deb
+Size: 115500
+MD5sum: 14ae818022c89ef5b8c58a8c7324a328
+SHA1: f1da0eca4138d40b8f8fe06228971629293d7f5a
+SHA256: c1bf334d808a8fd3fcf17275ff3bf2b9d025b1170b259f213a9de1fa31ab19f4
+SHA512: 781ae56cede13e6282d615763e5b2a6478c66d1107d93794cedcb7a9768a512e499a760fbe62595d34c085f70a317830d8f30f260b64f9f807ff53859be7cccb
+
+Package: libflac
+Version: 1.5.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, libogg
+Description: FLAC (Free Lossless Audio Codec) library
+Filename: pool/main/x86_64/libflac_1.5.0-1_x86_64.deb
+Size: 212652
+MD5sum: 6278cd16e1b8b44879b4c56f55dac3c7
+SHA1: e9aad14c91cc647c75eab0771aa3ae595b57f1f4
+SHA256: 8d394cf701fc27bfd79fffd916511aeca09507b6d0a5766ed50947e29f412dcd
+SHA512: 7b04d6c7d56fea4d89cdfdbcfd2d08a756a1f6a375a6cd2c84f4ca1d5cb1b3ebb9f5832cf66b996d2db6a214ff9b32cc859d3d7fe960be69c6c283909b2e6fcd
+
 Package: libgcrypt-static
 Version: 1.12.2
 Architecture: x86_64
@@ -1678,6 +1843,21 @@ SHA1: 847a1cfc7b4d21f4682ade04e7f691509c7356e2
 SHA256: 5424c9d134a90418aff7bbc971c9fcbf5f61993d80431f9a01b9b77dd1742783
 SHA512: 29de7b2fb84c2440448a446914bcc586bc7d01d859a2fba69ca2d3e003228a6f1e9d3ab680c5ad1324fafc969e5f6d2746ba4db5e7de9fe71e082e779e2b4204
 
+Package: libltdl
+Version: 2.6.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Library for dlopening libraries
+Filename: pool/main/x86_64/libltdl_2.6.2_x86_64.deb
+Size: 18664
+MD5sum: 5ae0cc56352ad888d0e7cd1e7a87f520
+SHA1: 4fd3d4e42e3d4863de6eacb9121faef7a39703d9
+SHA256: 65285bde67e3161bef5e9f253b86da51cc27305fa97d98d8aa13a5e5922381bc
+SHA512: b233d0548f84bbd1bc1929d4bf24c2d0c70a5cfa552d616a6643256eda1750a4e5b97af089666dbd242327d7b46ec22cbbdff88d8831c63cc636cb142cb7ff33
+
 Package: liblz4
 Version: 1.10.0-1
 Architecture: x86_64
@@ -1798,6 +1978,36 @@ SHA1: 80c2beaf2f2eea2c458bc1a987857b96f19ffd9e
 SHA256: e6d2724076671bba2d8a408e133cbe48056a2bafbe41f1c4297ffe781baf49d8
 SHA512: df8ab79e5719fc4b0332eeb8a876daf5f1199a9416f6fdb10e515e4fd5215a55bdb4f828d34a5fc1d04d7a77444494f7e4feae2993a1a77495602ff40d3319da
 
+Package: libmp3lame-static
+Version: 3.100-7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libmp3lame (= 3.100-7)
+Description: Static libraries for libmp3lame
+Filename: pool/main/x86_64/libmp3lame-static_3.100-7_x86_64.deb
+Size: 126752
+MD5sum: 80320f1679d8b2db1ef5dff4de2f108e
+SHA1: 504cc2cd66698bf1877d1aaff5e75055e9d28e92
+SHA256: 94a0c7e5c8d49fe0edcf43ed72f810e9e2a8ee5aa7e39c44910fcaf8f0816900
+SHA512: f8e0bedd2e54b3f7da6290730c6e80fbb329ff062f9978283d0cf3adb6152bb8e5ce4913cfe29a344487d51a1df68811086522cbcd0aab0f97b139a812afee41
+
+Package: libmp3lame
+Version: 3.100-7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: High quality MPEG Audio Layer III (MP3) encoder
+Filename: pool/main/x86_64/libmp3lame_3.100-7_x86_64.deb
+Size: 120200
+MD5sum: a68630ad73d2ade2c0e9d9bcd6fb9b7c
+SHA1: 616c4b0cf36be51116599eadc261aec546866e4e
+SHA256: 61d687fa4f366d5dbdf0852ce51f8e5411b906222cc8265498c26f2fe9273ac4
+SHA512: 5fe1e46c7012c0d1e6c570afe592a80a671164f448a47eaa46114f7088b9607eace023438c03ec70fd2141af1f2e6d3ef0d9b3f86e450b2420b9326b2832ec63
+
 Package: libmpfr-static
 Version: 4.2.1-1
 Architecture: x86_64
@@ -1837,11 +2047,11 @@ Maintainer: @termux
 Depends: libmpg123 (= 1.33.5)
 Description: Static libraries for libmpg123
 Filename: pool/main/x86_64/libmpg123-static_1.33.5_x86_64.deb
-Size: 160540
-MD5sum: 6631fe1e13cd81d554c87278cfeb3aa1
-SHA1: 86e434c31105685db31a059217cd3b249f13ac5d
-SHA256: b6e1b1f4301cc1d559c32813bc9ff6a7bb6f60bf0051db04a59903a06b287d6c
-SHA512: 3c4398b96cf6443cce1f2cb999d889909ca0b97930b4302059bfdd237763fe06cb387928feedfee7aa73301b36dcb1511d605436345ee78ecea1594db09767ef
+Size: 160396
+MD5sum: d53088187262f698b5bba46ea675d410
+SHA1: a09996ffadf4f7a3a3f51ba4c5a50b62a7b1b132
+SHA256: 868dd9cf5116874132e4f3eed5c18706e366064daeaa83da5687ab3bb188da22
+SHA512: 974c8965b9e590a2f4c452548c517ac8283cd29a1d7f6ca01e81e1d2385c0bba98ede61cd6af7c0a25f7ed59d13ca0c8aac47d6a8eb801fad147071a5d465b6f
 
 Package: libmpg123
 Version: 1.33.5
@@ -1852,11 +2062,11 @@ Maintainer: @termux
 Depends: 
 Description: Fast console MPEG Audio Player and decoder library
 Filename: pool/main/x86_64/libmpg123_1.33.5_x86_64.deb
-Size: 187808
-MD5sum: cf3ecbc7d613255e1c1e6561b6b4a81b
-SHA1: 790174d9f533f62c14c159f4518c9aeb811d479c
-SHA256: 47fbf96b200977f44e92f225c1deb84e22be86c4f8b3c46f850c6b869691b721
-SHA512: 7accb99df3d7fe3fb4f7d926083a40c0e080c037cccf8b724e1bd0c99de1de9ea19804d7ecd1a5d43ba698e1d8e2207ae388e6e029645369a2d401b1d556d15f
+Size: 186652
+MD5sum: 2e4d4401392a7de47a00d9cbe8cf7a19
+SHA1: fd6a4c9692b1a087dbdc42dfdad45e871718b4e5
+SHA256: 2cbdc951892279a0ee4a5b9bcd1567134a089e0721ca2d23a928172e32446066
+SHA512: 34d10ab66c28543a94d61765bd730f593b9e876762b29e9404bae7471e2f2055f70eb2fb9e43e6dafc2bf51d8dde4e62fdb98cc9863fe117dba139ea7f8f44c7
 
 Package: libnettle-static
 Version: 4.0+really3.10.2
@@ -1978,6 +2188,66 @@ SHA1: b74bababcdd9210de0ca360a7024d4d4194755ba
 SHA256: 0f047da26f8789de2996f3ecd404770d26cddb839b87e7ee23d2bb5b00fc796f
 SHA512: 3f2318f8b8c46e919ca86ae9247f1bbe2b161cb7b95347da375ed908d6dbb967a8fc8f7e8347c11d6a754549848abe4a8c38d75424a4d35bf8c254143caaf847
 
+Package: libogg-static
+Version: 1.3.6-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libogg (= 1.3.6-1)
+Description: Static libraries for libogg
+Filename: pool/main/x86_64/libogg-static_1.3.6-1_x86_64.deb
+Size: 16544
+MD5sum: d5053553545207e6d34f9e26f29aaf55
+SHA1: 86912be10675c93b0fea3a0e1c5ee50286441d38
+SHA256: c328ec24b0dc44a5d91b8aa5dfe270882ca20e034552a62508305fe696411e55
+SHA512: 652be4e9bd41c4d49e2218669749b3ba1d089a8238f2e30df92d25d8f3e2908e338bc21ed015e64c46f4a360eb80eef96b8b8f11adfbb33c18cc0f28ee7edbd6
+
+Package: libogg
+Version: 1.3.6-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Library for working with the Ogg multimedia container format
+Filename: pool/main/x86_64/libogg_1.3.6-1_x86_64.deb
+Size: 188944
+MD5sum: 54557ee553e0ff9da5d69788eb4b5f78
+SHA1: f5fab28bfb91b8bd9e492ee169077bff28515fb7
+SHA256: 4f0b9284586c547a601d3861962482e9cc6579edffa149d1f31e8de2e4dac00d
+SHA512: 1e748c626384b7a9a00ccb4c0a1a26fbea8017ccbcff46df296b76c1e47607f5fc40e8eee6d674bcb2a66e027d66d49de61aaf9c317cfece944f672f6d9b55e1
+
+Package: libopus-static
+Version: 1.6.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libopus (= 1.6.1)
+Description: Static libraries for libopus
+Filename: pool/main/x86_64/libopus-static_1.6.1_x86_64.deb
+Size: 211380
+MD5sum: 50c463f8e85443b3b9ad17d292eb20b1
+SHA1: 6e58fa8a8c923d13c8bb6041b8501c1bc4e90ea8
+SHA256: 1242be3dc4d5a30880861bb2e6ae50fb5236138d315b75b2c1470f7b975cad7d
+SHA512: 9ae1cebfa0c599525810c2ae614000acd4cd7af923e525f37574ec71af400b6d6b4d741e4911fa76b2212ebe21bc7d9adc85d7c0b61a644168ee57d03713ce52
+
+Package: libopus
+Version: 1.6.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Reference implementation of the Opus codec
+Filename: pool/main/x86_64/libopus_1.6.1_x86_64.deb
+Size: 201780
+MD5sum: 21fe2a8e33561a6e38a6fafc0c1dddef
+SHA1: fb4c1d19651d81501ad329cf4dfc64aaeeb0a426
+SHA256: f495496f057ce6b104e3c13b63b08ad33a8ee875e6fc44324859bdb33fc821b7
+SHA512: 8313a33595a4a30c43f6c45e904465a3e3a3fcf79b3be6b337440612dd46d0161900f61d93db7ecfd66aad70644e95c162726a7d03e02f9367d07110c9544311
+
 Package: libpng-static
 Version: 1.6.58
 Architecture: x86_64
@@ -2082,6 +2352,21 @@ MD5sum: d3af2bc5c26f2dcb206f3227fe1102c7
 SHA1: eaa532056dce54d174fd5540712f12306f955056
 SHA256: fb59c1b018071c196fbfbcdaa9fe295b014b5d894e35f39fd401ff4fc729e462
 SHA512: 821f26413f96c1a83a839d0d4dce25345730d3d040636a961f1981f3d4d8f0d97eb0e51588cfa41453c5b7f4ed60afaadc50a927b7b2dcc5eadc6c3f17f67529
+
+Package: libsoxr
+Version: 0.1.3-8
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: High quality, one-dimensional sample-rate conversion library
+Filename: pool/main/x86_64/libsoxr_0.1.3-8_x86_64.deb
+Size: 380152
+MD5sum: a9e10102284ee07c9c9b0076f916db9a
+SHA1: 4d6d0359f797994c03ec7827d5dc9ccb69d53259
+SHA256: 2086a4b8998e0879bf49325cf99a72cb7621d29d459f823865e5058ebde3c507
+SHA512: 75647c583907f04fb5d436e796f47f782c484a1c9e62970cfaf9035028f1ed43115ddfd1c760c3e156b8f952f8aa526a870596b76da392086452614f58e480c1
 
 Package: libsqlite-static
 Version: 3.53.4
@@ -2218,6 +2503,21 @@ SHA1: 3c93e33acd14d26e40ad71775c825c522cace32d
 SHA256: bd01c2c7bf02bf81d94a623368a61645ef35035688345e99dca0b15b4e69b5fc
 SHA512: 5559c76273edb7a3090f4a7d85e4ccc2726851b741a1471e0b9bddda983963a98d45f2b6ba17e31af4a8ece6c74ff4bae2fee48e76ebe2b51e7cb4b3d777117b
 
+Package: libtool
+Version: 2.6.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bash, grep, sed, libltdl
+Description: Generic library support script hiding the complexity of using shared libraries behind a consistent, portable interface
+Filename: pool/main/x86_64/libtool_2.6.2_x86_64.deb
+Size: 401336
+MD5sum: 08d52231826e5e8d3feae4e4a3f869a1
+SHA1: 85a6e7ba08f089e6294a539ab9ac921b73d101f8
+SHA256: ffcf0a4c123e8dac2b773ce57167d3c5f67657fa67c9ced75d4ff308eff9bed0
+SHA512: c81b8349179c49024bfd741b0c144fa3d8336372deb4fe3525c4a158031ecdc472037ddfd185040001f17ca38d34425da3cc6c307e003e6b7b5ec36996bbe95b
+
 Package: libunbound-static
 Version: 1.26.0
 Architecture: x86_64
@@ -2322,6 +2622,51 @@ MD5sum: 37f46ce8ad95c9b161c2ad1483ad1fd3
 SHA1: 76a8e62411e1ed33a404212348a9a00c942648d5
 SHA256: d545efc5f642649c5b5e047795ca4a9878ae9838b09be1e3f05f641b1bbf3428
 SHA512: e653386440f033134c08a29d1ba70c5425a68427a1d6b4d4bf2eee5c15d98fd8cae9030e29ab626a0902c0138c108377af70c6bd81df8e763fabb17618ae66cf
+
+Package: libvorbis-static
+Version: 1.3.7-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libvorbis (= 1.3.7-4)
+Description: Static libraries for libvorbis
+Filename: pool/main/x86_64/libvorbis-static_1.3.7-4_x86_64.deb
+Size: 159888
+MD5sum: 48e1525d3fc0c2327d5cd75d1fdc7fee
+SHA1: aa3dd03088a22efc7fac4c16eed17a9c2243cf4d
+SHA256: 708532780a81f2a3fa582fc51c7106211046e0196d22b2050a50471306a4a8e8
+SHA512: 21ce14c331eb3fce42b6e31cd7b0b1013d3fb15f1529a5588ecb9d8bfdfb47e77ca44cfe46f5e2e49c1f4bf2d7384e3751a033cfc5288a04110df3781f3f98be
+
+Package: libvorbis
+Version: 1.3.7-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libogg
+Description: Library for using the Ogg Vorbis compressed audio format
+Filename: pool/main/x86_64/libvorbis_1.3.7-4_x86_64.deb
+Size: 266708
+MD5sum: ab078722ad88477ddd111ae6e434f741
+SHA1: c2e94bd6ad11ecb01a77594a9b46a4875d37b8c2
+SHA256: b36dd05bfa9c3dc12608a811d4c9b6745a50997d2df5bf9b901df937467058fd
+SHA512: 1e0d4694283c14009ec147766e21bbd3eb538874426904b11874ba891f7323f2698d22f935e7e24d922a984fb61a83076e4e30a3fe9ba9b2bcc066e7495e5e2f
+
+Package: libwebrtc-audio-processing
+Version: 1.3-5
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, abseil-cpp
+Description: A library containing the AudioProcessing module from the WebRTC project
+Filename: pool/main/x86_64/libwebrtc-audio-processing_1.3-5_x86_64.deb
+Size: 434340
+MD5sum: 178098fefc85b28d8d46397299b0a8fa
+SHA1: 8b26b6f49d4ddafd0fe8005389419ce60ca9425f
+SHA256: c12217d71d042c0444ccc34234388fa751e3ebc6fff5d0e79067f6d9f2e2f31a
+SHA512: 73c084df12ea043196e6c388de8bb98be73de6b3d10962bdf156112e34be89a2d740150cdfe4bb1a6b9a0d9040c3d9c9325fa22014ccf5b6da16b0837c8c20e6
 
 Package: libx11-static
 Version: 1.8.13-1
@@ -2782,11 +3127,11 @@ Maintainer: @termux
 Depends: pulseaudio, libmpg123 (= 1.33.5)
 Description: Fast console MPEG Audio Player based on libmpg123
 Filename: pool/main/x86_64/mpg123_1.33.5_x86_64.deb
-Size: 99296
-MD5sum: cdced04d978664e074ae61f868debeff
-SHA1: 8d3f426af00b4a253eb91754a14d7d05391cf406
-SHA256: e936a9ec050a5222ec905f8f4fff13b54ec7ae77c97920d85e35f4226af99903
-SHA512: 047c74cb22fa54e793a70618a55c50aa4771e0b7902409441a5e17a74ae66161f7ad714c5200a53833b45d2690e9b9da995d7cfe39c1134dd700336fbf18cf0a
+Size: 101364
+MD5sum: c8d2c65650e92042f9ffdece1e7aeefb
+SHA1: 90290660cff36fcb72ce9e15ed0c452926179b18
+SHA256: 744b87efbf8c7e69b6841241b2ce47773d015dba55a335dce198a44e0c7a786f
+SHA512: f1861da7c688377057311939a3022f5d696f161cf309f696a3c0cf220d13781665a14fb269875365d94c95949789859ed81e7c8c47e3f0b7a7cf60cddae052f8
 
 Package: nano
 Version: 9.2-1
@@ -3057,6 +3402,21 @@ MD5sum: 4f94e2f2a04e6cd5495dbe57c102de7a
 SHA1: 9b2955c418d337007582d269a853699971347c03
 SHA256: 1b04c7a73882821f5347eaf862cd2a038737ec4def54bafe02795638b77240c3
 SHA512: b61742abf3b2d35e9cdb0456848b92b4e260a46cd4dc9985d33d8f7c6338463ec3fbec7d0262bc6168d38a74c8bc6889a91ee0447b997a28cd2e146fac0cfac7
+
+Package: pkg-config
+Version: 0.29.2-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: glib
+Description: Helper tool used when compiling applications and libraries
+Filename: pool/main/x86_64/pkg-config_0.29.2-3_x86_64.deb
+Size: 33316
+MD5sum: 09ea9604597025ab2ab9c6a5bd29825c
+SHA1: 329ba9a36c9046239532c6b1d3f8be5f2a280a44
+SHA256: 67c0fa529358cbccc2dec8ea750d09f5e7d9351a7c1fb2c7844da44477735b35
+SHA512: 590f4ac289e8d04973c76cdc1a6f786f5e4906f3dbb4b39b7c7256f9aad539e0436d0a1d43eab04cbc620e544bb2176e9b9841c810d2415a708f790332d4125d
 
 Package: procps-static
 Version: 3.3.17-6
@@ -3343,6 +3703,36 @@ SHA1: 02b458b9dea4393cf6b9d86dd25ea496051b0801
 SHA256: 3c856bffe925875e64aeb4f10a19aef91f055cbe48cbee668c9b3bae4907c82a
 SHA512: 02c0fd4b2765928f64be5571219655ded4adf92e801bded2b1a7fef14a7c7d74c3f921b6a3d260181f4440b3711a94dadc66b7751b2c7f89b99d3cede62a35cf
 
+Package: speexdsp-static
+Version: 1.2.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: speexdsp (= 1.2.1-1)
+Description: Static libraries for speexdsp
+Filename: pool/main/x86_64/speexdsp-static_1.2.1-1_x86_64.deb
+Size: 34688
+MD5sum: eb58891e6705dc15fc8e5283c1e6da0a
+SHA1: 4a26a6693e6a3600b7673007a9c68b356abb5a9b
+SHA256: dfc4d54162978e6fed9083194a98f9e4d6bf6b60414133fa48b150bfe897a92f
+SHA512: 3c059588dbe14b798e5c081db462a3e3539312c73c212b3927d23b14cad80ae965dce0157e12f1ca70d2228545615dd2264909972f52388c7a06dc4491aa83e8
+
+Package: speexdsp
+Version: 1.2.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Speex audio processing library
+Filename: pool/main/x86_64/speexdsp_1.2.1-1_x86_64.deb
+Size: 39200
+MD5sum: 24efdb9ba462fd3c19f4669d64af3566
+SHA1: fd029525decb45a7c6c8ee97ce9586069f594e43
+SHA256: cf82f3b888ff30bdc166484baca35e2f6f2e331d6eb7c4bdaff27f02aeb03e53
+SHA512: fd65e48fa343fd7ddafec6775f5ce2b781b99892b2d6b9c903b59eca93355bec931647dbb129a45abd750bf67287698dd967f0e6bb7a531164c4fd617290d0bf
+
 Package: sqlite
 Version: 3.53.4
 Architecture: x86_64
@@ -3478,6 +3868,21 @@ SHA1: 8e153378aaef909e0679b0cd9edbbf481783b3a1
 SHA256: 1b737351c667df56d721c4a05ac5f0e84ee3d8ad0df6761940b644df4c25cb7e
 SHA512: e606ed8b75b1f68e94b83d2316804bf52b4e8e67e68c434f74b03e3af0b699ea4e95bc9f0b145531518310d938af267a334405a191dec603519dc4988f6c5627
 
+Package: termux-am-socket
+Version: 1.5.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: A faster version of am with less features that only works while Termux is running
+Filename: pool/main/x86_64/termux-am-socket_1.5.0-1_x86_64.deb
+Size: 16460
+MD5sum: 6b6d0ff9a4500064c13805da088e8d1c
+SHA1: 626cd2b1389e8bc4202eee874bd244b00add2bad
+SHA256: 321d121a4fdfca54e1c81517b7a7013814923e486cc4f5b758097dabf61e62c4
+SHA512: 466d90be5f8e94b9c704800ab5602cb52cc333f174fb4496f2c70fe64c55acb38f22cf144ce62a58ab927fb7282c4ee22d4d43d17d94ac31ed88f25c10309215
+
 Package: termux-core-static
 Version: 0.4.0-1
 Architecture: x86_64
@@ -3567,6 +3972,21 @@ MD5sum: ffd7309ccb79cb88c07640d4bbffc773
 SHA1: 19b9a9a33e80bd30df3e4410127b9655d8d32dcf
 SHA256: afcfe87e9b27231a12c19f0c990d2a52d868b6d695e71ac2aad8a4a931630038
 SHA512: bf1f1ce51a697e66d859bf478bba5ec723ed9ab44b01c84cb5e1e773019904b3836f715af17624031f3ba930bc132bb666fa3e1d804bd8d77160d6ad21ec9336
+
+Package: texinfo
+Version: 7.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: gawk, libiconv, ncurses, perl
+Description: Documentation system for on-line information and printed output
+Filename: pool/main/x86_64/texinfo_7.3_x86_64.deb
+Size: 1172604
+MD5sum: ce19c6c49ab037353d5aa5d64e51950f
+SHA1: ad834bdc3b1e6305ed20c35a64d2036c6d42a3f8
+SHA256: 2ac990ccba03ede9c56ebff7be7fb539bf0be51896ccf95d69d1bab4def7f407
+SHA512: 3278b7228bfae6e44a9da413772df89db50d3de180f7766dba1485038edf34f92c0ad50167c7fdad352fda8368ab45b30bb0f3586a8d813104459be2053b66ea
 
 Package: tk
 Version: 8.6.14-1
