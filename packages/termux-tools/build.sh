@@ -30,6 +30,16 @@ termux_step_post_make_install() {
 }
 
 termux_step_make_install() {
+	# The upstream 'make install' is what installs the actual termux-tools
+	# scripts (pkg, termux-change-repo, motd, ...). Overriding this step
+	# without running it first would leave those scripts out of the deb, so
+	# run it explicitly before adding fork-specific files below.
+	if [ -z "$TERMUX_PKG_EXTRA_MAKE_ARGS" ]; then
+		make -j 1 ${TERMUX_PKG_MAKE_INSTALL_TARGET:-install}
+	else
+		make -j 1 ${TERMUX_PKG_EXTRA_MAKE_ARGS} ${TERMUX_PKG_MAKE_INSTALL_TARGET:-install}
+	fi
+
 	# Install fork mirror files (upstream mirrors removed by patch).
 	# Only a single fork mirror exists, so every region points to it.
 	# This keeps termux-change-repo working with no errors and ensures
@@ -59,6 +69,61 @@ termux_step_make_install() {
 	ROOT="${fork_root}"
 	X11="${fork_x11}"
 	EOF
+
+	# Replace the upstream welcome banner with Apex Studio branding. The
+	# static banner is read by cat, the dynamic one is executed by bash and
+	# mirrors the official Termux layout (logo + indent + columns). A quoted
+	# heredoc with an @TERMUX_PREFIX@ placeholder avoids shell expansion of
+	# the runtime variables ($motd, ${motd_indent}, ...); the placeholder is
+	# substituted afterwards.
+	cat > $TERMUX_PREFIX/etc/motd <<- 'EOF'
+	Welcome to Apex Studio!
+	Android Development Environment
+
+	Docs:      https://apex-studio-dev.github.io
+	Community: https://apex-studio-dev.github.io
+
+	Working with packages:
+	  Search:  pkg search <query>
+	  Install: pkg install <package>
+	  Upgrade: pkg upgrade
+	EOF
+
+	cat > $TERMUX_PREFIX/etc/motd.sh <<- 'EOF'
+	#!@TERMUX_PREFIX@/bin/bash
+	source @TERMUX_PREFIX@/bin/termux-setup-package-manager || exit 1
+
+	terminal_width="$(stty size | cut -d" " -f2)"
+	if [[ "$terminal_width" =~ ^[0-9]+$ ]] && [ "$terminal_width" -gt 60 ]; then
+	    motd="
+	 \e[47m                \e[0m  \e[1mWelcome to Apex Studio!\e[0m
+	 \e[47m  \e[0m            \e[0;37m\e[47m .\e[0m
+	 \e[47m  \e[0m  \e[47m  \e[0m        \e[47m  \e[0m  \e[1mDocs:\e[0m      \e[4mhttps://apex-studio-dev.github.io\e[0m
+	 \e[47m  \e[0m  \e[47m  \e[0m        \e[47m  \e[0m  \e[1mCommunity:\e[0m \e[4mhttps://apex-studio-dev.github.io\e[0m
+	 \e[47m  \e[0m            \e[47m  \e[0m  \e[1mVersion:\e[0m    ${TERMUX_VERSION:-Unknown}
+	"
+	    motd_indent="                   "
+	else
+	    motd="
+	\e[1mWelcome to Apex Studio!\e[0m
+	\e[2mAndroid Development Environment\e[0m
+
+	\e[1mDocs:\e[0m      \e[4mhttps://apex-studio-dev.github.io\e[0m
+	\e[1mCommunity:\e[0m \e[4mhttps://apex-studio-dev.github.io\e[0m
+	"
+	    motd_indent=""
+	fi
+
+	motd+="
+	${motd_indent}\e[1mWorking with packages:\e[0m
+	${motd_indent}  \e[1mSearch:\e[0m  pkg search <query>
+	${motd_indent}  \e[1mInstall:\e[0m pkg install <package>
+	${motd_indent}  \e[1mUpgrade:\e[0m pkg upgrade
+	"
+
+	echo -e "$motd"
+	EOF
+	sed -i "s|@TERMUX_PREFIX@|$TERMUX_PREFIX|g" $TERMUX_PREFIX/etc/motd.sh
 }
 
 termux_step_create_debscripts() {
