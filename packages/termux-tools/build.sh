@@ -29,6 +29,19 @@ termux_step_post_make_install() {
 	TERMUX_PKG_CONFFILES="$(cat "$TERMUX_PKG_BUILDDIR/conffiles")"
 }
 
+termux_step_make_install() {
+	# Install fork mirror files (upstream mirrors removed by patch).
+	mkdir -p $TERMUX_PREFIX/etc/termux/mirrors
+	cat > $TERMUX_PREFIX/etc/termux/mirrors/default <<- EOF
+	# This file is sourced by pkg
+	# ApexStudio fork repository
+	WEIGHT=10
+	MAIN="https://apex-studio-dev.github.io/termux-packages/apt/termux-main"
+	ROOT="https://apex-studio-dev.github.io/termux-packages/apt/termux-root"
+	X11="https://apex-studio-dev.github.io/termux-packages/apt/termux-x11"
+	EOF
+}
+
 termux_step_create_debscripts() {
 	cat <<- EOF > ./preinst
 	$(cat "$TERMUX_PKG_BUILDDIR/preinst")
