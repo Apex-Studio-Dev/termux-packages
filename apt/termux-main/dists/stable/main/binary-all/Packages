@@ -148,6 +148,36 @@ SHA1: 3a5d63601977dab2c5343d3373564dfb2f753a0c
 SHA256: 7af9587ec1c0933c3c3c61c3329c081c36db964165836c3b87116164578b8d53
 SHA512: b192e28914a3a0fdd63c95616f664a574c5265846c08e7bf542fc00bc81797ec18dd9d49d15ff71212fb874b75b3efce55d2f512eb0e825bdc4cc28003b7167d
 
+Package: openjdk-17-source
+Version: 17.0.20
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Source files for openjdk-17
+Filename: pool/main/all/openjdk-17-source_17.0.20_all.deb
+Size: 47113688
+MD5sum: 2fa8d5aebbfcf2876c0939c794d42134
+SHA1: 3ff0e2f5fb5c841514a80f28bba3d0393e632b33
+SHA256: 0400ed4cf3a663e768b95041bf68c9020108e595511539e1381a2c4f4db9b23d
+SHA512: 2ed441fc58f5ece082b26420712d2032a3eb0e8d6567cd3be1b5d4b4dc8b8ee4d9c47102278e4abca68bc769d9e2d93fb4ad9f0a397718c164a9f34b5032c800
+
+Package: openjdk-21-source
+Version: 21.0.12
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Source files for openjdk-21
+Filename: pool/main/all/openjdk-21-source_21.0.12_all.deb
+Size: 49131768
+MD5sum: 6bb9a4ba4d9bbb9a7a59679494a68648
+SHA1: 4b3a9d3f1f475ff24204508c841aef669058ce73
+SHA256: 40fe29d7e44a89e4fb019cd39b2582e7434776fbaad1625e0e92b7296b2e1c67
+SHA512: 5a5d7f888a881cbe94869952bf28a4cb9ec3cc94dc9b1864c3c7cce812705e5a5658a104dd424ecf78b9cc07b883fc5b9925f65045709a00e495084d9647e488
+
 Package: python-ensurepip-wheels
 Version: 3.14.6-1
 Architecture: all

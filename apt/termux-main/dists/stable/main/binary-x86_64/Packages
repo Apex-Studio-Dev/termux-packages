@@ -58,6 +58,36 @@ SHA1: 35318c4392279608d360276e8425f08f435a88f6
 SHA256: 87db04a5e6cde2676e105b17749f379c5c823d3854c319b42265e393c25ddccc
 SHA512: 5562a9ff908ae2a9793e39db2b8c77369fa88b497c46cbe7450c32ab17259ef24de8fea439fc6ca8db2691e22db1998159642aacf78645660176ea3e4147e590
 
+Package: alsa-lib
+Version: 1.2.16.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-sysv-semaphore, libandroid-shmem
+Description: The Advanced Linux Sound Architecture (ALSA) - library
+Filename: pool/main/x86_64/alsa-lib_1.2.16.1_x86_64.deb
+Size: 474356
+MD5sum: 94523d133d2a98aa7e1db0945cc44a04
+SHA1: bb2f2d5c033edce84f02f1d14b093b2a9e5a0686
+SHA256: 016c01c181c308c177565b94deddbc81293de5b196bda2a9ebfcce9267115db3
+SHA512: 7d1eee594bcb5ae57c2a2c70d2171fb2461091830d57c5f09ac41be295b45be503379de4c1ed1d4a4917d10b01e974bd3d50e11ac95b4f8719d519396d88a348
+
+Package: alsa-plugins
+Version: 1.2.12-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-sysv-semaphore, libandroid-shmem, alsa-lib, pulseaudio
+Description: The Advanced Linux Sound Architecture (ALSA) - plugins
+Filename: pool/main/x86_64/alsa-plugins_1.2.12-1_x86_64.deb
+Size: 26688
+MD5sum: 6bbc549a1e75c84381814e3a75b5ef30
+SHA1: 5da6bde2c7a9f7493d45acef35126536e8597efa
+SHA256: 9408f52526ec75aac112d138d42be5c00e81715df94777690f32249185af1a9c
+SHA512: 88c9277e88789f3d1297da1ca013216fed5461bca1df120e62e67f8ae4f211d066eebddec68b66ecbe10e2efa3a0f888cdd607b3b59978f8295045a2c6854a7e
+
 Package: apr-static
 Version: 1.7.6-2
 Architecture: x86_64
@@ -417,6 +447,36 @@ MD5sum: 95d43170b365f4dee3863eddc334e1a1
 SHA1: 97b10f753c985d087f065d048bcb534f50b70616
 SHA256: 1298127806fe4e1ce5865f7cc88288a53fb4a904606cc65597a3d217d718fe25
 SHA512: d3b26928507e42e9152fe946f50aac072e1d8b87c900bee03c9c869a701994b232168845fec3a0c01dffc93da019048340764e09480d5dd2fd133e46d25ffc5d
+
+Package: cups-static
+Version: 2.4.19
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: cups (= 2.4.19)
+Description: Static libraries for cups
+Filename: pool/main/x86_64/cups-static_2.4.19_x86_64.deb
+Size: 218548
+MD5sum: 3dc3e4f6da543a65724fc472a36938ff
+SHA1: 57219f7d5a08ab985349db3148a3e693a1688f49
+SHA256: 96b08fda1b67a1d50ff3a195415697c0c5e76826ae0f02b66679e773f21592a3
+SHA512: 4e5272d915b4de0b239da4ebe3c6b504392d728ac14d4b318c19c48a33ade3110e757bd233f05f769bb25be9f847eba8d23d4b6f88aea0f342331cd833ab04fd
+
+Package: cups
+Version: 2.4.19
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, libcrypt, libgnutls, libiconv, zlib
+Description: Common UNIX Printing System
+Filename: pool/main/x86_64/cups_2.4.19_x86_64.deb
+Size: 5220396
+MD5sum: 9432f8d4be6f7355d69554356b4a890e
+SHA1: df7ede0796c3c96636bdb92f9e2d7a6034dde371
+SHA256: 3a7da8887be0e9b96e1b33db445064e1ab55a4aece8155d97d1d9fa1158f8e0d
+SHA512: 2d54044a8fdf9b64b4e7632c0d1fbbd89ff38c8de63e227828a6e8e30d598dbee666d681080a9ca43e1505fdf72d33aad91263f306235ac3dcf7f9517b21d4a8
 
 Package: curl
 Version: 8.22.0
@@ -807,6 +867,51 @@ MD5sum: ff989cef25e99eba7ada814f3c7cd04d
 SHA1: b7307e3d0a6cd6eabfc36cb3a4061a51d6643449
 SHA256: fda25223e05c1abab31170e2aba2df77f5b790c017f35ef25e7f245ef2485050
 SHA512: e25a0990e00faae9641b9e553a923fb1f8dec2cebd712d3ccc4add7080bf5901109125ec6723ee39aab294a08c572f6269c7bacf1dd26ee75ae3a6404b5b9f69
+
+Package: giflib-static
+Version: 5.2.2-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: giflib (= 5.2.2-2)
+Description: Static libraries for giflib
+Filename: pool/main/x86_64/giflib-static_5.2.2-2_x86_64.deb
+Size: 16572
+MD5sum: cb12b8023a75ddf41cf966ec5f570e76
+SHA1: 64d7866e74a568f8c3209e7343875283071f78da
+SHA256: 84400eb1469112e13b3faab2c80c508ff36c2de040aed4162d28051c721b0aee
+SHA512: 8059e5e9ce2aef0c4e7edba1190d0fd3e1b20af8a13f9316957ab0d8ee35586bbaabd0ef784adde38dee5fc48f7409a7edb390c1b272d1b76da04959bc2a1013
+
+Package: giflib-utils
+Version: 5.2.2-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: giflib (= 5.2.2-2)
+Description: A set of utilities that comes with giflib package
+Filename: pool/main/x86_64/giflib-utils_5.2.2-2_x86_64.deb
+Size: 55572
+MD5sum: 5160746cbf6c047cc5032842d85bb976
+SHA1: 8bf197f126a9df28bce8028ceea43cdac716cd2e
+SHA256: 916541c7ea4eb17af19c2c286230edd4e8a3f75e2346f07f3371e073628b271e
+SHA512: 628f8557231dd8e698baa44209889a8ecb0ddcfd8db269d992edf240cd7ef76406be92663739928b3877824c18e4a8bca8684b793f42c0edc2c3bc15deaace69
+
+Package: giflib
+Version: 5.2.2-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: A library for reading and writing gif images
+Filename: pool/main/x86_64/giflib_5.2.2-2_x86_64.deb
+Size: 19880
+MD5sum: 4941659289202f7ad4ad735f7b79e341
+SHA1: 75e3818a6359defdbdab16473fb32ea68508570a
+SHA256: 27fee4daa9a4fd9f2923a9e0b260fe726220378a09c0c2a30d58e216d42e9e7a
+SHA512: effb44da585cedfdbfbdbe98ed2c4365cc76d83d259ac2413f83f51312bb1c09b389a9db8bfbb0071f2aea6f21991540b61df8bbbf2cbb26e0a696819f7fba1d
 
 Package: git-gitk
 Version: 2.55.0
@@ -1243,6 +1348,36 @@ SHA1: cf514e14da24ae263b9c89a93c4bf6c18c8435e9
 SHA256: 1a06736362e1ae884eceb89c8ce21c4cb4d49e3e61f781cd69da039fc7f6e9f9
 SHA512: 982f79816605aa654d394cb32d8029774d895f83e9a94d53b612347e91f212f1c63cc226940d75843ed1c14933898f3bbb5758f2cf9ac0acada57b3f4a3a3952
 
+Package: libandroid-shmem-static
+Version: 0.7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem (= 0.7)
+Description: Static libraries for libandroid-shmem
+Filename: pool/main/x86_64/libandroid-shmem-static_0.7_x86_64.deb
+Size: 5884
+MD5sum: 789d15d9176ac688480bd8f562efe90f
+SHA1: 48d51b766d89e9ca059f6bd5bc7d54d47664ed3f
+SHA256: 285def931860c716e2ca0f058628a5f9ed72a589f3644f7636b3afbbf9a94065
+SHA512: 4fd332902bcd51324a38cd3405e4e1c40037a0980fb544c9c2a184775c35dae510155e97d1a913e2258750bc84c6e51d6d0c88a371650ef2cfd3d3abd0e54b73
+
+Package: libandroid-shmem
+Version: 0.7
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: System V shared memory emulation on Android using ashmem
+Filename: pool/main/x86_64/libandroid-shmem_0.7_x86_64.deb
+Size: 7408
+MD5sum: 239ec07c2b466a47a1df46ee8dd2106b
+SHA1: 0988e595ebae5b583ee220ad4b3af5f287e8dfca
+SHA256: ef33967c8180cc0bcbe302db23165708aee9ba79543bca05a87c260cc431f062
+SHA512: 7cfb37c094730f96833449e6bdc82150698c7d7ca2549d78f7bbb4f6af57125bc9c68f1a238ce410c28c00a2517e8a42a28ddfeff9c05f988a4ce9d77ee3c71c
+
 Package: libandroid-spawn-static
 Version: 0.3
 Architecture: x86_64
@@ -1317,6 +1452,36 @@ MD5sum: 13bddd0cfc15f6eef83593ef8f1605de
 SHA1: e2b843b13cd4bb0d254af7056ad12bad8f2ace6d
 SHA256: 27a60058cf20b6ca38424834c8bb0b1c173e1fd452721dc1538d6b6093893829
 SHA512: 56df27d03a31ebe4e2a6d7d12be083a533b0e50329da93dce5d1d5e00ad7cc77a1ae8b4d44f75537adfc985865985399f706553f05afdbd46fdc99b5ef663192
+
+Package: libandroid-sysv-semaphore-static
+Version: 0.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-sysv-semaphore (= 0.1-1)
+Description: Static libraries for libandroid-sysv-semaphore
+Filename: pool/main/x86_64/libandroid-sysv-semaphore-static_0.1-1_x86_64.deb
+Size: 1664
+MD5sum: 36c3e8ebf84897828c0f3dc9dfeb8fed
+SHA1: 90fc2491807df07c1c00cef09a46a481de70e8e7
+SHA256: e580e531b3cf636f196e9e3d99f0db2a262e5326a5d5eac9fc17f0d32a4c1440
+SHA512: 4c7db70b3cc7f9004c3659c772f28a8dd3a722707fe7d160d00f6f4a274c5d6d927f7f6bc78552f1792ec8721c1b71f7fa1e96a05d396bc3811c070f483f20a1
+
+Package: libandroid-sysv-semaphore
+Version: 0.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: A shared library providing System V semaphores
+Filename: pool/main/x86_64/libandroid-sysv-semaphore_0.1-1_x86_64.deb
+Size: 3596
+MD5sum: 8c4d85a5a1c81f61324f973a50624d38
+SHA1: 4e8a44b20a83348fa3f18ce18578b231824e73cd
+SHA256: 93d4c64e2e32becfd187dadb79dc0a0e9b473a58f0c47e29c5d7c9c084de59bd
+SHA512: c4c8c9797b44b4d7efeadb480afce794aff0c418ca305861ae7be551e5f0cb875f7e31d3eee1c5a64f49a0538e4a1426f64cb389864ed11ba3697adec8cb066d
 
 Package: libandroid-utimes-static
 Version: 0.4
@@ -1843,6 +2008,21 @@ SHA1: bf79b6d41339bdfb4f51d6ed02e428d4ba450215
 SHA256: 79a812de24723fad9bd0b02ce35cb61393c3737e971945f23ae9f899ab4b99c8
 SHA512: 533fad0f781094420a1c2769f20df832d7f5c2b5f49def17e099fac45b7ed5e7952193c63dadf97f692db2d2146760a1de8dc06c8ac0c2ec9f75a5b526f63d50
 
+Package: libice
+Version: 1.1.2-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: X11 Inter-Client Exchange library
+Filename: pool/main/x86_64/libice_1.1.2-1_x86_64.deb
+Size: 70988
+MD5sum: ccad615848f894a2f5ec71db6e1bf272
+SHA1: 80aed0ad64fa51f5308e9e2af99414f51e59c613
+SHA256: 3b0c3213326af1efc88e07c42caa6d9a0825b5862b4809f03749a4cc07badb2a
+SHA512: 12087a95173470a27b709d2d6a27742fec7b6cfa5dc1efbf774f5a4c91386269e06dca7e3685ef3d38a51547ada6cebd7078ef42db1bdc416b6b102859996a63
+
 Package: libiconv-static
 Version: 1.18-1
 Architecture: x86_64
@@ -1932,6 +2112,51 @@ MD5sum: 72d6ba1b21d1cd0cdbe25079a6c21979
 SHA1: 93540d042318dd9cb078e9d66d335c75e8adee2d
 SHA256: 1cbb906100d21f95401a2f0b62e89a69ea571876f2ca3e665038bdacc1f4c443
 SHA512: 415246d97b468ab5677b03267e35d3c2b5f6bfac0f83d2d335f1ae885ab9ff06178911fe70e841719fefa4e17560be67671af50f6bc2d0075687ca77e575fd93
+
+Package: libjpeg-turbo-progs
+Version: 3.2.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libjpeg-turbo (= 3.2.0)
+Description: Programs for manipulating JPEG files
+Filename: pool/main/x86_64/libjpeg-turbo-progs_3.2.0_x86_64.deb
+Size: 185392
+MD5sum: 579de4eeee66a2b29905d0811e8cee99
+SHA1: 1b6b569b6340183a07bccd67c329515c89fe7b45
+SHA256: 75529ec747cd0afb18b7ed7589572bcd2852e514c82425ac3cd0e6110437d5a9
+SHA512: db5e1dae8fa2e941fc8951427d6d6c8086a96eb8101535ba87aace338f08921a9e36a1bc570b2d9f150cbcdc640e578e01ca97b92be6642758b5518a426d893f
+
+Package: libjpeg-turbo-static
+Version: 3.2.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libjpeg-turbo (= 3.2.0)
+Description: Static libraries for libjpeg-turbo
+Filename: pool/main/x86_64/libjpeg-turbo-static_3.2.0_x86_64.deb
+Size: 380168
+MD5sum: 663d46b59884bc699d1ffaa903113c3b
+SHA1: 3bb58af8ac74364a5027fe487cc29eceb2dfbcca
+SHA256: 052ecbf9ac5b849a895fc79e546a240b05af74ae04432a23ad37b98c31f1916f
+SHA512: 9e53686584b40078d0b0b12d95730bab40f694a7d836019a6a98274f071873847f33414f1fd1334888e2ae57784becff757f518192d42d71017923aea6a47026
+
+Package: libjpeg-turbo
+Version: 3.2.0
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Library for reading and writing JPEG image files
+Filename: pool/main/x86_64/libjpeg-turbo_3.2.0_x86_64.deb
+Size: 498020
+MD5sum: e0207eacbeb9488faaf7a2264fc2fb32
+SHA1: 61dcded8084fe60147f9c79c17c6eee4640cb261
+SHA256: e748ea78299d9585d98bf34bfb3ffd37d2a1998089e43c6b65900fdc5102220d
+SHA512: b49c8686b4ff9f9ce6ad7ca4085c97d7619e99e5ddb6e88d5e563fc3834081a0afb0465bcf163c0a88b58b3bc34ea236c64d1ce93d69e40e687b14169a6c4ed1
 
 Package: libksba-static
 Version: 1.8.1
@@ -2488,6 +2713,21 @@ SHA1: 72ff9ea29031ac6715d44763063c85022b4a82e6
 SHA256: dc49d0c888689160da0371aeb07a29db5f7ffc6ecc6dd24b55b798fbd56897e4
 SHA512: 34fe11cb342a644809fcb77f8dc4f9f38c89bc73762877e61c7ca74ea6034a305372d98142494efa106ef5b9b114944bea073d8782406b06f0eeedd55c8b5c62
 
+Package: libsm
+Version: 1.2.6-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libice, libuuid
+Description: X11 Session Management library
+Filename: pool/main/x86_64/libsm_1.2.6-1_x86_64.deb
+Size: 41896
+MD5sum: 603465247506d636bdf658211adbb37b
+SHA1: 4a9c83505e8ca0e80d9ea49df750696f01ef3a95
+SHA256: f950db016c8d78cd052cebd1113abdbcba8d6456b333aa66e21e6d68ff5a1e7c
+SHA512: 99a129331e282b08c039081b79033c11f23193e2be63f6a94dd26e378153fa85708e3c7af22b1cf4ecdd1b088e827cd204d62f8ebbce78f5d26973439d549aa9
+
 Package: libsmartcols
 Version: 2.42.1-4
 Architecture: x86_64
@@ -2652,6 +2892,51 @@ MD5sum: c1091b2d32e98008cd1fccfc00e2e9eb
 SHA1: 50fd60ca84050860213957292fc4930fedbe817a
 SHA256: d3875c4537160ffe370422682d96b6b9d085203e0f96d8228b8e2f247fa4a3bf
 SHA512: 214a85ddea1e7e267e8b16f9e01c65d122be10923b0b70b3f97c9dc26a2d6d0303d87fd617b3dab64ba9da279c89ee6db6cf2612e3393b165f87439072c9ad5b
+
+Package: libtiff-static
+Version: 4.7.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libtiff (= 4.7.2)
+Description: Static libraries for libtiff
+Filename: pool/main/x86_64/libtiff-static_4.7.2_x86_64.deb
+Size: 179500
+MD5sum: e8740380efab31e31d504e2d4ab031c7
+SHA1: d114147e5d8b7191420dd12feb573f1410937d12
+SHA256: 35f5e204b401fef8e671b36e616ff47587967222c656e7721cf07bf247d859b1
+SHA512: a59b895908a1eb1a25f8d9a70f4104e26abfc1c91909430717dbc89ed87598c8bc0b9b5ef566cd94d285a78b202f5cb9eb936f67d93fbd58604158f17ca4c286
+
+Package: libtiff-utils
+Version: 4.7.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libtiff (= 4.7.2)
+Description: Tools for working with tiff files
+Filename: pool/main/x86_64/libtiff-utils_4.7.2_x86_64.deb
+Size: 280264
+MD5sum: 360f80444589d6b323f4bb2a6e5e1164
+SHA1: d064493133f662b2f4ba1ac48733e840f83c5c16
+SHA256: 16a967273d3534525eb28b5cf9e96eef59e0c88007399584ca9b93aad073f38e
+SHA512: 433868a9fafa3975f44032932a79d82328bd6294d02ca36e858364eee06d62cba880c0585ef2521befb67c097eb1c534d57d67f354f605dd665f84759f54a969
+
+Package: libtiff
+Version: 4.7.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, libjpeg-turbo, liblzma, zlib, zstd
+Description: Support for the Tag Image File Format (TIFF) for storing image data
+Filename: pool/main/x86_64/libtiff_4.7.2_x86_64.deb
+Size: 881924
+MD5sum: 42b4201ea3666535734b525d3b9a077a
+SHA1: 355ed525f92cdaaa69c90e8640ba532a43632d5a
+SHA256: 71b88786d7871cfdf52a202384455af415244de1d4cddda393209970539dff58
+SHA512: a6fe9a2c21e952d2e23e5f5c852dba0372b14121e21907d3be4e3b8898eaf5e3992bdf3ae09b5a3f8732b43643c1c9bcaeed56487184e3d3400746c9a57958b6
 
 Package: libtirpc-static
 Version: 1.3.7-1
@@ -3013,6 +3298,36 @@ SHA1: 5440a9fb3fb66d2dc11f85d315e2716f1175dcc1
 SHA256: 9fa9c96ce06c32b1660b933e578b1411c29ead08b2fe1e57b4c7f8d8ff351bff
 SHA512: d220cbec132e42f778e651bc82a73d018c58fa028f0fb4ce7f70448aa087a5a814f177aecafcf8a813aac2972a3395893376bbc8ac0f56d207bd61dc31db523d
 
+Package: libxfixes-static
+Version: 6.0.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libxfixes (= 6.0.2)
+Description: Static libraries for libxfixes
+Filename: pool/main/x86_64/libxfixes-static_6.0.2_x86_64.deb
+Size: 6676
+MD5sum: aa63d9409cf1788568a38dd12f47814c
+SHA1: 5dc2c4f6ec215e22e5560bfb66db518058c04cac
+SHA256: 0b7ef3e366c4d1d62802ec3a2008d42059d3f664438b824b95c2e7280b3b1f40
+SHA512: 3aba55ceecf94daef4ff6adbaa92bcd4484674b788d6bf5900c5e708ea9ac9bb65d6e07c076ac27d5a1d24a1b487b09ee8368112ce91620deb4db8cdd7a19807
+
+Package: libxfixes
+Version: 6.0.2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libx11
+Description: X11 miscellaneous 'fixes' extension library
+Filename: pool/main/x86_64/libxfixes_6.0.2_x86_64.deb
+Size: 10892
+MD5sum: 25b5f6c68769a0afd574dff6246b51f7
+SHA1: bceebefbd38ee098a89936325c3445ac3004d5b2
+SHA256: 72ad0f4072b17cddf04add44f1b57b1b9be60a9207272c19514a17f879123a40
+SHA512: e25d52cb2781b80a2daf6732f9d54ca21c5809af9769dd8b5587c6a6e1fc970fff33271466fd17b7099caf3d816373e211600ab22a034b36597c6ceb6da7e785
+
 Package: libxft-static
 Version: 2.3.9-1
 Architecture: x86_64
@@ -3042,6 +3357,36 @@ MD5sum: 8f5abcbcf85638026adde2f0488faea9
 SHA1: b5354f7bd60fcf22a9ac36022699729fc8253c18
 SHA256: 44c7bdf7aff3c5669f2399cb949a18b40d258b58b809726041b02d747b12ff2c
 SHA512: 7dcc2748924a9487777b3197922f8487c9a793e96035eb539f2b9beaa67a8bb822d6d7a7863f1c6b9baa9f8353854ffcc72c7b2e81d9d5d6aa85c3a8aa6994c8
+
+Package: libxi-static
+Version: 1.8.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libxi (= 1.8.3)
+Description: Static libraries for libxi
+Filename: pool/main/x86_64/libxi-static_1.8.3_x86_64.deb
+Size: 26180
+MD5sum: f4bb45e1606225a3a3b84501fe34b687
+SHA1: d21d502a70c69c1e73b0cf068061aa1a1b464132
+SHA256: a98d8cac00caae98cd1547a5963a46cbba98b75aba53be8fbcf1d4bda6748486
+SHA512: a1d43d5b426f661d306c841735c14753fca07599f420aaf8fab89d7800af820c7e7cc6c7e5fdefa35d7aa1bb7cc7ae4d7756305128ed6db2671e098c3034d89c
+
+Package: libxi
+Version: 1.8.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libx11, libxext
+Description: X11 Input extension library
+Filename: pool/main/x86_64/libxi_1.8.3_x86_64.deb
+Size: 141664
+MD5sum: 8ab5e31578c496b65763ad0f2040ee05
+SHA1: 720630c8772bfeace07ec0aee9d90b1ee6020235
+SHA256: c86d20f1beb0aa902f04286d71aca957155647a43b2f5f6deee44bf805ceec82
+SHA512: a62ce0a1fcb97eecc7a6423687aa5449e2e88e2cdd780d836b3e1ad22dfe2b22cc8283998f933de99d3f124b965b71150c31805a15b10add5d26827ca8fced90
 
 Package: libxml2-python
 Version: 2.15.3-2
@@ -3178,6 +3523,66 @@ SHA1: 615a4018ebf11c7d60ade30cb91f578a714dd80a
 SHA256: dd16024db8c63314c9434bb6967ea8864077c409acefca06d198b0663244cd52
 SHA512: 64611312f29fc077bd2800b5a3ac9100b030a38c2e42922720b2edcb029cc73b1a29646abc68e17744e5051af6770c9c77fb9e2834ad72c24224fcc852d465cc
 
+Package: libxt-static
+Version: 1.3.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libxt (= 1.3.1-1)
+Description: Static libraries for libxt
+Filename: pool/main/x86_64/libxt-static_1.3.1-1_x86_64.deb
+Size: 146556
+MD5sum: cae1c8dc64165dfbf92298878827c485
+SHA1: 3288ecac7d28004cc44efc7de488662eeef9eb98
+SHA256: 778f33eb59f632c9ed8f414ed9dd9844e1852d4780cc7c4d0833ca4e2e62b6d9
+SHA512: 540d3324eb8e66a8fa142a621049c8b0e35832c7c977827f32187c914cea6029d769d3563477d0b05fc48eb82bf7e5b4f2e1bfeb23d456f33fd0fb4c147693bf
+
+Package: libxt
+Version: 1.3.1-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libice, libsm, libx11
+Description: X11 toolkit intrinsics library
+Filename: pool/main/x86_64/libxt_1.3.1-1_x86_64.deb
+Size: 490436
+MD5sum: 6f9b4d76c9088017b34f0d418ba7ccc0
+SHA1: ae7bcde2117dd49b19782f5737eee6de3f929c34
+SHA256: be720e74ee53de1057f201175ccee91f467f9fa5881379b869f5bf39b3b03bc0
+SHA512: bcfbdd9ac400d0b51f47ba936ecb520b69129c6298cc27d416facb39d7c3f1c712b99b3d5cf3ca54bbae21d6d31fc08aae50250c507096bb31187f309cd9b238
+
+Package: libxtst-static
+Version: 1.2.5-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libxtst (= 1.2.5-1)
+Description: Static libraries for libxtst
+Filename: pool/main/x86_64/libxtst-static_1.2.5-1_x86_64.deb
+Size: 8076
+MD5sum: 0950b877f6a1247f90da336a67a89659
+SHA1: 5b1816f8a447d5076d0dc466da6594b6bb15d0f0
+SHA256: c77923906f22adea6900db89e70755d80fd92f9ec76a0c9491210d84f1967101
+SHA512: 3515d7df8a9ec2021f2f7dabd82e705589894fbb08692c9ef95b78eda9b24457f5025623aac3ef25f81b1fd3efda4c92933873f58aee29c91cc96667a045f641
+
+Package: libxtst
+Version: 1.2.5-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libx11, libxext, libxi
+Description: Xlib-based library for XTEST & RECORD extensions
+Filename: pool/main/x86_64/libxtst_1.2.5-1_x86_64.deb
+Size: 25476
+MD5sum: a8fa5bad9c1704692ca0f1a3c6365219
+SHA1: 374b4767cf39c2c33e26c716e9a4c718c54e8ee2
+SHA256: 0b8964f8b1af81fba68207270204efc614757724e70ad28223e627b17a7bd031
+SHA512: 5cf9fa4fd813917a19c1de13dedde0672138525625e28a342c21752c7577088c9efca3f72f0f43dc03b1ced479cc2f99f017d1c7ddf8265d7ee3a2b5194497c8
+
 Package: libzopfli
 Version: 1.0.3-5
 Architecture: x86_64
@@ -3192,6 +3597,51 @@ MD5sum: 2d2bcadb509bfc262f939b57d219ceab
 SHA1: fae48a59a43dc4b76b958c5ff51f8f16fd5d0f9d
 SHA256: 5c0c0464dc82eac2a0e35f074bb9a4ef041e13dd01dceabae64e2eeda8eae1f8
 SHA512: 225787d078254a1e316bbf027b246061e802c151d4375255e568514742a331a5c7ada46047b97aff454c84571fe31d234d1b13c3ad972e7d1456cf20e95d58bc
+
+Package: littlecms-static
+Version: 2.19.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: littlecms (= 2.19.1)
+Description: Static libraries for littlecms
+Filename: pool/main/x86_64/littlecms-static_2.19.1_x86_64.deb
+Size: 148540
+MD5sum: 07fcc19a92f4f69ee4ea6e4e74c7242f
+SHA1: 3119e47522f416743fa4340504385e26758e08e1
+SHA256: c9881595aa5f798980946802a9b13ccf0a88747a3dfa7e54beee9c9b96b7fffc
+SHA512: 99a3f5164c116e9638c8da10186cbf6f384e74b0fee6ab4299b590aa2f3af629f5353ba5ddafef4c5baad59626b6f743daee6f183931774dea350685a407c828
+
+Package: littlecms-utils
+Version: 2.19.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libjpeg-turbo, libtiff, littlecms (= 2.19.1)
+Description: Color management utilities
+Filename: pool/main/x86_64/littlecms-utils_2.19.1_x86_64.deb
+Size: 36136
+MD5sum: 4da6b025d1d815416493c15d155f5b5b
+SHA1: ea03e2bb01110c64a2272230a85d8953bbabf319
+SHA256: 12b04fe03e21414b25e3ea7fc9edd08d20fa63dc5b3825d5bfadcdeafb1101ab
+SHA512: c35e2d486063a2d95f17f19b2f0e8c65f5c2c32abd0c566f2db8535e3716c96b6ac565fcb1b6a9f3055b2a12e80a29896f3d2784ebf53c8ba31a6c815d598202
+
+Package: littlecms
+Version: 2.19.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Color management library
+Filename: pool/main/x86_64/littlecms_2.19.1_x86_64.deb
+Size: 149588
+MD5sum: b258dd099af56c850be1d936c5f7549f
+SHA1: 378929b2f7550e83723ac2385a306c7ab043285d
+SHA256: 722a1b32227eb502f0ea1e8ab62298064be9c7b80b120ea2b65a41634900247a
+SHA512: eaa1cac0212b7da1f6c2e5bef5746004f9336eded71def82c79edade7618782469f019cc8c4c4366e24df6c3a0b5d440a50817e63dc931e52464c33a9ef27bec
 
 Package: lld
 Version: 21.1.8-3
@@ -3522,6 +3972,51 @@ MD5sum: 53551b0559335876d7c71f4c0d4c7b6b
 SHA1: 20924074df2883eecb9f8c5d7d1a37a558e2d96c
 SHA256: ae98c58a79da43b6d19aba1afc8c6bfe2ed8ae9a270f2e2dbb722a9d3a00801e
 SHA512: ea64be9eb7e1c176caeaafd14879f5e3bbb2c82e1ba291c0b6828aefb625c8ded578ae308732189159a710c7fc881645c6695b10ef0334cc1286048acdd9827f
+
+Package: openjdk-17-x
+Version: 17.0.20
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-17 (= 17.0.20)
+Description: Portion of openjdk-17 requiring X11 functionality
+Filename: pool/main/x86_64/openjdk-17-x_17.0.20_x86_64.deb
+Size: 12869784
+MD5sum: c1800bcd1416d426ca67b7bb03c560fa
+SHA1: 6f3c0e69caae6a65bb2a895a5ebdadf810ba38f4
+SHA256: 9b084d06bed2875724e848b38c2c5f27745695c0bf297a2a79218ab57b18ccd5
+SHA512: fc1b69afc7217a5a3a2cb3b0c4a0e4a37e4090af7f3279dc79e831dbb5e4c00f88e363b6df511d00a82912279164458baf0d846f5fffeada124952c4f29170fa
+
+Package: openjdk-17
+Version: 17.0.20
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: pool/main/x86_64/openjdk-17_17.0.20_x86_64.deb
+Size: 96581844
+MD5sum: f869ba4cb459ba34243ef86f7bb08a2d
+SHA1: d987592ee850580f210ea4f3e30fab9284b78d42
+SHA256: ffa2e2bb147ba44d5cdeb43b11417d3c5a3e3a8d6d11154c56a95b08c76e3ed7
+SHA512: 0e425665d3c054a1d6f3392fd6c741298467b477805f47caa09f3ed2098f278a013ae9d31cb91c3ec6825f5321cfc3aa96efecdab3fe9e756d904d8ddb142b2c
+
+Package: openjdk-21-x
+Version: 21.0.12
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-21 (= 21.0.12)
+Description: Portion of openjdk-21 requiring X11 functionality
+Filename: pool/main/x86_64/openjdk-21-x_21.0.12_x86_64.deb
+Size: 12881492
+MD5sum: baf5c0948658ba0b29d08109f59b6f11
+SHA1: 2beaa23bc7448aa3c697a58ff7f676f88ee8c414
+SHA256: 1db81cb996f524169bd7e6a5d2cfade118ce39b29c1c4d359232b4be3f86c8ce
+SHA512: 0a19439fd7772bc75dcc029823dfd0683eab8a9003846be9e770cf8c7b9d489dd2f610835bc8cef843eb4aeed3ad4fa91505c37dc194b64e1be732c9c59836c4
 
 Package: openssl-static
 Version: 1:3.6.3
@@ -4572,4 +5067,19 @@ MD5sum: ca69c33f1a718589ba8759a9a49a2431
 SHA1: 0460570a5eb5732553fa791bc027107168dc0dcd
 SHA256: cc40fd9d17a5d70f8f801230fd46e752c0b2a139c90a55a82df0834d482ec799
 SHA512: 88f8fdf6dc7604ed03ecc7dc6d9e60a7bd482687641f609bc455b9b59c141a6818878e7dd7ec1329731392f436112bd0d2545ac83c93b0043fd42a0fec11012e
+
+Package: openjdk-21
+Version: 21.0.12
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12_x86/openjdk-21_21.0.12_x86_64.deb
+Size: 84
+MD5sum: 3b621ce652103b5a211c72c31bd2412f
+SHA1: 51350eb122762712945e0223bcaa120078bdcfea
+SHA256: 86d199c5e169a3d0eada35965f0e1adb9cb95cbb1e337874178dec252ed37d4d
+SHA512: ea336ab1b1e258301d229f5159feb0b77ceb5fea064385b9059fb9ba578781192eaa20bf546e813850aa1f6b70501c076dcd85e790acff874fa9a50366a5ebb5
 
