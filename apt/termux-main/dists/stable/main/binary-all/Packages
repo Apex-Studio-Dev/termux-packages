@@ -8,10 +8,25 @@ Depends: tor, apt (= 2.8.1-3)
 Description: APT transport for anonymous package downloads via Tor
 Filename: pool/main/all/apt-transport-tor_2.8.1-3_all.deb
 Size: 932
-MD5sum: 80aac84f23fd3488f26fe1b63031ef87
-SHA1: f25c95d2a874ec4230e50a51154abc1ade74f2cd
-SHA256: df2402f9f516c97fde0e90bf0e08dbbe4550c4b1b3714f0bf68d48f6bcde4756
-SHA512: f940376ec109882633d55ad64a61315da55117e0e0668d5787ef65d2f19496523405e541f0c030b57143fb98311ec166f386dccb8388ef63c940e61c4c5164c7
+MD5sum: 111a849bbb51f19a0bc0ac215f924f65
+SHA1: e4c9ac027f1651239d731fb5358acf5cbe594bcc
+SHA256: 95d9fb8e96078dbbf6c9996a3c351d0506ef9abd5a8617b51ff057555d8b2535
+SHA512: 8e95a51a8ff89ea162a54809e84cdb7e2f8eed16692ee7cc7aaa7d39db4d5121864e8017d226c2258f3b6410c615be8848b5326a6849ade9c8f4f6b52c3f7f18
+
+Package: bash-completion
+Version: 2.18.0
+Architecture: all
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: bash
+Description: Programmable completion for the bash shell
+Filename: pool/main/all/bash-completion_2.18.0_all.deb
+Size: 194540
+MD5sum: bc6b72204463b6194f5e1143d420d15c
+SHA1: 50bdf7f80d731b09d803cec8cc15b7d797a18266
+SHA256: e7d84e69cdccf37da7aee6423a180a86bb0bc7d6c504748a5178d4765952b177
+SHA512: ec0bb6b9caa73a99b10df17d53564124388b97b6fd601d241d877758fa1547778848076bc1f0d6e71a9fbd6f7d303a495f811d7f5643113fda6a913f769e3619
 
 Package: ca-certificates-java
 Version: 1:2026.08.13
@@ -222,6 +237,21 @@ MD5sum: da218698f8446515021a5c4a93e7b700
 SHA1: a44b59133b3fea0603bc6759086b44a6017b5bf5
 SHA256: f770d34e41f8a4da96c4faa5b281927286f493eaa247203dfe2606c2a574f1ab
 SHA512: a5d9d7da38de6c141ad8d5d616d7e721026ea567a57661691eb7c1fab9d1b53e01e5610e8691847463d3722c623816e0c7cf908b0f1492f2305c51ea8496b007
+
+Package: termux-licenses
+Version: 2.2
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Contains LICENSE files for common licenses
+Filename: pool/main/all/termux-licenses_2.2_all.deb
+Size: 52252
+MD5sum: a2c6071c26017b3e79204d5a52b07c70
+SHA1: 1eaaa72654426ce3847f0ad329822cf31023eaf0
+SHA256: 1c75555ff188ab7f9b4e3b3a1ef9ab46a3286dc40ee7efcac610bfbccc541f8f
+SHA512: 188c994f6bb6c1bdf23b43a99c777674feac4d1bc6ed49f077873fc20c3c997f6d3d5221e02f2477746d5a9704b0c61193cc02ee7a2360a19d132cf7583bd810
 
 Package: ttf-dejavu
 Version: 2.37-8

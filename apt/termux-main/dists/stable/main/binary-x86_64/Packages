@@ -127,11 +127,11 @@ Maintainer: @termux
 Depends: libdb, apt (= 2.8.1-3)
 Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
 Filename: pool/main/x86_64/apt-ftparchive_2.8.1-3_x86_64.deb
-Size: 108360
-MD5sum: f874fc973648fb398f73b9a5cac078b7
-SHA1: f2f9de1aa0c83bb485943dafcd9287e0192da7ed
-SHA256: 0f5ddb236950bfe9015b8bffb15dfe44221bddb067eb7f1e1d7ea2aff21cb1bc
-SHA512: f5ceea235f7956a88db491b45c435ea848e87414918be6b32bfe845c77a63964f6b300eb90671ad1b0b8f431c305fc1a9513b1656c395ec8267b9720de73b4ca
+Size: 108428
+MD5sum: 72606ee4d6c2d94ea77a23cf6f6fe4dd
+SHA1: 83497852d4e814b3b7e3ae94602c67e35a1c0f4e
+SHA256: c8f6b25a12dcba2463aa16c44d7fa38c33c85121425d9608423dc95280758797
+SHA512: d0a6b205fccd0bdd7bfd85e7a3ff1b3dab6ecbcafa6aaad8322ff50a059f4ae80140426d22a5045c1aefb30d572288b7d74bb428724a9bdc85e385b26d84511c
 
 Package: apt
 Version: 2.8.1-3
@@ -142,11 +142,11 @@ Maintainer: @termux
 Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
 Description: Front-end for the dpkg package manager
 Filename: pool/main/x86_64/apt_2.8.1-3_x86_64.deb
-Size: 1167968
-MD5sum: 10fef4ddced964aeff7341ea46bc20db
-SHA1: 1d36194fa95c0844ff30e63848a6d38b40204ddf
-SHA256: 8902a7ec63526074deb4a9c6785c1d2b549bd9f1748db45e7d47e434354dd9aa
-SHA512: 179be1f4f577cae318f6e99883298773b0224fb8e4853ec8bd3f0910e6391bc6d711216538bc89d19c313ac7c3d75d427fdab2cb2ed8cfca2c22b493eca8c4f2
+Size: 1168184
+MD5sum: 475cde438a91230c3d0cab16616206a7
+SHA1: b732889c8b2cb85fbc527c506b07a3bfc2095fe9
+SHA256: 4ec4db14c69c5a5238f0d11ce13dcf7d833ab59de177c4bb634611d59f24fc0e
+SHA512: 8e7708b0cc58bf8f51f0b75bbc38055034d6ded48b470f38c32b85bcf04f7005662625cf9b6fd76a7ee8106f60d7d10fa88f9d56d36dc0624870d88426b74273
 
 Package: aria2
 Version: 1.37.0-3
@@ -447,6 +447,21 @@ MD5sum: b8db0d3598506bc2d2cb0fb5bafc130f
 SHA1: 4cbc90a731abe75f4643a9fd28a4911d20d99247
 SHA256: e7731fdc6ddc7329b21532df794cfedb625c6370b8e8ae73bd04c0ce84131dfa
 SHA512: de56c3818a0f5a9562478eec8ee1459ee2ad888ebee76fd865f3f9a70d2be4a131e8d751ed623454c81acbfd4fe6f14fbdef8180550b9a2f71a8654285d2115d
+
+Package: db
+Version: 18.1.40-6
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libdb (= 18.1.40-6)
+Description: The Berkeley DB embedded database system
+Filename: pool/main/x86_64/db_18.1.40-6_x86_64.deb
+Size: 42612
+MD5sum: 71400ed0feecb8fd9be9a65d0fa65c40
+SHA1: ba49c2ce8f86571c81cdbb998e5549947ea73a42
+SHA256: 8d617357710178bce90688236f42b5a633aec2ca4a389923bc66744979f8be0d
+SHA512: b2b6faeaa3bd2041f22bfcbb7f1ed787099ae2da56cfcccaa2ac2225d3696e6ba05026bb11e65d1e8460f9b895661b489c65e6b25d268523929ac4ef1774463c
 
 Package: dbus
 Version: 1.16.2-3
@@ -853,6 +868,36 @@ SHA1: 586ae135cfce994e52e752d5398b5ab7569d3dd4
 SHA256: 9b1bfd64353eff92e49a930d95db34640158b6836a099200e77225825d31c8c9
 SHA512: 1f724245778186cb562a4fb12d63143f7fffa8d96021dd1b73e7533cfa78c79d9b0d1148ba433360153c84c81a2571771f627ee1102084f71535e25bd0f05852
 
+Package: gnupg
+Version: 2.5.17
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libassuan, libbz2, libgcrypt, libgnutls, libgpg-error, libksba, libnpth, libsqlite, readline, pinentry, resolv-conf, zlib
+Description: Implementation of the OpenPGP standard for encrypting and signing data and communication
+Filename: pool/main/x86_64/gnupg_2.5.17_x86_64.deb
+Size: 1496576
+MD5sum: e056eebc690c0176064241594f4a4ba9
+SHA1: 2bdb54ad64aac4d9267d47144d32ffc89cef3eb6
+SHA256: 619698cd579c37fa700d5b71ee68c87caf39336d58f70c59bdd278ab11d4fd6c
+SHA512: 08772804f035bf9a6ccc288e3394bb3408a82f959395c069272226ec6ccafeaed6f4dc8b43566f2a2727fad9cd2994769c441128b483648d6ddbe0af4428b063
+
+Package: gnutls
+Version: 3.8.13-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libgnutls (= 3.8.13-1)
+Description: Commandline utilities for interfacing with the gnutls library
+Filename: pool/main/x86_64/gnutls_3.8.13-1_x86_64.deb
+Size: 201004
+MD5sum: 6a49290883a11965f8ff4365ce14698b
+SHA1: 780011f2a050ae1b8f50a4894ea8c99f456b81ac
+SHA256: 1f63f8b7945455143bfcee8c80891d28cf10a42ee8dabae86c8739871f0cf213
+SHA512: 758a6226719cfe3f85ccd08ec5a1a407868bf263430cc80413f000507de2e16c884b4d7406d9a767c789e808c1ad61bc3f2c4182c049908427666617f7800e63
+
 Package: googletest
 Version: 1.18.0
 Architecture: x86_64
@@ -867,6 +912,21 @@ MD5sum: ff404926e27eccb29e4466eb982ac1a8
 SHA1: 65efa2b444550dcf5746abdaed1bdb1cb0e87954
 SHA256: 9d8fcfd197c946c9304385f49f3bfa2ca280c7c1a5ce6a1a4d91aa8e3ea88b3b
 SHA512: fe148362690b9c39c128f0d1537f0fe1d7bac17b3d8bb9a30211c4b47e838d9b8a7140e98dfb749393a6078b32e911cce3e7abdaa2529a595463c37b88b36d02
+
+Package: gpgv
+Version: 2.5.17
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libassuan, libbz2, libgcrypt, libgpg-error, libnpth, zlib
+Description: GNU privacy guard - signature verification tool
+Filename: pool/main/x86_64/gpgv_2.5.17_x86_64.deb
+Size: 205580
+MD5sum: 312f4f099736582e5a7cb4bbb29c7ceb
+SHA1: 9ffe0aee4b600b61873d46c80d5a1181aef82bad
+SHA256: 58ffc3b4cbeffaf448a8361fd29db3ec8936606956bbeb981c96ac41b9a73d56
+SHA512: ec29207c310ec698c829988c48f20b1c94a4a7e8ddbae2e76454e252f4c61fe76d5110e33e7a86b39049f308e0e9b1e00f084cc1e315ddd5dba3dd21eeb6b673
 
 Package: grep
 Version: 3.12-3
@@ -1483,6 +1543,36 @@ SHA1: 2319b39eeeff85d32c03d6a34ca5aa40e22d2c6e
 SHA256: 5aad3e04b6dcc9cd6a6d65334e2193d15d34570c76450cc6a8cf08a5eb0da47c
 SHA512: 9dec7781c55adc12c048c3f6eedb59ab03aa617a6a453827cd0effde63fec81714310cc8f7b9ec406509e5c2100131ae8d4977a5c90091e15dab99a04c14e497
 
+Package: libdb-static
+Version: 18.1.40-6
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libdb (= 18.1.40-6)
+Description: Static libraries for libdb
+Filename: pool/main/x86_64/libdb-static_18.1.40-6_x86_64.deb
+Size: 492380
+MD5sum: a1b4cbb2c7dead783b3f6f4f9bf030dc
+SHA1: 913f912f6755cb2301812d992a254f3bd799a0f0
+SHA256: be3570eab946bc4db2a9162d63d97381cc82d8a6a8cbc15c51ca929b080b7c75
+SHA512: 4203bef8446399cbce3ca4ced36e9ab2e6b61cc0256a95e160bb0405309d8fd7cdbdc72d1f1f52ddd0399eddbe1c632b25e550e7b797ee8acc9ed8ba54f8c83a
+
+Package: libdb
+Version: 18.1.40-6
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++
+Description: The Berkeley DB embedded database system (library)
+Filename: pool/main/x86_64/libdb_18.1.40-6_x86_64.deb
+Size: 535336
+MD5sum: 1d4d6f3baa424931c4d0dc3b2b9b7184
+SHA1: e54fe8f028d54e817a570f69930073c85469767a
+SHA256: cff98dcf2c3627bd44dcdf61e48ac4cde7c61b817b35d9ce279cd86a6a62e6ae
+SHA512: a02d38a6cafa0313e4f8c6e4186918ffb61e3e4a2c3ef0d395214b5834d51eb3679d8451b55c46b75aab79e1e45c8af97b8486659faf354d76a51453116c5c76
+
 Package: libedit-static
 Version: 20260512-3.1-0
 Architecture: x86_64
@@ -1693,6 +1783,36 @@ SHA1: 90382a8f9e7c96a4867b61873c36e364c2669fec
 SHA256: b6879edb6cc72222a4fed4c0d536ecba7933791999c8327ef5c61ff0e5207fee
 SHA512: eb77378ae25bda7e1a3c95f819fb681ab4628b34ad695ba831a2216c1d6b2bda9dfa88c23ddb1f43433cc50a4432b5ad2b3c3d5a81b8ff56f278d9cd7198b8d0
 
+Package: libgnutls-static
+Version: 3.8.13-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libgnutls (= 3.8.13-1)
+Description: Static libraries for libgnutls
+Filename: pool/main/x86_64/libgnutls-static_3.8.13-1_x86_64.deb
+Size: 852552
+MD5sum: ef8b23ef748869dcba446f1f535c7332
+SHA1: e30455cc7be7b752b2cfe583008db8ebe2f78d68
+SHA256: 34c5190f94ccf4b7eeb77037240dc97ae130a501415a8ce6bdeaa7d557aece65
+SHA512: 16188bb04d58b4ee15751443e8601a1948f11df93592698eaf81a6b3dfc718bf7fc6830c1dccff2807f3a7133d7c13da80f591a326ec9c625423bbfe4b90200b
+
+Package: libgnutls
+Version: 3.8.13-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libc++, libgmp, libnettle, ca-certificates, libidn2, libtasn1, libunbound, libunistring, p11-kit, zlib
+Description: Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them
+Filename: pool/main/x86_64/libgnutls_3.8.13-1_x86_64.deb
+Size: 841444
+MD5sum: d48b71386f913520e388a8d6a73fde5f
+SHA1: c8def9a135a047837c8331c9219e3b2b77166a86
+SHA256: 9ef7d2a17796a43a745bebb1997ee95100da384d3881d8d456a7d4d8629bfae0
+SHA512: 34e5180744e80c6f56ee90dd02102ac4b094b8cfd380ceb5e81aa16bb8ac03218fd10af406be495c7be3f78ad15b598c19ab561008cf3dde198fc45865a0dc8d
+
 Package: libgpg-error-static
 Version: 1.61
 Architecture: x86_64
@@ -1812,6 +1932,36 @@ MD5sum: 72d6ba1b21d1cd0cdbe25079a6c21979
 SHA1: 93540d042318dd9cb078e9d66d335c75e8adee2d
 SHA256: 1cbb906100d21f95401a2f0b62e89a69ea571876f2ca3e665038bdacc1f4c443
 SHA512: 415246d97b468ab5677b03267e35d3c2b5f6bfac0f83d2d335f1ae885ab9ff06178911fe70e841719fefa4e17560be67671af50f6bc2d0075687ca77e575fd93
+
+Package: libksba-static
+Version: 1.8.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libksba (= 1.8.1)
+Description: Static libraries for libksba
+Filename: pool/main/x86_64/libksba-static_1.8.1_x86_64.deb
+Size: 97096
+MD5sum: 1dfa5878ed8244c32114b9d33c8c16eb
+SHA1: 915980046772d2712959351428c985ff45cc2df8
+SHA256: d37f21b23065913e6aaaec164c94d833d638afe97475fad8617ec709b6054a14
+SHA512: 03c7d990b96504483b36a85cb0fe641079fbaafc18ca3142a002538283800e397977554e2741cc257f40d2c4b80d9a31d4dedd499e2b99c3d4a0930bd06e0c63
+
+Package: libksba
+Version: 1.8.1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libgpg-error
+Description: Library for using X.509 certificates and CMS (Cryptographic Message Syntax) easily accessible
+Filename: pool/main/x86_64/libksba_1.8.1_x86_64.deb
+Size: 114492
+MD5sum: b1443efd6a994816224012b272e518e4
+SHA1: b85885e27a5d5ceec096b0ae5d6f3297576620e6
+SHA256: 54bf582f6d07ca4ed2eee5e1a8ebe946e97eef9a583c8f02bc4333f374377d49
+SHA512: 2be30180cfacb5a2de3fddbdda8d69bafacd3079d74d5b64dcf40847ec4a3eb5b43c777ad80cb68ae2d02ca1e901d6e6fae8187cf4638b6f1f609ac241aab267
 
 Package: libllvm-static
 Version: 21.1.8-3
@@ -2187,6 +2337,36 @@ MD5sum: 716605816890a61d8712cf5d54aa84eb
 SHA1: b74bababcdd9210de0ca360a7024d4d4194755ba
 SHA256: 0f047da26f8789de2996f3ecd404770d26cddb839b87e7ee23d2bb5b00fc796f
 SHA512: 3f2318f8b8c46e919ca86ae9247f1bbe2b161cb7b95347da375ed908d6dbb967a8fc8f7e8347c11d6a754549848abe4a8c38d75424a4d35bf8c254143caaf847
+
+Package: libnpth-static
+Version: 1.6-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libnpth (= 1.6-3)
+Description: Static libraries for libnpth
+Filename: pool/main/x86_64/libnpth-static_1.6-3_x86_64.deb
+Size: 4412
+MD5sum: 4155f4fc5a832d7bc2a62005a664b591
+SHA1: 41e5d1c523a3ff92ef9f7c76da33232914511776
+SHA256: 5d5e386f272b4a2eb515827832ffca05509395550794d21d19db482c17a81107
+SHA512: 8d6b94cf94e3f56c3c58b00fb3bf9aa439410e7a68563106df9bf35e09426a024137155d832e05cc9246dc896f937b797dd12695a4fd7af0b9a166106e5e2579
+
+Package: libnpth
+Version: 1.6-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: New GNU Portable Threads Library
+Filename: pool/main/x86_64/libnpth_1.6-3_x86_64.deb
+Size: 11236
+MD5sum: 75b516f85103f3c58075334c1e72403d
+SHA1: 8054fc865af9156b8fa5820ebe93b2fba43164b3
+SHA256: cc3c91b5e011cb1e6c516395bb6dd937114eec99b8ecd6af95bd8c11cd165850
+SHA512: 6b73687f403aa7bb99523f54bc93664836c32833f02cc81e061db0c155b7ac5b565cdfd62dc0d361da68ac6c417e71cbb9993af07c1382f6e6c4cafd39a3471e
 
 Package: libogg-static
 Version: 1.3.6-1
@@ -2577,6 +2757,36 @@ MD5sum: 5be0a046809d0eb130fda2ce9c423557
 SHA1: 7467aa9c7afd07a4d54ca7603181a658470cbdb2
 SHA256: 638345f03f6b199c43c255fa7cc510cc7ef40d26008dfb4ffcb9b6ac9deecde8
 SHA512: 12d9eb2927a88ad03796e56eb278ab545980fcf00ae16789566829afdd06fc430f9be152150d555c2d79e415f27e6b3faa12ecd1a9ec12cb2f13888b169fd4cc
+
+Package: libusb-static
+Version: 1.0.30
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libusb (= 1.0.30)
+Description: Static libraries for libusb
+Filename: pool/main/x86_64/libusb-static_1.0.30_x86_64.deb
+Size: 49392
+MD5sum: 2e55028dfd950c06dfc22422e9b32917
+SHA1: a93d63d80e414a0c56cfb250ed99d72ef5dd1db8
+SHA256: 837310ac00298bf737ca60ce0da1b55b464eafc57af47f0b1379e17d53829351
+SHA512: 9a3798f14fb1bb074a26a87a4c048d2a58a76d7a41d0200079715fc4910ce791cd4ea83e15f5f7a16f6ae418947d5fc51f5a9bac6007009afd24eaa0ac7c9ac0
+
+Package: libusb
+Version: 1.0.30
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: A C library that provides generic access to USB devices
+Filename: pool/main/x86_64/libusb_1.0.30_x86_64.deb
+Size: 60792
+MD5sum: d9acdd7175f670d30ad9412947a5b455
+SHA1: 744d1662f2f385224c3059a8d26a1dcd5b57cec9
+SHA256: 09c285d47f62d02a9ee0c5cfa2961c99a3e2f321109d2a4ecd4fb12b25283986
+SHA512: 7bd69f11efecdc8f6012c44d60dd6d127fec13d8efd73233ccb10a3d0af4cd65143832cb4f5c0d7182c4b8e42ce5a715fcefda60042d874a52de63b318d99d63
 
 Package: libuuid
 Version: 2.42.1-4
@@ -3328,6 +3538,21 @@ SHA1: 4bea3ca5576f7ea9aa70a9b20960bb294f6e99d5
 SHA256: 31f529676d66aa6168dd057081fb15bd4dbd1a70b7d40cabd8ba3b747b02eb91
 SHA512: 4d0568b31e783444ab85dd3e9f36f26d1cebc4aa8f4af521db17c16b5f64ca495ac8043a8e52a5eb859a51f5e79f09c8d521fddbd3ad2b8dcb25319ae9a90c09
 
+Package: p11-kit
+Version: 0.26.5
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libffi, libtasn1
+Description: Provides a way to load and enumerate PKCS#11 modules
+Filename: pool/main/x86_64/p11-kit_0.26.5_x86_64.deb
+Size: 575328
+MD5sum: 887e7a6fe1dbd50c8f47bbee70731a97
+SHA1: 957e580d9786e7b2b24a901f7e6a75a80b1fff98
+SHA256: a2ef393fc1d15cd69b7e36ca96c80ae7d976800dee8597617ca150c0e1580b8b
+SHA512: c24f44c45b8d7e70f35114f108147a19a304a6e9702d17253e6926bbe4a0a6eacb8b0c0b3bbd1c97e533a25733f0e1c55a9718f755c1768e565bbf8698c27c45
+
 Package: patch
 Version: 2.8-1
 Architecture: x86_64
@@ -3402,6 +3627,21 @@ MD5sum: 4f94e2f2a04e6cd5495dbe57c102de7a
 SHA1: 9b2955c418d337007582d269a853699971347c03
 SHA256: 1b04c7a73882821f5347eaf862cd2a038737ec4def54bafe02795638b77240c3
 SHA512: b61742abf3b2d35e9cdb0456848b92b4e260a46cd4dc9985d33d8f7c6338463ec3fbec7d0262bc6168d38a74c8bc6889a91ee0447b997a28cd2e146fac0cfac7
+
+Package: pinentry
+Version: 1.3.3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support, libassuan, libgpg-error, libiconv, ncurses
+Description: Dialog allowing secure password entry
+Filename: pool/main/x86_64/pinentry_1.3.3_x86_64.deb
+Size: 50076
+MD5sum: 9cb5831f9112e901c67ae8111ac70ec8
+SHA1: 24a98dc9c8dfeadea443297b93a47991548fb65e
+SHA256: 6371e1311ffc6b2d962074f6b2477293e10421f1798cbc2a5146f36c371381be
+SHA512: 87cd99e5d4e2905ef3370dd97b17a6158bd6b84dc87958656fe979ad8a69b4fb704de43ec40b9ef43ff613607ffbbca4aaeb8496aa6ee06201b4093d58329d65
 
 Package: pkg-config
 Version: 0.29.2-3
@@ -3657,6 +3897,21 @@ MD5sum: a99d198e61fe4a41ee15f27b41809573
 SHA1: 961e394dbe1cc10799f46540aca4350faba52d3a
 SHA256: e2789d9c6413c717e2ac3c153f0d8e29d2fac7be8febbfdb874349ebc6fe6649
 SHA512: 0a2893f211250fec0ad5de979d771338c8730d15f059cff8934ddae349865e48ec5bb3e8cb2c6b8a9867543a6dc7144f9f4c1d1a1fa992df0b34ae449b591d75
+
+Package: scdaemon
+Version: 2.5.17
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libgcrypt, libksba, libgpg-error, libassuan, libnpth, libusb, gnupg (= 2.5.17)
+Description: Daemon invoked by gpg to manage smartcards
+Filename: pool/main/x86_64/scdaemon_2.5.17_x86_64.deb
+Size: 198688
+MD5sum: d53d83bd0eef52ec4d5f27b4c2caab26
+SHA1: 4ed6bee21e1735e6f77ae96619781679fea07f03
+SHA256: 714039b3127f30c78bb9ebfbbf2062269301384c5310aa5d9dfec52cd4eb0041
+SHA512: 3c60b28e7ea67602508017d92776ab3eaf94fc320d40f013ea1c52cdaac167220300c35f1e03d18937f8bf23580b4abda35135111502ae59326ab9f53052f05b
 
 Package: sed
 Version: 4.9-2
@@ -4003,6 +4258,21 @@ SHA1: 950b552196d94a3e13f1881a7af62c1e1008625d
 SHA256: 7c00c141c48e76cf6aa0f5fc551c866a67f868738c3ecd7c495f8112831b1ea2
 SHA512: bba1e17bec1880ba5a5b55993298a773c504726a0b111a0ffa27c3dad1a7e385935210aec470ea49f559752d0cfbefe09c34a6e050242f0d3240a25056ae5f2b
 
+Package: tor
+Version: 0.4.9.11
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libevent, liblzma, openssl, resolv-conf, zlib
+Description: The Onion Router anonymizing overlay network
+Filename: pool/main/x86_64/tor_0.4.9.11_x86_64.deb
+Size: 3383080
+MD5sum: 45fcbeb0f684fce036fe185eea39d78c
+SHA1: 766e0ef30cdf9c93d474ce72bbed7d466e163cf6
+SHA256: fccb760023790643124571cc1c4a09c7aa9ed34eeb35b7ea63600300496df281
+SHA512: 75086c4a40579cbe70c9fd0ad10050500ae87209243cba7a2ee057ea2396862e94326bc3703523ee1d48fa6ad96f291ae73dddda050e6396de3c10ec4685268a
+
 Package: unbound
 Version: 1.26.0
 Architecture: x86_64
@@ -4152,6 +4422,36 @@ MD5sum: 115724e7ae48af8d058bc6d19016179a
 SHA1: c76367a0d5ec6dc1ccac2f25e0a42736b779d14d
 SHA256: d6859e52090e267281767f37a0b24f14846d59c8156cd354dca12c9331151c66
 SHA512: cbb0d194ebe5c183ca54886c1cbb2542a8aca9611e8d8739844dd5afae10ccfafb348809c834be9d358d82031071531c57b7f482610b8de9b32922f63bd9d2c6
+
+Package: xxhash-static
+Version: 0.8.3-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: xxhash (= 0.8.3-1)
+Description: Static libraries for xxhash
+Filename: pool/main/x86_64/xxhash-static_0.8.3-1_x86_64.deb
+Size: 8128
+MD5sum: 4a47b21ef6aa073c3cabae0344dfba21
+SHA1: ee1a0469d3685af5ea31804d0765fa8bcd9f4297
+SHA256: 1bde9bd74b555abfdcbe51cea568a6955d0c7f40db1321ce566ab7c1497eefe4
+SHA512: c92a5fea3a2f28bf1a92a96cfdba35876ca2c839766121451e0fd3cb1e9168d22ba735e17f57224207c6f4927143cf065e45f6227ba5ff7ede3c0f4f4b72931d
+
+Package: xxhash
+Version: 0.8.3-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Extremely fast non-cryptographic hash algorithm
+Filename: pool/main/x86_64/xxhash_0.8.3-1_x86_64.deb
+Size: 78752
+MD5sum: 87f027d726deb3df3ee3a16bef8a101b
+SHA1: bd0c24be118e962afd4ffccf7e10e210d2ee509c
+SHA256: 726fb707376125f35e82d87b76d6ee36f780ce82552a560161b826f2d9b82f55
+SHA512: 0311db892d3d9d514db584f1eb8fd0d5b8c04c96979dd76fe6ef6a3bda97db6c2e60d5f7c9bf9ea670608501204c608d52eb385b597d827ffc15756732073139
 
 Package: xz-utils
 Version: 5.8.3
