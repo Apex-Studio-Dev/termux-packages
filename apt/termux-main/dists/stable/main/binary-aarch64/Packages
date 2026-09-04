@@ -4753,6 +4753,21 @@ SHA1: 60057b148354d0d23b2eb199199b03355c228f0a
 SHA256: 324bb732a2643d449802ee9c3ecb88f18ace56fad957efb8437f5f1a9cc82084
 SHA512: c744c414e9be22e7a2799224f94fcfff4969ffb641fd403ca906278ac5435c2c98d14f56ef74be4e028997716d009a8386d0bec6b74b72a1af5958128ae7ba8a
 
+Package: termux-tools
+Version: 1.46.0+really1.45.0-3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Description: Basic system tools for Termux
+Filename: pool/main/aarch64/termux-tools_1.46.0+really1.45.0-3_aarch64.deb
+Size: 29156
+MD5sum: 87c9782edaafe8f7288ed4bbb8cb834a
+SHA1: 9171fe585887470347a04362e8a7640327713530
+SHA256: bd5b375688c8cc773a4ec9b5791e694703fe260406a1dfdc15946e0d4e5aedac
+SHA512: 1919bc025318823ba8de73b76fc338938007f02155df8d6e43010b25269faf6e9d530f2fd606d65185018261d61c3be712d0bb3eff8196b0421081dfab21d5e8
+
 Package: texinfo
 Version: 7.3
 Architecture: aarch64
