@@ -457,11 +457,11 @@ Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: libc++
 Description: Suggest installation of packages in interactive shell sessions
 Filename: pool/main/i686/command-not-found_3.5.0-9_i686.deb
-Size: 23164
-MD5sum: 94c376fe197e9a68e7b209e9f7e978eb
-SHA1: b154b49e273073baed7d34b492af8857503f4613
-SHA256: 8f55cd7fee075aadcf1471cb04ba941ad784c7b6527104bb875e0378fb043b5e
-SHA512: a6c79eb1e698bc14ec0c9bc374dfee8d024bfc0e1855c87ca9c008a45902616d45c13f5c041a9536ea4096964b2b44e815bff7d6d4f76dbfc3a21f4db91c7b4e
+Size: 26500
+MD5sum: 4640b56fdcec3da3c85d5f63934a021e
+SHA1: 1f81e5c10c4439e25dbd54a065f156fb65eeafb2
+SHA256: 00ec0dc782e0a241e0cf9669f870852ad5ea90ffc65ac978cbb3ff944894d9e8
+SHA512: 7fb172f4198a70da17220b3d7147bcd348c3696019c3c7e05b72dfe42a92fd071e2f3bab40ec0dcd0a345a8991e216791cb9d53c460bed23b2f8ac3f8ad7d76e
 
 Package: coreutils
 Version: 9.11-1

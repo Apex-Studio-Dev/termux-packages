@@ -457,11 +457,11 @@ Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: libc++
 Description: Suggest installation of packages in interactive shell sessions
 Filename: pool/main/aarch64/command-not-found_3.5.0-9_aarch64.deb
-Size: 23348
-MD5sum: 31d4bc777701d9ea179a99196e22b1bb
-SHA1: dacf5af77fc71c994dc28b53091a76af4e2cfb9f
-SHA256: 6d1e57b089733adeb3a1f208db183fc48a790cfcef09fac6bfd10ab955dc14b8
-SHA512: 58d768a03c9884be459c492dce3cea5260f71884723203c6cc1c0084db8b2e8627a31dd9ee562e47ac480a071cf62a8829143ce03635f0d7fdcb7bef61fe8f8f
+Size: 26392
+MD5sum: a6046810da6119825165bce2be5d4d99
+SHA1: 4134e688af17632c8959a8146ef084bb5c93cb71
+SHA256: 3c2a41f445e14ad5019b1123dc534d521a1bbdeab3e2ba83256aa6b31098e961
+SHA512: cdf08456fcac37a58316f32545a93e839d472c47edca2db0fbee981fe028306ecf1e7600ca4f25fd55aa43e1339a26cdd85b7c3b4f77055e83685aeb8df97d54
 
 Package: coreutils
 Version: 9.11-1
@@ -5202,19 +5202,4 @@ MD5sum: 994b9df2297d46991bfd9f2ab36f600a
 SHA1: 495efc56f74dc9ac19719f41f955b75c33a7c397
 SHA256: b192a4c8c9d0219495c1ad669332f6a5b8a5aad281c35120e698e9a2c0ea0398
 SHA512: 3f7db1706168a9a10672f22c11e46a8f91c95eac4cdcb31a70b567fc14674a816d7fcb64ed4013ec2b6ff7089b2cb5bd2b15bc6dea9932a9c54520ea4c19a530
-
-Package: openjdk-21
-Version: 21.0.12
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
-Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12/openjdk-21_21.0.12_aarch64.deb
-Size: 85
-MD5sum: d1f501bf717116545fda57dafbd78c03
-SHA1: 1751005f61a76d3f482ab50c3acf2b92eb6a8e6f
-SHA256: 5181d0206f7d88e90c88f6518e74ea2ab15aadf3ecac221e596ac35e285b638b
-SHA512: 0e81163f04c8278ba77fc75dbaddf0e651281b852867ca9e289e49f2d63e95818bc352589b2bcc12f9fe911844bdf5abe62ae366c07d1a3cdd58ba2f32f95df2
 

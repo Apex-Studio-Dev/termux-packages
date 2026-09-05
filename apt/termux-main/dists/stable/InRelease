@@ -5,7 +5,7 @@ Origin: ApexStudio
 Label: ApexStudio
 Suite: stable
 Codename: stable
-Date: Sat, 05 Sep 2026 06:10:01 UTC
+Date: Sat, 05 Sep 2026 06:22:49 UTC
 Architectures: aarch64 arm i686 x86_64 all
 Components: main
 Description: ApexStudio apt repository
@@ -15,59 +15,59 @@ MD5Sum:
  08a6f6d9ae40d8ef72b955f0e1dda982           211395 Contents-arm.gz
  89b585aa4008a5c3a705f2dd77f299ae           211268 Contents-i686.gz
  fc71ee8a48d045f081b90810226b83da           208705 Contents-x86_64.gz
- 796e1758988c4505be8ef386893b572e           196267 main/binary-aarch64/Packages
- 199c9709b1ef617d2e04146087a75eef            77018 main/binary-aarch64/Packages.gz
+ ec7d53cd0b7a60f3013bb5835c67abbb           195580 main/binary-aarch64/Packages
+ d2bb683fde8a399bbf3bd0d68f378d69            76674 main/binary-aarch64/Packages.gz
  b1adff110b3e7361e07554f140f1d702            16358 main/binary-all/Packages
- 1a4cc04c5d18166f853e840918775b26             7032 main/binary-all/Packages.gz
- 36858a8093c376e9324718ddc954f118           192012 main/binary-arm/Packages
- 025b14024cc06b7df082f145677eb818            76690 main/binary-arm/Packages.gz
- 6ad64255dee8a1b9860e68f55ec4b0ac           192415 main/binary-i686/Packages
- 98de854490a87e435d05308d991585ef            76546 main/binary-i686/Packages.gz
- 8694371a1dc3c63d5cbdca1f7611774a           195239 main/binary-x86_64/Packages
- e19d8e5dbdbce9b0cea931af5d5b79ee            76987 main/binary-x86_64/Packages.gz
+ 6dc3ecfbb93dbab302c9e8d2fc4cc41c             7032 main/binary-all/Packages.gz
+ d09d82aeaf9acf607001c47152fe774a           192012 main/binary-arm/Packages
+ d9dda0c7d574adddf805ad9df51d1670            76689 main/binary-arm/Packages.gz
+ bfa7e8da9c6d461cab9968dc4f3a91f5           192415 main/binary-i686/Packages
+ c8d124886f68b9f416cedc2fb5267861            76543 main/binary-i686/Packages.gz
+ 3d428453cd7dc4b5f506f6da5ce0c432           194550 main/binary-x86_64/Packages
+ 1318561d139e532e2bd0fb229edeb40b            76635 main/binary-x86_64/Packages.gz
 SHA1:
  ccfa4e66b5bcceca65e65f1e7b55364ace809643           210782 Contents-aarch64.gz
  72eb99b249c0b87928e541aa5fc7f0e014dff68e           211395 Contents-arm.gz
  917b48d8a0152c5b9627d8907b132c24ec5598a8           211268 Contents-i686.gz
  ab18bbc6f57dde44cf9a447a5ffb332fb576c9b1           208705 Contents-x86_64.gz
- a061d4fe1dc7488b05cfc7e401af13b96363f0ca           196267 main/binary-aarch64/Packages
- 37fb83f0ce82428162c65fac441a65533ff6f046            77018 main/binary-aarch64/Packages.gz
+ 44e7863e0f75f2c496fd93ec654b5a9422937a7c           195580 main/binary-aarch64/Packages
+ ab864cdb3a11b50728e3351d13d59265af75cfb4            76674 main/binary-aarch64/Packages.gz
  4e9c35d590eea2fc1102d7a5ad40367bb5d7dcba            16358 main/binary-all/Packages
- 6a787e68ec48b446dc5b8aff381f776ec61c30e1             7032 main/binary-all/Packages.gz
- 3ec5367b0c8b68c1dae139ab3ce8e4aea6c93c88           192012 main/binary-arm/Packages
- b28792f6fa6ff7d8416e64b4729e8701e2ad0e96            76690 main/binary-arm/Packages.gz
- 2e02fa05ffa3149d0217331cad4cfb40658d34e0           192415 main/binary-i686/Packages
- 0d18073c2aa3e7e3bb8a57116de7cfab68f6df8a            76546 main/binary-i686/Packages.gz
- c1db371970b3438f08fb8920e995ef9f5c8478bf           195239 main/binary-x86_64/Packages
- c14e57526ef06d21b0403de2d639eb9f3816c686            76987 main/binary-x86_64/Packages.gz
+ 53009e5a3f64d159ab501e2d2f3cd87923c0bd2c             7032 main/binary-all/Packages.gz
+ 94dfb9bddfbe4b52fb12747cff0dd60fcc710879           192012 main/binary-arm/Packages
+ 7308280ea6464c084acea8233f4a0d8bc94daf84            76689 main/binary-arm/Packages.gz
+ f75042a381c77c667bb3cee6d9655f25d21ba34f           192415 main/binary-i686/Packages
+ bae2a94120f44c3e8178131520b85df40193e447            76543 main/binary-i686/Packages.gz
+ a32a894bed2722c59d83e10a193fc4ab26a17512           194550 main/binary-x86_64/Packages
+ 2a6f023214e1bb61fefe6ac837ff5e29d11037f0            76635 main/binary-x86_64/Packages.gz
 SHA256:
  53368b5a5cd67f9946e9759ebb830ee35b7696212b4bfa9cd4d20196b147f13c           210782 Contents-aarch64.gz
  25bf1b2ac71fcb811954c9fb75ccacfbd7cdaaeee089a5729854a10eef11ef5a           211395 Contents-arm.gz
  77c28e6a48acb0cfadf9c655ae4aabd3c2d4bf5d5cf366e3916ff6f844b2d4a9           211268 Contents-i686.gz
  de5560ff90e97624300901ca3a33c089e318c159e3a966bf0f8245f1a8b5d3c4           208705 Contents-x86_64.gz
- e2eb4ce05984006946c941bfa55862795b2cdd8133b7c3106b6f85c73bcc8997           196267 main/binary-aarch64/Packages
- b6f11ee5625f4996e0bb9ac8cbde09007992130948de2080878940b250d66124            77018 main/binary-aarch64/Packages.gz
+ 92ca48ea409b09f338c298b67947c3557cf5a0d16f12ade34d8d2a91a1cf5593           195580 main/binary-aarch64/Packages
+ 8f0b1ad573c999bea52f8ca7106279b83d3c8e5a5b3df30e3a9fad2f25f168fd            76674 main/binary-aarch64/Packages.gz
  cadb07977529e89e9de7bd86c78c1ac23f7d75ba75e6de54b1356111cbcbd93e            16358 main/binary-all/Packages
- 72b984d65e2c58a7bf0ea38cc4085a761eea68b430c229c677b4f0a41f924632             7032 main/binary-all/Packages.gz
- 5e424b8730f94812b2397a458837bc8267335d7aa799b7cbd1794f6751326f47           192012 main/binary-arm/Packages
- 09283a74acaa0cf6145fb2cc8fe8506aaefbfa21a677c5f48c7b51da4a2cf49e            76690 main/binary-arm/Packages.gz
- 1406258e46769c0457714a1a1e9ffa863b4344e246567db3593e786e6f06c893           192415 main/binary-i686/Packages
- 028c8514ee82c90dbc4b660f996702d5e1431cdd1d92f45494062cef0697b347            76546 main/binary-i686/Packages.gz
- bf71d36bbca7695f56e028d0c467c6f408818388119164f9cfc909ba35673bd3           195239 main/binary-x86_64/Packages
- 12e9c9c673b08ff0720d31d0455f63bd298553231e251612b834f5d53f215374            76987 main/binary-x86_64/Packages.gz
+ 40c1bcc96e679c25b3d5b8a2442bba798c7e1492d29c379146de1f5678d2b092             7032 main/binary-all/Packages.gz
+ 6a49784be7a73a867fd9f5f0e9685e9aa98e852be256c3d8e245732e74dbb160           192012 main/binary-arm/Packages
+ f69bb3acc18316eb2c6e40437ccd784a49e393a57b33c429aa17fdd2b51ab10b            76689 main/binary-arm/Packages.gz
+ 1e1b3078ef0a4377799aab3eea45e904c3138f1148bd62136d318b6c62cb4197           192415 main/binary-i686/Packages
+ 802fcab43ea8c6502ae8cd47b237f2b3d84399f42989645cbbc09b72ec8dc919            76543 main/binary-i686/Packages.gz
+ a1a40d94b1c042c51cfd706e9b5a86354c1cca760a7f16fe4509e55876c4a574           194550 main/binary-x86_64/Packages
+ 1efea99773b37eb72d920256b60fcb92056b516397922d047f8cb4fbf52d4109            76635 main/binary-x86_64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqbsjkACgkQdpPrVPIE
-9coKtw/9HXl1jDTPRY0wD4b4oPH6+h0g8V5eZ8vMfnbClIK6lsnAZE+y2hfjNVqY
-O9m2eQ6093zPlB00V4edykfx+CBoSS5YPVVozSfFr/cTf2IYxycWs/Jq7OVWSnMe
-Ruc55apMHPFRgdiaS8GUlvwt5D3SGtfk5BEBk66vI8eW34Z+hFLkq6ccnA5IWTTB
-qFEwS0xUTr6caBOdAiUbsTf8T0iTZdniOdcSb4VN6AyJJdbjv7hBjfUt67WOuYyO
-iqrtEyh4UKO3o+5Xjsjg2612cwYZ76rxlYM7mlb6hAORavq38510QymspwffEJm9
-Kgl0iCyXeMM1Cvf5QtYcH88jHwf4cFIvIucaaA5mzCaqpdHd9i6yO7gdgcTEr0xe
-lDUkY12x3q3S9j10nyPh4tY6glejoVODGY8cushk/33Zw13XQ9tE5PrJYWN5q0Bn
-f7lPHAlnWJvBl3eweI6cO5J8HzKPKSSwS0lxZtw4lu8dirNGvsj6VJ5MBZNf4m40
-RPoSLygm23wQ+fdvjwXf14wAEVdjcAluzrg9UKHKzfJ16UloSwE8zNz4d2ZIhvu2
-beuBRsDYwn3YGLr1LLbZO57TVA2cDbV3dTMuyyKBCfQHOOedDgQ9X/KKrJjrRrMX
-TDOoWL+oQ9pJdJfx1WCRszd8IbcG7VvVt2csULEhYESVH2eEwMg=
-=VF2l
+iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqbtTkACgkQdpPrVPIE
+9cqEqBAAiRkZ1PaBwYsnvEsk3w9rEfM1NMA7Ke7CdqsXYHyb07kKobd1j/eBgN9m
+J47uT8w1miXylv8zZOvetX8wAcYbDnEpT3zlCU7pqqVj+ZWaZZ0pa5Jv6SFaEDcN
+dKGVw/s8n6IMRp+RAGWQizKMErunWTbpREzZu1A197MDlqbTmi1k0ww9H7WYs2OM
+2XUP8XV8fAuDH4iQvamXkEjUSguyKO9o/tfi/6u5jHkCuwgMOwAH8qi9n0VV1BAV
+Auz74eTh9EdUS5UWjLOW6QhwLOd4QdlG6GAojZzVxSu1Xkj3/ISzRd/+6NIa2/nC
+Vp+zHzfC8o7BUg7WkbubtLrW55zqGo+9UgQxmG1kxnN/u2D0eCKOyBd2wGXWNlQ7
+VjeWlPoldBbzZ2tzOsD0W3yhav3majQCKwseEP86CLYsO37gyzD4COOvH1wb6aoL
+8rU+nHfpbjV6tKjnr9l/l6os2Qie2yyU+GCVWSJA7wD/m4zAykdOwHwGTPVVlp2A
+WWq+6yU/DkC1LxnWVYuCjXxcW14/lAKqtlBzXPPruiVn44032sK+P9ps2P6gRk3K
+tGXaBGV8Be4O2zxRtFno7g4CtEdAeAqufA5G0+3O1enQUGwFi9rIWa+ySa7lubkw
+UsaRiSFsdgM5d17ATFI+fAr9e4K6d71hzHLfsoehqHLTcxMN/JM=
+=ElGF
 -----END PGP SIGNATURE-----

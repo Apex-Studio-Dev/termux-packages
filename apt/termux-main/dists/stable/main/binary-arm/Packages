@@ -457,11 +457,11 @@ Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: libc++
 Description: Suggest installation of packages in interactive shell sessions
 Filename: pool/main/arm/command-not-found_3.5.0-9_arm.deb
-Size: 13776
-MD5sum: bcfe619633a904866738f14f90e265a7
-SHA1: 26c8763ea6447b1feedc7878292f203d203b7651
-SHA256: b0c3375e6cc77e7c2cc41611905efaf55270a5829bd1a4d39d2fb30a81873e0c
-SHA512: 971966d0f7b6291ae2d0f3eb81263fd46da87d331db29ae1a00c45c921fabba31128ab3a1e45af34018e03f2b7e889ee13459dd2da21e3edf6fe7516ae4e4051
+Size: 16940
+MD5sum: adf1375d31e11305e2356a16cb86f9f9
+SHA1: f01386a27782d98bc0d4a4974182f987a201f136
+SHA256: 68167bdc0de3d24edba90f7b4b0b8952fe9901599b071a727c80c5ff0d6176e5
+SHA512: 1de2a12a4941c012c5107e681eeb687bf53e15acc4d0b0167c78e68a0ab8660d3fa2d211464a13c2eb64d7db37837af26c91e7e9de6d14c124ff7b5147f566b2
 
 Package: coreutils
 Version: 9.11-1
