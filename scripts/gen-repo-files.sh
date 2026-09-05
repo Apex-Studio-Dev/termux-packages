@@ -140,7 +140,7 @@ gen_packages() {
 				efname="$(basename "$ext")"
 				ename="${efname%%_*}"
 				ever="${efname#*_}"
-				ever="${ever%_*}"
+				ever="${ever%%_*}"
 				emit_stanza "$ext" "$EXTERNAL_URL/pkg-${ename}-${ever}/$efname" "$pkgfile"
 			done
 		fi

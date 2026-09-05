@@ -78,8 +78,11 @@ upload_large_deb() {
 	local deb="$1" fname name ver tag
 	fname="$(basename "$deb")"
 	name="${fname%%_*}"
+	# Version never contains '_' (only '.', '-', '+', and ':' for epochs),
+	# but architectures like 'x86_64' do, so trim at the FIRST underscore
+	# after the name, not the last, otherwise the tag splits the arch.
 	ver="${fname#*_}"
-	ver="${ver%_*}"
+	ver="${ver%%_*}"
 	tag="pkg-${name}-${ver}"
 	if [[ -z "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
 		echo "Warning: no GH_TOKEN/GITHUB_TOKEN; large deb '$fname' left in pool" >&2
