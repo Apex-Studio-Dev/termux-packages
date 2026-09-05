@@ -202,11 +202,11 @@ Maintainer: @termux
 Depends: 
 Description: Source files for openjdk-21
 Filename: pool/main/all/openjdk-21-source_21.0.12_all.deb
-Size: 49132000
-MD5sum: a0289b677a3a4f5611c5cca3f1da889d
-SHA1: fecec7b7b80f0938167b5f78c0b0e276cff015ab
-SHA256: 81655408847ac57625a6c616c1b3cf7b70d696bf89c12a6d6e1b46135865424d
-SHA512: 2ef1ba654075d35704dd45a4e0c7a1f8d7c93bab5adbf5e7ef6336e74927b0672b2a341d539f3115b272935f393ce9971e652d5163fe68440552928036c5fcb7
+Size: 49131448
+MD5sum: 0fa130f732fb1019d74d163dc265ba19
+SHA1: 0b4d377fa5396b03cb5d5814df9fbd22e4d2e632
+SHA256: dfe5d235dbb5189456f130b9ffb93f746622edfcbaa857dac05bb085c963af51
+SHA512: 8b21c8d2a59080d3693759b28bb900a9c79b7ab816aba590217108488b2a242a69d13a378022b74d53a346f7ec4083816cc0c764d808516b906cc1eb02b2d3fd
 
 Package: openjdk-25-source
 Version: 25.0.4
@@ -447,4 +447,19 @@ MD5sum: efb34da537bfdf3a299a1ac77e529ae0
 SHA1: 342ac55adda1341c8350040f34b54f1812d3882f
 SHA256: efd8079d3f9ff63df415177b764bf9d0d60bf829afdf1f4a55480798b470d024
 SHA512: ca03224125773afc13d76a162d0ef46a8ce15ae8cc2f3b8b307311aac39332a41dd8682b0c723f4077a53dc96eb35e184187b6c070d658c522ab388959f0f112
+
+Package: gradle
+Version: 1:9.7.1
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: openjdk-21
+Description: Powerful build system for the JVM
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-gradle-1:9.7.1/gradle_1:9.7.1_all.deb
+Size: 77
+MD5sum: 9d45884ae151b361840312c36eab4527
+SHA1: 65be4c3eb3727b344be4eb3d53f157790e9edcdf
+SHA256: 951bb95e969fd91abd8c8d44aede4a468595b725bf26efc4320d777abb59abb1
+SHA512: b1c1fff52fc278a0d84abcdb4dc842e5f8d694d75a93e700362b3494e5aff9022b765411e617068798d81f43550c21eb666646462703d2accc2f8fa3c3f6e944
 
