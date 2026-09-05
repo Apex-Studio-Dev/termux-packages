@@ -4087,11 +4087,11 @@ Maintainer: @termux
 Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-21 (= 21.0.12)
 Description: Portion of openjdk-21 requiring X11 functionality
 Filename: pool/main/aarch64/openjdk-21-x_21.0.12_aarch64.deb
-Size: 12676464
-MD5sum: 3213b4202957da428500d2faba139c25
-SHA1: fc9ca65b6dd85236a26f577205a7187b8a4d34b9
-SHA256: aed6ea7efdfcddf31784f7ee73fa673b035fc49a7cd62290bdc830c723215ba5
-SHA512: 5a1ca20bc852fdc8f88d34b6451de6a3818e144b0975f3ea6b847450b1c5eeb7801b49d6a12856a9cb99dd1badf78f27c75669ae9822bc8e4c249089e88fbdd4
+Size: 12676240
+MD5sum: 8ed22346fb1c057391c6ef320355afb7
+SHA1: c9eb9cd54c1aa6ef13d32de0340199f99f7a3c8d
+SHA256: 3a616a6c1bab377ba2cc4d8459e26da3617a6e9e0a76e0ef56941428a580bec5
+SHA512: 86f4a7a467b59f8fdebbc0d98627d243ec9e53aa72f0d5d8d876c6b67c917ffe0747764984660a372ac12923268d3da5a872166f21fecb97a03c82c59e0f5473
 
 Package: openjdk-25-x
 Version: 25.0.4
@@ -4918,6 +4918,21 @@ SHA1: 05f48a028265192b562464b9a70ca4e7d3ed2c6a
 SHA256: 642b46aa5926f345eaa64472ba0a8009dabe4a72d90ffbbf0178814eee2da711
 SHA512: efbe74e63370dc0e1c6ee33dcbffd10a8eb11bcc42bcc7138ffb6edd7c52c979069e8201d5625feaeb8ff3c04e34d1d7c668cddb5c0bcfa4dfa683172f063e6e
 
+Package: tree
+Version: 2.3.2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support
+Description: Recursive directory lister producing a depth indented listing of files
+Filename: pool/main/aarch64/tree_2.3.2_aarch64.deb
+Size: 35904
+MD5sum: 697a015702590cd5121582d480dad47a
+SHA1: 4e7f13ae95e01abf3428daa793b478ab45ce2822
+SHA256: fec95f3957366e6bf861c3ee3311498e00da1ce972fb3bcfe2097b879284612b
+SHA512: cb0ce89919160f9efac96cdf4dcb8bbc810973733e86c82448e6ce3887313893f06d4826f8fe11304b4c50772ec6d51e38539e318196a67f8d9f98b24f53e8ed
+
 Package: unbound
 Version: 1.26.0
 Architecture: aarch64
@@ -5188,18 +5203,18 @@ SHA1: 495efc56f74dc9ac19719f41f955b75c33a7c397
 SHA256: b192a4c8c9d0219495c1ad669332f6a5b8a5aad281c35120e698e9a2c0ea0398
 SHA512: 3f7db1706168a9a10672f22c11e46a8f91c95eac4cdcb31a70b567fc14674a816d7fcb64ed4013ec2b6ff7089b2cb5bd2b15bc6dea9932a9c54520ea4c19a530
 
-Package: openjdk-25
-Version: 25.0.4
+Package: openjdk-21
+Version: 21.0.12
 Architecture: aarch64
 Section: 
 Priority: 
 Maintainer: @termux
 Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
 Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4/openjdk-25_25.0.4_aarch64.deb
-Size: 67
-MD5sum: 72c9f68815ddfb0d9ca7385d777d8834
-SHA1: 8e9dff70f5e4a9362800f3e0e3f2c4afdee6a75a
-SHA256: 0d7c10fd64896c2da0d18a8123ed8ada8f97fccc9d70da8e0b45f15eab9be94b
-SHA512: fff45cc3d0b00bf6f5491a592907217bd9be0c3eb90eef1d6e90d190df3091ac60004704cd9b6dc2dc25214ab4aaf4e3b541e87e2cba523e7f2cac109a6dea1f
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12/openjdk-21_21.0.12_aarch64.deb
+Size: 85
+MD5sum: d1f501bf717116545fda57dafbd78c03
+SHA1: 1751005f61a76d3f482ab50c3acf2b92eb6a8e6f
+SHA256: 5181d0206f7d88e90c88f6518e74ea2ab15aadf3ecac221e596ac35e285b638b
+SHA512: 0e81163f04c8278ba77fc75dbaddf0e651281b852867ca9e289e49f2d63e95818bc352589b2bcc12f9fe911844bdf5abe62ae366c07d1a3cdd58ba2f32f95df2
 

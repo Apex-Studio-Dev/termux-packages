@@ -4087,11 +4087,11 @@ Maintainer: @termux
 Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-21 (= 21.0.12)
 Description: Portion of openjdk-21 requiring X11 functionality
 Filename: pool/main/i686/openjdk-21-x_21.0.12_i686.deb
-Size: 12815120
-MD5sum: 577851b5db60527671f56e2759b8aa83
-SHA1: 237dd7b303d9ca55b8e6ac882fe77c58248b3acd
-SHA256: 1c5ac4abe8a64140f24952d66212c98d7cf30218a83179426f7ba53dbd36530a
-SHA512: 797a227bb8683401751cb8fbce422811c235805ff26aae74e047f7edecb64b64a85dac9a6c86876175de0433ce02085d9d12c9778235ca8bcf489356b4a0144c
+Size: 12814944
+MD5sum: 40cd7ca0fd339940f7e5a6529999d81c
+SHA1: 6c324919ab1c7448f34deea3471a955adf48a8f7
+SHA256: aebf297031540fd109ffca8266b1f4a3a3c3b614313fcb23224d8addae0dfb68
+SHA512: 9c148b3029edd94610b3642493e7e49b3f50f11102225690f87565372e669886d94a45f052473329e89f2a2ebbf597424905dd4f0ada86529d5bc60781239baa
 
 Package: openjdk-21
 Version: 21.0.12
@@ -4102,11 +4102,11 @@ Maintainer: @termux
 Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
 Description: Java development kit and runtime
 Filename: pool/main/i686/openjdk-21_21.0.12_i686.deb
-Size: 104548220
-MD5sum: 471b1ed4b9ee072d18aa4d5b0b8dea04
-SHA1: 2330472634e3f3a19902058376d48475d4117060
-SHA256: 018781cac34b5a53a16fac1095ec81883ea12ee6bedf8c958bb3e37d8be54150
-SHA512: f2a7f09aee94abb710f48e1e19e2d934d50fae7472df6a364c55c55972582785db0e602991adceda25c6b67e6736b9aeb8518b19fc6b5f3086e304005611b2fb
+Size: 104546196
+MD5sum: 09944a9e818c7192566f7e173ff96743
+SHA1: d6f4b88567b04892cc92b9847cbd783a2cbd6a92
+SHA256: 1b55cea41d3291c233b1c7a3ee26cbdac937826d3a5c92c6057ccdc37d219ee9
+SHA512: a1fbff31c3a03fb30f5ce52fa5b74bebe004cdfde062145b28ccd747eed173caf965f3a2d6a78421b6df9519e4eb64be3448dd7342736782c9da18863273ba40
 
 Package: openssl-static
 Version: 1:3.6.3
@@ -4917,6 +4917,21 @@ MD5sum: 9f7de9cae53de5892dfbe6fe9d3924ff
 SHA1: 85030df998006e765207e79e62348ae78bfb4626
 SHA256: 673612471196cf8d22088b4eb97e281284a503085c1cc1002a13dd9b932e8631
 SHA512: 89a69d8f8b8543eec6382f24dccad5b596562866ff9c99dae8f6c3d9cd1ec1db7f556b694ea54ec51f2f0746e1e28c8fb16c86d01818be51e5ba48c23de12885
+
+Package: tree
+Version: 2.3.2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-support
+Description: Recursive directory lister producing a depth indented listing of files
+Filename: pool/main/i686/tree_2.3.2_i686.deb
+Size: 36916
+MD5sum: d3be51d4ee6e3acb5872388a76c95beb
+SHA1: 17edcc0d644f0360b9d3fc1e0d5a39f4a2dc4292
+SHA256: ffdf4211456a15cd44deb7723b081cee7ba926637eccaed4afe50bf1eec5fc1e
+SHA512: 979dfcd4a6667652de945d55867aa2357896f126c5cbecafa4935cb659725307562b599867fa6fd4432ee66c7a806818ced4d08fef61504b5a6c93f255f60b24
 
 Package: unbound
 Version: 1.26.0
