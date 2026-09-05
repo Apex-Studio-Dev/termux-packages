@@ -88,6 +88,36 @@ SHA1: c2a80f9fec39a51107aa5a37ca4a14716649a296
 SHA256: 959bb6fe77a59c44a1ce58491d0308340bc84899cc8575c16e41278897b7a231
 SHA512: 7c4723a3db2efccfece226fae627b0041b0079ba579e15c5cbf3895c226078a5895cebd2293385535cc0e747ef4a662450ae60e0255528af38ed395c6007e934
 
+Package: aosp-libs
+Version: 9.0.0-r76-4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: resolv-conf
+Description: bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and termux-docker
+Filename: pool/main/aarch64/aosp-libs_9.0.0-r76-4_aarch64.deb
+Size: 9746132
+MD5sum: b6371f347c093edbe03b7c3a2568daed
+SHA1: cc1db42bdfab7f356035a97cf64f5d839c71b3d5
+SHA256: 87cd133809be3754bb6bf144068069d60fd83577e2aa1de02939f42d323096c7
+SHA512: 5e3e51a63b79070dc4bf13bdd430a22aac600eaed8162a02c632d544f896107aa7101f69e501b6588d4a6510f943ae193aceac9f1e2a6148bbd261600a5bf21d
+
+Package: aosp-utils
+Version: 9.0.0-r76-4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: aosp-libs (= 9.0.0-r76-4)
+Description: AOSP-based mksh, toybox, grep and iputils for termux-docker
+Filename: pool/main/aarch64/aosp-utils_9.0.0-r76-4_aarch64.deb
+Size: 337944
+MD5sum: cf464a3a0f6ba028db28c7ea8e695b0a
+SHA1: d01773504bda03b26b56f3087fef68000c2813f9
+SHA256: 75fc8c2ad807f53ab95d9875b0d56f90d14a05dab9c7d12cc1ce21b74e679b5a
+SHA512: b1e720ab46aadef093210ed1517bcb1a4a57ff82840d9f85ab1c1cc8c6f71fef6933b40b036c00ca5b9c96d023d6070b4021121ac601b43d7ce1a2cd4403f669
+
 Package: apr-static
 Version: 1.7.6-2
 Architecture: aarch64
@@ -3778,6 +3808,21 @@ SHA1: e8f78a1f4360a73d26651705127f2c8aeaa57db6
 SHA256: 70f1cf8e26a7c51729a59c397d25d3782f7d1c293639eadd80f5b561807730d3
 SHA512: 8a27d52df214f72f3e934514dd1cf18b4c2177e9f0b04792fec91b487ae10f6ef514fcff14e836d737af6ce780d04bf6bccfa6a4601fc6104e272f4f5fdde4ee
 
+Package: micro
+Version: 2.0.15-2
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Modern and intuitive terminal-based text editor
+Filename: pool/main/aarch64/micro_2.0.15-2_aarch64.deb
+Size: 3852884
+MD5sum: 639ce8a7cbd3ba0d6225ef26e9da881d
+SHA1: e553f78c640b13e5926b279b60e44f315c73ea0f
+SHA256: 417b9ce32215a5896d3abe1a3b5782fe19bdd4734762b9b605d51d1fe7dc6fe2
+SHA512: fbb6bfbbe3f6f5b012f5d9dbef43cc085bd8abf81310c2672722c9a742d0818935bd720bc6e95cb4bf73892c636249455a3b444a110522ba74a63c37e14f1fe6
+
 Package: mlir
 Version: 21.1.8-3
 Architecture: aarch64
@@ -3943,6 +3988,36 @@ SHA1: 05d72694c8cae3333fbc47c495e21f10e9073c9c
 SHA256: eb1292f4a2147e893315defb0f573365b6e183675d4e9a26b253f087849dc575
 SHA512: 8ea7656a976299b38aac366c20ff23dda9df6b77d7e9cf4aadaf090b4c5327129e3439178406fda336626512aa79e65f08d69ceecee8122bbc35f908b112a090
 
+Package: nodejs-lts
+Version: 24.18.0-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/aarch64/nodejs-lts_24.18.0-1_aarch64.deb
+Size: 9745140
+MD5sum: d0b15fb6220537511dfa1695c949c60d
+SHA1: 203be507ebc003ed3b485023f6337a3f25ddd819
+SHA256: 2cf6af99c42288268e0214d6c1ab3e4ffda9fc090ab40342b641aaf14afed6d1
+SHA512: af33d7fc89421f024589913944f632571e406fa0724c9e5a1911fecf3f5c57ffc75d8130c1a82d5a0e720d91f38a941cf41898e40e0a4f0e1fd02ad7c54d5590
+
+Package: nodejs
+Version: 26.4.0-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib, libffi
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/aarch64/nodejs_26.4.0-1_aarch64.deb
+Size: 10340100
+MD5sum: badf2e05517577fe7b848d0b79059430
+SHA1: 19fbf0c3e2f59b76f1f1cf0f80567c41ec538aa4
+SHA256: 81aad0c6b66862f4f97d5812678082a8d431a629bcd4b3ad0d85fdd1604750bf
+SHA512: a523f641e25304fdb7686af3d5367b9ea5e4db38d0ae7a03f4179fee80f53446057762cf257a2d2fc2a7202b15ee8f6088509a10a308736fe40acc93f9135fe1
+
 Package: oniguruma-static
 Version: 6.9.10-1
 Architecture: aarch64
@@ -4017,6 +4092,21 @@ MD5sum: 3213b4202957da428500d2faba139c25
 SHA1: fc9ca65b6dd85236a26f577205a7187b8a4d34b9
 SHA256: aed6ea7efdfcddf31784f7ee73fa673b035fc49a7cd62290bdc830c723215ba5
 SHA512: 5a1ca20bc852fdc8f88d34b6451de6a3818e144b0975f3ea6b847450b1c5eeb7801b49d6a12856a9cb99dd1badf78f27c75669ae9822bc8e4c249089e88fbdd4
+
+Package: openjdk-25-x
+Version: 25.0.4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-25 (= 25.0.4)
+Description: Portion of openjdk-25 requiring X11 functionality
+Filename: pool/main/aarch64/openjdk-25-x_25.0.4_aarch64.deb
+Size: 12824532
+MD5sum: 3679dd9f071a9319c84d9b33bc0fa4ee
+SHA1: d8f701e9a68308845871a54030d6dad4df91d584
+SHA256: ef83cd88d35dd463e5bd056558815b1c13ed35904d692e2b928e27451ea37258
+SHA512: d59bfd882aaa96bf68b21153019048444fc848cb9a760dbe0826a2d4ca973674b420228c7f3c4f7d8e60fd1541b235350a86d27be738c9415f46b7f7aa72df93
 
 Package: openssl-static
 Version: 1:3.6.3
@@ -4482,6 +4572,21 @@ MD5sum: 0a991e36c6240d756b88f710aa413664
 SHA1: 2b2d5680e0440293f21e31d5b73699cc24c199dc
 SHA256: 57871ff85d02144900bda5c3fd368a65823c5a392620eb4c98c88be78593b4ef
 SHA512: c18819ca60cf9cab0b8bff0ecb3c82acb6c6ad5a1d5135537760f766b1e84e0fdcdb6ffe4a18f57ce1d06afbfec4087808fa4cbf7bc20f5319117f39dea65ebb
+
+Package: shellcheck
+Version: 0.11.0-3
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libandroid-posix-semaphore, libandroid-utimes, libffi, libgmp, libiconv
+Description: Shell script analysis tool
+Filename: pool/main/aarch64/shellcheck_0.11.0-3_aarch64.deb
+Size: 2617912
+MD5sum: 48059cd1c9769acfca2b5bc102ac650c
+SHA1: d313ce94ed529c92ed4e0b6590324f2a18cbff88
+SHA256: cf658578256727b835cd1969c5b04a2eddf2ddda6024d25d40c20eb22253d01d
+SHA512: b3e05d1ca6e56a457ddab36eb78b6b0b87e717b9f3cc98c6f01ef1329615b13f1b4b9a22a8716714e33bb3bc8dcbdb4206f9a9f62151554d0fbc1f4eb3c9eb1c
 
 Package: speexdsp-static
 Version: 1.2.1-1
@@ -5082,4 +5187,19 @@ MD5sum: 994b9df2297d46991bfd9f2ab36f600a
 SHA1: 495efc56f74dc9ac19719f41f955b75c33a7c397
 SHA256: b192a4c8c9d0219495c1ad669332f6a5b8a5aad281c35120e698e9a2c0ea0398
 SHA512: 3f7db1706168a9a10672f22c11e46a8f91c95eac4cdcb31a70b567fc14674a816d7fcb64ed4013ec2b6ff7089b2cb5bd2b15bc6dea9932a9c54520ea4c19a530
+
+Package: openjdk-25
+Version: 25.0.4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4/openjdk-25_25.0.4_aarch64.deb
+Size: 67
+MD5sum: 72c9f68815ddfb0d9ca7385d777d8834
+SHA1: 8e9dff70f5e4a9362800f3e0e3f2c4afdee6a75a
+SHA256: 0d7c10fd64896c2da0d18a8123ed8ada8f97fccc9d70da8e0b45f15eab9be94b
+SHA512: fff45cc3d0b00bf6f5491a592907217bd9be0c3eb90eef1d6e90d190df3091ac60004704cd9b6dc2dc25214ab4aaf4e3b541e87e2cba523e7f2cac109a6dea1f
 

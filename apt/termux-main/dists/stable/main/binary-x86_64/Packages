@@ -88,6 +88,36 @@ SHA1: 5da6bde2c7a9f7493d45acef35126536e8597efa
 SHA256: 9408f52526ec75aac112d138d42be5c00e81715df94777690f32249185af1a9c
 SHA512: 88c9277e88789f3d1297da1ca013216fed5461bca1df120e62e67f8ae4f211d066eebddec68b66ecbe10e2efa3a0f888cdd607b3b59978f8295045a2c6854a7e
 
+Package: aosp-libs
+Version: 9.0.0-r76-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: resolv-conf
+Description: bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and termux-docker
+Filename: pool/main/x86_64/aosp-libs_9.0.0-r76-4_x86_64.deb
+Size: 10238040
+MD5sum: 8c292013ea75ba42924227d780f91528
+SHA1: d4b22dd78d010404808ab0ada9aa243d5912dc77
+SHA256: ec103c0c0be2d98099e962c41e5b16a0474ff36fde20f090368d6ca3c6ce563b
+SHA512: d139dfe3925d9904e94bc6c862c69ae317357dcb20d0417262766c55ba8bbaa75167bd3ce7b559947e5504344d66f21697e41e090427300df1520bc7ee5d36ac
+
+Package: aosp-utils
+Version: 9.0.0-r76-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: aosp-libs (= 9.0.0-r76-4)
+Description: AOSP-based mksh, toybox, grep and iputils for termux-docker
+Filename: pool/main/x86_64/aosp-utils_9.0.0-r76-4_x86_64.deb
+Size: 368856
+MD5sum: 25c3f07f16ed9029660993646e89bee4
+SHA1: e849089b2b166feedfdc36ea50da41bf1e384eaa
+SHA256: dc033b8c583dd57a606ba24eed839f5a362ad8a506c196883219d207c92b2600
+SHA512: bdd5042464cdd012fae0a8a301ec5899292cb3ac59a361ab15ebefe215597082aaf28a402f0fdd3c613c6ded59c17d981bffa7634b79f85f14ee37db48dd37b3
+
 Package: apr-static
 Version: 1.7.6-2
 Architecture: x86_64
@@ -3778,6 +3808,21 @@ SHA1: 77f2aa8161734da1d04b8f5805e3e4ab81f664bd
 SHA256: 2a8c70a4ad3a7adf61a1e62d15a205457f4bea53c95b3bcad1b2edeea20c9314
 SHA512: b5d272548923bfcd90b6e6c42a7d3189ad4401590ec55be5c61111db84503c4b4e0e0cd09543858d9509f94be7063ebc4d121d919393e223b64b808f44e73edf
 
+Package: micro
+Version: 2.0.15-2
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Modern and intuitive terminal-based text editor
+Filename: pool/main/x86_64/micro_2.0.15-2_x86_64.deb
+Size: 4426680
+MD5sum: d83e1dbc97cb521804a04382b0b19dcc
+SHA1: 84786814bf208e545ea2b831fca70b99819d4dfa
+SHA256: ade7139aebb92bd37f3b89635f89d94e042b6f87342110ba11ffbf55d23e45ef
+SHA512: fd0d8f1fd8e485e8e6a33df06fc2052170dd47a13ba34dae55ffdf24403b5de6c08af4670c2c00091500359aa5ccf766afd52bfa41eb10c6b1754750c9675135
+
 Package: mlir
 Version: 21.1.8-3
 Architecture: x86_64
@@ -3943,6 +3988,36 @@ SHA1: e24aa3012bf7ce733cd814122813b447fb494065
 SHA256: 688358f5e101611e21bdd47e24c0a98768431291bf3b51428617dfc647fea953
 SHA512: 2f22237a93f9f61d59f52b1b60a1638db4627cf3568c8472d2d77b1dec5e4529d835a9d2080caaf766baa5fb51e5ba0cf64dc4fd47d2d19fbea681e29260977b
 
+Package: nodejs-lts
+Version: 24.18.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/x86_64/nodejs-lts_24.18.0-1_x86_64.deb
+Size: 10164532
+MD5sum: 47483788dfb783f8821459e91d6fad40
+SHA1: 438de9096077a07d59959f935e50758dcbe47597
+SHA256: 70bfa1cf998c6f61c20294536751834cb5eb2a694c9ae0d76ba9039a65aa4ad7
+SHA512: 5325e93f1f35532510261cf4a10ac82acf2d1963b3b6142c9e22f1870bdf9244a6fe53f5dd15138844f85900b56a36370664b297064f4a670e6465f6e7db56eb
+
+Package: nodejs
+Version: 26.4.0-1
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib, libffi
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/x86_64/nodejs_26.4.0-1_x86_64.deb
+Size: 10843408
+MD5sum: f6ac5004e8bed6474f70e8273786f2e1
+SHA1: 24fd7fd66f043bf3da39f0a59089b7ad9bafd549
+SHA256: ca72aebdf8ef9425604092a4546b40f00e6876ac090c8e3d4e504c2a5c4de1f3
+SHA512: 24ce12248d2aae80099cdb602e6433d875cdb8c5cbcf010e493bc3d0bd71696c185b257bb1a4d090fe9cf9fee60b51acd36e5c07143cd5ce9db1d712a653117b
+
 Package: oniguruma-static
 Version: 6.9.10-1
 Architecture: x86_64
@@ -4017,6 +4092,21 @@ MD5sum: baf5c0948658ba0b29d08109f59b6f11
 SHA1: 2beaa23bc7448aa3c697a58ff7f676f88ee8c414
 SHA256: 1db81cb996f524169bd7e6a5d2cfade118ce39b29c1c4d359232b4be3f86c8ce
 SHA512: 0a19439fd7772bc75dcc029823dfd0683eab8a9003846be9e770cf8c7b9d489dd2f610835bc8cef843eb4aeed3ad4fa91505c37dc194b64e1be732c9c59836c4
+
+Package: openjdk-25-x
+Version: 25.0.4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: freetype, giflib, libandroid-shmem, libjpeg-turbo, libpng, libx11, libxext, libxi, libxrender, libxtst, openjdk-25 (= 25.0.4)
+Description: Portion of openjdk-25 requiring X11 functionality
+Filename: pool/main/x86_64/openjdk-25-x_25.0.4_x86_64.deb
+Size: 13032724
+MD5sum: 3e8405031da51f57fa8c84d7d5f93426
+SHA1: 0f6a82dc09d3a5baeb839f6f20744509e841a54c
+SHA256: d3ffb3537534aed43cfdcfbb4dc97dec7026d3d1c36c0070dee2efaf55c869ef
+SHA512: 1e96d1798c11d463bc80ed9d1090c470d48f4e272a9d3722392a4dae32887894648a6bb66b3bda3bda9b0ae54f059b84065d7c45e91fae498c950c713fa13f85
 
 Package: openssl-static
 Version: 1:3.6.3
@@ -4482,6 +4572,21 @@ MD5sum: 375f268d338ccaed3eeea47fdc5f0b40
 SHA1: 02b458b9dea4393cf6b9d86dd25ea496051b0801
 SHA256: 3c856bffe925875e64aeb4f10a19aef91f055cbe48cbee668c9b3bae4907c82a
 SHA512: 02c0fd4b2765928f64be5571219655ded4adf92e801bded2b1a7fef14a7c7d74c3f921b6a3d260181f4440b3711a94dadc66b7751b2c7f89b99d3cede62a35cf
+
+Package: shellcheck
+Version: 0.11.0-3
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libandroid-posix-semaphore, libandroid-utimes, libffi, libgmp, libiconv
+Description: Shell script analysis tool
+Filename: pool/main/x86_64/shellcheck_0.11.0-3_x86_64.deb
+Size: 2664956
+MD5sum: ce46173b5fc42982018e5c18fabcb34c
+SHA1: 811e0a413740d78f3226fab7232b7054fa475377
+SHA256: e503d945a5767f0fad07e51cf3e79fc3bc3716a38ee707348deca88bfc6d1035
+SHA512: 12979ce4db4b98596e2739f273f062653d6d3076d2431e1c9aba78fbe005d9ea136973c9820ab048bb97a210f6530c4108a4aaebd4707fb7655d45ce108d73f1
 
 Package: speexdsp-static
 Version: 1.2.1-1
@@ -5082,4 +5187,19 @@ MD5sum: ca69c33f1a718589ba8759a9a49a2431
 SHA1: 0460570a5eb5732553fa791bc027107168dc0dcd
 SHA256: cc40fd9d17a5d70f8f801230fd46e752c0b2a139c90a55a82df0834d482ec799
 SHA512: 88f8fdf6dc7604ed03ecc7dc6d9e60a7bd482687641f609bc455b9b59c141a6818878e7dd7ec1329731392f436112bd0d2545ac83c93b0043fd42a0fec11012e
+
+Package: openjdk-25
+Version: 25.0.4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4_x86/openjdk-25_25.0.4_x86_64.deb
+Size: 66
+MD5sum: a8da4eb3839c17879f36012fdac50b53
+SHA1: 854a06339e1be6a42780701798b991f9203a0152
+SHA256: d66a93a9e075e9d874e874ef6bcb049a31733e784e42bfae3e97db07a7a4e44f
+SHA512: c105010ab6b93fe14d9e3afee4924fac48ff9ec7cffc0e27c4fea9b4698526daf1bd6a6cfccff800cd0ea6eb6e79549caf32bfa1a912bb78eae6d6ae650e069e
 

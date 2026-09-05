@@ -163,6 +163,21 @@ SHA1: d3d4dc86f4552dba3955f8707328b1e0cb3db045
 SHA256: 7d360db51e345fa666daa2febe8ae2542cf2276f63806f8fdc215335c78a20f0
 SHA512: 7a917c6c8e0016d0e3e096b1f1f76657ee0b20610cb6c3040a4919483270cde3d66b588c64ea987fea09d14c48de640540a75924407f1927333dddcff8e37081
 
+Package: npm
+Version: 11.19.1
+Architecture: all
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: nodejs | nodejs-lts
+Description: The package manager for JavaScript
+Filename: pool/main/all/npm_11.19.1_all.deb
+Size: 2032144
+MD5sum: f7ea71405758e72ae04163f777fc5d73
+SHA1: 8520d8d5bc3e869cf5c07aab929767a08798719c
+SHA256: 125b2996753a0c5622254b410c19bbfbb63ac4f87215ad6803ad60da967c3efe
+SHA512: d3d994abe21424c2d8a5a9bf2371aadd36feb0656470650fdc53fc765c36440ac9b16988a38a8d2f07b1214140c048ecae4d73e9234241ab31d190ffb05356f6
+
 Package: openjdk-17-source
 Version: 17.0.20
 Architecture: all
@@ -192,6 +207,21 @@ MD5sum: 6bb9a4ba4d9bbb9a7a59679494a68648
 SHA1: 4b3a9d3f1f475ff24204508c841aef669058ce73
 SHA256: 40fe29d7e44a89e4fb019cd39b2582e7434776fbaad1625e0e92b7296b2e1c67
 SHA512: 5a5d7f888a881cbe94869952bf28a4cb9ec3cc94dc9b1864c3c7cce812705e5a5658a104dd424ecf78b9cc07b883fc5b9925f65045709a00e495084d9647e488
+
+Package: openjdk-25-source
+Version: 25.0.4
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Source files for openjdk-25
+Filename: pool/main/all/openjdk-25-source_25.0.4_all.deb
+Size: 48643740
+MD5sum: 201841bf9c609a4da6875594aad67d5c
+SHA1: 471e041e111d05506af8deb9499dbbdfefadc62d
+SHA256: 673f49febab820cf3f77a37e6262202e5e0cb6d70c0157102edbdcf0ae346846
+SHA512: cfcf196ca54c3a7a8f259e363c3b7f3616c87d34fa913ba9f15aa319c29d430ef9aad23150e115a9cadfe2f0eca96c47c0e20897c0c6693ae3deb34fcf094a54
 
 Package: python-ensurepip-wheels
 Version: 3.14.6-1

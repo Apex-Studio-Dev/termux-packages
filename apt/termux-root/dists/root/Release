@@ -2,7 +2,7 @@ Origin: ApexStudio
 Label: ApexStudio
 Suite: root
 Codename: root
-Date: Fri, 04 Sep 2026 20:27:48 UTC
+Date: Fri, 04 Sep 2026 21:49:01 UTC
 Architectures: aarch64 arm i686 x86_64 all
 Components: main
 Description: ApexStudio apt repository
@@ -13,15 +13,15 @@ MD5Sum:
  4a4dd3598707603b3f76a2378a4504aa               20 Contents-i686.gz
  4a4dd3598707603b3f76a2378a4504aa               20 Contents-x86_64.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-aarch64/Packages
- 1d77d50f1d1441cdc3519eaf734650d2               29 main/binary-aarch64/Packages.gz
+ 38eb51bb43aca599cd182b240b96cce7               29 main/binary-aarch64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-all/Packages
- 1d77d50f1d1441cdc3519eaf734650d2               29 main/binary-all/Packages.gz
+ 3b9108e52577412d35f43eb2f0551f44               29 main/binary-all/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-arm/Packages
- 1d77d50f1d1441cdc3519eaf734650d2               29 main/binary-arm/Packages.gz
+ 3b9108e52577412d35f43eb2f0551f44               29 main/binary-arm/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-i686/Packages
- 1d77d50f1d1441cdc3519eaf734650d2               29 main/binary-i686/Packages.gz
+ 3b9108e52577412d35f43eb2f0551f44               29 main/binary-i686/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 main/binary-x86_64/Packages
- 1d77d50f1d1441cdc3519eaf734650d2               29 main/binary-x86_64/Packages.gz
+ 3b9108e52577412d35f43eb2f0551f44               29 main/binary-x86_64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 stable/binary-aarch64/Packages
  f49239304efe6b9e9a515f49f93f1684               29 stable/binary-aarch64/Packages.gz
  d41d8cd98f00b204e9800998ecf8427e                0 stable/binary-all/Packages
@@ -38,15 +38,15 @@ SHA1:
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 Contents-i686.gz
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 Contents-x86_64.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-aarch64/Packages
- b08d3ee8d2c79170513e5ceb823b3e5cf50e6164               29 main/binary-aarch64/Packages.gz
+ 0f1d0cc2d2cf390485db95ba66283d5e057974d8               29 main/binary-aarch64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-all/Packages
- b08d3ee8d2c79170513e5ceb823b3e5cf50e6164               29 main/binary-all/Packages.gz
+ 1c3d0f5c7fe6ba92847b2a31203bbbbbd5fcf693               29 main/binary-all/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-arm/Packages
- b08d3ee8d2c79170513e5ceb823b3e5cf50e6164               29 main/binary-arm/Packages.gz
+ 1c3d0f5c7fe6ba92847b2a31203bbbbbd5fcf693               29 main/binary-arm/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-i686/Packages
- b08d3ee8d2c79170513e5ceb823b3e5cf50e6164               29 main/binary-i686/Packages.gz
+ 1c3d0f5c7fe6ba92847b2a31203bbbbbd5fcf693               29 main/binary-i686/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/binary-x86_64/Packages
- b08d3ee8d2c79170513e5ceb823b3e5cf50e6164               29 main/binary-x86_64/Packages.gz
+ 1c3d0f5c7fe6ba92847b2a31203bbbbbd5fcf693               29 main/binary-x86_64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 stable/binary-aarch64/Packages
  4386e24979e06b40aab7e890561948b8a107241b               29 stable/binary-aarch64/Packages.gz
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 stable/binary-all/Packages
@@ -63,15 +63,15 @@ SHA256:
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 Contents-i686.gz
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 Contents-x86_64.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-aarch64/Packages
- b44cea494dfa605ecda6c3f438b6d0a741586ef6ef856e770a040397ae5fa4ba               29 main/binary-aarch64/Packages.gz
+ 117450956a72ad7db68e3c3dbbf04711299927b6f0040d8bd51d78461884513d               29 main/binary-aarch64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-all/Packages
- b44cea494dfa605ecda6c3f438b6d0a741586ef6ef856e770a040397ae5fa4ba               29 main/binary-all/Packages.gz
+ 6ff8a83f684fae2a4f56893178d0d7d2d8b14a8382930bc130d5d8225881caab               29 main/binary-all/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-arm/Packages
- b44cea494dfa605ecda6c3f438b6d0a741586ef6ef856e770a040397ae5fa4ba               29 main/binary-arm/Packages.gz
+ 6ff8a83f684fae2a4f56893178d0d7d2d8b14a8382930bc130d5d8225881caab               29 main/binary-arm/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-i686/Packages
- b44cea494dfa605ecda6c3f438b6d0a741586ef6ef856e770a040397ae5fa4ba               29 main/binary-i686/Packages.gz
+ 6ff8a83f684fae2a4f56893178d0d7d2d8b14a8382930bc130d5d8225881caab               29 main/binary-i686/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/binary-x86_64/Packages
- b44cea494dfa605ecda6c3f438b6d0a741586ef6ef856e770a040397ae5fa4ba               29 main/binary-x86_64/Packages.gz
+ 6ff8a83f684fae2a4f56893178d0d7d2d8b14a8382930bc130d5d8225881caab               29 main/binary-x86_64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 stable/binary-aarch64/Packages
  83d7fb17cdc51847e95b243ab610245d8d539821c1d4556eb02f77a5fd6c0864               29 stable/binary-aarch64/Packages.gz
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 stable/binary-all/Packages

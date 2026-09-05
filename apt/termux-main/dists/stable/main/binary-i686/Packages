@@ -88,6 +88,36 @@ SHA1: 922a123cac0bbd34e85d6932d3d2c1b0eb4dfd9c
 SHA256: 0d40797c207a66f95358e8627b0db690d9a98de1f8e99e08d4f285ca6be171b3
 SHA512: 4b4bd949856b4f78c19c38b31850f3f48d1bfa7765341ee48fc65f84500a530e641b2ef2bcd828ed3187f32ff4689138f86cf4279c3fbdde2478f886b0336379
 
+Package: aosp-libs
+Version: 9.0.0-r76-4
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: resolv-conf
+Description: bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and termux-docker
+Filename: pool/main/i686/aosp-libs_9.0.0-r76-4_i686.deb
+Size: 8364004
+MD5sum: daf9cc18b2e750d94a3cec274f409796
+SHA1: 3c4992e341f11192a956efc3683af73d679224b2
+SHA256: 2f5c3d1b8e681695dd623ca992ac031fb0a1e78c9656f2d425fd26c66d57d6bf
+SHA512: 68a03d274d679935422e59251fc928088a98de7af67e79997fa78aebdb90b0ef901babe1bd87cd86d25858b26c9402d2c0bd9e98936887d5ec7ee397defbc807
+
+Package: aosp-utils
+Version: 9.0.0-r76-4
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: aosp-libs (= 9.0.0-r76-4)
+Description: AOSP-based mksh, toybox, grep and iputils for termux-docker
+Filename: pool/main/i686/aosp-utils_9.0.0-r76-4_i686.deb
+Size: 364716
+MD5sum: 6d0a505efa250224d106acd9443ed876
+SHA1: 3e0d5259150b46bb9ee03aa93f282b2bf3b70a40
+SHA256: 1ab487d7ce5e0902165280da70ce448ebc36344f43776a14a7584c262dbb2f3d
+SHA512: 6e37915467fe64f37fc5d76d060a6b99e8c639663b8d2c0c34cae4ef3dfa65dc99e68f64b25503d7f7ae194e9ed1cb1df18d7a5d952219c105a1926eb6eefe23
+
 Package: apr-static
 Version: 1.7.6-2
 Architecture: i686
@@ -3778,6 +3808,21 @@ SHA1: 82f23af2f2a9f5fa206c3aadbd811ff956664d4c
 SHA256: d76b6fdca2c7ccf2b6988badaabb01859b4d251cfc3e9f285dfc280472ee8b77
 SHA512: adb62f57fcc12733aca7acec3790f7b5faac0c43927566f372bfb37d3f822a0ca34a3cb3a8c1fcfea69e84c59e6330ef045b52d1ff3202cbedcfaa9b8e6945d6
 
+Package: micro
+Version: 2.0.15-2
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: 
+Description: Modern and intuitive terminal-based text editor
+Filename: pool/main/i686/micro_2.0.15-2_i686.deb
+Size: 4623348
+MD5sum: b16441021ad044bf0d232d9590cca2cf
+SHA1: 36cedb86bc4247d676699b6c3c4f6bfca8955b4c
+SHA256: adf8d329e0e3b9407697b32b5c9f00018f331c8d71c1f62e2cce16669b79dbd5
+SHA512: ccf5cc71296527c8817a6a120e81fe473850d0e5be070f9e6ff9ea71f1fef9ad4505c03941387e1f4f13b99a158896730ab5ec0ce8158a993f883c01d7432cd8
+
 Package: mlir
 Version: 21.1.8-3
 Architecture: i686
@@ -3942,6 +3987,36 @@ MD5sum: 1ac7c87841bea47d3f0cd18301284b1d
 SHA1: 6968db93ffa191619b38cd3180fe08caf4d9dd4b
 SHA256: 98e39b115dea4cdeebcd701b9aa4b465add9551bfe78f5adef18e08b5c80a67b
 SHA512: 1f528a3ef2de652241be61647a65a0519b18ab47d47a383f9593968d73809884ff1ff243b037e3a4700f3b99759f793701770959bd2d8276b1a44c2a131cdd86
+
+Package: nodejs-lts
+Version: 24.18.0-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/i686/nodejs-lts_24.18.0-1_i686.deb
+Size: 11139920
+MD5sum: ed6da8ccec677aa4ef9364d014c4d38d
+SHA1: bce2333ac3ad40e5514b63b4605bdb8aaa312965
+SHA256: 5226b75378de16df7baa6190799fa17b42362ec5c89639de3c0f1e87b09a477a
+SHA512: d792a5c5303c1ae85cbcf06c2016958c320d2bc605eed36125b03c0751170a7fc63282dd251b51d42ad14d9765a013a62aaf2edcb908a09bb234e065102ad0ec
+
+Package: nodejs
+Version: 26.4.0-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib, libffi
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/i686/nodejs_26.4.0-1_i686.deb
+Size: 11887736
+MD5sum: 268999851174967c98f5158348fd812e
+SHA1: 72664894efb1d1f8333ce376be3a8d5e8dc9b34d
+SHA256: b2780902ca5bcc72b39ff8d8dd6aba033b2943ea1eac79b3c73884fed8f92317
+SHA512: 703b7574879a0be28de075b95978a8983478faa78a7038a2a44cdc2eec54c7f39ffdf6d7f24eaf07fc5958d26b26fac1314876538bad92533fd9261cc84d9af1
 
 Package: oniguruma-static
 Version: 6.9.10-1
@@ -4497,6 +4572,21 @@ MD5sum: 071b565798a49433d6e6f5569ada1201
 SHA1: 7e71f3833c0922824c5ce4274e06feb76e8ecb77
 SHA256: 2db078d2ab284fe293fdb59f542d6d3ba019ba303e7d2ac950dd47bdce8d0668
 SHA512: bcda544d1db1fc9605d2e8b8001fd0919444dbd563da2b6aa52547d82f838149bf2d32dfa43c78a3d5d748960698717c236d637cb4747d04c9d69c2aeadb89e2
+
+Package: shellcheck
+Version: 0.11.0-3
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: Joshua Kahn <tom@termux.dev>
+Depends: libandroid-posix-semaphore, libandroid-utimes, libffi, libgmp, libiconv
+Description: Shell script analysis tool
+Filename: pool/main/i686/shellcheck_0.11.0-3_i686.deb
+Size: 2919160
+MD5sum: 3ff2b546c01a5493e9f7523a0b8ce295
+SHA1: df0ec9725d2b25669bec212ad387822fb775772a
+SHA256: 3da13cfe5dec10eee4fa3f3ba1f7dc49be4ac3593849bb79e50933fd63cfd68e
+SHA512: e901777434da3170211cfdf78f5ab5fc46d7fa10d5f129a57cf4ea29afe18bcabf35158a704458890cb4453819eb7fe6d3e416a6ad83a1de3a8ae99d376ba6e8
 
 Package: speexdsp-static
 Version: 1.2.1-1
