@@ -98,62 +98,66 @@ upload_large_deb() {
 }
 
 for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.json"); do
+	# Read repo metadata (name/dist/component) from repo.json.
 	name=$(jq --raw-output ".[\"$repo\"].name" "$REPO_ROOT/repo.json")
 	dist=$(jq --raw-output ".[\"$repo\"].distribution" "$REPO_ROOT/repo.json")
 	comp=$(jq --raw-output ".[\"$repo\"].component" "$REPO_ROOT/repo.json")
 	builtlist="$DEBS_DIR/built_${name}_packages.txt"
 
-	if [[ ! -f "$builtlist" ]]; then
-		# No newly built packages for this repo this run. Still regenerate its
-		# metadata from the existing pool so dists/<dist>/ (incl. the
-		# Contents-<arch>.gz files needed by command-not-found) stays present
-		# and freshly signed for every repo in repo.json.
-		echo "No new debs for $repo ($name); regenerating metadata from existing pool"
-		# --debs expects a flat dir of debs; stage every deb in the pool.
-		merge_dir="$(mktemp -d)"
-		find "$PAGES_DIR/apt/$name/pool" -name '*.deb' -type f -exec ln -sf {} "$merge_dir/" \; 2>/dev/null || true
-		gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist")
-		if [[ -n "$GPG_KEY" ]]; then
-			gen_args+=(--gpg-key "$GPG_KEY")
-		fi
-		bash "$gen_repo_files" "${gen_args[@]}"
-		rm -rf "$merge_dir"
-		continue
-	fi
-
-	# Stage only this repo's freshly built debs. gen-repo-files.sh copies them
-	# into the pool (creating pool/main/<arch>), then regenerates Packages from
-	# the WHOLE pool, so existing published debs merge with the new ones.
+	# Fresh staging dirs: merge_dir for pool debs, extern_dir for GitHub Release assets.
 	merge_dir="$PAGES_DIR/.merge-${name}"
 	extern_dir="$PAGES_DIR/.extern-${name}"
+	rm -rf "$merge_dir" "$extern_dir"
 	mkdir -p "$merge_dir" "$extern_dir"
 	external_url="https://github.com/$GITHUB_REPO/releases/download"
 	externals_present=0
-	# New debs for this repo.
-	while IFS= read -r pkg; do
-		[[ -n "$pkg" ]] || continue
-		while IFS= read -r -d '' deb; do
-			size=$(stat -c %s "$deb")
-			if [[ -n "$GITHUB_REPO" && "$size" -ge "$LARGE_THRESHOLD" ]]; then
-				if upload_large_deb "$deb" >/dev/null; then
-					ln -sf "$deb" "$extern_dir/"
-					externals_present=1
+
+	# Step 1: retain all debs already in the published pool.
+	find "$PAGES_DIR/apt/$name/pool" -name '*.deb' -type f -exec ln -sf {} "$merge_dir/" \; 2>/dev/null || true
+
+	# Step 2: stage debs from this run's build manifests.
+	if [[ -f "$builtlist" ]]; then
+		while IFS= read -r pkg; do
+			[[ -n "$pkg" ]] || continue
+			while IFS= read -r -d '' deb; do
+				size=$(stat -c %s "$deb")
+				# Offload oversized binaries to GitHub Release assets to mitigate Git repository bloat
+				if [[ -n "$GITHUB_REPO" && "$size" -ge "$LARGE_THRESHOLD" ]]; then
+					if upload_large_deb "$deb" >/dev/null; then
+						ln -sf "$deb" "$extern_dir/"
+						externals_present=1
+					else
+						echo "Falling back: symlinking '$deb' into pool instead of a release" >&2
+						ln -sf "$deb" "$merge_dir/"
+					fi
 				else
-					echo "Falling back: symlinking '$deb' into pool instead of a release" >&2
 					ln -sf "$deb" "$merge_dir/"
 				fi
-			else
-				ln -sf "$deb" "$merge_dir/"
-			fi
-		done < <(find "$DEBS_DIR" \( -name "${pkg}_*.deb" -o -name "${pkg}-static_*.deb" \) -print0)
-	done < "$builtlist"
+			done < <(find "$DEBS_DIR" \( -name "${pkg}_*.deb" -o -name "${pkg}-static_*.deb" \) -print0)
+		done < "$builtlist"
+	fi
 
+	# Step 3: re-fetch previously released large debs so they are not evicted from metadata.
+	if [[ -n "$GITHUB_REPO" && -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
+		echo "Fetching previously published large debs from GitHub Releases..."
+		while read -r tag; do
+			[[ -n "$tag" ]] || continue
+			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$extern_dir" --pattern '*.deb' 2>/dev/null || true
+		done < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
+
+		if find "$extern_dir" -name '*.deb' | grep -q .; then
+			externals_present=1
+		fi
+	fi
+
+	# Step 4: skip if there is nothing to publish.
 	if ! find "$merge_dir" -name '*.deb' | grep -q . && (( ! externals_present )); then
 		echo "Skip $repo ($name): no debs to publish"
 		rm -rf "$merge_dir" "$extern_dir"
 		continue
 	fi
 
+	# Step 5: generate apt metadata (Packages/Release/InRelease) via gen-repo-files.sh.
 	echo "Assembling $repo ($name) distribution '$dist'..."
 	gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist")
 	if [[ -n "$GPG_KEY" ]]; then
