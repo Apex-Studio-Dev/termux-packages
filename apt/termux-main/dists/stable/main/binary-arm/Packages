@@ -1117,11 +1117,11 @@ Maintainer: @termux
 Depends: libiconv
 Description: Prints a friendly greeting
 Filename: pool/main/arm/hello_2.12.3-2_arm.deb
-Size: 29408
-MD5sum: 310a13a493ba2cc0fb63c18e9b59be02
-SHA1: 5d0468feb53a274ceac72bbf601a7ee7853ca991
-SHA256: 373139a8d3228dee7aadacac0ddebe91796264184c1aa3bc800efca0fece6fb7
-SHA512: 4fe2e3b57b77c8e2d2a5e5c657360358060f64c654ad2b6bf9178518507f07ad60ff55aed90eb6ded4dd4bf0f3599c5c83014f6c53e9bdcf46d6ab7f6d6cfe2f
+Size: 29412
+MD5sum: d78fa9d2bd4ebc745311afe6d8fc633e
+SHA1: f507a00e32128fe95a2661e8e6d17c1ed9797b3e
+SHA256: 0b65cb873f1cee37002e19dc655cd0d567ddb56a65a218d794a7229ac649ff89
+SHA512: 04e1fb1a7abd9cf9625f6f9d544011bbfc999b7096dda1bc48d40f912f463d584807f1976dc52bc32385b0e54abc22b0c7f1027b346fe7134b839392be491558
 
 Package: iconv
 Version: 1.18-1

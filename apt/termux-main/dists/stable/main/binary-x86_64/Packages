@@ -1117,11 +1117,11 @@ Maintainer: @termux
 Depends: libiconv
 Description: Prints a friendly greeting
 Filename: pool/main/x86_64/hello_2.12.3-2_x86_64.deb
-Size: 31992
-MD5sum: 92e557c31080683fbdc264f61b5e1f8c
-SHA1: fefc6a4903c0cd8f80bccbf4632d1daf5bacafa4
-SHA256: 87864cc53300f5a3702d8d2f0db78f14a7f6d45684bbbd8ab0a590ce05cc65d7
-SHA512: d79ce653e26352d801cdfff93356f20829e2f985ee2da942d33295ef3a7342e66d0f34a2feaa41a6b42da60edfc9b3ff3e440f21e3bd1801dfd7cb4101530c2e
+Size: 31984
+MD5sum: af58dd723e139fa8a17e4cc01118033c
+SHA1: af550cfe17f3760e4a3c24c79b3afef0d8497ecb
+SHA256: 608c85c6a776f9f40f9bec63ba01c20eef8f4519786c9d080ed47b44ed93fd30
+SHA512: 7276b3fa9e276ad2820ec6e33d692d15753fbf1792fe0fda2008c4f7adf10cd5ee9e9a769a7ae06663d001878132a02ce0faa1454ab15c5cc65456f3d9f4a84f
 
 Package: iconv
 Version: 1.18-1
