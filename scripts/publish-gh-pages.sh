@@ -145,13 +145,13 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$extern_dir" --pattern '*.deb' 2>/dev/null || true
 		done < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
 
-		if find "$extern_dir" -name '*.deb' | grep -q .; then
+		if find "$extern_dir" -name '*.deb' -print -quit | grep -q .; then
 			externals_present=1
 		fi
 	fi
 
 	# Step 4: skip if there is nothing to publish.
-	if ! find "$merge_dir" -name '*.deb' | grep -q . && (( ! externals_present )); then
+	if ! find "$merge_dir" -name '*.deb' -print -quit | grep -q . && (( ! externals_present )); then
 		echo "Skip $repo ($name): no debs to publish"
 		rm -rf "$merge_dir" "$extern_dir"
 		continue

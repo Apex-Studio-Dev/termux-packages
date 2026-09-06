@@ -110,14 +110,18 @@ else
 fi
 
 copy_pool() {
-	local f arch
+	local f arch dest
 	for f in "${DEB_FILES[@]}"; do
 		# Derive arch from the deb control file (Termux uses arch names like
 		# x86_64 which contain '_', so filename parsing is unreliable).
 		arch="$(dpkg-deb --field "$f" Architecture 2>/dev/null || true)"
 		[[ -n "$arch" && " ${ARCHES[*]} " == *" $arch "* ]] || arch="all"
+		dest="$APT_ROOT/pool/$COMPONENT/$arch/$(basename "$f")"
+		# The caller may stage debs already in the pool (as symlinks pointing at
+		# the pool itself); copying such a deb onto itself is a no-op.
+		[[ "$(realpath -m "$f")" == "$(realpath -m "$dest")" ]] && continue
 		mkdir -p "$APT_ROOT/pool/$COMPONENT/$arch"
-		cp -f "$f" "$APT_ROOT/pool/$COMPONENT/$arch/"
+		cp -f "$f" "$dest"
 	done
 }
 
