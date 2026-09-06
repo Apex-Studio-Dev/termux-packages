@@ -184,7 +184,7 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 
 	# Step 5: generate apt metadata (Packages/Release/InRelease) via gen-repo-files.sh.
 	echo "Assembling $repo ($name) distribution '$dist'..."
-	gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist")
+	gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist" --component "$comp")
 	if [[ -n "$GPG_KEY" ]]; then
 		gen_args+=(--gpg-key "$GPG_KEY")
 	fi
