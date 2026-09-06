@@ -3,14 +3,15 @@
 ## gen-repo-files.sh - generate an APT repository (dists/Packages/Release/InRelease)
 ##                    from a directory of .deb files, using GPG signing.
 ##
-## Mirrors the output that Termux's aptly server produces, so that a forked
-## termux-packages repo can host its own apt repos over static hosting
-## (e.g. GitHub Pages) without needing an aptly server.
+## Generates the dists tree (Packages/Contents indexes) and produces
+## Release/InRelease with the standard Debian tooling (apt-ftparchive release
+## + gpg), so a forked termux-packages repo can host its own apt repos over
+## static hosting (e.g. GitHub Pages) without needing an aptly server.
 ##
 ## Layout produced (under <output>):
 ##   dists/<dist>/<comp>/binary-<arch>/Packages[.gz]
-##   dists/<dist>/Contents-<arch>.gz   (file -> package map; used by
-##                                     command-not-found's generate-db.js)
+##   dists/<dist>/<comp>/Contents-<arch>.gz   (file -> package map; used by
+##                                            command-not-found's generate-db.js)
 ##   dists/<dist>/Release
 ##   dists/<dist>/Release.gpg   (detached signature)
 ##   dists/<dist>/InRelease     (clearsigned Release)
@@ -71,6 +72,10 @@ done
 [[ -d "$DEBS_DIR" ]] || { echo "Error: debs dir '$DEBS_DIR' does not exist" >&2; exit 1; }
 
 APT_ROOT="$OUT_DIR"
+if ! command -v apt-ftparchive >/dev/null 2>&1; then
+	echo "Error: apt-ftparchive not found in PATH (install apt-utils / the apt-ftparchive package)" >&2
+	exit 1
+fi
 HAS_GPG=0
 if [[ -n "$GPG_KEY" ]]; then
 	if command -v gpg >/dev/null 2>&1; then
@@ -170,17 +175,19 @@ emit_stanza() {
 }
 
 gen_contents() {
-	# Generate dists/<SUITE>/Contents-<arch>.gz for each real architecture:
-	# one "path package" line per file shipped by every package in the pool
-	# (paths relative to /, e.g. data/data/com.termux/files/usr/bin/foo).
-	# command-not-found builds its command database from these files, and its
-	# generate-db.js fetches them from dists/<dist>/Contents-<arch>.gz (no
-	# component segment). The "all" arch is skipped: generate-db.js only ever
-	# requests the four real architectures (TERMUX_ARCH).
+	# Generate dists/<SUITE>/<COMPONENT>/Contents-<arch>.gz for each real
+	# architecture: one "path package" line per file shipped by every package
+	# in the pool (paths relative to /, e.g.
+	# data/data/com.termux/files/usr/bin/foo). command-not-found builds its
+	# command database from these files; Contents lives under the component
+	# dir (as in Debian / the working aurastudio reference repo) and is
+	# collected by apt-ftparchive release. The "all" arch is skipped:
+	# generate-db.js only ever requests the four real architectures
+	# (TERMUX_ARCH).
 	local arch deb pkg_name tmpf
 	for arch in "${ARCHES[@]}"; do
 		[[ "$arch" == "all" ]] && continue
-		local contents_file="$APT_ROOT/dists/$SUITE/Contents-$arch"
+		local contents_file="$APT_ROOT/dists/$SUITE/$COMPONENT/Contents-$arch"
 		tmpf="$(mktemp)"
 		: > "$tmpf"
 		for deb in "$APT_ROOT"/pool/"$COMPONENT"/"$arch"/*.deb; do
@@ -205,36 +212,26 @@ gen_contents() {
 }
 
 gen_release_and_sign() {
-	local rel_file="$APT_ROOT/dists/$SUITE/Release"
-	gen_release_and_sign_hashes() {
-		local algo="$1" cmd="$2" f
-		echo "$algo:"
-		for f in $(find "$APT_ROOT/dists/$SUITE" -type f \( -name 'Packages*' -o -name 'Contents*' \)); do
-			printf ' %s %16s %s\n' \
-				"$($cmd "$f" | cut -d' ' -f1)" \
-				"$(stat -c %s "$f")" \
-				"${f#"$APT_ROOT"/dists/$SUITE/}"
-		done | sort -k3
-	}
-	{
-		echo "Origin: ApexStudio"
-		echo "Label: ApexStudio"
-		echo "Suite: $SUITE"
-		echo "Codename: $SUITE"
-		echo "Date: $(date -u '+%a, %d %b %Y %H:%M:%S UTC')"
-		echo "Architectures: ${ARCHES[*]}"
-		echo "Components: $COMPONENT"
-		echo "Description: ApexStudio apt repository"
-		echo
-		gen_release_and_sign_hashes MD5Sum md5sum
-		gen_release_and_sign_hashes SHA1 sha1sum
-		gen_release_and_sign_hashes SHA256 sha256sum
-		gen_release_and_sign_hashes SHA512 sha512sum
-	} > "$rel_file"
+	local rel_dir="$APT_ROOT/dists/$SUITE"
+	local rel_file="$rel_dir/Release"
+	# Use the standard Debian tooling: apt-ftparchive scans the dists tree and
+	# writes MD5Sum/SHA1/SHA256/SHA512 sections (plus a self "Release" entry),
+	# which apt 2.8+ parses reliably. The hand-written hasher previously
+	# produced an InRelease that this apt rejected with "No Hash entry".
+	local opts=(
+		-o "APT::FTPArchive::Release::Origin=ApexStudio"
+		-o "APT::FTPArchive::Release::Label=ApexStudio"
+		-o "APT::FTPArchive::Release::Suite=$SUITE"
+		-o "APT::FTPArchive::Release::Codename=$SUITE"
+		-o "APT::FTPArchive::Release::Components=$COMPONENT"
+		-o "APT::FTPArchive::Release::Architectures=${ARCHES[*]}"
+		-o "APT::FTPArchive::Release::Description=ApexStudio apt repository"
+	)
+	apt-ftparchive release "${opts[@]}" "$rel_dir" > "$rel_file"
 
 	if (( HAS_GPG )); then
 		gpg --batch --yes --armor --detach-sign -o "$rel_file.gpg" "$rel_file"
-		gpg --batch --yes --armor --clearsign -o "$APT_ROOT/dists/$SUITE/InRelease" "$rel_file"
+		gpg --batch --yes --armor --clearsign -o "$rel_dir/InRelease" "$rel_file"
 		echo "Signed repository with key: $GPG_KEY"
 	else
 		echo "Warning: repository NOT signed (--gpg-key missing)"
