@@ -226,6 +226,7 @@ gen_release_and_sign() {
 		gen_release_and_sign_hashes MD5Sum md5sum
 		gen_release_and_sign_hashes SHA1 sha1sum
 		gen_release_and_sign_hashes SHA256 sha256sum
+		gen_release_and_sign_hashes SHA512 sha512sum
 	} > "$rel_file"
 
 	if (( HAS_GPG )); then
