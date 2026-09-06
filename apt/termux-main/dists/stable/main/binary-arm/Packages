@@ -4543,6 +4543,36 @@ SHA1: d49965ee2694878e6216099da1bed4ec6d047dbd
 SHA256: 1f2f1a4a3f224c6a12c8f6c3b5df61dec9f9c75d6bd02e7d21ae74b624df9fd7
 SHA512: b0aad95fcf86a58bf9ab4abd3efa30f9e1c2e5b296bfa4adc3e1cc0ea77d9619e3fb046b297880267703e943287d3467dd7873ced5f831ba54d031bd8029b699
 
+Package: ripgrep-all
+Version: 1:0.10.10-1
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fzf, ripgrep, xz-utils
+Description: Search tool able to locate in PDFs, E-Books, zip, tar.gz, etc
+Filename: pool/main/arm/ripgrep-all_1:0.10.10-1_arm.deb
+Size: 2270116
+MD5sum: 14642ac904a06929686c9cdb2ea6d1f7
+SHA1: 2f8db84455704414d69a9c4d02879f7ec4c5315d
+SHA256: 844ee894a9b9d80a24f88e7c7968f499594cd516458fd686794444b5721ed634
+SHA512: 6cb2f371d113e3d6a64045ce22b6c1e631fd27b14d4a33a684017e15b8bf32b36e056cce0eb3c5cae76a25e8955551c10d2305d3a0b542eabefaf7efe42129ae
+
+Package: ripgrep
+Version: 15.2.0
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pcre2
+Description: Search tool like grep and The Silver Searcher
+Filename: pool/main/arm/ripgrep_15.2.0_arm.deb
+Size: 1200236
+MD5sum: 23fd0d3cbf13168ef812d1c60045ebeb
+SHA1: f6c5c8a44b6b19aa25552cad5fc92d0099162ca1
+SHA256: d765f10382a71578c2774d0445eff9bb35d4ee11c6ddc7af5786f22eb1c02b10
+SHA512: 6f8392b5528f5bb86e8a08d6b49f28a85672eeea7b49acc4ca72f391b9dcbdb7cfb7c0ee62278cb839c5bc900330d059da5224ce38dfc65775ccb329d321c63e
+
 Package: scdaemon
 Version: 2.5.17
 Architecture: arm
@@ -5247,4 +5277,19 @@ MD5sum: 22bf64834d1c37c96ebd7e63f5fead15
 SHA1: 70c21317f125e55efcccb99997d09a2fd8f7e559
 SHA256: de343d8e9baccee66517dc61ae7ee7b4b0d1e7331f3e2ab7cba43ebec74575d6
 SHA512: 859fdf465c5f69b12c14567664ea3824bbc1f71648e57a042cca8f1dee82173d601cdd3353f81f965ed39aca3340cd67aa242063a3ceb16b482ee27632902319
+
+Package: openjdk-25
+Version: 25.0.4
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4/openjdk-25_25.0.4_arm.deb
+Size: 111088268
+MD5sum: d401ce80c42836ffcf655210fec2638f
+SHA1: b916c0a5760e97c216260dd5653ac19ecd080d85
+SHA256: 529307b83d72499aa2ae786682a251ec59bbfd8398b73ea3bd68923564d20263
+SHA512: 5f809270bcc18e375693be052341e5da8088c6c904eb3cc3e3aeda18818d1ba741c9841a9f5a4ae0d89d1fc5cb93a6e2ba75cea7a738e444724b4eac7d2aa48c
 

@@ -4528,6 +4528,36 @@ SHA1: 22c8a808e77e5106cb52b8876d4fb55d7ff332e2
 SHA256: 834f936f00f8eaf7c97598bd891a28306b2774a3efaa0c326a89e708141a0aa2
 SHA512: f3c5f79bbf991f1ed34bec6ea956aa7dbda1ba2d1c711f92a99f4bc8cd539cf4a81d2507fcca5d63ce0a32cc4fb19841ac55cee19c957d604ff8b9ceb4c674c5
 
+Package: ripgrep-all
+Version: 1:0.10.10-1
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fzf, ripgrep, xz-utils
+Description: Search tool able to locate in PDFs, E-Books, zip, tar.gz, etc
+Filename: pool/main/i686/ripgrep-all_1:0.10.10-1_i686.deb
+Size: 3935020
+MD5sum: 8a6691dfb9a43e1fee53908949a8c11b
+SHA1: 13963abe8d42c8382507594142a5392a21b8570a
+SHA256: e69d8e9b008a2f6d57a0e822f81d6b21db307b9d89f2c22aa16abfef7127e47a
+SHA512: d0d1993ea142ca3fac351f1bda61d59986a73de5dc76e755c1b43e555d8958560cf6102dd16728a2175e7e6bc4b84e172fa00024310694572b8d2994b1ff4410
+
+Package: ripgrep
+Version: 15.2.0
+Architecture: i686
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pcre2
+Description: Search tool like grep and The Silver Searcher
+Filename: pool/main/i686/ripgrep_15.2.0_i686.deb
+Size: 1496828
+MD5sum: 51ccc4848fb1a878e6dd8d48b2b4e6cb
+SHA1: 97354034362df250aa9a2a836b658db4011aefdb
+SHA256: fea93dac782aa4d272fb8caee457ebb4566d3626e7405b06092304c10a21ec51
+SHA512: 043bdb3f2b4ee719d344a519abaeac8ee27c2834f26d6b6862301265decfc7c647d4b5840715c5b49034c9f6cd538f000cdcfddf86796f2ab0666774440bf548
+
 Package: scdaemon
 Version: 2.5.17
 Architecture: i686

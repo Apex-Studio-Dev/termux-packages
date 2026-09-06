@@ -864,6 +864,11 @@ data/data/dev.apexstudio.ide/files/usr/bin/resizepart termux-tools
 data/data/dev.apexstudio.ide/files/usr/bin/resizepart util-linux
 data/data/dev.apexstudio.ide/files/usr/bin/rev termux-tools
 data/data/dev.apexstudio.ide/files/usr/bin/rev util-linux
+data/data/dev.apexstudio.ide/files/usr/bin/rg ripgrep
+data/data/dev.apexstudio.ide/files/usr/bin/rga ripgrep-all
+data/data/dev.apexstudio.ide/files/usr/bin/rga-fzf ripgrep-all
+data/data/dev.apexstudio.ide/files/usr/bin/rga-fzf-open ripgrep-all
+data/data/dev.apexstudio.ide/files/usr/bin/rga-preproc ripgrep-all
 data/data/dev.apexstudio.ide/files/usr/bin/rhash rhash
 data/data/dev.apexstudio.ide/files/usr/bin/rm coreutils
 data/data/dev.apexstudio.ide/files/usr/bin/rmdir coreutils
@@ -18535,6 +18540,7 @@ data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/rename 
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/renice util-linux
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/resizepart util-linux
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/rev util-linux
+data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/rg ripgrep
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/rtcwake util-linux
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/script util-linux
 data/data/dev.apexstudio.ide/files/usr/share/bash-completion/completions/scriptlive util-linux
@@ -24405,6 +24411,9 @@ data/data/dev.apexstudio.ide/files/usr/share/doc/readline/readline.html readline
 data/data/dev.apexstudio.ide/files/usr/share/doc/readline/rluserman.html readline
 data/data/dev.apexstudio.ide/files/usr/share/doc/resolv-conf/copyright resolv-conf
 data/data/dev.apexstudio.ide/files/usr/share/doc/rhash/copyright rhash
+data/data/dev.apexstudio.ide/files/usr/share/doc/ripgrep-all/copyright ripgrep-all
+data/data/dev.apexstudio.ide/files/usr/share/doc/ripgrep/copyright ripgrep
+data/data/dev.apexstudio.ide/files/usr/share/doc/ripgrep/copyright.1 ripgrep
 data/data/dev.apexstudio.ide/files/usr/share/doc/sed/copyright sed
 data/data/dev.apexstudio.ide/files/usr/share/doc/serf/copyright serf
 data/data/dev.apexstudio.ide/files/usr/share/doc/shellcheck/copyright shellcheck
@@ -24839,6 +24848,7 @@ data/data/dev.apexstudio.ide/files/usr/share/doc/zlib/copyright zlib
 data/data/dev.apexstudio.ide/files/usr/share/doc/zstd/copyright zstd
 data/data/dev.apexstudio.ide/files/usr/share/emacs/site-lisp/cmake-mode.el cmake
 data/data/dev.apexstudio.ide/files/usr/share/examples/termux/termux.properties termux-tools
+data/data/dev.apexstudio.ide/files/usr/share/fish/vendor_completions.d/rg.fish ripgrep
 data/data/dev.apexstudio.ide/files/usr/share/fontconfig/conf.avail/05-reset-dirs-sample.conf fontconfig
 data/data/dev.apexstudio.ide/files/usr/share/fontconfig/conf.avail/09-autohint-if-no-hinting.conf fontconfig
 data/data/dev.apexstudio.ide/files/usr/share/fontconfig/conf.avail/10-autohint.conf fontconfig
@@ -25984,6 +25994,7 @@ data/data/dev.apexstudio.ide/files/usr/share/man/man1/reset.1.gz ncurses
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/rev.1.gz util-linux
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/rgb2ycbcr.1.gz libtiff-utils
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/rhash.1.gz rhash
+data/data/dev.apexstudio.ide/files/usr/share/man/man1/ripgrep.1.gz ripgrep
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/rm.1.gz coreutils
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/rmdir.1.gz coreutils
 data/data/dev.apexstudio.ide/files/usr/share/man/man1/runcon.1.gz coreutils
@@ -35789,6 +35800,7 @@ data/data/dev.apexstudio.ide/files/usr/share/xml/dbus-1/introspect.dtd dbus
 data/data/dev.apexstudio.ide/files/usr/share/xml/fontconfig/fonts.dtd fontconfig
 data/data/dev.apexstudio.ide/files/usr/share/zsh/site-functions/_p11-kit p11-kit
 data/data/dev.apexstudio.ide/files/usr/share/zsh/site-functions/_pulseaudio pulseaudio
+data/data/dev.apexstudio.ide/files/usr/share/zsh/site-functions/_rg ripgrep
 data/data/dev.apexstudio.ide/files/usr/share/zsh/site-functions/_trust p11-kit
 data/data/dev.apexstudio.ide/files/usr/share/zsh/vendor-completions/_dpkg-parsechangelog dpkg
 data/data/dev.apexstudio.ide/files/usr/var/run/dbus/README.dbus dbus

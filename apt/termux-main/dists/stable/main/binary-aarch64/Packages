@@ -4528,6 +4528,36 @@ SHA1: 5667045e95910f866a5ef906ef1e3c920a51f670
 SHA256: db4acacd4c3511dea16dc3bdfbccf3816014043ed488f823669a47b0cea2085a
 SHA512: 3891237a3668b1dc5507e60346c3e67ffb9121e619cef8ce24dce613b2320de3eb3d9ee5297345a868706ad41e4d0610d96671dd5deaac5d2cb72aa881315359
 
+Package: ripgrep-all
+Version: 1:0.10.10-1
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: fzf, ripgrep, xz-utils
+Description: Search tool able to locate in PDFs, E-Books, zip, tar.gz, etc
+Filename: pool/main/aarch64/ripgrep-all_1:0.10.10-1_aarch64.deb
+Size: 3396564
+MD5sum: 4e1a9d94a45ee54a6b3b85982c7a277c
+SHA1: cccb5510e8041e0a07f56d0d7f726845a9f3741c
+SHA256: c39b8ea901d5f775b2699bd728fa14dc5bfb359033601eb686741b9c6728b0ac
+SHA512: a2ab5c12cb3dd986d56033cd3d209a2870392cce19ebffbc8211755f94115ffaa54c4322b9048a90af7a5d597e3e565f13f9a50f21dfbc720bcdd12c39097a65
+
+Package: ripgrep
+Version: 15.2.0
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: pcre2
+Description: Search tool like grep and The Silver Searcher
+Filename: pool/main/aarch64/ripgrep_15.2.0_aarch64.deb
+Size: 1223508
+MD5sum: 382e06b2c92daa949a7fa69d3b207cca
+SHA1: 4feafb95237d47c297c6993f525865a939c1c09b
+SHA256: 06dc9e658e6c73c4d82a0d089b34b49845a48f0a7e241d2a52c87333b7e4504e
+SHA512: 8fb1c67cea64adbdc37cf1801ec15bae70569f4dd69b9d5d16878aecd2a8fb98aef00941747b8c142507ec5f1b87fab8f651bc5316aa5caeac0dde11485ea7fd
+
 Package: scdaemon
 Version: 2.5.17
 Architecture: aarch64
@@ -5232,4 +5262,34 @@ MD5sum: 994b9df2297d46991bfd9f2ab36f600a
 SHA1: 495efc56f74dc9ac19719f41f955b75c33a7c397
 SHA256: b192a4c8c9d0219495c1ad669332f6a5b8a5aad281c35120e698e9a2c0ea0398
 SHA512: 3f7db1706168a9a10672f22c11e46a8f91c95eac4cdcb31a70b567fc14674a816d7fcb64ed4013ec2b6ff7089b2cb5bd2b15bc6dea9932a9c54520ea4c19a530
+
+Package: openjdk-21
+Version: 21.0.12
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12/openjdk-21_21.0.12_aarch64.deb
+Size: 106118180
+MD5sum: 3e44ffa0aa6d4bf767a707c573267510
+SHA1: e390fe96949754271b82e4475236c0a56b8592ae
+SHA256: f98d7da818869458adc55343a4f869978830d565aa342f23723b0d78c657e550
+SHA512: 29f401f61f98aa90a20d31855810506f96ebe03a793a65b1bae8237af41aa0a541f3da6e07761fa75b80374433560e61762527b7c40c1077f2c362a71a520f43
+
+Package: openjdk-25
+Version: 25.0.4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
+Description: Java development kit and runtime
+Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4/openjdk-25_25.0.4_aarch64.deb
+Size: 116850444
+MD5sum: 72c9f68815ddfb0d9ca7385d777d8834
+SHA1: 8e9dff70f5e4a9362800f3e0e3f2c4afdee6a75a
+SHA256: 0d7c10fd64896c2da0d18a8123ed8ada8f97fccc9d70da8e0b45f15eab9be94b
+SHA512: fff45cc3d0b00bf6f5491a592907217bd9be0c3eb90eef1d6e90d190df3091ac60004704cd9b6dc2dc25214ab4aaf4e3b541e87e2cba523e7f2cac109a6dea1f
 
