@@ -448,18 +448,3 @@ SHA1: 342ac55adda1341c8350040f34b54f1812d3882f
 SHA256: efd8079d3f9ff63df415177b764bf9d0d60bf829afdf1f4a55480798b470d024
 SHA512: ca03224125773afc13d76a162d0ef46a8ce15ae8cc2f3b8b307311aac39332a41dd8682b0c723f4077a53dc96eb35e184187b6c070d658c522ab388959f0f112
 
-Package: gradle
-Version: 1:9.7.1
-Architecture: all
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: openjdk-21
-Description: Powerful build system for the JVM
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-gradle-1:9.7.1/gradle_1:9.7.1_all.deb
-Size: 77
-MD5sum: 9d45884ae151b361840312c36eab4527
-SHA1: 65be4c3eb3727b344be4eb3d53f157790e9edcdf
-SHA256: 951bb95e969fd91abd8c8d44aede4a468595b725bf26efc4320d777abb59abb1
-SHA512: b1c1fff52fc278a0d84abcdb4dc842e5f8d694d75a93e700362b3494e5aff9022b765411e617068798d81f43550c21eb666646462703d2accc2f8fa3c3f6e944
-

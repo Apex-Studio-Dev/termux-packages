@@ -4873,6 +4873,21 @@ SHA1: 9171fe585887470347a04362e8a7640327713530
 SHA256: bd5b375688c8cc773a4ec9b5791e694703fe260406a1dfdc15946e0d4e5aedac
 SHA512: 1919bc025318823ba8de73b76fc338938007f02155df8d6e43010b25269faf6e9d530f2fd606d65185018261d61c3be712d0bb3eff8196b0421081dfab21d5e8
 
+Package: termux-tools
+Version: 1.46.0+really1.45.0-4
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Description: Basic system tools for Termux
+Filename: pool/main/aarch64/termux-tools_1.46.0+really1.45.0-4_aarch64.deb
+Size: 2916196
+MD5sum: ee70fc834ca1d1cae00dda6d08d7f660
+SHA1: a557dec18619363646c74886378d8bea64af1b50
+SHA256: e553bc2ee673b8b3d46e967e9a2202b3fd103a7c8eb1797746a7602fac6e7d83
+SHA512: 1ec6e741913cb76db360760ec261e62ae41bbee38dedc49fb357049a184c30f5c14eb17e480dcebdd2e68bef91f732b5e964862aee3cf89e7d3fed4e5db26f1e
+
 Package: texinfo
 Version: 7.3
 Architecture: aarch64
@@ -5202,19 +5217,4 @@ MD5sum: 994b9df2297d46991bfd9f2ab36f600a
 SHA1: 495efc56f74dc9ac19719f41f955b75c33a7c397
 SHA256: b192a4c8c9d0219495c1ad669332f6a5b8a5aad281c35120e698e9a2c0ea0398
 SHA512: 3f7db1706168a9a10672f22c11e46a8f91c95eac4cdcb31a70b567fc14674a816d7fcb64ed4013ec2b6ff7089b2cb5bd2b15bc6dea9932a9c54520ea4c19a530
-
-Package: openjdk-21
-Version: 21.0.12
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
-Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12/openjdk-21_21.0.12_aarch64.deb
-Size: 85
-MD5sum: 3e44ffa0aa6d4bf767a707c573267510
-SHA1: e390fe96949754271b82e4475236c0a56b8592ae
-SHA256: f98d7da818869458adc55343a4f869978830d565aa342f23723b0d78c657e550
-SHA512: 29f401f61f98aa90a20d31855810506f96ebe03a793a65b1bae8237af41aa0a541f3da6e07761fa75b80374433560e61762527b7c40c1077f2c362a71a520f43
 

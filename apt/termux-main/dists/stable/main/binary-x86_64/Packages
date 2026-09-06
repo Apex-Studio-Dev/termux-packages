@@ -4873,6 +4873,21 @@ SHA1: 00dc415ef332d2de655f8e40a7468a344cdf9c8d
 SHA256: 83231efb04a7c10e6a36b0e176584cecdf9447bb9e6d7d566c99ccfc0f7dd644
 SHA512: 592b43f553ad6fcafa93294a743cde15220c262d8d86927783cc154108357ab0c9964e07bb6402851d3d4ec0c9f7b9b7a336b68cf99b44123ab0fbf7a39ac852
 
+Package: termux-tools
+Version: 1.46.0+really1.45.0-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Description: Basic system tools for Termux
+Filename: pool/main/x86_64/termux-tools_1.46.0+really1.45.0-4_x86_64.deb
+Size: 3149648
+MD5sum: b8563a1cefc5174678ddce157d2fdfeb
+SHA1: 73e5c9215d62a61da5b453528795fd33ea769a0f
+SHA256: 90e0d0c26a36449f9dd6e14df3dfd8909ae12d8190b3513ab7954b8a3dcafe9a
+SHA512: 81aad4623927d98dc0988651b55067b8f38ceb34878a24c2055cdf4e2e8b9108bf0fb79a569e7e46683bdb49012330c33bbcfe9dbf0c5068b5c1b4dc6fadec5b
+
 Package: texinfo
 Version: 7.3
 Architecture: x86_64
@@ -5202,19 +5217,4 @@ MD5sum: ca69c33f1a718589ba8759a9a49a2431
 SHA1: 0460570a5eb5732553fa791bc027107168dc0dcd
 SHA256: cc40fd9d17a5d70f8f801230fd46e752c0b2a139c90a55a82df0834d482ec799
 SHA512: 88f8fdf6dc7604ed03ecc7dc6d9e60a7bd482687641f609bc455b9b59c141a6818878e7dd7ec1329731392f436112bd0d2545ac83c93b0043fd42a0fec11012e
-
-Package: openjdk-21
-Version: 21.0.12
-Architecture: x86_64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
-Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-21-21.0.12/openjdk-21_21.0.12_x86_64.deb
-Size: 84
-MD5sum: ea6638d0562a9b435f077920bf804f0c
-SHA1: 51775597dbe93fe3ff24a01fe2757f7e74a17e88
-SHA256: e433cc1a00b4f90347db07c90b2c2fe562da0d07215431b5d75f6125e519190a
-SHA512: 3457a89ddc07bd7881501924c7239ba6b537680990f5f01f913a4a2786860cdcab2304ee521517f461c1e9e451e6e03dd4ab96906d088feacc11ec0d1b25fbf6
 
