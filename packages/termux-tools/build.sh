@@ -45,13 +45,23 @@ termux_step_make_install() {
 	# @TERMUX_PREFIX@ placeholder are rewritten at build time. Rewrite every
 	# remaining reference so pkg & friends resolve helper/cache/home paths
 	# inside the fork's prefix.
+	#
+	# IMPORTANT: only rewrite files that belong to THIS package. Running sed
+	# over every file under $TERMUX_PREFIX/bin would bump the mtime of binaries
+	# owned by other preinstalled packages (curl, gzip, openssl, pcre2-config,
+	# ...), causing termux_step_copy_into_massagedir to sweep them all into the
+	# termux-tools deb and contaminate it (dpkg "trying to overwrite" errors).
 	local app_root="$(dirname "$(dirname "$TERMUX_PREFIX")")"
-	sed -i \
-		-e "s|/data/data/com.termux/files/usr|$TERMUX_PREFIX|g" \
-		-e "s|/data/data/com.termux/files/home|$TERMUX_ANDROID_HOME|g" \
-		-e "s|/data/data/com.termux/cache|$app_root/cache|g" \
-		-e "s|/data/data/com.termux|$app_root|g" \
-		$(find "$TERMUX_PREFIX/bin" "$TERMUX_PREFIX/etc" -type f)
+	local own_files
+	own_files="$(find "$TERMUX_PREFIX/bin" "$TERMUX_PREFIX/etc" -type f -newer "$TERMUX_BUILD_TS_FILE")"
+	if [ -n "$own_files" ]; then
+		sed -i \
+			-e "s|/data/data/com.termux/files/usr|$TERMUX_PREFIX|g" \
+			-e "s|/data/data/com.termux/files/home|$TERMUX_ANDROID_HOME|g" \
+			-e "s|/data/data/com.termux/cache|$app_root/cache|g" \
+			-e "s|/data/data/com.termux|$app_root|g" \
+			$own_files
+	fi
 
 	# Install fork mirror files (upstream mirrors removed by patch).
 	# Only a single fork mirror exists, so every region points to it.
