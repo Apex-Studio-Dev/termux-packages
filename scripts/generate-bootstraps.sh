@@ -487,6 +487,7 @@ for package_arch in "${TERMUX_ARCHITECTURES[@]}"; do
 	pull_package lsof
 	pull_package nano
 	pull_package net-tools
+	pull_package jq
 	pull_package patch
 	pull_package unzip
 
