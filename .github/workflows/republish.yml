@@ -54,7 +54,7 @@ jobs:
         fi
 
     - name: Clean stale apt artifacts
-      if: ${{ inputs.cleanup-stale == 'true' }}
+      if: ${{ inputs.cleanup-stale == true }}
       run: |
         bash scripts/cleanup-stale-apt.sh \
           --pages "$PWD/gh-pages" \
