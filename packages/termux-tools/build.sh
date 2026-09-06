@@ -22,6 +22,9 @@ TERMUX_PKG_DEPENDS="bzip2, coreutils, curl, dash, diffutils, findutils, gawk, gr
 TERMUX_PKG_RECOMMENDS="ed, dos2unix, inetutils, net-tools, patch, unzip"
 
 termux_step_pre_configure() {
+	# Rewrite the fallback app package in configure.ac before autoreconf so the
+	# generated configure script bakes the fork prefix into every template script.
+	sed -i 's/com.termux/dev.apexstudio.ide/g' configure.ac
 	autoreconf -vfi
 }
 
@@ -38,29 +41,6 @@ termux_step_make_install() {
 		make -j 1 ${TERMUX_PKG_MAKE_INSTALL_TARGET:-install}
 	else
 		make -j 1 ${TERMUX_PKG_EXTRA_MAKE_ARGS} ${TERMUX_PKG_MAKE_INSTALL_TARGET:-install}
-	fi
-
-	# termux-tools 1.45 installs scripts with the canonical Termux prefix
-	# hardcoded (/data/data/com.termux/...); only files using the
-	# @TERMUX_PREFIX@ placeholder are rewritten at build time. Rewrite every
-	# remaining reference so pkg & friends resolve helper/cache/home paths
-	# inside the fork's prefix.
-	#
-	# IMPORTANT: only rewrite files that belong to THIS package. Running sed
-	# over every file under $TERMUX_PREFIX/bin would bump the mtime of binaries
-	# owned by other preinstalled packages (curl, gzip, openssl, pcre2-config,
-	# ...), causing termux_step_copy_into_massagedir to sweep them all into the
-	# termux-tools deb and contaminate it (dpkg "trying to overwrite" errors).
-	local app_root="$(dirname "$(dirname "$TERMUX_PREFIX")")"
-	local own_files
-	own_files="$(find "$TERMUX_PREFIX/bin" "$TERMUX_PREFIX/etc" -type f -newer "$TERMUX_BUILD_TS_FILE")"
-	if [ -n "$own_files" ]; then
-		sed -i \
-			-e "s|/data/data/com.termux/files/usr|$TERMUX_PREFIX|g" \
-			-e "s|/data/data/com.termux/files/home|$TERMUX_ANDROID_HOME|g" \
-			-e "s|/data/data/com.termux/cache|$app_root/cache|g" \
-			-e "s|/data/data/com.termux|$app_root|g" \
-			$own_files
 	fi
 
 	# Install fork mirror files (upstream mirrors removed by patch).
