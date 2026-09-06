@@ -502,6 +502,10 @@ jobs:
     steps:
     - name: Clone repository
       uses: actions/checkout@v7
+    - name: Install apt-ftparchive
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y apt-utils
     - name: Import GPG signing key
       env:
         GPG_PRIVATE_KEY: ${{ secrets.APEX_GPG_PRIVATE_KEY }}
