@@ -449,6 +449,21 @@ SHA256: deb44ed649da32f7abd9d15aa7797d38001b15df1ddea08ce5e90ad191ad21ae
 SHA512: e3b4506e11b44a8c9971d36a3c44d05405324ffe6c24a6e2ddb8bf172f14ae4be6306b886f40e905bad6f7046234221521b82839b87ab0c1828cbe8e2da65420
 
 Package: command-not-found
+Version: 3.5.0-10
+Architecture: arm
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++
+Description: Suggest installation of packages in interactive shell sessions
+Filename: pool/main/arm/command-not-found_3.5.0-10_arm.deb
+Size: 16804
+MD5sum: e4b6c39ddc3e47fbf2085cb3b5615442
+SHA1: b6debc8b89319c4fa778d4ff80e1ca09f26b7b32
+SHA256: 82601ab0cb74cda43a774807b8955cae9dbf3eee53054764784ef37bf4a300b6
+SHA512: 796cdb5a29319c8c8eb9563fd6bd8ff7045213fb4a245c73b547aebe532cc50e0fff218bd21cc78b28a117f3b95dc6c17f74ca98f6fa5a1325b353940cf98163
+
+Package: command-not-found
 Version: 3.5.0-9
 Architecture: arm
 Section: 

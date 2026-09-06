@@ -449,6 +449,21 @@ SHA256: 9ff63c53559d2823a494484f2bf05e93d7bfcd6c4d386b2ce619f751fcf621fb
 SHA512: 7087da333debd84d84741caa99ddc25e1ee898c662a3e56ad7fb51cf7761706d4fdf83c6c3d10f473ed97ba2370317f9e6d065f5d43758ca521dced72e6e28d2
 
 Package: command-not-found
+Version: 3.5.0-10
+Architecture: aarch64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++
+Description: Suggest installation of packages in interactive shell sessions
+Filename: pool/main/aarch64/command-not-found_3.5.0-10_aarch64.deb
+Size: 26972
+MD5sum: efd7a3ef37b02b6dca2d914c8f3b30be
+SHA1: 0f41ec0432beab25f3ff62310422dcd07751ef66
+SHA256: cfb6c3ad81291c85ce2f215ecfcb62f2199441d2ec491c834938e6b194354818
+SHA512: 33d57d86fdae9983ac0444bae19dce4aa7f25c25bc0686e019cc6fe0f7d0b0111c5e3dfaef3e18bb8a277f17bea5a3b100ec2f7407a65e1afc8538f6e1f6d292
+
+Package: command-not-found
 Version: 3.5.0-9
 Architecture: aarch64
 Section: 

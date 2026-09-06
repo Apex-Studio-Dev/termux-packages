@@ -449,6 +449,21 @@ SHA256: d7d295c459486a3bc78ec64f4ac6f28e3b100aaebc0b704a3dd6160c176f6f1a
 SHA512: e6c0b1887990083bf80cda749d15e030d6a43ac78ce9f1b0ebd03887c867f289fb3e9bf2b53f7fbdcb28876227761b8dd6d6f74a9c510c53c983a3cfee7c3b89
 
 Package: command-not-found
+Version: 3.5.0-10
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Depends: libc++
+Description: Suggest installation of packages in interactive shell sessions
+Filename: pool/main/x86_64/command-not-found_3.5.0-10_x86_64.deb
+Size: 27180
+MD5sum: 52747dbab678bb4b026e3e6e47e66452
+SHA1: 3ac6afde458a91942ec7e418741f01ef6465235f
+SHA256: f66dc07ccddfb556abc58321a9ed3f2e0831086df22a013000fcd7c83622a6c4
+SHA512: 765ae71204b8e09565238915fc8a3c4ffe6db7bceb38c488da2bb9078daba9c755f4e14d29f3398e6bfecd565e43cbe61a499c83b4beb705a2148202af6dab82
+
+Package: command-not-found
 Version: 3.5.0-9
 Architecture: x86_64
 Section: 
