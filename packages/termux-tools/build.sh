@@ -3,7 +3,7 @@ TERMUX_PKG_DESCRIPTION="Basic system tools for Termux"
 TERMUX_PKG_LICENSE="GPL-3.0"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="1.46.0+really1.45.0"
-TERMUX_PKG_REVISION=3
+TERMUX_PKG_REVISION=4
 TERMUX_PKG_SRCURL=https://github.com/termux/termux-tools/archive/refs/tags/v1.45.0.tar.gz
 TERMUX_PKG_SHA256=1ae29b1b875d95cc626dae323b45a2ace759969862d96094b2fa6d13bffe20d2
 TERMUX_PKG_ESSENTIAL=true
@@ -39,6 +39,19 @@ termux_step_make_install() {
 	else
 		make -j 1 ${TERMUX_PKG_EXTRA_MAKE_ARGS} ${TERMUX_PKG_MAKE_INSTALL_TARGET:-install}
 	fi
+
+	# termux-tools 1.45 installs scripts with the canonical Termux prefix
+	# hardcoded (/data/data/com.termux/...); only files using the
+	# @TERMUX_PREFIX@ placeholder are rewritten at build time. Rewrite every
+	# remaining reference so pkg & friends resolve helper/cache/home paths
+	# inside the fork's prefix.
+	local app_root="$(dirname "$(dirname "$TERMUX_PREFIX")")"
+	sed -i \
+		-e "s|/data/data/com.termux/files/usr|$TERMUX_PREFIX|g" \
+		-e "s|/data/data/com.termux/files/home|$TERMUX_ANDROID_HOME|g" \
+		-e "s|/data/data/com.termux/cache|$app_root/cache|g" \
+		-e "s|/data/data/com.termux|$app_root|g" \
+		$(find "$TERMUX_PREFIX/bin" "$TERMUX_PREFIX/etc" -type f)
 
 	# Install fork mirror files (upstream mirrors removed by patch).
 	# Only a single fork mirror exists, so every region points to it.
