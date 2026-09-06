@@ -2,6 +2,12 @@ name: Generate bootstrap archives (android-7)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - scripts/generate-bootstraps.sh
+      - scripts/bootstrap/**
 
 permissions: {} # none
 
