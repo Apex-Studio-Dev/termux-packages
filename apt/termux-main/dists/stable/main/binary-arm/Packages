@@ -4942,11 +4942,11 @@ Maintainer: @termux
 Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
 Description: Basic system tools for Termux
 Filename: pool/main/arm/termux-tools_1.46.0+really1.45.0-4_arm.deb
-Size: 2637868
-MD5sum: 9bbfd8f2088511674b49e36b3b1f6379
-SHA1: 81e8557bb9a23e3e107cb20ee5d7d1c52573acda
-SHA256: b40c272e2943906cb9896585e5ecbe874e7302f7b9773b10dff387df0c414a3f
-SHA512: a72dd0d0b7ece13ad9bc3d37dd1a8a2e01f22602d47b3c9790882e63944fc907089b9f99ddc67fcce9401574b4e4e409f96c272c06f5a483a84e68c433dd578f
+Size: 28928
+MD5sum: e070b0533ca6a6a90a1b5992568b854e
+SHA1: 7c0e3a6e9eba570be6da0f7513d8f881b867f33e
+SHA256: 6d0cadb7d7e376090eb191d4f28d84435dfd5d37be355600bddeffaee742e536
+SHA512: b8bb4444b04df39fb9b5e4537883ced62300061dcd0441f9555b6f91dac84f533e47c127aad8c13175ccdf7a268778915364665aaac1c63882fb5756c74701da
 
 Package: texinfo
 Version: 7.3

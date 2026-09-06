@@ -1,13 +1,13 @@
 Architectures: aarch64 arm i686 x86_64 all
 Codename: x11
 Components: main
-Date: Sun, 06 Sep 2026 14:32:41 +0000
+Date: Sun, 06 Sep 2026 19:49:37 +0000
 Description: ApexStudio apt repository
 Label: ApexStudio
 Origin: ApexStudio
 Suite: x11
 MD5Sum:
- 9cc25e34e34bff982c6a5ab4c8c06916              199 Release
+ 2fce4cd6b4ca689046681bfe7c20661b              199 Release
  d41d8cd98f00b204e9800998ecf8427e                0 main/Contents-aarch64
  4a4dd3598707603b3f76a2378a4504aa               20 main/Contents-aarch64.gz
  8dc5aea5b03dff8595f096f9e368e888               32 main/Contents-aarch64.xz
@@ -36,7 +36,7 @@ MD5Sum:
  4a4dd3598707603b3f76a2378a4504aa               20 main/binary-x86_64/Packages.gz
  8dc5aea5b03dff8595f096f9e368e888               32 main/binary-x86_64/Packages.xz
 SHA1:
- a6187358d4b0eacc3676f7a29787c9c4e0fabfeb              199 Release
+ 33eaaf61805d28ac5ae100d59db5a1b70745a166              199 Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/Contents-aarch64
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 main/Contents-aarch64.gz
  9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 main/Contents-aarch64.xz
@@ -65,7 +65,7 @@ SHA1:
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 main/binary-x86_64/Packages.gz
  9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 main/binary-x86_64/Packages.xz
 SHA256:
- 59e350680610b5177a7643d0bd2626d4a45744ac217d75deb38c8cf169abe4c9              199 Release
+ 32ce0701412424c665542594f0431160a3d706d160a1d19343f12706b823ab3a              199 Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/Contents-aarch64
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 main/Contents-aarch64.gz
  0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 main/Contents-aarch64.xz
@@ -94,7 +94,7 @@ SHA256:
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 main/binary-x86_64/Packages.gz
  0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 main/binary-x86_64/Packages.xz
 SHA512:
- 7ff577642e29b594d19625399e8f613a39457a61f23c7bf71f05ea148046c49cde841009a00a89597e7eb17095defb577f5b913286d337bdaf142f65d905af76              199 Release
+ 131078fe8916d780eeb0e362fb770c8bc10105c62efb168b6403308dc334886d0d9efe2bef32d0b4346eb256b161f0802b10e437c61be0779b426c0a14577dc8              199 Release
  cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/Contents-aarch64
  1b46b9b08d5b338be9d732a1724795b2eab63daffde377218727c90857b79fe6a47bceed495117fcde60f7339812ef75ef4c69f82dd79fb69b6cbf8006b521f2               20 main/Contents-aarch64.gz
  034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 main/Contents-aarch64.xz
