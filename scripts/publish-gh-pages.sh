@@ -72,25 +72,31 @@ REPO_ROOT="$(realpath "$REPO_ROOT")"
 
 gen_repo_files="$(dirname "${BASH_SOURCE[0]}")/gen-repo-files.sh"
 
-# Upload a large .deb to a GitHub Release (tag pkg-<name>-<version>). Reuses an
-# existing release if one already exists. Prints "asset-url <url>" on success.
+# Apt repo names (termux-main, termux-root, ...) from repo.json, used to tell
+# repo-prefixed release tags apart from the legacy pkg-<pkg>-<ver> tags.
+mapfile -t repo_names < <(jq -r 'del(.pkg_format) | to_entries[] | .value.name' "$REPO_ROOT/repo.json")
+
+# Upload a large .deb to a GitHub Release (tag pkg-<repo>-<pkg>-<version>;
+# termux-main predates the repo prefix and keeps pkg-<pkg>-<version> so its
+# existing release URLs stay valid). Reuses an existing release if one exists.
+# Prints "asset-url <url>" on success.
 upload_large_deb() {
-	local deb="$1" fname name ver tag
+	local deb="$1" style="$2" fname pkgname ver tag
 	fname="$(basename "$deb")"
-	name="${fname%%_*}"
+	pkgname="${fname%%_*}"
 	# Version never contains '_' (only '.', '-', '+', and ':' for epochs),
 	# but architectures like 'x86_64' do, so trim at the FIRST underscore
 	# after the name, not the last, otherwise the tag splits the arch.
 	ver="${fname#*_}"
 	ver="${ver%%_*}"
-	tag="pkg-${name}-${ver}"
+	tag="pkg-${style:+${style}-}${pkgname}-${ver}"
 	if [[ -z "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
 		echo "Warning: no GH_TOKEN/GITHUB_TOKEN; large deb '$fname' left in pool" >&2
 		return 1
 	fi
 	if ! gh release view "$tag" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
 		gh release create "$tag" \
-			--repo "$GITHUB_REPO" --title "$tag" --notes "Packages: $name $ver" >/dev/null
+			--repo "$GITHUB_REPO" --title "$tag" --notes "Packages: $pkgname $ver" >/dev/null
 	fi
 	gh release upload "$tag" "$deb" --repo "$GITHUB_REPO" --clobber >/dev/null
 	echo "Published large deb '$fname' to release '$tag'"
@@ -111,6 +117,10 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 	mkdir -p "$merge_dir" "$extern_dir"
 	external_url="https://github.com/$GITHUB_REPO/releases/download"
 	externals_present=0
+	# Repo tag prefix for large-deb releases (empty keeps termux-main's legacy
+	# pkg-<pkg>-<ver> format).
+	external_style="$name"
+	[[ "$external_style" == "termux-main" ]] && external_style=""
 
 	# Step 1: retain all debs already in the published pool.
 	find "$PAGES_DIR/apt/$name/pool" -name '*.deb' -type f -exec ln -sf {} "$merge_dir/" \; 2>/dev/null || true
@@ -123,7 +133,7 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 				size=$(stat -c %s "$deb")
 				# Offload oversized binaries to GitHub Release assets to mitigate Git repository bloat
 				if [[ -n "$GITHUB_REPO" && "$size" -ge "$LARGE_THRESHOLD" ]]; then
-					if upload_large_deb "$deb" >/dev/null; then
+					if upload_large_deb "$deb" "$external_style" >/dev/null; then
 						ln -sf "$deb" "$extern_dir/"
 						externals_present=1
 					else
@@ -137,11 +147,26 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 		done < "$builtlist"
 	fi
 
-	# Step 3: re-fetch previously released large debs so they are not evicted from metadata.
+	# Step 3: re-fetch this repo's previously released large debs so they are
+	# not evicted from metadata. Only tags for THIS repo are downloaded:
+	#   pkg-<style>-...           repo-prefixed tags (style empty for termux-main)
+	#   pkg-<pkg>-...             legacy unprefixed tags, all termux-main
+	# repo-prefixed tags of other repos are skipped in both cases.
 	if [[ -n "$GITHUB_REPO" && -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
-		echo "Fetching previously published large debs from GitHub Releases..."
+		echo "Fetching previously published large debs ($name) from GitHub Releases..."
 		while read -r tag; do
 			[[ -n "$tag" ]] || continue
+			case "$tag" in
+				pkg-${external_style}-*) ;;
+				pkg-*)
+					[[ "$name" == "termux-main" ]] || continue
+					for other in "${repo_names[@]}"; do
+						[[ "$other" == "termux-main" ]] && continue
+						case "$tag" in pkg-${other}-*) continue 2 ;; esac
+					done
+					;;
+				*) continue ;;
+			esac
 			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$extern_dir" --pattern '*.deb' 2>/dev/null || true
 		done < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
 
@@ -165,6 +190,7 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 	fi
 	if (( externals_present )); then
 		gen_args+=(--externals-dir "$extern_dir" --external-base-url "$external_url")
+		gen_args+=(--external-repo "$external_style")
 	fi
 	bash "$gen_repo_files" "${gen_args[@]}"
 	rm -rf "$merge_dir" "$extern_dir"

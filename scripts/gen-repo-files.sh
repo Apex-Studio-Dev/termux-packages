@@ -24,6 +24,7 @@
 ##   gen-repo-files.sh --debs <dir> --out <repo-root> [--gpg-key <id>]
 ##                     [--suite <suite>] [--arch <arch>...]
 ##                     [--externals-dir <dir>] [--external-base-url <url>]
+##                     [--external-repo <repo>]
 ##
 ## If --gpg-key is omitted (or gpg not available) the repository is generated
 ## unsigned (a warning is printed). Signing is required for a usable apt repo.
@@ -35,7 +36,9 @@
 ## tag segment ("pkg-<name>-<version>") is derived from each filename, so
 ## --external-base-url should be the releases "download" base, e.g.
 ## https://github.com/<owner>/<repo>/releases/download. Small debs in --debs
-## are handled normally.
+## are handled normally. When large-deb releases use a repo-prefixed tag
+## (pkg-<repo>-<name>-<version>, see publish-gh-pages.sh), recreate it by
+## passing --external-repo <repo>; omit it for the legacy unprefixed form.
 set -euo pipefail
 
 DEBS_DIR=""
@@ -46,6 +49,7 @@ COMPONENT="main"
 ARCHES=(aarch64 arm i686 x86_64 all)
 EXTERNALS_DIR=""
 EXTERNAL_URL=""
+EXTERNAL_REPO=""
 
 usage() {
 	sed -n '3,23p' "$0"
@@ -63,6 +67,7 @@ while (($#)); do
 		--arch) IFS=' ' read -r -a ARCHES <<< "$2"; shift 2;;
 		--externals-dir) EXTERNALS_DIR="$2"; shift 2;;
 		--external-base-url) EXTERNAL_URL="$2"; shift 2;;
+		--external-repo) EXTERNAL_REPO="$2"; shift 2;;
 		-h|-help|--help) usage;;
 		*) echo "Unknown option: $1" >&2; usage;;
 	esac
@@ -145,12 +150,14 @@ gen_packages() {
 				[[ "$earch" == "$arch" ]] || continue
 				# Reconstruct the release tag (mirrors upload_large_deb in
 				# publish-gh-pages.sh) so the Filename becomes the full asset
-				# URL: <external-base-url>/pkg-<name>-<version>/<file>.
+				# URL: <external-base-url>/pkg-<name>-<version>/<file> (or
+				# pkg-<repo>-<name>-<version>/<file> with --external-repo).
 				efname="$(basename "$ext")"
 				ename="${efname%%_*}"
 				ever="${efname#*_}"
 				ever="${ever%%_*}"
-				emit_stanza "$ext" "$EXTERNAL_URL/pkg-${ename}-${ever}/$efname" "$pkgfile"
+				stag="pkg-${EXTERNAL_REPO:+${EXTERNAL_REPO}-}${ename}-${ever}"
+				emit_stanza "$ext" "$EXTERNAL_URL/$stag/$efname" "$pkgfile"
 			done
 		fi
 		gzip -9nc "$pkgfile" > "$pkgfile.gz"
