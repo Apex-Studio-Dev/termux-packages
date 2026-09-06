@@ -175,11 +175,11 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 		fi
 	fi
 
-	# Step 4: skip if there is nothing to publish.
+	# Step 4: do NOT skip empty repos. Metadata (Packages/Release/InRelease)
+	# is regenerated for every repo on every run, so previously-empty repos
+	# (root/x11) also get fresh release indexes with correct suite/component.
 	if ! find "$merge_dir" -name '*.deb' -print -quit | grep -q . && (( ! externals_present )); then
-		echo "Skip $repo ($name): no debs to publish"
-		rm -rf "$merge_dir" "$extern_dir"
-		continue
+		echo "Info: $repo ($name): no debs to publish; regenerating empty repo index"
 	fi
 
 	# Step 5: generate apt metadata (Packages/Release/InRelease) via gen-repo-files.sh.
