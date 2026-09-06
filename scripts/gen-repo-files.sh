@@ -144,7 +144,8 @@ gen_packages() {
 				emit_stanza "$ext" "$EXTERNAL_URL/pkg-${ename}-${ever}/$efname" "$pkgfile"
 			done
 		fi
-		gzip -9c "$pkgfile" > "$pkgfile.gz"
+		gzip -9nc "$pkgfile" > "$pkgfile.gz"
+		xz -9c "$pkgfile" > "$pkgfile.xz"
 		echo "Generated: $pkgfile ($(wc -l < "$pkgfile") lines)"
 	done
 }
@@ -195,7 +196,9 @@ gen_contents() {
 					[[ -n "$p" ]] && printf '%s %s\n' "$p" "$pkg_name"
 				done >> "$tmpf" || true
 		done
-		sort -u "$tmpf" | gzip -9n > "$contents_file.gz"
+		sort -u "$tmpf" > "$contents_file"
+		gzip -9nc "$contents_file" > "$contents_file.gz"
+		xz -9c "$contents_file" > "$contents_file.xz"
 		echo "Generated: $contents_file.gz ($(sort -u "$tmpf" | wc -l) entries)"
 		rm -f "$tmpf"
 	done
