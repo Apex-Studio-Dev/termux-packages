@@ -17,5 +17,11 @@
     "distribution": "x11",
     "component": "main",
     "url": "https://apex-studio-dev.github.io/termux-packages/apt/termux-x11"
+  },
+  "large-packages": {
+    "name": "termux-big",
+    "distribution": "stable",
+    "component": "main",
+    "url": "https://debs.apexstudiodev.my.id"
   }
 }

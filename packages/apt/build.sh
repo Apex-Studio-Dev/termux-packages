@@ -3,7 +3,7 @@ TERMUX_PKG_DESCRIPTION="Front-end for the dpkg package manager"
 TERMUX_PKG_LICENSE="GPL-2.0"
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION="2.8.1"
-TERMUX_PKG_REVISION=3
+TERMUX_PKG_REVISION=4
 # old tarball are removed in https://deb.debian.org/debian/pool/main/a/apt/apt_${TERMUX_PKG_VERSION}.tar.xz
 TERMUX_PKG_SRCURL=https://salsa.debian.org/apt-team/apt/-/archive/${TERMUX_PKG_VERSION}/apt-${TERMUX_PKG_VERSION}.tar.bz2
 TERMUX_PKG_SHA256=87ca18392c10822a133b738118505f7d04e0b31ba1122bf5d32911311cb2dc7e
@@ -76,6 +76,7 @@ termux_step_post_make_install() {
 	{
 		echo "# ApexStudio fork repository"
 		echo "deb https://apex-studio-dev.github.io/termux-packages/apt/termux-main/ stable main"
+		echo "deb https://debs.apexstudiodev.my.id stable main"
 	} > $TERMUX_PREFIX/etc/apt/sources.list
 
 	# apt-transport-tor

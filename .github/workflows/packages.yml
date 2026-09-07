@@ -506,6 +506,14 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y apt-utils
+    - name: Install rclone
+      run: |
+        if ! command -v rclone >/dev/null 2>&1; then
+          curl -sSLo /tmp/rclone.zip https://download.rclone.org/v1.75.1/rclone-v1.75.1-linux-amd64.zip
+          sudo unzip -o /tmp/rclone.zip -d /usr/local/lib/rclone
+          sudo ln -s /usr/local/lib/rclone/rclone-v1.75.1-linux-amd64/rclone /usr/local/bin/rclone
+        fi
+        rclone version
     - name: Import GPG signing key
       env:
         GPG_PRIVATE_KEY: ${{ secrets.APEX_GPG_PRIVATE_KEY }}
@@ -542,6 +550,11 @@ jobs:
       env:
         GNUPGHOME: ${{ runner.temp }}/gnupg
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+        R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        R2_ENDPOINT: ${{ secrets.R2_ENDPOINT }}
+        R2_BUCKET: ${{ secrets.R2_BUCKET }}
+        R2_PUBLIC_URL: ${{ secrets.R2_PUBLIC_URL }}
       run: |
         mkdir -p "$GNUPGHOME" && chmod 700 "$GNUPGHOME"
         export GNUPGHOME

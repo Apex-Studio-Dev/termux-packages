@@ -9,10 +9,20 @@
 ## locally and stages it for a git push to the gh-pages branch. The actual push
 ## is done by the CI workflow (needs a GITHUB_TOKEN / deploy key).
 ##
+## Large .deb files (>= --large-threshold, e.g. openjdk) cannot be served from
+## GitHub Pages (100 MiB per-file / 1 GiB per-repo limits). They are moved to a
+## separate apt repo "termux-big" hosted on Cloudflare R2: the index AND the
+## deb contents both live in the R2 bucket, exposed via the R2 custom domain,
+## with RELATIVE pool Filenames so apt resolves them under the single source
+## URI "deb [trusted] https://<custom-domain> stable main". Needs the rclone
+## binary plus the R2_* secrets; when they are absent, large debs fall back
+## into the regular pool (and may exceed GitHub Pages limits).
+##
 ## Usage:
 ##   publish-gh-pages.sh --pages <dir> --debs <dir> [--gpg-key <id>]
 ##                       [--public-key <file>] [--repo-root <dir>]
-##                       [--github-repo <owner/repo>] [--large-threshold <bytes>]
+##                       [--github-repo <owner/repo>]
+##                       [--large-threshold <bytes>]
 ##
 ##   --pages        existing gh-pages working tree (contains apt/... from prior
 ##                  publishes, or empty). This is where output is assembled.
@@ -24,13 +34,17 @@
 ##                  devices can fetch it.
 ##   --repo-root    directory containing repo.json (default: this script's
 ##                  parent).
-##   --github-repo  (optional) "owner/repo" used to host large .deb files as
-##                  GitHub Release assets instead of committing them to the
-##                  git-backed gh-pages tree. Requires gh + GH_TOKEN.
+##   --github-repo  (optional) "owner/repo"; legacy large debs previously
+##                  released under pkg-* tags are re-fetched from GitHub
+##                  Releases and migrated into the R2 termux-big repo.
 ##   --large-threshold
 ##                  (optional) .deb files >= this many bytes are treated as
-##                  large and uploaded to a GitHub Release (default 52428800 =
-##                  50 MiB). Only used when --github-repo is given.
+##                  large and moved to the R2 termux-big repo (default
+##                  104857600 = 100 MiB).
+##
+## Environment (needed for the R2 termux-big repo):
+##   R2_ACCESS_KEY_ID, R2_SECRET_ACCESS_KEY, R2_ENDPOINT, R2_BUCKET,
+##   R2_PUBLIC_URL (custom domain base URI, informational)
 set -euo pipefail
 
 PAGES_DIR=""
@@ -42,7 +56,7 @@ GITHUB_REPO=""
 LARGE_THRESHOLD=104857600
 
 usage() {
-	sed -n '3,30p' "$0"
+	sed -n '3,48p' "$0"
 	echo
 	exit 1
 }
@@ -72,55 +86,81 @@ REPO_ROOT="$(realpath "$REPO_ROOT")"
 
 gen_repo_files="$(dirname "${BASH_SOURCE[0]}")/gen-repo-files.sh"
 
-# Apt repo names (termux-main, termux-root, ...) from repo.json, used to tell
-# repo-prefixed release tags apart from the legacy pkg-<pkg>-<ver> tags.
-mapfile -t repo_names < <(jq -r 'del(.pkg_format) | to_entries[] | .value.name' "$REPO_ROOT/repo.json")
+# Detect the "large" repo (termux-big), hosted on Cloudflare R2.
+BIG_REPO_KEY=""
+BIG_NAME=""
+BIG_DIST=""
+BIG_COMP=""
+for key in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.json"); do
+	[[ "$(jq --raw-output ".[\"$key\"].name" "$REPO_ROOT/repo.json")" == "termux-big" ]] || continue
+	BIG_REPO_KEY="$key"
+	BIG_NAME="$(jq --raw-output ".[\"$key\"].name" "$REPO_ROOT/repo.json")"
+	BIG_DIST="$(jq --raw-output ".[\"$key\"].distribution" "$REPO_ROOT/repo.json")"
+	BIG_COMP="$(jq --raw-output ".[\"$key\"].component" "$REPO_ROOT/repo.json")"
+	break
+done
 
-# Upload a large .deb to a GitHub Release (tag pkg-<repo>-<pkg>-<version>;
-# termux-main predates the repo prefix and keeps pkg-<pkg>-<version> so its
-# existing release URLs stay valid). Reuses an existing release if one exists.
-# Prints "asset-url <url>" on success.
-upload_large_deb() {
-	local deb="$1" style="$2" fname pkgname ver tag
-	fname="$(basename "$deb")"
-	pkgname="${fname%%_*}"
-	# Version never contains '_' (only '.', '-', '+', and ':' for epochs),
-	# but architectures like 'x86_64' do, so trim at the FIRST underscore
-	# after the name, not the last, otherwise the tag splits the arch.
-	ver="${fname#*_}"
-	ver="${ver%%_*}"
-	tag="pkg-${style:+${style}-}${pkgname}-${ver}"
-	if [[ -z "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
-		echo "Warning: no GH_TOKEN/GITHUB_TOKEN; large deb '$fname' left in pool" >&2
-		return 1
-	fi
-	if ! gh release view "$tag" --repo "$GITHUB_REPO" >/dev/null 2>&1; then
-		gh release create "$tag" \
-			--repo "$GITHUB_REPO" --title "$tag" --notes "Packages: $pkgname $ver" >/dev/null
-	fi
-	gh release upload "$tag" "$deb" --repo "$GITHUB_REPO" --clobber >/dev/null
-	echo "Published large deb '$fname' to release '$tag'"
-	echo "asset-url https://github.com/$GITHUB_REPO/releases/download/$tag/$fname"
+# R2 availability: rclone binary + all R2_* secrets. A remote WITHOUT a bucket
+# config is created so the bucket name can be passed explicitly as the first
+# path component (a remote with a configured bucket + a leading bucket-name
+# path component makes rclone treat the first component as a bucket name and
+# silently creates a junk bucket).
+R2_AVAILABLE=0
+R2_REMOTE=""
+r2_missing=0
+if [[ -z "$BIG_REPO_KEY" ]]; then
+	echo "Warning: no 'termux-big' repo in repo.json; skipping R2 large-deb repo" >&2
+	r2_missing=1
+else
+	for var in R2_ACCESS_KEY_ID R2_SECRET_ACCESS_KEY R2_ENDPOINT R2_BUCKET; do
+		[[ -n "${!var:-}" ]] || { echo "Warning: $var not set; large debs stay in the regular pool" >&2; r2_missing=1; }
+	done
+	command -v rclone >/dev/null 2>&1 || { echo "Warning: rclone not found in PATH; large debs stay in the regular pool" >&2; r2_missing=1; }
+fi
+
+if (( ! r2_missing )); then
+	R2_REMOTE="apexr2"
+	rclone config delete "$R2_REMOTE" >/dev/null 2>&1 || true
+	rclone config create "$R2_REMOTE" s3 \
+		provider Cloudflare \
+		access_key_id "$R2_ACCESS_KEY_ID" \
+		secret_access_key "$R2_SECRET_ACCESS_KEY" \
+		region auto \
+		endpoint "$R2_ENDPOINT" >/dev/null
+	R2_AVAILABLE=1
+	# root of the termux-big repo tree: pool/<comp>/<arch>/... + dists/. This
+	# mirrors 1:1 to the R2 bucket, exposed at https://<r2-custom-domain>/
+	# (repo.json url). --debs and --out point at the same root so existing
+	# pool debs (restored below) are reused in place instead of re-copied.
+	big_root="$(mktemp -d)"
+	trap 'rm -rf "$big_root"' EXIT
+	echo "R2 termux-big repo enabled (bucket: $R2_BUCKET)"
+fi
+
+# Stage a large .deb into the termux-big repo root at pool/<comp>/<arch>/<file>.
+stage_large_deb() {
+	local deb="$1" comp="$2" arch dest
+	arch="$(dpkg-deb --field "$deb" Architecture 2>/dev/null || true)"
+	[[ -n "$arch" ]] || arch="all"
+	mkdir -p "$big_root/pool/$comp/$arch"
+	ln -sf "$deb" "$big_root/pool/$comp/$arch/$(basename "$deb")"
 }
 
 for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.json"); do
+	# The large repo (termux-big) is assembled separately, after the main loop.
+	[[ "$repo" == "$BIG_REPO_KEY" ]] && continue
+
 	# Read repo metadata (name/dist/component) from repo.json.
 	name=$(jq --raw-output ".[\"$repo\"].name" "$REPO_ROOT/repo.json")
 	dist=$(jq --raw-output ".[\"$repo\"].distribution" "$REPO_ROOT/repo.json")
 	comp=$(jq --raw-output ".[\"$repo\"].component" "$REPO_ROOT/repo.json")
 	builtlist="$DEBS_DIR/built_${name}_packages.txt"
 
-	# Fresh staging dirs: merge_dir for pool debs, extern_dir for GitHub Release assets.
+	# Fresh staging dir: merge_dir for pool debs.
 	merge_dir="$PAGES_DIR/.merge-${name}"
-	extern_dir="$PAGES_DIR/.extern-${name}"
-	rm -rf "$merge_dir" "$extern_dir"
-	mkdir -p "$merge_dir" "$extern_dir"
-	external_url="https://github.com/$GITHUB_REPO/releases/download"
-	externals_present=0
-	# Repo tag prefix for large-deb releases (empty keeps termux-main's legacy
-	# pkg-<pkg>-<ver> format).
-	external_style="$name"
-	[[ "$external_style" == "termux-main" ]] && external_style=""
+	rm -rf "$merge_dir"
+	mkdir -p "$merge_dir"
+	staged_large=0
 
 	# Step 1: retain all debs already in the published pool.
 	find "$PAGES_DIR/apt/$name/pool" -name '*.deb' -type f -exec ln -sf {} "$merge_dir/" \; 2>/dev/null || true
@@ -131,13 +171,15 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 			[[ -n "$pkg" ]] || continue
 			while IFS= read -r -d '' deb; do
 				size=$(stat -c %s "$deb")
-				# Offload oversized binaries to GitHub Release assets to mitigate Git repository bloat
-				if [[ -n "$GITHUB_REPO" && "$size" -ge "$LARGE_THRESHOLD" ]]; then
-					if upload_large_deb "$deb" "$external_style" >/dev/null; then
-						ln -sf "$deb" "$extern_dir/"
-						externals_present=1
+				# Offload oversized binaries to the R2 termux-big repo (no
+				# GitHub Pages file/repo size limits); fall back to the
+				# regular pool when R2 is unavailable.
+				if [[ "$size" -ge "$LARGE_THRESHOLD" ]]; then
+					if (( R2_AVAILABLE )); then
+						stage_large_deb "$deb" "$comp"
+						staged_large=1
 					else
-						echo "Falling back: symlinking '$deb' into pool instead of a release" >&2
+						echo "Warning: large deb '$deb' has no R2 termux-big target; leaving it in the regular pool" >&2
 						ln -sf "$deb" "$merge_dir/"
 					fi
 				else
@@ -147,54 +189,78 @@ for repo in $(jq --raw-output 'del(.pkg_format) | keys | .[]' "$REPO_ROOT/repo.j
 		done < "$builtlist"
 	fi
 
-	# Step 3: re-fetch this repo's previously released large debs so they are
-	# not evicted from metadata. Only tags for THIS repo are downloaded:
-	#   pkg-<style>-...           repo-prefixed tags (style empty for termux-main)
-	#   pkg-<pkg>-...             legacy unprefixed tags, all termux-main
-	# repo-prefixed tags of other repos are skipped in both cases.
-	if [[ -n "$GITHUB_REPO" && -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
-		echo "Fetching previously published large debs ($name) from GitHub Releases..."
-		while read -r tag; do
-			[[ -n "$tag" ]] || continue
-			case "$tag" in
-				pkg-${external_style}-*) ;;
-				pkg-*)
-					[[ "$name" == "termux-main" ]] || continue
-					for other in "${repo_names[@]}"; do
-						[[ "$other" == "termux-main" ]] && continue
-						case "$tag" in pkg-${other}-*) continue 2 ;; esac
-					done
-					;;
-				*) continue ;;
-			esac
-			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$extern_dir" --pattern '*.deb' 2>/dev/null || true
-		done < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
-
-		if find "$extern_dir" -name '*.deb' -print -quit | grep -q .; then
-			externals_present=1
-		fi
-	fi
-
-	# Step 4: do NOT skip empty repos. Metadata (Packages/Release/InRelease)
+	# Step 3: do NOT skip empty repos. Metadata (Packages/Release/InRelease)
 	# is regenerated for every repo on every run, so previously-empty repos
 	# (root/x11) also get fresh release indexes with correct suite/component.
-	if ! find "$merge_dir" -name '*.deb' -print -quit | grep -q . && (( ! externals_present )); then
+	if ! find "$merge_dir" -name '*.deb' -print -quit | grep -q . && (( ! staged_large )); then
 		echo "Info: $repo ($name): no debs to publish; regenerating empty repo index"
 	fi
 
-	# Step 5: generate apt metadata (Packages/Release/InRelease) via gen-repo-files.sh.
+	# Step 4: generate apt metadata (Packages/Release/InRelease) via gen-repo-files.sh.
 	echo "Assembling $repo ($name) distribution '$dist'..."
 	gen_args=(--debs "$merge_dir" --out "$PAGES_DIR/apt/$name" --suite "$dist" --component "$comp")
 	if [[ -n "$GPG_KEY" ]]; then
 		gen_args+=(--gpg-key "$GPG_KEY")
 	fi
-	if (( externals_present )); then
-		gen_args+=(--externals-dir "$extern_dir" --external-base-url "$external_url")
-		gen_args+=(--external-repo "$external_style")
+	bash "$gen_repo_files" "${gen_args[@]}"
+	rm -rf "$merge_dir"
+done
+
+# Assemble the R2 termux-big repo (index AND deb contents both in the R2
+# bucket, base URI from repo.json url) so a single apt source line
+# "deb [trusted] https://<custom-domain> stable main" works. Filenames are
+# relative (pool/<comp>/<arch>/<file>) and resolve under that base URI.
+if (( ! R2_AVAILABLE )); then
+	echo "Info: R2 not configured; no termux-big repo generated"
+else
+	# Restore previously published pool content so old large debs stay
+	# available; re-generated metadata below covers the union of old + new.
+	echo "Restoring previously published R2 termux-big pool..."
+	rclone copy "$R2_REMOTE:$R2_BUCKET/pool" "$big_root/" 2>/dev/null || true
+
+	# Migrate legacy large debs previously hosted as GitHub Release assets
+	# (tags pkg-<pkg>-<ver> / pkg-<repo>-<pkg>-<ver>) into the R2 pool, except
+	# tags prefixed with another termux repo's name (root/x11).
+	if [[ -n "$GITHUB_REPO" && -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
+		echo "Fetching legacy large debs from GitHub Releases (migration)..."
+		mapfile -t legacy_tags < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
+		for tag in "${legacy_tags[@]:-}"; do
+			[[ -n "$tag" ]] || continue
+			case "$tag" in
+				pkg-termux-root-*|pkg-termux-x11-*) continue ;;
+				pkg-*) ;;
+				*) continue ;;
+			esac
+			echo "  downloading release '$tag'"
+			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$big_root" --pattern '*.deb' 2>/dev/null || true
+		done
+		# Relocate legacy debs into the correct pool/<comp>/<arch> layout (they
+		# were downloaded flat into the root).
+		while IFS= read -r -d '' deb; do
+			larch="$(dpkg-deb --field "$deb" Architecture 2>/dev/null || true)"
+			[[ -n "$larch" ]] || larch="all"
+			mkdir -p "$big_root/pool/$BIG_COMP/$larch"
+			mv -f "$deb" "$big_root/pool/$BIG_COMP/$larch/$(basename "$deb")"
+		done < <(find "$big_root" -maxdepth 1 -name '*.deb' -print0)
+	fi
+
+	echo "Generating R2 termux-big repository metadata..."
+	gen_args=(--debs "$big_root" --out "$big_root" --suite "$BIG_DIST" --component "$BIG_COMP")
+	if [[ -n "$GPG_KEY" ]]; then
+		gen_args+=(--gpg-key "$GPG_KEY")
 	fi
 	bash "$gen_repo_files" "${gen_args[@]}"
-	rm -rf "$merge_dir" "$extern_dir"
-done
+
+	echo "Uploading R2 termux-big repository (pool + dists) to bucket '$R2_BUCKET'..."
+	# -L dereferences the staged pool symlinks (debs are symlinked into the
+	# pool to avoid copying; rclone otherwise skips them).
+	rclone copy "$big_root/." "$R2_REMOTE:$R2_BUCKET/" -L
+	if [[ -n "${R2_PUBLIC_URL:-}" ]]; then
+		echo "R2 termux-big repository published at: $R2_PUBLIC_URL"
+	else
+		echo "R2 termux-big repository published (custom domain from repo.json url)"
+	fi
+fi
 
 if [[ -n "$PUBLIC_KEY" && -f "$PUBLIC_KEY" ]]; then
 	cp -f "$PUBLIC_KEY" "$PAGES_DIR/apexstudio-packages.asc"
