@@ -509,7 +509,7 @@ jobs:
     - name: Install rclone
       run: |
         if ! command -v rclone >/dev/null 2>&1; then
-          curl -sSLo /tmp/rclone.zip https://download.rclone.org/v1.75.1/rclone-v1.75.1-linux-amd64.zip
+          curl -sSLo /tmp/rclone.zip https://github.com/rclone/rclone/releases/download/v1.75.1/rclone-v1.75.1-linux-amd64.zip
           sudo unzip -o /tmp/rclone.zip -d /usr/local/lib/rclone
           sudo ln -s /usr/local/lib/rclone/rclone-v1.75.1-linux-amd64/rclone /usr/local/bin/rclone
         fi
