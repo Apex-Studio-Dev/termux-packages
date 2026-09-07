@@ -220,7 +220,8 @@ else
 
 	# Migrate legacy large debs previously hosted as GitHub Release assets
 	# (tags pkg-<pkg>-<ver> / pkg-<repo>-<pkg>-<ver>) into the R2 pool, except
-	# tags prefixed with another termux repo's name (root/x11).
+	# tags prefixed with another termux repo's name (root/x11). Debs already
+	# present in the restored R2 pool are skipped to avoid re-downloading.
 	if [[ -n "$GITHUB_REPO" && -n "${GH_TOKEN:-}${GITHUB_TOKEN:-}" ]]; then
 		echo "Fetching legacy large debs from GitHub Releases (migration)..."
 		mapfile -t legacy_tags < <(gh release list --repo "$GITHUB_REPO" --limit 1000 | awk '/^pkg-/ {print $1}')
@@ -231,6 +232,20 @@ else
 				pkg-*) ;;
 				*) continue ;;
 			esac
+			# Skip the download when every asset of this tag already lives in
+			# the pool tree restored from R2 above.
+			have_all=1
+			while IFS= read -r aname; do
+				[[ -n "$aname" ]] || continue
+				if ! find "$big_root/pool" -name "$aname" -print -quit | grep -q .; then
+					have_all=0
+					break
+				fi
+			done < <(gh release view "$tag" --repo "$GITHUB_REPO" --json assets -q '.assets[].name' 2>/dev/null)
+			if (( have_all )); then
+				echo "  skipping '$tag' (already in R2 pool)"
+				continue
+			fi
 			echo "  downloading release '$tag'"
 			gh release download "$tag" --repo "$GITHUB_REPO" --dir "$big_root" --pattern '*.deb' 2>/dev/null || true
 		done
