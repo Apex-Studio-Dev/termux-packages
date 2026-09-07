@@ -233,7 +233,7 @@ prune_pool() {
 		declare -A best_ver=() best_file=()
 		for deb in "$dir"/*.deb; do
 			[[ -f "$deb" ]] || continue
-			read -r pkg ver < <(dpkg-deb --showformat='${Package} ${Version}' --show "$deb" 2>/dev/null || true)
+			read -r pkg ver < <(dpkg-deb --showformat='${Package} ${Version}\n' --show "$deb" 2>/dev/null || true) || true
 			[[ -n "$pkg" && -n "$ver" ]] || continue
 			if [[ -n "${best_ver[$pkg]:-}" ]]; then
 				if dpkg --compare-versions "$ver" gt "${best_ver[$pkg]}"; then
