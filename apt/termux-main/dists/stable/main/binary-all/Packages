@@ -13,6 +13,21 @@ SHA1: ea14e1767f5dbc4894e1cd695fb8997d403c29c1
 SHA256: 770eecf8a5056c629c5cba3e9dbdd550a49cd1901bb3dd3c81a39672b6186fb9
 SHA512: 1b6dfc30a2ed258d89bef887c61395815385fa144567bca3b0881eb1c660d52a56d61274c3199d9a38759e53156fb8ed8b224a4023cbcc8033b07c5c12c85469
 
+Package: apt-transport-tor
+Version: 2.8.1-4
+Architecture: all
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: tor, apt (= 2.8.1-4)
+Description: APT transport for anonymous package downloads via Tor
+Filename: pool/main/all/apt-transport-tor_2.8.1-4_all.deb
+Size: 932
+MD5sum: b7e71a64ee2182b7c75c3d200a636fa7
+SHA1: 572db50e86900053c8da1b0de80c1bc40d99f184
+SHA256: 4ae10ef1f632eacfe6956b8e5ef1456d889866058c1e54672aee40d52ead5d85
+SHA512: fca09b41ae84834f4a6ccae09d254692485194e7f7f3515c1a68ee2850ddc51ddd166e7edd74a6766508e416616222813a1e662ad43f5226bfeed84b7aab3628
+
 Package: bash-completion
 Version: 2.18.0
 Architecture: all

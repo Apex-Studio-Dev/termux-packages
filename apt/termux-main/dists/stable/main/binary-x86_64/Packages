@@ -193,6 +193,21 @@ SHA1: 678a0a209f39583f6e7e7b11a5c422b7c205ad2d
 SHA256: 25c2f900fb1db32525fe084041636dab1c568fbc516b5b4163698b5a6031d4f8
 SHA512: dffab154896ee1aeaf2f51a76d9d84b80b895f3e167bb2401970a1d2bea0bcad290ebbf8429997490c2102d27913c7b262f9c271ff34ed6af1979dba49c4c4d9
 
+Package: apt-ftparchive
+Version: 2.8.1-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: libdb, apt (= 2.8.1-4)
+Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
+Filename: pool/main/x86_64/apt-ftparchive_2.8.1-4_x86_64.deb
+Size: 108356
+MD5sum: 881b2ede30769f387fc49714d7fc5768
+SHA1: 66e69dac89f9a2a04b8d0125cc7ce5e1dfd47ce1
+SHA256: b61ca5dabf04cc6a616b852d9552a549f9e6b7b334553205736df8ebf27adfe6
+SHA512: 2f5cac7d07bb978a125cf193cce7b1653715e641110cebb9d00f84158e48b0308cf4d839a0ad7cf48c60b152e3ba3ff3442a85ef0cc28d96e6ee628d6bb9cc51
+
 Package: apt
 Version: 2.8.1-3
 Architecture: x86_64
@@ -207,6 +222,21 @@ MD5sum: 9671ac11cce183dba2992293dfed4080
 SHA1: 4bc79b3d8b2aea268bb109c16daf933cc35a7202
 SHA256: 30ea82eef3be44ca6665addfd667a487a2d4fb378871faeb93f0f51cfc13ae53
 SHA512: 007281dd6a3b1146ba0ace36f856e82f55c0f441bd09c9031608ccca59127ee4894123cabab451677ff939d94df38ab8fbab8e82467f3cfa404c9668f2dc8ae3
+
+Package: apt
+Version: 2.8.1-4
+Architecture: x86_64
+Section: 
+Priority: 
+Maintainer: @termux
+Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
+Description: Front-end for the dpkg package manager
+Filename: pool/main/x86_64/apt_2.8.1-4_x86_64.deb
+Size: 1168688
+MD5sum: 04fdac8348e1406644227d3a0fa813d9
+SHA1: fb003b140c94e1dc1efbf27a8747dbd2463232e6
+SHA256: 1edab7cf8c501628681ef2887252808b525734e2a9ef604a8f166d63103de11e
+SHA512: 158236a2c195a81c42d5ec84b3f811aa21d7b6cc87f26cebef7b9bf38edfdb35ce850daeebab328e1f9e59ed8969f0252dc5d2739ad1b3e64636a307e0a4519f
 
 Package: aria2
 Version: 1.37.0-3
