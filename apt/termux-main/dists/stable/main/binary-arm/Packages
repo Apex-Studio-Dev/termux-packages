@@ -5278,18 +5278,3 @@ SHA1: 70c21317f125e55efcccb99997d09a2fd8f7e559
 SHA256: de343d8e9baccee66517dc61ae7ee7b4b0d1e7331f3e2ab7cba43ebec74575d6
 SHA512: 859fdf465c5f69b12c14567664ea3824bbc1f71648e57a042cca8f1dee82173d601cdd3353f81f965ed39aca3340cd67aa242063a3ceb16b482ee27632902319
 
-Package: openjdk-25
-Version: 25.0.4
-Architecture: arm
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libandroid-shmem, libandroid-spawn, libiconv, libjpeg-turbo, zlib, littlecms, alsa-plugins
-Description: Java development kit and runtime
-Filename: https://github.com/Apex-Studio-Dev/termux-packages/releases/download/pkg-openjdk-25-25.0.4/openjdk-25_25.0.4_arm.deb
-Size: 111088268
-MD5sum: d401ce80c42836ffcf655210fec2638f
-SHA1: b916c0a5760e97c216260dd5653ac19ecd080d85
-SHA256: 529307b83d72499aa2ae786682a251ec59bbfd8398b73ea3bd68923564d20263
-SHA512: 5f809270bcc18e375693be052341e5da8088c6c904eb3cc3e3aeda18818d1ba741c9841a9f5a4ae0d89d1fc5cb93a6e2ba75cea7a738e444724b4eac7d2aa48c
-
