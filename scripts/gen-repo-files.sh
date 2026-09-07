@@ -220,6 +220,38 @@ gen_release_and_sign() {
 }
 
 copy_pool
+
+# Keep only the highest version of each package per architecture, mirroring the
+# upstream termux convention that their Packages index never lists a package
+# more than once. Old versions otherwise accumulate in the pool forever because
+# publish-gh-pages.sh re-merges every deb previously staged there.
+prune_pool() {
+	local arch dir deb pkg ver
+	for arch in "${ARCHES[@]}"; do
+		dir="$APT_ROOT/pool/$COMPONENT/$arch"
+		[[ -d "$dir" ]] || continue
+		declare -A best_ver=() best_file=()
+		for deb in "$dir"/*.deb; do
+			[[ -f "$deb" ]] || continue
+			read -r pkg ver < <(dpkg-deb --showformat='${Package} ${Version}' --show "$deb" 2>/dev/null || true)
+			[[ -n "$pkg" && -n "$ver" ]] || continue
+			if [[ -n "${best_ver[$pkg]:-}" ]]; then
+				if dpkg --compare-versions "$ver" gt "${best_ver[$pkg]}"; then
+					rm -f "${best_file[$pkg]}"
+					best_ver[$pkg]="$ver"
+					best_file[$pkg]="$deb"
+				else
+					rm -f "$deb"
+				fi
+			else
+				best_ver[$pkg]="$ver"
+				best_file[$pkg]="$deb"
+			fi
+		done
+	done
+}
+
+prune_pool
 gen_packages
 gen_contents
 gen_release_and_sign
