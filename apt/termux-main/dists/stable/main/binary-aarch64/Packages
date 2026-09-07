@@ -179,21 +179,6 @@ SHA256: 40d71ffbb3546b4880c923847952694b4c17ca310a8ffd1641038fd74c094925
 SHA512: af33ac8b6ab5a6cf434de37c3501eb210fee80c21528f8ad6457d11158baa69ad198f34aa3330354432c5b70a05aa26692125f809ade932bd4179b412a46d957
 
 Package: apt-ftparchive
-Version: 2.8.1-3
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: libdb, apt (= 2.8.1-3)
-Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
-Filename: pool/main/aarch64/apt-ftparchive_2.8.1-3_aarch64.deb
-Size: 95608
-MD5sum: babc41954ac25ef0f448c6bc82c9cdab
-SHA1: e1ce6233621d0812b1e9f979f36c235e1c2b3d47
-SHA256: b93c261218aff6022eec817fe59c1c668c6bb200c62c79d5e5a64b6ae7ab9f91
-SHA512: de265bba114ee48eea612ea0c288b04fdd78d8a8abbb64de5e1ce5e7469b04ed2972fced5930c41a50385c6841acc8fd4e1a9da3e3996b63c24bcc11877f8660
-
-Package: apt-ftparchive
 Version: 2.8.1-4
 Architecture: aarch64
 Section: 
@@ -207,21 +192,6 @@ MD5sum: 391f14379d58b22be7c8dcf93a43efcb
 SHA1: c3d3a666beefdc6f3d774da1f8a53051c7bc6f98
 SHA256: 9761b5dc8ddf144afbe8c040c72db2993cb1ef86720a62c43d8c315c94a32726
 SHA512: ec047f4d08eeff35a128038daf8bb700e53df7c4791dffb97adad6f54bf201b7fd91d4537b6d4306fbe16a246415242506113fca349a2ae73e5b8dc0bf410568
-
-Package: apt
-Version: 2.8.1-3
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
-Description: Front-end for the dpkg package manager
-Filename: pool/main/aarch64/apt_2.8.1-3_aarch64.deb
-Size: 1034160
-MD5sum: ed3958a6249b121f407ffb20b3b4fce9
-SHA1: 4f991a5a1d63d6be9b7e3b8dacfd653bd8f40529
-SHA256: 2b56f5da4c48b070d081f35b1d2693dcb2dbd37827f641ca0dbb7fe2fe7e47d9
-SHA512: e6172a24fb31cdc0d6bf7e7536801718f1aaabf087df775c22fe645dfede95f0b81361ff2a4e4e9a96983f696de96723438748a80df39b194ebe739a7efa6e48
 
 Package: apt
 Version: 2.8.1-4
@@ -492,21 +462,6 @@ MD5sum: efd7a3ef37b02b6dca2d914c8f3b30be
 SHA1: 0f41ec0432beab25f3ff62310422dcd07751ef66
 SHA256: cfb6c3ad81291c85ce2f215ecfcb62f2199441d2ec491c834938e6b194354818
 SHA512: 33d57d86fdae9983ac0444bae19dce4aa7f25c25bc0686e019cc6fe0f7d0b0111c5e3dfaef3e18bb8a277f17bea5a3b100ec2f7407a65e1afc8538f6e1f6d292
-
-Package: command-not-found
-Version: 3.5.0-9
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
-Depends: libc++
-Description: Suggest installation of packages in interactive shell sessions
-Filename: pool/main/aarch64/command-not-found_3.5.0-9_aarch64.deb
-Size: 26392
-MD5sum: a6046810da6119825165bce2be5d4d99
-SHA1: 4134e688af17632c8959a8146ef084bb5c93cb71
-SHA256: 3c2a41f445e14ad5019b1123dc534d521a1bbdeab3e2ba83256aa6b31098e961
-SHA512: cdf08456fcac37a58316f32545a93e839d472c47edca2db0fbee981fe028306ecf1e7600ca4f25fd55aa43e1339a26cdd85b7c3b4f77055e83685aeb8df97d54
 
 Package: coreutils
 Version: 9.11-1
@@ -4902,51 +4857,6 @@ MD5sum: a247b0b3675588c1e8e1f24d08b06544
 SHA1: 8b1bdabd46ce187200746aee62c7b557feeba2cc
 SHA256: af42fea0cf7c8fd147a20d03b3d8ebadc8e3f15b7b24c2326e86d8134e41cb5a
 SHA512: 56a4e938dad5e1834c5a153e101336912c25c0df2e174275434fc549c883ae89f0031705ba6fd8614aa1456935dc8f1b2c83b92b1c7716a85d72ffbd5e501aa2
-
-Package: termux-tools
-Version: 1.46.0+really1.45.0-1
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
-Description: Basic system tools for Termux
-Filename: pool/main/aarch64/termux-tools_1.46.0+really1.45.0-1_aarch64.deb
-Size: 33632
-MD5sum: 1d3077316565ba4fe739e343ae8fae55
-SHA1: d26ba5124fffb76b1c031eeb560a3d8e81ecaa1c
-SHA256: 7ed7f165123fa6264de0934776980c6b2c07f8e30094d5f5972ef4a546254afe
-SHA512: 0fd47f84de6498c81f2811b56121782034ceb80f77fdf2a2fc72d8a43a5207e6f580bfebc7b6cc35831a84ed0797f4b9a95a17e7d69491fe8e9e3943889ead79
-
-Package: termux-tools
-Version: 1.46.0+really1.45.0-2
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
-Description: Basic system tools for Termux
-Filename: pool/main/aarch64/termux-tools_1.46.0+really1.45.0-2_aarch64.deb
-Size: 28976
-MD5sum: b7309fbe72a04da7e8aa04c753b3a46d
-SHA1: 60057b148354d0d23b2eb199199b03355c228f0a
-SHA256: 324bb732a2643d449802ee9c3ecb88f18ace56fad957efb8437f5f1a9cc82084
-SHA512: c744c414e9be22e7a2799224f94fcfff4969ffb641fd403ca906278ac5435c2c98d14f56ef74be4e028997716d009a8386d0bec6b74b72a1af5958128ae7ba8a
-
-Package: termux-tools
-Version: 1.46.0+really1.45.0-3
-Architecture: aarch64
-Section: 
-Priority: 
-Maintainer: @termux
-Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
-Description: Basic system tools for Termux
-Filename: pool/main/aarch64/termux-tools_1.46.0+really1.45.0-3_aarch64.deb
-Size: 29156
-MD5sum: 87c9782edaafe8f7288ed4bbb8cb834a
-SHA1: 9171fe585887470347a04362e8a7640327713530
-SHA256: bd5b375688c8cc773a4ec9b5791e694703fe260406a1dfdc15946e0d4e5aedac
-SHA512: 1919bc025318823ba8de73b76fc338938007f02155df8d6e43010b25269faf6e9d530f2fd606d65185018261d61c3be712d0bb3eff8196b0421081dfab21d5e8
 
 Package: termux-tools
 Version: 1.46.0+really1.45.0-4
