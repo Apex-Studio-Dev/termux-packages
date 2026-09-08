@@ -1,10 +1,10 @@
 Package: apt-transport-tor
 Version: 2.8.1-4
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 44
 Maintainer: @termux
 Depends: tor, apt (= 2.8.1-4)
+Homepage: https://packages.debian.org/apt
 Description: APT transport for anonymous package downloads via Tor
 Filename: pool/main/all/apt-transport-tor_2.8.1-4_all.deb
 Size: 932
@@ -16,10 +16,10 @@ SHA512: fca09b41ae84834f4a6ccae09d254692485194e7f7f3515c1a68ee2850ddc51ddd166e7e
 Package: bash-completion
 Version: 2.18.0
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 2724
 Maintainer: Joshua Kahn <tom@termux.dev>
 Depends: bash
+Homepage: https://github.com/scop/bash-completion
 Description: Programmable completion for the bash shell
 Filename: pool/main/all/bash-completion_2.18.0_all.deb
 Size: 194540
@@ -31,10 +31,10 @@ SHA512: ec0bb6b9caa73a99b10df17d53564124388b97b6fd601d241d877758fa1547778848076b
 Package: ca-certificates-java
 Version: 1:2026.08.13
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 184
 Maintainer: @termux
 Depends: ca-certificates (= 1:2026.08.13)
+Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates (java keystore format)
 Filename: pool/main/all/ca-certificates-java_1_2026.08.13_all.deb
 Size: 96188
@@ -46,10 +46,9 @@ SHA512: 5c5dd8bef3d49726cab05f9a28ed63645cccaa850c0decdcfe85b57be721122b4292f56f
 Package: ca-certificates
 Version: 1:2026.08.13
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 232
 Maintainer: @termux
-Depends: 
+Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates
 Filename: pool/main/all/ca-certificates_1_2026.08.13_all.deb
 Size: 105428
@@ -61,10 +60,11 @@ SHA512: e5880224b0a98002b1c71a3a634f3f487c1aa1af91d3890a7e4fbc988f8d2fd9c185f4de
 Package: docbook-xml
 Version: 5.1-1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 2412
 Maintainer: @termux
 Depends: libxml2-utils
+Breaks: docbook-xsl (<= 1.79.2-1)
+Homepage: https://www.oasis-open.org/docbook/
 Description: A widely used XML scheme for writing documentation and help
 Filename: pool/main/all/docbook-xml_5.1-1_all.deb
 Size: 78148
@@ -76,10 +76,10 @@ SHA512: 3f8fc417c7ce08aa9ae5bd339e529c7ea876b4f56b2438dde3defeb963279a77047f2564
 Package: docbook-xsl
 Version: 1.79.2-4
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 33404
 Maintainer: @termux
 Depends: docbook-xml (>= 5.1), libxml2-utils, xsltproc
+Homepage: https://docbook.org/
 Description: XML stylesheets for Docbook-xml transformations
 Filename: pool/main/all/docbook-xsl_1.79.2-4_all.deb
 Size: 1390768
@@ -91,10 +91,10 @@ SHA512: 91093d50c67788b86cbc0d90f1933c723d8866fd71438640e4fe6b5815b8929bb6290412
 Package: dpkg-perl
 Version: 1.22.6-5
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 940
 Maintainer: @termux
 Depends: perl, clang, make, dpkg (= 1.22.6-5)
+Homepage: https://packages.debian.org/dpkg
 Description: Perl modules for dpkg
 Filename: pool/main/all/dpkg-perl_1.22.6-5_all.deb
 Size: 126268
@@ -106,10 +106,10 @@ SHA512: 10e24a0193ca834dd1c73165f7459976dcb698f9981568de7bf23bf589e66f4be32d196e
 Package: dpkg-scanpackages
 Version: 1.22.6-5
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 56
 Maintainer: @termux
 Depends: dpkg-perl, dpkg (= 1.22.6-5)
+Homepage: https://packages.debian.org/dpkg
 Description: Creates Packages index files
 Filename: pool/main/all/dpkg-scanpackages_1.22.6-5_all.deb
 Size: 6524
@@ -121,10 +121,10 @@ SHA512: 545a42cda6761b5a402be15c6b83badcd9a55c90b1c8f72f171d2870ade960ad9803a3c4
 Package: git-svn
 Version: 2.55.0
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 320
 Maintainer: Joshua Kahn <tom@termux.dev>
 Depends: subversion-perl, git (= 2.55.0)
+Homepage: https://git-scm.com/
 Description: Convert between Git and Subversion repositories
 Filename: pool/main/all/git-svn_2.55.0_all.deb
 Size: 75568
@@ -136,10 +136,10 @@ SHA512: f8d49f45520fdcf956112116b4042fa33cbe26d86f935980742525e9da65b7e6ed654ec7
 Package: glib-cross
 Version: 2.88.3
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 83184
 Maintainer: @termux
 Depends: glib (= 2.88.3)
+Homepage: https://developer.gnome.org/glib/
 Description: glib for host (NOT for Termux)
 Filename: pool/main/all/glib-cross_2.88.3_all.deb
 Size: 13174200
@@ -151,10 +151,9 @@ SHA512: b192e28914a3a0fdd63c95616f664a574c5265846c08e7bf542fc00bc81797ec18dd9d49
 Package: glibc-repo
 Version: 1.0
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 52
 Maintainer: @termux-pacman
-Depends: 
+Homepage: https://github.com/termux/glibc-packages
 Description: A package repository containing glibc-based programs and libraries
 Filename: pool/main/all/glibc-repo_1.0_all.deb
 Size: 1120
@@ -166,10 +165,11 @@ SHA512: 7a917c6c8e0016d0e3e096b1f1f76657ee0b20610cb6c3040a4919483270cde3d66b588c
 Package: npm
 Version: 11.19.1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 18228
 Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: nodejs | nodejs-lts
+Conflicts: nodejs (<= 25.3.0), nodejs-lts (<= 24.13.0)
+Homepage: https://docs.npmjs.com/cli/
 Description: The package manager for JavaScript
 Filename: pool/main/all/npm_11.19.1_all.deb
 Size: 2032144
@@ -181,10 +181,9 @@ SHA512: d3d994abe21424c2d8a5a9bf2371aadd36feb0656470650fdc53fc765c36440ac9b16988
 Package: openjdk-17-source
 Version: 17.0.20
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 50792
 Maintainer: @termux
-Depends: 
+Homepage: https://openjdk.java.net
 Description: Source files for openjdk-17
 Filename: pool/main/all/openjdk-17-source_17.0.20_all.deb
 Size: 47113688
@@ -196,10 +195,9 @@ SHA512: 2ed441fc58f5ece082b26420712d2032a3eb0e8d6567cd3be1b5d4b4dc8b8ee4d9c47102
 Package: openjdk-21-source
 Version: 21.0.12
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 52384
 Maintainer: @termux
-Depends: 
+Homepage: https://openjdk.java.net
 Description: Source files for openjdk-21
 Filename: pool/main/all/openjdk-21-source_21.0.12_all.deb
 Size: 49131448
@@ -211,10 +209,9 @@ SHA512: 8b21c8d2a59080d3693759b28bb900a9c79b7ab816aba590217108488b2a242a69d13a37
 Package: openjdk-25-source
 Version: 25.0.4
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 51828
 Maintainer: @termux
-Depends: 
+Homepage: https://openjdk.java.net
 Description: Source files for openjdk-25
 Filename: pool/main/all/openjdk-25-source_25.0.4_all.deb
 Size: 48643740
@@ -226,10 +223,12 @@ SHA512: cfcf196ca54c3a7a8f259e363c3b7f3616c87d34fa913ba9f15aa319c29d430ef9aad231
 Package: python-ensurepip-wheels
 Version: 3.14.6-1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 1812
 Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: python (= 3.14.6-1)
+Breaks: python (<< 3.11.1-3)
+Replaces: python (<< 3.11.1-3)
+Homepage: https://python.org/
 Description: Wheels for Python ensurepip
 Filename: pool/main/all/python-ensurepip-wheels_3.14.6-1_all.deb
 Size: 1740176
@@ -241,10 +240,12 @@ SHA512: 582b99320401904f1b85b27d98950e423e53f78d10722216c529c85a3620caaff8b86a47
 Package: python-pip
 Version: 26.2.1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 7388
 Maintainer: @termux
 Depends: python (>= 3.11.1-1)
+Recommends: clang, make, pkg-config
+Breaks: python (<< 3.11.1-1)
+Homepage: https://pip.pypa.io/
 Description: The PyPA recommended tool for installing Python packages
 Filename: pool/main/all/python-pip_26.2.1_all.deb
 Size: 1192892
@@ -256,10 +257,13 @@ SHA512: dffe501e2afd2f4334ed9cc01a523ed50070c31b9dd177b0f5d16efb10030184b1d2e756
 Package: python-xcbgen
 Version: 1.17.0-3
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 132
 Maintainer: @termux
 Depends: xcb-proto (= 1.17.0-3)
+Recommends: python
+Breaks: xcb-proto (<< 1.15.2)
+Replaces: xcb-proto (<< 1.15.2)
+Homepage: https://xcb.freedesktop.org/
 Description: The xcbgen Python module
 Filename: pool/main/all/python-xcbgen_1.17.0-3_all.deb
 Size: 15200
@@ -271,10 +275,10 @@ SHA512: b4d89e85a45c1662acce625bdaa142a49c31712ad13482dc8addf5b763516bd3a35c41c7
 Package: root-repo
 Version: 2.4-2
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 52
 Maintainer: Henrik Grimler @Grimler91
 Depends: termux-keyring
+Homepage: https://github.com/termux/termux-root-packages
 Description: Package repository containing programs for rooted devices
 Filename: pool/main/all/root-repo_2.4-2_all.deb
 Size: 1204
@@ -286,10 +290,10 @@ SHA512: 62bf6a3caa336013d0f94edef5ea75fc2808486d750c932f5693b32fac0b5c458e6c86a0
 Package: termux-am
 Version: 0.8.0-3
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 620
 Maintainer: Michal Bednarski @michalbednarski
-Depends: 
+Conflicts: termux-tools (<< 0.51)
+Homepage: https://github.com/termux/TermuxAm
 Description: Android Oreo-compatible am command reimplementation
 Filename: pool/main/all/termux-am_0.8.0-3_all.deb
 Size: 577364
@@ -301,10 +305,10 @@ SHA512: d4fa58f70acd71ae1c2014a4ec2383ccbef3a190ab76c02cc11b31f84aca830153ca134c
 Package: termux-keyring
 Version: 3.14-1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 208
 Maintainer: @termux
-Depends: 
+Essential: yes
+Homepage: https://github.com/termux
 Description: GPG public keys for the official Termux repositories
 Filename: pool/main/all/termux-keyring_3.14-1_all.deb
 Size: 46184
@@ -316,10 +320,10 @@ SHA512: 19ba033ce195bc4bc2264a8ba8dc064c47ee64e04c007ef6e7e739463201202e596637d1
 Package: termux-licenses
 Version: 2.2
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 372
 Maintainer: @termux
-Depends: 
+Essential: yes
+Homepage: https://termux.dev
 Description: Contains LICENSE files for common licenses
 Filename: pool/main/all/termux-licenses_2.2_all.deb
 Size: 52252
@@ -331,10 +335,9 @@ SHA512: 188c994f6bb6c1bdf23b43a99c777674feac4d1bc6ed49f077873fc20c3c997f6d3d5221
 Package: ttf-dejavu
 Version: 2.37-8
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 10108
 Maintainer: @termux
-Depends: 
+Homepage: https://dejavu-fonts.github.io/
 Description: Font family based on the Bitstream Vera Fonts with a wider range of characters
 Filename: pool/main/all/ttf-dejavu_2.37-8_all.deb
 Size: 2461556
@@ -346,10 +349,10 @@ SHA512: 3f51cc9b12db357d2500ed85306238c9acbd474e4a7f314b9cd9fa40895bd866ba182349
 Package: update-info-dir
 Version: 7.3
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 48
 Maintainer: @termux
 Depends: texinfo (= 7.3)
+Homepage: https://www.gnu.org/software/texinfo/
 Description: Update or create index file from all installed info files in directory
 Filename: pool/main/all/update-info-dir_7.3_all.deb
 Size: 2496
@@ -361,10 +364,10 @@ SHA512: b82b97a06355764a462a98d422482a94f7cd62f4c58524344336d5490b3d30d677e02d63
 Package: x11-repo
 Version: 8.4-1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 52
 Maintainer: @termux
 Depends: termux-keyring
+Homepage: https://github.com/termux/x11-packages
 Description: Package repository containing X11 programs and libraries
 Filename: pool/main/all/x11-repo_8.4-1_all.deb
 Size: 1192
@@ -376,10 +379,11 @@ SHA512: 76ac873729c430c19bcd28beddd37f6e8f4e571f9c0c2d4103d7b3fe928eb5b2a88ec4b1
 Package: xcb-proto
 Version: 1.17.0-3
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 812
 Maintainer: @termux
-Depends: 
+Conflicts: xcbproto
+Replaces: xcbproto
+Homepage: https://xcb.freedesktop.org/
 Description: XML-XCB protocol descriptions
 Filename: pool/main/all/xcb-proto_1.17.0-3_all.deb
 Size: 78608
@@ -391,10 +395,9 @@ SHA512: 48c3e38cf88ba1fb5be8b430e140430109da2a6ff1fa22213ecba9faa0f8453a92492a0b
 Package: xorg-util-macros
 Version: 1.20.2
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 144
 Maintainer: @termux
-Depends: 
+Homepage: https://xorg.freedesktop.org/
 Description: X.Org Autotools macros
 Filename: pool/main/all/xorg-util-macros_1.20.2_all.deb
 Size: 21968
@@ -406,10 +409,12 @@ SHA512: 89ce91dc9016e957509f783e9e124afa3719d7b9997d29b296c8e94072331764e03ecd97
 Package: xorgproto
 Version: 2025.1
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 2292
 Maintainer: @termux
 Depends: xorg-util-macros
+Conflicts: x11-proto
+Replaces: x11-proto
+Homepage: https://xorg.freedesktop.org/
 Description: X.Org X11 Protocol headers
 Filename: pool/main/all/xorgproto_2025.1_all.deb
 Size: 249660
@@ -421,10 +426,9 @@ SHA512: f53120b5101c7bced27425059ee88bbecb1e5227782af55a8eabd2158c3e6d84bffc1260
 Package: xtrans
 Version: 1.6.0
 Architecture: all
-Section: 
-Priority: 
+Installed-Size: 296
 Maintainer: @termux
-Depends: 
+Homepage: https://xorg.freedesktop.org/
 Description: X transport library
 Filename: pool/main/all/xtrans_1.6.0_all.deb
 Size: 39884

@@ -4,13 +4,13 @@ Hash: SHA512
 Architectures: aarch64 arm i686 x86_64 all
 Codename: x11
 Components: main
-Date: Mon, 07 Sep 2026 23:10:16 +0000
+Date: Tue, 08 Sep 2026 00:24:39 +0000
 Description: ApexStudio apt repository
 Label: ApexStudio
 Origin: ApexStudio
 Suite: x11
 MD5Sum:
- f1d9fe2e4fa47b8a20b32d55443578dc              199 Release
+ 3a7733b2dd65bec3fb1ff15aa29e8c36              199 Release
  d41d8cd98f00b204e9800998ecf8427e                0 main/Contents-aarch64
  4a4dd3598707603b3f76a2378a4504aa               20 main/Contents-aarch64.gz
  8dc5aea5b03dff8595f096f9e368e888               32 main/Contents-aarch64.xz
@@ -39,7 +39,7 @@ MD5Sum:
  4a4dd3598707603b3f76a2378a4504aa               20 main/binary-x86_64/Packages.gz
  8dc5aea5b03dff8595f096f9e368e888               32 main/binary-x86_64/Packages.xz
 SHA1:
- b8eb55225e0009ec522d05a5c716a0ecf483f5d2              199 Release
+ 35a3f91335ceed9577ca8999b7bd8109391f5dd2              199 Release
  da39a3ee5e6b4b0d3255bfef95601890afd80709                0 main/Contents-aarch64
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 main/Contents-aarch64.gz
  9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 main/Contents-aarch64.xz
@@ -68,7 +68,7 @@ SHA1:
  a0fddd5458378c1bf3c10dd2f5c060d1347741ed               20 main/binary-x86_64/Packages.gz
  9746882f4236fa1c3a8f86be2f1d9c46680c0b10               32 main/binary-x86_64/Packages.xz
 SHA256:
- 95383751ed592c148a1f3a4660139577ba45dfb188a56015f1ab185d9e19e94e              199 Release
+ fb2e6e431331d860297ca9ef1e8bc6f0bb76a982e62ec7c12373e55628d8830a              199 Release
  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855                0 main/Contents-aarch64
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 main/Contents-aarch64.gz
  0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 main/Contents-aarch64.xz
@@ -97,7 +97,7 @@ SHA256:
  f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec               20 main/binary-x86_64/Packages.gz
  0040f94d11d0039505328a90b2ff48968db873e9e7967307631bf40ef5679275               32 main/binary-x86_64/Packages.xz
 SHA512:
- 84b685c9915fa76f7c00a5c9b02f0a35a2b838806f3854bd268d65652c24cb3b1691ca005171d857ad5ad3fe26f1c057502845c809e891bdbbbeabc55d41340a              199 Release
+ 8307bb59c01c728ed2604bd8414ca756b2c156200dbc6a22553537c7a095676759b968752575b142534c5d86ecec9e4436dea9f3912ec5867a1b493d20a7ffb1              199 Release
  cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af927da3e                0 main/Contents-aarch64
  1b46b9b08d5b338be9d732a1724795b2eab63daffde377218727c90857b79fe6a47bceed495117fcde60f7339812ef75ef4c69f82dd79fb69b6cbf8006b521f2               20 main/Contents-aarch64.gz
  034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 main/Contents-aarch64.xz
@@ -127,17 +127,17 @@ SHA512:
  034b32f1138322638c7a5b7949a3b184c6a4cdfd003360a496c08c56c2cc645c94fbe9cdf9d84c963af6dda6c442717cd61d7e1cecf7024bd463f6f5196c5527               32 main/binary-x86_64/Packages.xz
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqfRFgACgkQdpPrVPIE
-9cok6Q//dgbF+W9WDXdbMXcn7EK4yHbVmKZaLmZkfPTZl+1iTRyeexaot2zeacAb
-ttCs3Yvi6B7uD5EIHOW7eIvZ6mElYyOkJIA9L/d7VnqWUN7kGdKWuM6idSILq7dm
-eTyORAbkQEq2dd5H+r0VnEB25p8CbYx3Z+5iN6mMKprUNTLCmvGHpBqRxD1E4aKV
-nPsczBoJsA2PlTmXHKz/Net2UqVze3/1j8Fhc6aDSUDfw4RtMBA4GRIlVSuZWRh4
-/qPjnf4pM8iap0mQ1wE5xyCsJirw5Wt56hQ6onqPEzoAuMhGWhoG0ZFfCRi6o9oA
-kF8EdKZ6q4KlPAN37l1sHkgUluzUgdojFCora6vIPR98thKvViAeJynLN2OerFrI
-MoR0KG8unfG0OOGOw7fntnslSsplIYcXc/fUY3LF6VyJWLfGz799vRdS2S6G5mJM
-Y5mipP12wJn+t+pZnC36OCdtxAb0VaTM3YCiwyHseTuk1YEAchUeBMyfiCzhhh3h
-BUFMmFiJXwsaCjAAUNewajbHs8oU61D7gDs4N/3PYq3s43xKlEHR/pnq3seRqhj5
-yZ7ci7qJn6LHkaVnxrqjSn9ix+eaQlsxaSR5RsIXnolMpTuGSSjnWH8lZwGkphuq
-Opv69dlLgrrqeZadJ/bsydHtmJ0JKYoVPK4r/QeI3XKS33zG64o=
-=pwtV
+iQIzBAEBCgAdFiEEfRs1p+iPXoks2+ZldpPrVPIE9coFAmqfVccACgkQdpPrVPIE
+9cpYwg/+NqbqCiJ2KmrR3O3Dt6WmgbZPwKUV1TRqthUIva2n5PCvIbpLfpLcPHhO
+wdcnsAGNejO7PCpD0+495B4In2luWLY0RaJ2BgyKD3Hz/fpcMrthubwcQLiVZV+v
+hnNCbbkT6HGuKQldXV8xjKzyFl3o1PdH2d6lEfdED7v3s0A2ocEaUd52+HWS/U5Q
+PnbZ8rbsJBXyFxpSsq9m/uLazPQrSo9pzuMf83ia5rZy7chauFP3HY8jz2kevRLr
+gz4FyJpchVZS6co7mgkgpKC6ngQjujPXk4rDKPoqr6Gz7uk4dVKl7OdDyK+QxyFw
+AMv7aSJ1SQ05e9R+QSuTjyHincNcPkCfy7T21EtE68sp3bIzuky9pGkH2e0olDIw
+qYpq37qd59UG4W9E5Y9ce7gzJKJ/zXIXJxCXfcmgAR3els71Pxs7qGqS6KCr/uOF
+ro3/F0+WP61ynweJf19AV/54idLCiQyS3dUiJxpSXKKdFdUuRhiczSyRw31KyHsz
+Xd/SCRdwrkJXCoz1+37ID0yijbSHRtIffZT2V8UaEjh216MrxC5t1SsCAsRdIHjM
+0WnHBqTjFBier3p49YsUGzKEO5Mk10cNoH7guJhMoyxEryjINZIeoxqSrqMilSZG
+atU7VHDJPemqGfCxyMAqXQlQyYNVIp8La8Vriy4EFLeqjr1y3Ss=
+=0J4v
 -----END PGP SIGNATURE-----
