@@ -139,9 +139,20 @@ emit_stanza() {
 	{
 		if command -v dpkg-deb >/dev/null 2>&1; then
 			dpkg-deb --info "$deb" > /dev/null 2>&1 || true
-			dpkg-deb --showformat \
-				'Package: ${Package}\nVersion: ${Version}\nArchitecture: ${Architecture}\nSection: ${Section}\nPriority: ${Priority}\nMaintainer: ${Maintainer}\nDepends: ${Depends}\nDescription: ${Description}\n' \
-				--show "$deb" >> "$pkgfile" || true
+			# Mirror the control fields registered in dpkg/status (Installed-Size,
+			# Homepage, Breaks, Replaces, ...) so apt's version-node hash matches the
+			# installed record; otherwise the same version string is treated as a
+			# different version node and packages show as "upgradable from: <same>".
+			# Only fields actually present in the deb control are emitted (dpkg-deb
+			# --showformat would synthesize empty / "no" defaults for absent fields).
+			local f field val
+			for field in Package Version Architecture Installed-Size Maintainer \
+				Section Priority Depends Pre-Depends Recommends Suggests Conflicts \
+				Breaks Replaces Provides Essential Multi-Arch Homepage Description; do
+				val="$(dpkg-deb --field "$deb" "$field" 2>/dev/null)" || val=
+				[[ -n "$val" ]] && [[ "$val" != "no" ]] && \
+					printf '%s: %s\n' "$field" "$val"
+			done
 		fi
 		echo "Filename: $fname"
 		# -L: stat args may be symlinks (pool debs staged via symlink); GNU stat
