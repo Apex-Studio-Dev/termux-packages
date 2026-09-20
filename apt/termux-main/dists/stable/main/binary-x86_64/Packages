@@ -476,19 +476,19 @@ SHA256: d7d295c459486a3bc78ec64f4ac6f28e3b100aaebc0b704a3dd6160c176f6f1a
 SHA512: e6c0b1887990083bf80cda749d15e030d6a43ac78ce9f1b0ebd03887c867f289fb3e9bf2b53f7fbdcb28876227761b8dd6d6f74a9c510c53c983a3cfee7c3b89
 
 Package: command-not-found
-Version: 3.5.0-10
+Version: 3.5.0-13
 Architecture: x86_64
-Installed-Size: 144
+Installed-Size: 148
 Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
 Depends: libc++
 Homepage: https://github.com/termux/command-not-found
 Description: Suggest installation of packages in interactive shell sessions
-Filename: pool/main/x86_64/command-not-found_3.5.0-10_x86_64.deb
-Size: 27180
-MD5sum: 52747dbab678bb4b026e3e6e47e66452
-SHA1: 3ac6afde458a91942ec7e418741f01ef6465235f
-SHA256: f66dc07ccddfb556abc58321a9ed3f2e0831086df22a013000fcd7c83622a6c4
-SHA512: 765ae71204b8e09565238915fc8a3c4ffe6db7bceb38c488da2bb9078daba9c755f4e14d29f3398e6bfecd565e43cbe61a499c83b4beb705a2148202af6dab82
+Filename: pool/main/x86_64/command-not-found_3.5.0-13_x86_64.deb
+Size: 26588
+MD5sum: 95db2b271fa624b1b8c4f01dfe7eb690
+SHA1: c3ae23d4cfdc3f36b0e9aad7220fac3d6f816b00
+SHA256: 2a0607d86789539c713d245e2a48757eb50d6a3ad75d56f08b2230cea9b75c82
+SHA512: aced4d23894b6376cc9ffe809210fe1893fc37bfdde1e8f6b3d77175c9dda113d0611e29bbdf603658bfe4ab5f8a6f78674e79c760789383f6b0f5f501a7932d
 
 Package: coreutils
 Version: 9.11-1
